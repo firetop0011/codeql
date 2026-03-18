@@ -14,7 +14,7 @@ extensions:
       - ["io.netty.handler.codec", "MessageToMessageCodec", True, "decode", "", "", "Parameter[1]", "remote", "manual"]
   - addsTo:
       pack: codeql/java-all
-      extensible: summaryModel 
+      extensible: summaryModel
     data:
       - ["io.netty.handler.codec", "ByteToMessageDecoder$Cumulator", True, "cumulate", "(ByteBufAllocator,ByteBuf,ByteBuf)", "", "Argument[1..2]", "ReturnValue", "taint", "manual"]
       - ["io.netty.handler.codec", "HeadersUtils", False, "getAsString", "(Headers,Object)", "", "Argument[0].Element.MapValue", "ReturnValue", "taint", "manual"]

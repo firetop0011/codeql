@@ -5,11 +5,11 @@
 
 
 <overview>
-<p>This rule finds expressions of pointer type which are (implicitly or explicitly) converted to an integer type of smaller size. 
+<p>This rule finds expressions of pointer type which are (implicitly or explicitly) converted to an integer type of smaller size.
 This results in truncation of the most significant bits of the larger integer type.</p>
 
-<p>Such conversions are highly non-portable, since the relative size of integer and pointer types may differ between architectures. 
-For example, while on a 32-bit architecture both type <code>int</code> and type <code>char*</code>  are four bytes wide, 
+<p>Such conversions are highly non-portable, since the relative size of integer and pointer types may differ between architectures.
+For example, while on a 32-bit architecture both type <code>int</code> and type <code>char*</code>  are four bytes wide,
 the latter occupies eight bytes on a 64-bit machine.</p>
 
 </overview>

@@ -5,7 +5,7 @@
 <overview>
 <p>The program uses input from the user as a format string for <code>printf</code> style functions. This can lead to buffer overflows or data representation problems. An attacker can exploit this weakness to crash the program, disclose information or even execute arbitrary code.</p>
 
-<p>The results of this rule do not include inputs from the user that are transferred through global variables. 
+<p>The results of this rule do not include inputs from the user that are transferred through global variables.
 Those can be found in the related rule "Uncontrolled format string (through global variable)".</p>
 
 </overview>

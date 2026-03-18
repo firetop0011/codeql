@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>If a constructor calls a method that is overridden in a subclass, 
+<p>If a constructor calls a method that is overridden in a subclass,
 it can cause the overriding method in the subclass
 to be called before the subclass has been initialized. This can lead to unexpected results.
 </p>
@@ -33,8 +33,8 @@ To avoid this problem:
 
 <ul>
     <li>The <code>init</code> method in the super constructor should be made <code>final</code> or <code>private</code>.</li>
-    <li>The initialization that is performed in the overridden <code>init</code> method in the subclass 
-    can be moved to the subclass constructor itself, or delegated to a separate final 
+    <li>The initialization that is performed in the overridden <code>init</code> method in the subclass
+    can be moved to the subclass constructor itself, or delegated to a separate final
     or private method that is called from within the subclass constructor.</li>
 </ul>
 

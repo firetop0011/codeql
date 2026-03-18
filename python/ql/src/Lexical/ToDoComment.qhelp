@@ -34,8 +34,8 @@ and prioritized relative to other defects and feature requests.</p>
 
 </recommendation>
 <example>
-<p>The following example shows a function where a TODO comment indicates a known limitation in the 
-existing implementation. The function should be reviewed, the limitation addressed and then the 
+<p>The following example shows a function where a TODO comment indicates a known limitation in the
+existing implementation. The function should be reviewed, the limitation addressed and then the
 comment deleted.</p>
 
 <sample src="ToDoComment.py" />

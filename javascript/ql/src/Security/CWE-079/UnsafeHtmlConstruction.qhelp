@@ -5,8 +5,8 @@
 <overview>
 	<p>
 		When a library function dynamically constructs HTML in a potentially unsafe
-		way, then it's important to document to clients of the library that the function 
-		should only be used with trusted inputs. 
+		way, then it's important to document to clients of the library that the function
+		should only be used with trusted inputs.
 
 		If the function is not documented as being potentially unsafe, then a client
 		may inadvertently use inputs containing unsafe HTML fragments, and thereby leave
@@ -16,7 +16,7 @@
 <recommendation>
 
 	<p>
-		Document all library functions that can lead to cross-site scripting 
+		Document all library functions that can lead to cross-site scripting
 		attacks, and guard against unsafe inputs where dynamic HTML
 		construction is not intended.
 	</p>
@@ -42,7 +42,7 @@
 	</p>
 
 	<sample src="examples/unsafe-html-construction_safe.js" />
-	
+
 	<p>
 		Alternatively, an HTML sanitizer can be used to remove unsafe content.
 	</p>

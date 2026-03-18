@@ -10,8 +10,8 @@ resource using that provider.
 
   You specify the permissions using
   the <code>android:readPermission</code>, <code>android:writePermission</code>,
-  or <code>android:permission</code> attributes. 
-If you do not specify the permission required to perform an operation, the application will implicitly have access to perform that operation.  
+  or <code>android:permission</code> attributes.
+If you do not specify the permission required to perform an operation, the application will implicitly have access to perform that operation.
   For example, if you specify only <code>android:readPermission</code>, the application must have explicit permission to read data, but requires no permission to write data.
 </p>
 

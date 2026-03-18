@@ -11,13 +11,13 @@
 	</property>
 </bean>
 
-<bean id="shippingService" 
+<bean id="shippingService"
 		class="documentation.examples.spring.ShippingService"
 		parent="baseService">
 	<property name="shippingProvider" value="Federal Parcel Service"/>
 </bean>
 
-<bean id="orderService" 
+<bean id="orderService"
 		class="documentation.examples.spring.OrderService"
 		parent="baseService">
 	<property name="orderReference" value="8675309"/>

@@ -3,8 +3,8 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>This metric measures the (absolute) number of comment lines per file. Whilst this is not 
-especially meaningful out of context a low number of comments may indicate files that are difficult 
+<p>This metric measures the (absolute) number of comment lines per file. Whilst this is not
+especially meaningful out of context a low number of comments may indicate files that are difficult
 to understand due to poor documentation.</p>
 
 </overview>

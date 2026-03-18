@@ -3,14 +3,14 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>Avoid capturing the loop variable of <code>foreach</code> statements in lambda or delegate functions because 
-the value captured varies depending on the version of C# used. In C# 5.0 and above the value captured is the 
-<em>original</em> value but in earlier versions of C# the value captured is the <em>current</em> value. 
+<p>Avoid capturing the loop variable of <code>foreach</code> statements in lambda or delegate functions because
+the value captured varies depending on the version of C# used. In C# 5.0 and above the value captured is the
+<em>original</em> value but in earlier versions of C# the value captured is the <em>current</em> value.
 If the function is used outside of the loop, then the function will behave differently in different versions of C#.</p>
 </overview>
 
 <recommendation>
-<p>Make a copy of the loop variable, which can be safely captured in the lambda function without being 
+<p>Make a copy of the loop variable, which can be safely captured in the lambda function without being
 changed by the loop.</p>
 </recommendation>
 

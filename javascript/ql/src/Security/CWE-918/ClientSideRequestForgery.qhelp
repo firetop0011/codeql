@@ -7,7 +7,7 @@
         <p>
 
             Directly incorporating user input in the URL of an outgoing HTTP request
-            can enable a request forgery attack, in which the request is altered to 
+            can enable a request forgery attack, in which the request is altered to
             target an unintended API endpoint or resource.
 
             A client-side forged request may perform an unwanted action affecting the victim's account,

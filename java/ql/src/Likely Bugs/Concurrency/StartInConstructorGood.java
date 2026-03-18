@@ -11,7 +11,7 @@ class Super {
     public void start() {  // good
         thread.start();
     }
-    
+
     public String toString() {
         return "hello";
     }

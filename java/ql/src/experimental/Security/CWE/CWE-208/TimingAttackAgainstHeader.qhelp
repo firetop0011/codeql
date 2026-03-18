@@ -4,7 +4,7 @@
 <overview>
 <p>
 A constant-time algorithm should be used for checking the value of sensitive headers.
-In other words, the comparison time should not depend on the content of the input. 
+In other words, the comparison time should not depend on the content of the input.
 Otherwise timing information could be used to infer the header's expected, secret value.
 </p>
 </overview>
@@ -25,4 +25,3 @@ This method implements a non-constant-time algorithm. The example also demonstra
 <sample src="TimingAttackAgainstHeader.java" />
 </example>
 </qhelp>
-

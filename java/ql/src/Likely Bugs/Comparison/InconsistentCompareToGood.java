@@ -3,7 +3,7 @@ public class InconsistentCompareToFix implements Comparable<InconsistentCompareT
 	public InconsistentCompareToFix(int i) {
 		this.i = i;
 	}
-	
+
 	public int compareTo(InconsistentCompareToFix rhs) {
 		return i - rhs.i;
 	}

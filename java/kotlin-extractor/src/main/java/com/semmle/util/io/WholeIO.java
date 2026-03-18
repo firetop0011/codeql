@@ -25,24 +25,24 @@ import com.semmle.util.files.FileUtil;
 /**
  * A class that allows bulk operations on entire files,
  * reading or writing them as {@link String} values.
- * 
+ *
  * This is intended to address the woeful inadequacy of
  * the Java standard libraries in this area.
  */
 public class WholeIO {
 	private IOException e;
-	
+
 	/**
 	 * Regular expression {@link Pattern}
 	 */
 	private final static Pattern rpLineEndingCRLF = Pattern.compile("\r\n");
-	
+
 	/**
 	 * The default encoding to use for writing, and for reading if no
 	 * encoding can be detected.
 	 */
 	private final String defaultEncoding;
-	
+
 	/**
 	 * Construct a new {@link WholeIO} instance using ODASA's default
 	 * charset ({@code "UTF-8"}) for all input and output (unless a
@@ -51,28 +51,28 @@ public class WholeIO {
 	public WholeIO() {
 		this("UTF-8");
 	}
-	
+
 	/**
 	 * Construct a new {@link WholeIO} instance using the specified
 	 * encoding for all input and output (unless a different encoding
 	 * is detected for a file being read).
-	 * 
+	 *
 	 * @param encoding The encoding name, e.g. {@code "UTF-8"}.
 	 */
 	public WholeIO(String encoding) {
 		defaultEncoding = encoding;
 	}
-	
+
 	/**
 	 * Open the given file for reading, get the entire content
 	 * and return it as a {@link String}. Returns <code>null</code>
 	 * on error, in which case you can check the getLastException()
 	 * method for the exception that occurred.
-	 * 
+	 *
 	 * <b>Warning:</b> This method trims the content of the file, removing
 	 * leading and trailing whitespace. Do not use it if you care about file
 	 * locations being preserved; use 'read' instead.
-	 * 
+	 *
 	 * @param file The file to read
 	 * @return The <b>trimmed</b> contents of the file, or <code>null</code> on error.
 	 */
@@ -97,7 +97,7 @@ public class WholeIO {
 	 * on error, in which case you can check the getLastException()
 	 * method for the exception that occurred. Tries to create any
 	 * enclosing directories that do not exist.
-	 * 
+	 *
 	 * @param filename The name of the file to write to
 	 * @param contents the string to write out
 	 * @return the success state
@@ -112,7 +112,7 @@ public class WholeIO {
 	 * on error, in which case you can check the getLastException()
 	 * method for the exception that occurred. Tries to create any
 	 * enclosing directories that do not exist.
-	 * 
+	 *
 	 * @param file The file to write to
 	 * @param contents the string to write out
 	 * @return the success state
@@ -140,7 +140,7 @@ public class WholeIO {
 	 * Open the given filename for writing and dump the given
 	 * {@link String} into it. Throws {@link ResourceError}
 	 * if we fail.
-	 * 
+	 *
 	 * @param file The file to write to
 	 * @param contents the string to write out
 	 */
@@ -163,7 +163,7 @@ public class WholeIO {
 	/**
 	 * This is the same as {@link #write(File,String)},
 	 * except that this method allows appending to an existing file.
-	 * 
+	 *
 	 * @param file the file to write to
 	 * @param contents the string to write out
 	 * @param append whether or not to append to any existing file
@@ -172,7 +172,7 @@ public class WholeIO {
 	public boolean write(File file, String contents, boolean append) {
 		if (file.getParentFile() != null)
 			file.getParentFile().mkdirs();
-		
+
 		FileOutputStream fos = null;
 		try {
 			fos = new FileOutputStream(file, append);
@@ -241,7 +241,7 @@ public class WholeIO {
 	public IOException getLastException() {
 		return e;
 	}
-	
+
 	public String read(File file) {
 		InputStream is = null;
 		try {
@@ -293,8 +293,8 @@ public class WholeIO {
 		String result = read(path);
 		return result != null ? result.replaceAll("\r\n", "\n") : null;
 	}
-	
-	
+
+
 	/**
 	 * Read the contents of the given {@link File}, throwing a {@link ResourceError}
 	 * if we fail.
@@ -344,16 +344,16 @@ public class WholeIO {
 	 * and interpret it as a {@link String} trying to detect its character set.
 	 * Returns <code>null</code> on error, in which case you can check
 	 * the getLastException() method for the exception that occurred.
-	 * 
+	 *
 	 * @param stream the stream to read from
 	 * @return The contents of the file, or <code>null</code> on error.
 	 */
 	public String readString(InputStream stream) {
 		IntRef length = new IntRef(0);
 		byte[] bytes = readBinary(stream, length);
-		
+
 		if (bytes == null) return null;
-		
+
 		try {
 			IntRef start = new IntRef(0);
 			String charset = determineCharset(bytes, length.get(), start);
@@ -384,10 +384,10 @@ public class WholeIO {
 	 * as a sequence of bytes. This removes restrictions regarding invalid
 	 * code points that would potentially prevent reading a file's contents
 	 * as a String.
-	 * 
+	 *
 	 * This method returns <code>null</code> on error, in which case you can
 	 * check {@link #getLastException()} for the exception that occurred.
-	 * 
+	 *
 	 * @param stream the stream to read from
 	 * @return The binary contents of the file, or <code>null</code> on error.
 	 */
@@ -413,10 +413,10 @@ public class WholeIO {
 			throw new ResourceError("Couldn't read from stream", e);
 		return result;
 	}
-	
+
 	/**
 	 * Get the entire binary contents of a {@link File} as a sequence of bytes.
-	 * 
+	 *
 	 * @param file the file to read
 	 * @return the file's contents as a byte[] -- always non-null.
 	 * @throws ResourceError if an exception occurs during IO.
@@ -438,7 +438,7 @@ public class WholeIO {
 
 	/**
 	 * Get the entire binary contents of a {@link Path} as a sequence of bytes.
-	 * 
+	 *
 	 * @param path the path to read
 	 * @return the file's contents as a byte[] -- always non-null.
 	 * @throws ResourceError if an exception occurs during IO.
@@ -460,7 +460,7 @@ public class WholeIO {
 
 	/**
 	 * Get the entire binary contents of a {@link Path} as a sequence of bytes.
-	 * 
+	 *
 	 * @param path the path to read
 	 * @return the file's contents as a byte[] -- always non-null.
 	 */
@@ -476,7 +476,7 @@ public class WholeIO {
 			FileUtil.close(stream);
 		}
 	}
-	
+
 	private byte[] readBinary(InputStream stream, IntRef offsetHolder) {
 		try {
 			byte[] bytes = new byte[16384];
@@ -501,7 +501,7 @@ public class WholeIO {
 	/**
 	 * Safely attempt to double the length of an array.
 	 * @param array The array which want to be doubled
-	 * @return a new array that is longer than array 
+	 * @return a new array that is longer than array
 	 */
 	private byte[] safeArrayDouble(byte[] array) {
 		if (array.length  >= ArrayUtil.MAX_ARRAY_LENGTH) {
@@ -540,7 +540,7 @@ public class WholeIO {
 		}
 		return ret;
 	}
-	
+
 	private static int byteToInt(byte b) {
 		return b & 0xFF;
 	}

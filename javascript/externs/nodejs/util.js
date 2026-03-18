@@ -289,4 +289,3 @@ module.exports.deprecate = util.deprecate;
 util._extend = function(destination, source) {};
 
 module.exports._extend = util._extend;
-

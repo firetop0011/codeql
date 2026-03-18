@@ -12,8 +12,8 @@ the inheritance depth of a type is the length of a longest path in the inheritan
 </overview>
 
 <recommendation>
-<p>The depth of a type is an indication of how deeply nested a type is in a given design. 
-Very deep types can be an indication of over-engineering, whereas a system with predominantly shallow types 
+<p>The depth of a type is an indication of how deeply nested a type is in a given design.
+Very deep types can be an indication of over-engineering, whereas a system with predominantly shallow types
 may not be exploiting object-orientation to the full.</p>
 </recommendation>
 

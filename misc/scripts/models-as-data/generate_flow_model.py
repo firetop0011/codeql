@@ -127,7 +127,7 @@ Requirements: `codeql` should both appear on your path.
 
         generator.setenvironment(sys.argv[2], sys.argv[1], friendlyName)
         return generator
-    
+
 
     def runQuery(self, query):
         print("########## Querying " + query + "...")
@@ -172,7 +172,7 @@ Requirements: `codeql` should both appear on your path.
             neutralAddsTo = self.getAddsTo("CaptureNeutralModels.ql", helpers.neutralModelPredicate)
         else:
             neutralAddsTo = ""
-        
+
         return f"""# THIS FILE IS AN AUTO-GENERATED MODELS AS DATA FILE. DO NOT EDIT.
 # Definitions of models for the {self.friendlyname} framework.
 extensions:
@@ -202,7 +202,7 @@ extensions:
         if self.dryRun:
             print("Models as data extensions generated, but not written to file.")
             sys.exit(0)
-        
+
         if self.generateSinks or self.generateSinks or self.generateSummaries:
             self.save(content, self.frameworkTarget)
 

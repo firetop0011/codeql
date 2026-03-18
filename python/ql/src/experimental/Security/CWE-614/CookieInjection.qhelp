@@ -4,9 +4,9 @@
 <qhelp>
 
 <overview>
-<p>Constructing cookies from user input may allow an attacker to perform a Cookie Poisoning attack. 
-It is possible, however, to perform other parameter-like attacks through cookie poisoning techniques, 
-such as SQL Injection, Directory Traversal, or Stealth Commanding, etc. Additionally, 
+<p>Constructing cookies from user input may allow an attacker to perform a Cookie Poisoning attack.
+It is possible, however, to perform other parameter-like attacks through cookie poisoning techniques,
+such as SQL Injection, Directory Traversal, or Stealth Commanding, etc. Additionally,
 cookie injection may relate to attempts to perform Access of Administrative Interface.
 </p>
 </overview>

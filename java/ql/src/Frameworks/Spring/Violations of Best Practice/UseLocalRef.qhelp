@@ -6,7 +6,7 @@
 
 <overview>
 <p>
-If at all possible, refer to Spring beans in the same XML file using local references, that is <code>&lt;idref local="targetBean"&gt;</code>. This 
+If at all possible, refer to Spring beans in the same XML file using local references, that is <code>&lt;idref local="targetBean"&gt;</code>. This
 requires that the bean being referenced is in the same XML file, and is named using the <code>id</code> attribute. Using local references
 has the advantage of allowing reference errors to be detected during XML parsing, instead of during deployment or instantiation.
 </p>
@@ -17,13 +17,13 @@ From the Spring Framework Reference documentation on <code>idref</code> elements
 <blockquote>
 <p>
 [Using the <code>idref</code> tag in a <code>property</code> element] is preferable to [using the bean name in the property's <code>value</code> attribute], because using the <code>idref</code>
-tag allows the container to validate at deployment time that the referenced, named bean actually exists. In the second variation, no validation 
-is performed on the value that is passed to the [<code>name</code>] property of the client bean. Typos are only discovered (with most likely fatal results) 
-when the client bean is actually instantiated. If the client bean is a prototype bean, this typo and the resulting exception may only be 
+tag allows the container to validate at deployment time that the referenced, named bean actually exists. In the second variation, no validation
+is performed on the value that is passed to the [<code>name</code>] property of the client bean. Typos are only discovered (with most likely fatal results)
+when the client bean is actually instantiated. If the client bean is a prototype bean, this typo and the resulting exception may only be
 discovered long after the container is deployed.
 </p>
 <p>
-Additionally, if the referenced bean is in the same XML unit, and the bean name is the bean <code>id</code>, you can use the <code>local</code> attribute, which allows 
+Additionally, if the referenced bean is in the same XML unit, and the bean name is the bean <code>id</code>, you can use the <code>local</code> attribute, which allows
 the XML parser itself to validate the bean <code>id</code> earlier, at XML document parse time.
 </p>
 </blockquote>
@@ -39,7 +39,7 @@ rather than during instantiation.
 <example>
 
 <p>In the following example, the <code>shippingService</code> bean is shown using the <code>ref</code> element,
-which cannot be checked by the XML parser. The <code>orderService</code> bean is shown using the 
+which cannot be checked by the XML parser. The <code>orderService</code> bean is shown using the
 <code>idref</code> element, which allows the XML parser to find any errors at parse time.</p>
 
 <sample src="UseLocalRef.xml" />

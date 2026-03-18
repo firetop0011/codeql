@@ -44,7 +44,7 @@ No user-facing changes.
 
 ### Minor Analysis Improvements
 
-* Added dataflow sources for the [express-ws](https://www.npmjs.com/package/express-ws) library. 
+* Added dataflow sources for the [express-ws](https://www.npmjs.com/package/express-ws) library.
 
 ## 0.4.2
 
@@ -107,8 +107,8 @@ No user-facing changes.
   The types of some classes have been changed, and these changes may break existing code.
   Other classes and predicates have been renamed, in these cases the old name is still available as a deprecated feature.
 
-* The basetype of the following list of classes has changed from an expression to a dataflow node, and thus code using these classes might break. 
-  The fix to these breakages is usually to use `asExpr()` to get an expression from a dataflow node, or to use `.flow()` to get a dataflow node from an expression.  
+* The basetype of the following list of classes has changed from an expression to a dataflow node, and thus code using these classes might break.
+  The fix to these breakages is usually to use `asExpr()` to get an expression from a dataflow node, or to use `.flow()` to get a dataflow node from an expression.
    - DOM.qll#WebStorageWrite
    - CryptoLibraries.qll#CryptographicOperation
    - Express.qll#Express::RequestBodyAccess
@@ -160,7 +160,7 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Some classes/modules with upper-case acronyms in their name have been renamed to follow our style-guide. 
+* Some classes/modules with upper-case acronyms in their name have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### Major Analysis Improvements
@@ -169,7 +169,7 @@ No user-facing changes.
 
 ### Minor Analysis Improvements
 
-* A model for the `mermaid` library has been added. XSS queries can now detect flow through the `render` method of the `mermaid` library. 
+* A model for the `mermaid` library has been added. XSS queries can now detect flow through the `render` method of the `mermaid` library.
 
 ## 0.2.5
 
@@ -177,9 +177,9 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Many classes/predicates/modules with upper-case acronyms in their name have been renamed to follow our style-guide. 
+* Many classes/predicates/modules with upper-case acronyms in their name have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
-* The utility files previously in the `semmle.javascript.security.performance` package have been moved to the `semmle.javascript.security.regexp` package.  
+* The utility files previously in the `semmle.javascript.security.performance` package have been moved to the `semmle.javascript.security.regexp` package.
   The previous files still exist as deprecated aliases.
 
 ### Minor Analysis Improvements
@@ -218,19 +218,19 @@ No user-facing changes.
 
 ### Minor Analysis Improvements
 
-* The `isLibaryFile` predicate from `ClassifyFiles.qll` has been renamed to `isLibraryFile` to fix a typo. 
+* The `isLibaryFile` predicate from `ClassifyFiles.qll` has been renamed to `isLibraryFile` to fix a typo.
 
 ## 0.1.2
 
 ### Deprecated APIs
 
-* The `ReflectedXss`, `StoredXss`, `XssThroughDom`, and `ExceptionXss` modules from `Xss.qll` have been deprecated.  
+* The `ReflectedXss`, `StoredXss`, `XssThroughDom`, and `ExceptionXss` modules from `Xss.qll` have been deprecated.
   Use the `Customizations.qll` file belonging to the query instead.
 
 ### Minor Analysis Improvements
 
-* The [cash](https://github.com/fabiospampinato/cash) library is now modelled as an alias for JQuery.  
-  Sinks and sources from cash should now be handled by all XSS queries. 
+* The [cash](https://github.com/fabiospampinato/cash) library is now modelled as an alias for JQuery.
+  Sinks and sources from cash should now be handled by all XSS queries.
 * Added the `Selection` api as a DOM text source in the `js/xss-through-dom` query.
 * The security queries now recognize drag and drop data as a source, enabling the queries to flag additional alerts.
 * The security queries now recognize ClipboardEvent function parameters as a source, enabling the queries to flag additional alerts.
@@ -252,11 +252,11 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Some predicates from `DefUse.qll`, `DataFlow.qll`, `TaintTracking.qll`, `DOM.qll`, `Definitions.qll` that weren't used by any query have been deprecated. 
+* Some predicates from `DefUse.qll`, `DataFlow.qll`, `TaintTracking.qll`, `DOM.qll`, `Definitions.qll` that weren't used by any query have been deprecated.
   The documentation for each predicate points to an alternative.
-* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide. 
+* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
-* Some modules that started with a lowercase letter have been renamed to follow our style-guide. 
+* Some modules that started with a lowercase letter have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### Minor Analysis Improvements

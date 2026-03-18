@@ -9,7 +9,7 @@
 	<property name="registry">
 		<ref bean="basicRegistry"/>
 	</property>
-	
+
 	<property name="shippingProvider" value="Federal Parcel Service"/>
 </bean>
 
@@ -23,6 +23,6 @@
 	<property name="registry">
 		<ref bean="basicRegistry"/>
 	</property>
-	
+
 	<property name="orderReference" value="8675309"/>
 </bean>

@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>
-Efferent coupling is the number of outgoing dependencies for each class. In other words, it is the 
+Efferent coupling is the number of outgoing dependencies for each class. In other words, it is the
 number of other types on which each class depends.
 </p>
 
@@ -32,8 +32,8 @@ You can reduce efferent coupling by splitting up a class so that each part depen
 
 <sample src="TEfferentCoupling.java" />
 
-<p>However, the methods that use <code>Y</code> do not use <code>Z</code>, and the methods 
-that use <code>Z</code> do not use <code>Y</code>. Therefore, the class can be split into 
+<p>However, the methods that use <code>Y</code> do not use <code>Z</code>, and the methods
+that use <code>Z</code> do not use <code>Y</code>. Therefore, the class can be split into
 two classes, one of which depends only on <code>Y</code> and the other only on <code>Z</code></p>
 
 <sample src="TEfferentCouplingGood.java" />

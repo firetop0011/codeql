@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
   <p>
-  When eras change, calling a date and time instantiation method that relies on the default era can produce an ambiguous date. 
+  When eras change, calling a date and time instantiation method that relies on the default era can produce an ambiguous date.
   In the example below, the call to the <code>JapaneseCalendar.ToDateTime</code> method that uses the default era returns different dates depending on whether or not the new era has been defined in the registry.
   </p>
 </overview>

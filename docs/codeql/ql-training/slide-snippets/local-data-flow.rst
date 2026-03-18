@@ -8,7 +8,7 @@ Data flow analysis
   - Nodes of the data flow graph.
 
 - Various predicates represent flow between these nodes.
-  
+
   - Edges of the data flow graph.
 
 .. note::
@@ -36,13 +36,13 @@ Data flow graphs
          }
          return -1;
       }
- 
+
 .. container:: column-right
 
   Data flow graph:
-   
+
       .. graphviz::
-         
+
             digraph {
             graph [ dpi = 1000 ]
             node [shape=polygon,sides=4,color=blue4,style="filled,rounded",   fontname=consolas,fontcolor=white]
@@ -51,11 +51,11 @@ Data flow graphs
             c [label=<x<BR /><FONT POINT-SIZE="10">ExprNode</FONT>>]
             d [label=<x<BR /><FONT POINT-SIZE="10">ExprNode</FONT>>]
             e [label=<y<BR /><FONT POINT-SIZE="10">ExprNode</FONT>>]
-   
+
             a -> b
             b -> {c, d}
             c -> e
-   
+
          }
 
 Local vs global data flow
@@ -95,14 +95,14 @@ To use the data flow library, add the following import:
      predicate localFlow(Node source, Node sink) {
                localFlowStep*(source, sink)
             }
-     ... 
+     ...
    }
 
 So all references will need to be qualified (that is, ``DataFlow::Node``)
 
 .. note::
 
-  A **query library** is file with the extension ``.qll``. Query libraries do not contain a query clause, but may contain modules, classes, and predicates. 
+  A **query library** is file with the extension ``.qll``. Query libraries do not contain a query clause, but may contain modules, classes, and predicates.
   For further information on the data flow libraries, see the following links:
 
   - `Java data flow library <https://codeql.github.com/codeql-standard-libraries/java/semmle/code/java/dataflow/DataFlow.qll/module.DataFlow.html>`__
@@ -143,7 +143,7 @@ Taint tracking
 - Examples:
 
   .. code-block:: java
-  
+
     sink = source;        // source -> sink: data and taint
     strcat(sink, source); // source -> sink: taint, not data
 
@@ -154,7 +154,7 @@ Taint tracking
   Taint tracking can be thought of as another type of data flow graph. It usually extends the standard data flow graph for a problem by adding edges between nodes where one one node influences or *taints* another.
 
   The taint-tracking API is almost identical to that of the local data flow. All we need to do to switch to taint tracking is ``import semmle.code.<language>.dataflow.TaintTracking`` instead of ``semmle.code.<language>.dataflow.DataFlow``, and instead of using ``localFlow``, we use ``localTaint``.
-  
-  - `Java taint-tracking library <https://codeql.github.com/codeql-standard-libraries/java/semmle/code/java/dataflow/TaintTracking.qll/module.TaintTracking.html>`__ 
-  - `C/C++ taint-tracking library <https://codeql.github.com/codeql-standard-libraries/cpp/semmle/code/cpp/dataflow/TaintTracking.qll/module.TaintTracking.html>`__ 
-  - `C# taint-tracking library <https://codeql.github.com/codeql-standard-libraries/csharp/semmle/code/csharp/dataflow/TaintTracking.qll/module.TaintTracking.html>`__ 
+
+  - `Java taint-tracking library <https://codeql.github.com/codeql-standard-libraries/java/semmle/code/java/dataflow/TaintTracking.qll/module.TaintTracking.html>`__
+  - `C/C++ taint-tracking library <https://codeql.github.com/codeql-standard-libraries/cpp/semmle/code/cpp/dataflow/TaintTracking.qll/module.TaintTracking.html>`__
+  - `C# taint-tracking library <https://codeql.github.com/codeql-standard-libraries/csharp/semmle/code/csharp/dataflow/TaintTracking.qll/module.TaintTracking.html>`__

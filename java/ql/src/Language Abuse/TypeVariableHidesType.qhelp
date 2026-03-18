@@ -20,7 +20,7 @@ imported class.</p>
 </recommendation>
 <example>
 
-<p>In the following example, the type <code>java.util.Map.Entry</code> is imported at the top of the 
+<p>In the following example, the type <code>java.util.Map.Entry</code> is imported at the top of the
 file, but the class <code>Mapping</code> is defined with two type variables,
 <code>Key</code> and <code>Entry</code>. Uses of <code>Entry</code> within the
 <code>Mapping</code> class refer to the type variable, and not the imported

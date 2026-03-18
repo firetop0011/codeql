@@ -5,11 +5,11 @@
 
 <overview>
 <p>
-Creating a <code>StringBuilder</code> in the body of a loop is inefficient. 
-It is more efficient to create the <code>StringBuilder</code> before the loop and 
-reuse the same instance for each iteration. Use the 
+Creating a <code>StringBuilder</code> in the body of a loop is inefficient.
+It is more efficient to create the <code>StringBuilder</code> before the loop and
+reuse the same instance for each iteration. Use the
 <code>Clear</code> method to reset the <code>StringBuilder</code>, which reuses
-its internal buffer and is more efficient. This is particularly important in 
+its internal buffer and is more efficient. This is particularly important in
 performance-critical code.</p>
 </overview>
 

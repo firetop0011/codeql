@@ -5,10 +5,10 @@
 <overview>
 <p>
   When an Android application wants to access data in a content provider, it uses the <code>ContentResolver</code>
-  object. <code>ContentResolver</code>s communicate with an instance of a class that implements the 
+  object. <code>ContentResolver</code>s communicate with an instance of a class that implements the
   <code>ContentProvider</code> interface via URIs with the <code>content://</code> scheme.
 
-  The authority part (the first path segment) of the URI, passed as parameter to the <code>ContentResolver</code>, 
+  The authority part (the first path segment) of the URI, passed as parameter to the <code>ContentResolver</code>,
   determines which content provider is contacted for the operation. Specific operations that act on files also
   support the <code>file://</code> scheme, in which case the local filesystem is queried instead.
 

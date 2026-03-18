@@ -986,7 +986,7 @@ case @expr.kind of
 | 109 = @local_function_invocation_expr
 | 110 = @ref_expr
 | 111 = @discard_expr
-/* C# 8.0 */ 
+/* C# 8.0 */
 | 112 = @range_expr
 | 113 = @index_expr
 | 114 = @switch_expr

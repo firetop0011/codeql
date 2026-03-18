@@ -4,13 +4,13 @@ public class CovariantCompareTo {
 			return -1;
 		}
 	}
-	
+
 	static class Sub extends Super {
 		public int compareTo(Sub rhs) {  // Definition of compareTo uses a different parameter type
 			return 0;
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		Super a = new Sub();
 		Super b = new Sub();

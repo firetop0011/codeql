@@ -6,12 +6,12 @@
 
 <overview>
 <p>
-This rule finds blocks of code that have too many complex statements, 
+This rule finds blocks of code that have too many complex statements,
 such as branching statements (<code>if</code>, <code>switch</code>), and loops (<code>for</code>, <code>while</code>).
 </p>
 
 <p>
-Blocks with too many consecutive statements are candidates for refactoring. 
+Blocks with too many consecutive statements are candidates for refactoring.
 Only complex statements are counted here (eg. for, while, switch ...).
 The top-level logic will be clearer if each complex statement is extracted to a function.
 </p>

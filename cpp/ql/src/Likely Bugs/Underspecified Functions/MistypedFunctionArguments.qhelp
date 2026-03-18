@@ -10,7 +10,7 @@
  to behave unpredictably.</p>
 
 <p>This may indicate that an incorrect function is being called, or that the
- signature (parameter list and parameter types) of the called function 
+ signature (parameter list and parameter types) of the called function
  is not known to the author.</p>
 
 </overview>

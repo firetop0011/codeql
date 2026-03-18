@@ -6,4 +6,3 @@
 + semmlecode-cpp-queries/jsf/4.10 Classes/AV Rule 95.ql: /Critical/Critical_Readability/JSF # Redefined default parameter
 
 @import ../c/code-review
-

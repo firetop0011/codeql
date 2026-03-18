@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>A <em>hub class</em> is a class that depends on many other classes, and on which many other classes 
+<p>A <em>hub class</em> is a class that depends on many other classes, and on which many other classes
 depend.</p>
 
 <p>For the purposes of this rule, a <em>dependency</em> is any use of one class in another.
@@ -19,11 +19,11 @@ Examples include:</p>
 </ul>
 
 <p>A class can be regarded as a hub class when both the incoming dependencies and the outgoing
-source dependencies are particularly high. (Outgoing source dependencies are dependencies on other 
+source dependencies are particularly high. (Outgoing source dependencies are dependencies on other
 source classes, rather than library classes like <code>java.lang.Object</code>.)</p>
 
 <p>It is undesirable to have many hub classes because they are extremely difficult to maintain. This is
-because many other classes depend on a hub class, and so the other classes have to be tested and 
+because many other classes depend on a hub class, and so the other classes have to be tested and
 possibly adapted after each change to the hub class. Also, when one of a hub class's direct
 dependencies changes, the behavior of the hub class and all of its dependencies has to be
 checked and possibly adapted.</p>

@@ -16,12 +16,12 @@ throughout your code.
 </li>
 
 <li>
-They introduce unwanted dependencies on concrete classes. Code cannot be written only in terms of an interface but 
+They introduce unwanted dependencies on concrete classes. Code cannot be written only in terms of an interface but
 must instead be written considering all of the different special cases.
 </li>
 
 <li>
-They can be error-prone - it is easy to test for a base type before a derived type, resulting in a failure to 
+They can be error-prone - it is easy to test for a base type before a derived type, resulting in a failure to
 execute the code handling the derived type.
 </li>
 
@@ -37,8 +37,8 @@ There are a number of different possible solutions to this problem:
 <ul>
 <li>
 <strong>Polymorphism</strong>. You can add a virtual method to the type hierarchy and put the segments of code to be called
-in the relevant override for each concrete class. This is a good solution when: (a) you can change the type hierarchy 
-and (b) the operation being implemented is core functionality that the types should implement. If you implement this 
+in the relevant override for each concrete class. This is a good solution when: (a) you can change the type hierarchy
+and (b) the operation being implemented is core functionality that the types should implement. If you implement this
 solution then you must be careful not to introduce unwanted dependencies. If the operation depends on entities
 that themselves depend on the type hierarchy, then you cannot move the operation to the type hierarchy without creating a dependency cycle.
 </li>
@@ -46,9 +46,9 @@ that themselves depend on the type hierarchy, then you cannot move the operation
 <li>
 <strong>The visitor pattern</strong>. You can introduce a visitor interface containing a visit method for each type in
 the type hierarchy, and add an <code>accept</code> method to each type in the hierarchy that takes a visitor as its parameter.
-The <code>accept</code> method calls the visit method of the visitor on <code>this</code>. Concrete visitors then implement the 
-interface and process each specific type as necessary. This is a good solution when: (a) you can change the type hierarchy 
-and (b) the type hierarchy should not know about the operation being implemented (either to avoid dependency 
+The <code>accept</code> method calls the visit method of the visitor on <code>this</code>. Concrete visitors then implement the
+interface and process each specific type as necessary. This is a good solution when: (a) you can change the type hierarchy
+and (b) the type hierarchy should not know about the operation being implemented (either to avoid dependency
 or because it is not core functionality for the types in the hierarchy). It is also useful when you want to provide
 multiple operations with the same structure, on the same set of types, and you want the types themselves to control the way
 that the operation is structured. For example, "visit this tree using an in-order walk and apply the operation to each
@@ -74,9 +74,9 @@ cannot change the type hierarchy, for example, because it is third-party code.
 <references>
 
 
-  <li>D. Flanagan, <em>Java in a Nutshell: A Desktop Quick Reference</em>.  
+  <li>D. Flanagan, <em>Java in a Nutshell: A Desktop Quick Reference</em>.
     O'Reilly Media, 1997.</li>
-    <li>E. Gamma, R. Helm, R. Johnson, J. Vlissides, <em>Design patterns: elements of reusable 
+    <li>E. Gamma, R. Helm, R. Johnson, J. Vlissides, <em>Design patterns: elements of reusable
     object-oriented software</em>. Addison-Wesley Longman Publishing Co., Inc. Boston, MA, 1995.</li>
 
 </references>

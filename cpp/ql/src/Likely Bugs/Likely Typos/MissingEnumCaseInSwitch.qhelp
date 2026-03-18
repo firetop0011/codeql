@@ -5,8 +5,8 @@
 
 
 <overview>
-<p>This rule finds <code>switch</code> statements that switch on values of an enumeration type 
-but do not provide cases for all the enumeration constants or a default case. This is an 
+<p>This rule finds <code>switch</code> statements that switch on values of an enumeration type
+but do not provide cases for all the enumeration constants or a default case. This is an
 indication that there may be cases unhandled by the <code>switch</code> statement.</p>
 
 </overview>

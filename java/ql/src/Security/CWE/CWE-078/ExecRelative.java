@@ -2,7 +2,7 @@ class Test {
     public static void main(String[] args) {
         // BAD: relative path
         Runtime.getRuntime().exec("make");
-        
+
         // GOOD: absolute path
         Runtime.getRuntime().exec("/usr/bin/make");
 

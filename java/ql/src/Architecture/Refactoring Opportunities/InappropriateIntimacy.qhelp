@@ -7,14 +7,14 @@
 <overview>
 <p><em>Inappropriate intimacy</em> is an anti-pattern that describes a pair of otherwise unrelated classes
 that are too tightly coupled: each class uses a significant number of methods and fields of
-the other. This makes both classes difficult to maintain, change and understand. Inappropriate 
-intimacy is the same as the "feature envy" anti-pattern but in both directions: each class is 
+the other. This makes both classes difficult to maintain, change and understand. Inappropriate
+intimacy is the same as the "feature envy" anti-pattern but in both directions: each class is
 "envious" of some functionality or data defined in the other class.</p>
 
 </overview>
 <recommendation>
 
-<p>The solution might be as simple as moving some misplaced methods to their rightful place, or 
+<p>The solution might be as simple as moving some misplaced methods to their rightful place, or
 perhaps some tangled bits of code need to be extracted to their own methods first before being moved.</p>
 
 <p>Sometimes the entangled parts (both fields and methods) indicate a

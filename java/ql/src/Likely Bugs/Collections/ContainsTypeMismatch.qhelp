@@ -5,11 +5,11 @@
 
 
 <overview>
-<p>The <code>contains</code> method of the <code>Collection</code> interface 
-has an argument of type <code>Object</code>. Therefore, you can try to check if an object 
-of any type is a member of a collection, regardless of the collection's element type. However, 
-although you can call <code>contains</code> with an argument of a different type than that of the collection, 
-it is unlikely that the collection actually 
+<p>The <code>contains</code> method of the <code>Collection</code> interface
+has an argument of type <code>Object</code>. Therefore, you can try to check if an object
+of any type is a member of a collection, regardless of the collection's element type. However,
+although you can call <code>contains</code> with an argument of a different type than that of the collection,
+it is unlikely that the collection actually
 contains an object of this type.
 </p>
 
@@ -26,12 +26,12 @@ where the argument may also have type <code>Object</code>.
 </recommendation>
 <example>
 
-<p>In the following example, although the argument to <code>contains</code> is an integer, the code 
-does not result in a type error because the argument does not have to match the type of the elements 
-of <code>list</code>. However, the argument is unlikely to be found (and the body of the 
-<code>if</code> statement is therefore not executed), so it is probably a typographical error: the 
+<p>In the following example, although the argument to <code>contains</code> is an integer, the code
+does not result in a type error because the argument does not have to match the type of the elements
+of <code>list</code>. However, the argument is unlikely to be found (and the body of the
+<code>if</code> statement is therefore not executed), so it is probably a typographical error: the
 argument should be enclosed in quotation marks.
-</p> 
+</p>
 
 <sample src="ContainsTypeMismatch.java" />
 

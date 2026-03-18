@@ -5,9 +5,9 @@
 <overview>
 <p>This metric measures the number of global variables in a file. This includes both public and file-local global variables.</p>
 
-<p>Globals in general should be avoided as it is too easy for them to be modified in other parts of the code. 
+<p>Globals in general should be avoided as it is too easy for them to be modified in other parts of the code.
 It also pollutes the name space and public globals expose internal representation. This is particularly
-important in multi-threaded applications as every global is likely going to require some synchronization 
+important in multi-threaded applications as every global is likely going to require some synchronization
 mechanism to ensure that they are accessed and written in the correct order.</p>
 
 </overview>

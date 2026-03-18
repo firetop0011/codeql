@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>Checking whether the result of a bitwise operation is greater than zero may yield unexpected results. 
+<p>Checking whether the result of a bitwise operation is greater than zero may yield unexpected results.
 </p>
 
 </overview>
@@ -16,18 +16,18 @@
 </recommendation>
 <example>
 
-<p>In the following example, the expression assigned to variable <code>bad</code> is <i>not</i> a robust way to check 
-that the <code>n</code>th bit of <code>x</code> is set. 
+<p>In the following example, the expression assigned to variable <code>bad</code> is <i>not</i> a robust way to check
+that the <code>n</code>th bit of <code>x</code> is set.
 With the given values of <code>x</code> (all bits are set) and <code>n</code>,
-the expression <code>x &amp; (1&lt;&lt;n)</code> has the value <code>-2147483648</code>, 
-and the variable <code>bad</code> is assigned <code>false</code>, 
+the expression <code>x &amp; (1&lt;&lt;n)</code> has the value <code>-2147483648</code>,
+and the variable <code>bad</code> is assigned <code>false</code>,
 even though the 31st bit of <code>x</code> is, in fact, set.
 </p>
 
 <sample src="BitwiseSignCheck.java" />
 
-<p>In the following example, the expression assigned to variable <code>good</code> is a robust way to check that the 
-<code>n</code>th bit of <code>x</code> is set. With the given values of <code>x</code> and 
+<p>In the following example, the expression assigned to variable <code>good</code> is a robust way to check that the
+<code>n</code>th bit of <code>x</code> is set. With the given values of <code>x</code> and
 <code>n</code>, the variable <code>good</code> is assigned <code>true</code>.</p>
 
 <sample src="BitwiseSignCheckGood.java" />

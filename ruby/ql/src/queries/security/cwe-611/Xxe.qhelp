@@ -15,7 +15,7 @@ and out-of-band data retrieval techniques may allow attackers to steal sensitive
 <p>
 The easiest way to prevent XXE attacks is to disable external entity handling when
 parsing untrusted data. How this is done depends on the library being used. Note that some
-libraries, such as <code>rexml</code>, <code>nokogiri</code> and <code>libxml-ruby</code>, 
+libraries, such as <code>rexml</code>, <code>nokogiri</code> and <code>libxml-ruby</code>,
 disable entity expansion by default, so unless you have explicitly enabled entity expansion,
 no further action needs to be taken.
 </p>
@@ -31,7 +31,7 @@ the parser is invoked with the <code>noent</code> option set:
 
 <p>
 To guard against XXE attacks, the <code>noent</code> option should be omitted or cleared
-(e.g. using <code>nonoent</code>). This means that no entity expansion is undertaken at all, 
+(e.g. using <code>nonoent</code>). This means that no entity expansion is undertaken at all,
 not even for standard internal entities such as <code>&amp;amp;</code> or <code>&amp;gt;</code>.
 If desired, these entities can be expanded in a separate step using utility functions.
 </p>

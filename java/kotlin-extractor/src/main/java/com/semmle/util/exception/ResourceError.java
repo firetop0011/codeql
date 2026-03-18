@@ -16,7 +16,7 @@ public class ResourceError extends NestedError {
 	public ResourceError(Throwable throwable) {
 		super(throwable);
 	}
-	
+
 	public ResourceError(String message, Throwable throwable) {
 		super(message,throwable);
 	}
@@ -26,5 +26,5 @@ public class ResourceError extends NestedError {
 		// The message here should always be meaningful enough that we can return that.
 		return getMessage() != null ? getMessage() : super.toString();
 	}
-	
+
 }

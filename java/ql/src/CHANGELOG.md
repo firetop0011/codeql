@@ -137,14 +137,14 @@ No user-facing changes.
 * A new query "Use of RSA algorithm without OAEP" (`java/rsa-without-oaep`) has been added. This query finds uses of RSA encryption that don't use the OAEP scheme.
 * Added a new query, `java/android/debuggable-attribute-enabled`, to detect if the `android:debuggable` attribute is enabled in the Android manifest.
 * The query "Using a static initialization vector for encryption" (`java/static-initialization-vector`) has been promoted from experimental to the main query pack. This query was originally [submitted as an experimental query by @artem-smotrakov](https://github.com/github/codeql/pull/6357).
-* A new query `java/partial-path-traversal` finds partial path traversal vulnerabilities resulting from incorrectly using 
-`String#startsWith` to compare canonical paths. 
-* Added a new query, `java/suspicious-regexp-range`, to detect character ranges in regular expressions that seem to match 
+* A new query `java/partial-path-traversal` finds partial path traversal vulnerabilities resulting from incorrectly using
+`String#startsWith` to compare canonical paths.
+* Added a new query, `java/suspicious-regexp-range`, to detect character ranges in regular expressions that seem to match
   too many characters.
 
 ### Query Metadata Changes
 
-* The queries `java/redos` and `java/polynomial-redos` now have a tag for CWE-1333. 
+* The queries `java/redos` and `java/polynomial-redos` now have a tag for CWE-1333.
 
 ### Minor Analysis Improvements
 
@@ -175,7 +175,7 @@ No user-facing changes.
 
 ### New Queries
 
-* A new query "Improper verification of intent by broadcast receiver" (`java/improper-intent-verification`) has been added. 
+* A new query "Improper verification of intent by broadcast receiver" (`java/improper-intent-verification`) has been added.
   This query finds instances of Android `BroadcastReceiver`s that don't verify the action string of received intents when registered
   to receive system intents.
 
@@ -192,7 +192,7 @@ No user-facing changes.
 ### New Queries
 
 * Two new queries "Inefficient regular expression" (`java/redos`) and "Polynomial regular expression used on uncontrolled data" (`java/polynomial-redos`) have been added.
-These queries help find instances of Regular Expression Denial of Service vulnerabilities. 
+These queries help find instances of Regular Expression Denial of Service vulnerabilities.
 
 ### Minor Analysis Improvements
 
@@ -205,7 +205,7 @@ These queries help find instances of Regular Expression Denial of Service vulner
 
 ### Query Metadata Changes
 
-* Query `java/predictable-seed` now has a tag for CWE-337. 
+* Query `java/predictable-seed` now has a tag for CWE-337.
 
 ### Minor Analysis Improvements
 
@@ -229,7 +229,7 @@ and no longer requires its sinks to be `MethodAccess`es.
 ### Minor Analysis Improvements
 
 * Fixed "Local information disclosure in a temporary directory" (`java/local-temp-file-or-directory-information-disclosure`) to resolve false-negatives when OS isn't properly used as logical guard.
-* The `SwitchCase.getRuleExpression()` predicate now gets expressions for case rules with an expression on the right-hand side of the arrow belonging to both `SwitchStmt` and `SwitchExpr`, and the corresponding `getRuleStatement()` no longer returns an `ExprStmt` in either case. Previously `SwitchStmt` and `SwitchExpr` behaved differently in 
+* The `SwitchCase.getRuleExpression()` predicate now gets expressions for case rules with an expression on the right-hand side of the arrow belonging to both `SwitchStmt` and `SwitchExpr`, and the corresponding `getRuleStatement()` no longer returns an `ExprStmt` in either case. Previously `SwitchStmt` and `SwitchExpr` behaved differently in
 this respect.
 
 ## 0.0.13

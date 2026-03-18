@@ -19,7 +19,7 @@ subclass.</p>
 <example>
 <p>In the following example, the programmer unintentionally added an <code>age</code> field to <code>Employee</code>, which
 hides the <code>age</code> field in <code>Person</code>. The constructor in <code>Person</code> sets the <code>age
-</code> field in <code>Person</code> to 20 but the <code>age</code> field in <code>Employee</code>  
+</code> field in <code>Person</code> to 20 but the <code>age</code> field in <code>Employee</code>
 is still 0. This means that the program outputs 0, which is probably not what was intended.</p>
 <sample src="FieldMasksSuperField.java" />
 <p>To fix this, delete the declaration of <code>age</code> on line 11.</p>

@@ -65,7 +65,7 @@ URL: https://code.google.com/p/io-2012-slides
   <link rel="stylesheet" href="{{ pathto('_static/' + theme_custom_css, 1) }}"
         type="text/css" />
   {% endif %}
-  
+
   {%- for cssfile in css_files %}
   <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {%- endfor %}
@@ -128,7 +128,7 @@ URL: https://code.google.com/p/io-2012-slides
     <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
     {%- endif %}
 {%- endblock %}
-{%- block extrahead %} 
+{%- block extrahead %}
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Work+Sans&display=swap' rel='stylesheet'>
 {% endblock %}
@@ -150,7 +150,7 @@ URL: https://code.google.com/p/io-2012-slides
 
 <script type="text/javascript">
 
-//insert info buttons on slides that have additional notes 
+//insert info buttons on slides that have additional notes
   $(".admonition.note").before("<button id='extra-notes'>&#9432;</button>");
   $(".admonition-title").before("<button id='close-notes'>&times;</button>");
   $(document).ready(function() {

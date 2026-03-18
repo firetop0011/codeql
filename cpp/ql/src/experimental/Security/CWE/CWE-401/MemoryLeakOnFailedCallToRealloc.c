@@ -6,7 +6,7 @@ if (currentSize < newSize)
 
 
 
-// GOOD: this way we will exclude possible memory leak 
+// GOOD: this way we will exclude possible memory leak
 unsigned char * tmp;
 if (currentSize < newSize)
 {
@@ -15,6 +15,6 @@ if (currentSize < newSize)
 if (tmp == NULL)
 {
 	free(buffer);
-} 
+}
 else
 	buffer = tmp;

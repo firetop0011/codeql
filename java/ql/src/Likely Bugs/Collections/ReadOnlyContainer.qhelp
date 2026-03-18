@@ -7,7 +7,7 @@
 <p>
 A method that queries the contents of a collection or map (such as <code>containsKey</code>
 or <code>isEmpty</code>) is invoked on an object that is known to be empty. Such method
-calls do not return interesting results, and may indicate missing code or a logic error. 
+calls do not return interesting results, and may indicate missing code or a logic error.
 </p>
 
 </overview>
@@ -27,7 +27,7 @@ duplicate elements. It maintains a collection <code>seen</code>, which is intend
 all the elements seen so far in traversing the array. If the current element is already
 contained in that collection then the method returns <code>true</code>, indicating that a
 duplicate has been found.
-</p> 
+</p>
 
 <p>
 Note, however, that no elements are ever actually added to <code>seen</code>, so the method always

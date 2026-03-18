@@ -13,7 +13,7 @@ void pushStrings(char *firstString, ...)
 	{
 		// push the string
 		pushString(arg);
-	
+
 		// move on to the next input
 		arg = va_arg(args, char *);
 	}
@@ -24,7 +24,7 @@ void pushStrings(char *firstString, ...)
 void badFunction()
 {
 	pushStrings("hello", "world", NULL); // OK
-	
+
 	pushStrings("apple", "pear", "banana", NULL); // OK
 
 	pushStrings("car", "bus", "train"); // BAD, not terminated with the expected NULL

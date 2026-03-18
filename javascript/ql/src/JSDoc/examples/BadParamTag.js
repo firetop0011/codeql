@@ -2,7 +2,7 @@
  * A message.
  *
  * @constructor
- * 
+ *
  * @param title
  * @param text
  */

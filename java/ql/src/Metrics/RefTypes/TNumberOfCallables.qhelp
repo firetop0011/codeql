@@ -11,8 +11,8 @@ methods in the type itself.
 
 <p>
 A class with too many methods is generally trying to do too much, either at
-the interface or implementation level or both. It is common for the set of 
-operations such a class provides to be diverse and wide-ranging, making it 
+the interface or implementation level or both. It is common for the set of
+operations such a class provides to be diverse and wide-ranging, making it
 difficult for readers to understand. Such
 classes often lack cohesion and are prime candidates for refactoring.
 </p>

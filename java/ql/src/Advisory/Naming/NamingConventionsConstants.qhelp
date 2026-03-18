@@ -13,7 +13,7 @@ naming conventions, which decreases code readability. For example, <code>Min_Wid
 <recommendation>
 
 <p>
-Use uppercase letters throughout a static, final field name, and use underscores to 
+Use uppercase letters throughout a static, final field name, and use underscores to
 separate words within the field name. For example, <code>MIN_WIDTH</code>.
 </p>
 

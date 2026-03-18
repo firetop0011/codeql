@@ -528,4 +528,3 @@ case @error.kind of
 | 1 = @listerror
 | 2 = @parseerror
 | 3 = @typeerror;
-

@@ -11,7 +11,7 @@ The Enterprise JavaBeans 3.0 core specification, Section 21.1.2, states:
 
 <blockquote>
 <p>
-An enterprise bean must not use the <code>java.io</code> package to attempt to access files and 
+An enterprise bean must not use the <code>java.io</code> package to attempt to access files and
 directories in the file system.
 </p>
 <p>

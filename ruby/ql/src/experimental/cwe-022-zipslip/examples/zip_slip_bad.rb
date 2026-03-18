@@ -17,5 +17,5 @@ class FilesController < ActionController::Base
         entry.read
       end
     end
-  end  
+  end
 end

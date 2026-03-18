@@ -7,4 +7,3 @@ def incorrect_except_order(val):
         print ("Exception")
     except AttributeError:
         print ("AttributeError")
-        

@@ -9,6 +9,6 @@ int sayHello(uint32_t userId)
 	sprintf(buffer, "Hello, user %d!", userId);
 
 	MessageBox(hWnd, buffer, "New Message", MB_OK);
-	
+
 	return SUCCESS;
 }

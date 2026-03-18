@@ -15,7 +15,7 @@ suggests a logical error, so it is not possible to suggest a general fix.</p>
 
 </recommendation>
 <example>
-<p>In this example the <code>__init__</code> method contains a yield expression. This is 
+<p>In this example the <code>__init__</code> method contains a yield expression. This is
 not logical in the context of an initializer.</p>
 <sample src="InitIsGenerator.py" />
 

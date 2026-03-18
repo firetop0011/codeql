@@ -15,7 +15,7 @@ use the same lock.
 
 </p></recommendation>
 <example>
-<p>The following example uses a <code>private readonly</code> 
+<p>The following example uses a <code>private readonly</code>
 variable called <code>mutex</code> to use in the <code>lock</code> statement.</p>
 
 <sample src="LockThis.cs" />

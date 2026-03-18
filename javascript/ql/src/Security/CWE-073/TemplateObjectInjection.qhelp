@@ -4,31 +4,31 @@
 <qhelp>
 <overview>
 <p>
-Directly using user-controlled objects as arguments to template engines might allow an attacker to do 
-local file reads or even remote code execution. 
+Directly using user-controlled objects as arguments to template engines might allow an attacker to do
+local file reads or even remote code execution.
 </p>
 </overview>
 
 <recommendation>
 <p>
-Avoid using user-controlled objects as arguments to a template engine. Instead, construct the object explicitly with 
+Avoid using user-controlled objects as arguments to a template engine. Instead, construct the object explicitly with
 the specific properties needed by the template.
 </p>
 </recommendation>
 
 <example>
 <p>
-In the example below a server uses the user-controlled <code>profile</code> object to 
-render the <code>index</code> template.  
+In the example below a server uses the user-controlled <code>profile</code> object to
+render the <code>index</code> template.
 </p>
 <sample src="examples/TemplateObjectInjection.js" />
 <p>
-However, if an attacker adds a <code>layout</code> property to the <code>profile</code> object then 
+However, if an attacker adds a <code>layout</code> property to the <code>profile</code> object then
 the server will load the file specified by the <code>layout</code> property, thereby allowing an attacker
 to do local file reads.
 </p>
 <p>
-The fix is to have the server construct the object, and only add the properties that are needed by the template. 
+The fix is to have the server construct the object, and only add the properties that are needed by the template.
 </p>
 <sample src="examples/TemplateObjectInjection_fixed.js" />
 </example>

@@ -19,7 +19,7 @@
     <p>
       In general, using user input to determine Spring view name should be avoided.
       If user input must be included in the expression, the controller can be annotated by
-      a <code>@ResponseBody</code> annotation. In this case, Spring Framework does not interpret 
+      a <code>@ResponseBody</code> annotation. In this case, Spring Framework does not interpret
       it as a view name, but just returns this string in HTTP Response. The same applies to using
       a <code>@RestController</code> annotation on a class, as internally it inherits <code>@ResponseBody</code>.
     </p>

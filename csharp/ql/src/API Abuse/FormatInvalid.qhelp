@@ -40,7 +40,7 @@ should be taken into account:
     Change the format string to use the highlighted argument, or remove the unnecessary argument.
   </li>
   <li>
-    Supply the correct number of arguments to the format method, or change the format string 
+    Supply the correct number of arguments to the format method, or change the format string
     to use the correct arguments.
   </li>
 </ol>
@@ -67,11 +67,11 @@ Here are three examples where the format string does not use all the arguments.
 <sample src="FormatUnusedArgumentBad.cs"/>
 <ul>
   <li>On line 7, the second argument (<code>ex.HResult</code>) is not logged.</li>
-  <li>On line 8, the first argument (<code>ex</code>) is not logged but the second 
+  <li>On line 8, the first argument (<code>ex</code>) is not logged but the second
     argument (<code>ex.HResult</code>) is logged twice.</li>
-  <li>On line 9, a C-style format string is used, which is incorrect, and neither 
+  <li>On line 9, a C-style format string is used, which is incorrect, and neither
     argument will be logged.</li>
-</ul>  
+</ul>
 </example>
 
 <example>

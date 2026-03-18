@@ -12,20 +12,20 @@ value assigned to the property, but when the value is ignored, then this does no
 <ol>
   <li>The property is not intended to be assigned to. In this case, the caller expects the assignment
     to have some effect, but it does not.</li>
-  <li>The property represents a particular state using a <code>bool</code>. In this case, the caller 
+  <li>The property represents a particular state using a <code>bool</code>. In this case, the caller
     might expect that setting the property to <code>false</code> would have a different effect than
     setting it to <code>true</code>.</li>
-  <li>The property is virtual or overridden. In this case, it is possible for some of the 
+  <li>The property is virtual or overridden. In this case, it is possible for some of the
     derived classes to use the property, but other classes to ignore it.
-    For this reason, virtual and overridden properties are excluded from the results.</li> 
+    For this reason, virtual and overridden properties are excluded from the results.</li>
 </ol>
 
 </overview>
 <recommendation>
 <p>Empty setters (<code>set</code> with an empty body) should simply be removed.</p>
 
-<p>Where the setter does not use the assigned value, replace <code>set</code> with a method 
-that does not take a parameter. Alternatively, change the implementation of <code>set</code> 
+<p>Where the setter does not use the assigned value, replace <code>set</code> with a method
+that does not take a parameter. Alternatively, change the implementation of <code>set</code>
 to use the assigned value, or to throw an exception if the assigned value is invalid.</p>
 
 </recommendation>
@@ -38,7 +38,7 @@ assigned values.</p>
 <sample src="UnusedPropertyValue.cs" />
 
 <p>The first of these problems can be fixed by simply removing the empty <code>set</code>.
-The second problem can be fixed by implementing the functionality in a method instead of 
+The second problem can be fixed by implementing the functionality in a method instead of
 in a property.</p>
 
 <sample src="UnusedPropertyValueFix.cs" />

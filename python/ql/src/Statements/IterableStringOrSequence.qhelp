@@ -13,7 +13,7 @@ One source of defects in Python is mistakenly iterating over a non-iterable obje
 This sort of defect is easily detected as a <code>TypeError</code> will be raised. However, if a string
 is mistakenly used as the iterable in a <code>for</code> statement, which also receives other sequences
 (such as lists) then the code will iterate over the string one character at a time.
-This is probably not what the programmer intended and results in errors that are hard to find. 
+This is probably not what the programmer intended and results in errors that are hard to find.
 </p>
 
 </overview>

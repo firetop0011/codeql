@@ -6,16 +6,16 @@
 
 <overview>
 <p>
-If a serializable class is serialized using the default Java serialization mechanism,  
-each non-static, non-transient field in the class must also be serializable. 
+If a serializable class is serialized using the default Java serialization mechanism,
+each non-static, non-transient field in the class must also be serializable.
 Otherwise, the class generates a <code>java.io.NotSerializableException</code> as its fields are written
 out by <code>ObjectOutputStream.writeObject</code>.
 </p>
 
 <p>
-As an exception, classes that define their own <code>readObject</code> and <code>writeObject</code> 
-methods can have fields that are not themselves serializable. The <code>readObject</code> and 
-<code>writeObject</code> methods are responsible for encoding any state in those fields that needs 
+As an exception, classes that define their own <code>readObject</code> and <code>writeObject</code>
+methods can have fields that are not themselves serializable. The <code>readObject</code> and
+<code>writeObject</code> methods are responsible for encoding any state in those fields that needs
 to be serialized.
 </p>
 
@@ -25,19 +25,19 @@ to be serialized.
 To avoid causing a <code>NotSerializableException</code>, do one of the following:</p>
 <ul>
   <li>
-  <strong>Mark the field as <code>transient</code> : </strong> Marking the field as <code>transient</code> makes the 
+  <strong>Mark the field as <code>transient</code> : </strong> Marking the field as <code>transient</code> makes the
   serialization mechanism skip the field. Before doing this, make sure that the field is not really intended
   to be part of the persistent state of the object.
   </li>
   <li>
-  <strong>Define custom <code>readObject</code> and <code>writeObject</code> methods for the <code>Serializable</code> class : </strong> 
+  <strong>Define custom <code>readObject</code> and <code>writeObject</code> methods for the <code>Serializable</code> class : </strong>
   Explicitly defining the <code>readObject</code> and <code>writeObject</code> methods enables you to choose which fields
   to read from, or write to, an object stream during serialization.
   </li>
   <li>
   <strong>Make the type of the field <code>Serializable</code> : </strong> If the field is part of the object's persistent state and you wish
   to use Java's default serialization mechanism, the type of the field must implement <code>Serializable</code>. When choosing this option,
-  make sure that you follow best practices for serialization. 
+  make sure that you follow best practices for serialization.
   </li>
 </ul>
 
@@ -45,8 +45,8 @@ To avoid causing a <code>NotSerializableException</code>, do one of the followin
 <section title="Example 1">
 <p>In the following example, <code>WrongPerformanceRecord</code> contains a field <code>factors</code>
 that is not serializable but is in a serializable class. This causes a <code>java.io.NotSerializableException</code>
-when the field is written out by <code>writeObject</code>. However, <code>PerformanceRecord</code> 
-contains a field <code>factors</code> that is marked as <code>transient</code>, so that the serialization 
+when the field is written out by <code>writeObject</code>. However, <code>PerformanceRecord</code>
+contains a field <code>factors</code> that is marked as <code>transient</code>, so that the serialization
 mechanism skips the field. This means that a correctly serialized record is output by <code>writeObject</code>.</p>
 <sample src="NonSerializableField.java" />
 

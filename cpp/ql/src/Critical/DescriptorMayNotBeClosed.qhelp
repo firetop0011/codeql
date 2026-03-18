@@ -8,7 +8,7 @@
 <p>
 This query looks at functions that return file or socket descriptors, but may return an error value before actually closing the resource.
 This can occur when an operation performed on the open descriptor fails, and the function returns with an error before it closes the open resource. An improperly handled error could cause the function to leak resource descriptors. Failing to close resources in the function that opened them also makes it more difficult to detect leaks.
-</p> 
+</p>
 
 <include src="dataFlowWarning.inc.qhelp" />
 </overview>
@@ -18,7 +18,7 @@ This can occur when an operation performed on the open descriptor fails, and the
 </recommendation>
 
 <example>
-<p>In the example below, the <code>sockfd</code> socket may remain open if an error is triggered. 
+<p>In the example below, the <code>sockfd</code> socket may remain open if an error is triggered.
 The code should be updated to ensure that the socket is always closed when the function ends.
 </p>
 <sample src="DescriptorMayNotBeClosed.cpp" />

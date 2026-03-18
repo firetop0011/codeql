@@ -28,7 +28,7 @@ method. Possibly make the object a context manager.</p>
 
 </recommendation>
 <example>
-<p>The first example below shows a class which relies on <code>__del__</code> to release resources. 
+<p>The first example below shows a class which relies on <code>__del__</code> to release resources.
 The second example shows an improved version of the class where <code>__del__</code> simply calls close.</p>
 
 <sample src="OverlyComplexDelMethod.py" />

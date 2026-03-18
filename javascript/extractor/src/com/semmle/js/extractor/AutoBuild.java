@@ -446,8 +446,8 @@ public class AutoBuild {
   }
 
   /**
-   * Returns whether the autobuilder has seen code. 
-   * This is overridden in tests. 
+   * Returns whether the autobuilder has seen code.
+   * This is overridden in tests.
    */
   protected boolean hasSeenCode() {
     return seenCode;
@@ -741,12 +741,12 @@ public class AutoBuild {
       dependencyInstallationResult = this.preparePackagesAndDependencies(filesToExtract);
     }
     Set<Path> extractedFiles = new LinkedHashSet<>();
-    
+
     // Extract HTML files as they may contain TypeScript
     CompletableFuture<?> htmlFuture = extractFiles(
         filesToExtract, extractedFiles, extractors,
         f -> extractors.fileType(f) == FileType.HTML);
-    
+
     htmlFuture.join(); // Wait for HTML extraction to be finished.
 
     // extract TypeScript projects and files

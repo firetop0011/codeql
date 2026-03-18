@@ -11,8 +11,8 @@ Code for performing CodeQL analysis on open source codebases.
 CodeQL command-line interface
 -----------------------------
 
-The CodeQL command-line interface (CLI) is primarily used to create databases for 
-security research. You can also query CodeQL databases directly from the command line 
+The CodeQL command-line interface (CLI) is primarily used to create databases for
+security research. You can also query CodeQL databases directly from the command line
 or using the Visual Studio Code extension.
 The CodeQL CLI can be downloaded from `GitHub releases <https://github.com/github/codeql-cli-binaries/releases>`__.
 For more information, see "`CodeQL CLI <https://docs.github.com/en/code-security/codeql-cli>`__" and the `CLI changelog <https://github.com/github/codeql-cli-binaries/blob/main/CHANGELOG.md>`__.

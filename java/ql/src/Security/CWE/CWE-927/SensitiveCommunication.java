@@ -1,4 +1,4 @@
-public void sendBroadcast1(Context context, String token, String refreshToken) 
+public void sendBroadcast1(Context context, String token, String refreshToken)
 {
     {
         // BAD: broadcast sensitive information to all listeners

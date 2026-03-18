@@ -1,5 +1,5 @@
 public class GroovyInjection {
-    void injectionViaClassLoader(HttpServletRequest request) {    
+    void injectionViaClassLoader(HttpServletRequest request) {
         String script = request.getParameter("script");
         final GroovyClassLoader classLoader = new GroovyClassLoader();
         Class groovy = classLoader.parseClass(script);
@@ -24,4 +24,3 @@ public class GroovyInjection {
         shell.evaluate(gcs);
     }
 }
-

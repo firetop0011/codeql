@@ -12,7 +12,7 @@ def bad():
     if request.method == 'POST':
         password = request.form['pwd']
         return password == "test"
-    
+
 if __name__ == '__main__':
     app.debug = True
-    app.run() 
+    app.run()

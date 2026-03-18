@@ -34,7 +34,7 @@ AST
 There are two primary AST CodeQL classes, used within ``Callables``:
 
    - ``Expr``: expressions such as assignments, variable references, function calls, ...
-   - ``Stmt``: statements such as conditionals, loops, try statements, ... 
+   - ``Stmt``: statements such as conditionals, loops, try statements, ...
 
 Operations are provided for exploring the AST:
 
@@ -74,7 +74,7 @@ Working with variables
 Working with callables
 ======================
 
-Callables are represented by the ``Callable`` CodeQL class. 
+Callables are represented by the ``Callable`` CodeQL class.
 
 Calls to callables are modeled by the CodeQL class ``Call`` and its subclasses:
 

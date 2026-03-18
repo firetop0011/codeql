@@ -98,7 +98,7 @@ public class Env {
 		SEMMLE_COMPILATION_CACHE,
 		/**
 		 * Override the versions used in compilation caching.
-		 * 
+		 *
 		 * This is useful for testing without modifying the version manually.
 		 */
 		SEMMLE_OVERRIDE_OPTIMISER_VERSION,

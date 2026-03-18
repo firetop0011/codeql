@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>If an HTTP Header is built using string concatenation or string formatting, and the
-components of the concatenation include user input, a user 
+components of the concatenation include user input, a user
 is likely to be able to manipulate the response.</p>
 </overview>
 

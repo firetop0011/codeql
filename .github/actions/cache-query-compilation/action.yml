@@ -56,7 +56,7 @@ runs:
     - name: Fill compilation cache directory
       id: fill-compilation-dir
       uses: actions/github-script@v6
-      env: 
+      env:
         COMBINED_CACHE_DIR: ${{ runner.temp }}/compilation-dir
       with:
         script: |

@@ -13,7 +13,7 @@ Types that are depended upon by many other types typically require a lot of
 effort to change, because changing them will force their dependents to change
 as well. This is not necessarily a bad thing -- indeed, most systems will have
 some such types (one example might be a string class). However, types with a high number
-of incoming dependencies 
+of incoming dependencies
 and a high number of outgoing dependencies are hard to maintain. A type with both high afferent
 coupling <em>and</em> high efferent coupling is referred to as a hub type.
 Such types can be problematic, because on the one hand they are hard to
@@ -30,7 +30,7 @@ types have very few incoming dependencies, however, it can be an indication
 that a type is not pulling its weight. In extreme cases, types may even
 have an afferent coupling of <code>0</code>, indicating that they are dead
 code.
-</p> 
+</p>
 
 </overview>
 <recommendation>

@@ -130,4 +130,3 @@ module.exports.open = tty.open;
 module.exports.setWindowSize = tty.setWindowSize;
 
 module.exports.getWindowSize = tty.getWindowSize;
-

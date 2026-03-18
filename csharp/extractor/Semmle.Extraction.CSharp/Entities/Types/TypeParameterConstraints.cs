@@ -62,4 +62,3 @@ namespace Semmle.Extraction.CSharp.Entities
         }
     }
 }
-

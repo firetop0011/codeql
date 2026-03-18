@@ -4,7 +4,7 @@ class Singleton {
     static {
         resource = new Resource();  // Initialize "resource" only once
     }
- 
+
     public Resource getResource() {
         return resource;
     }

@@ -5,16 +5,16 @@
 
 <overview>
 <p>Python has been the most widely used programming language in recent years, and Jython
-  (formerly known as JPython) is a popular Java implementation of Python. It allows 
+  (formerly known as JPython) is a popular Java implementation of Python. It allows
   embedded Python scripting inside Java applications and provides an interactive interpreter
-  that can be used to interact with Java packages or with running Java applications. If an 
-  expression is built using attacker-controlled data and then evaluated, it may allow the 
+  that can be used to interact with Java packages or with running Java applications. If an
+  expression is built using attacker-controlled data and then evaluated, it may allow the
   attacker to run arbitrary code.</p>
 </overview>
 
 <recommendation>
-<p>In general, including user input in Jython expression should be avoided. If user input 
-  must be included in an expression, it should be then evaluated in a safe context that 
+<p>In general, including user input in Jython expression should be avoided. If user input
+  must be included in an expression, it should be then evaluated in a safe context that
   doesn't allow arbitrary code invocation.</p>
 </recommendation>
 

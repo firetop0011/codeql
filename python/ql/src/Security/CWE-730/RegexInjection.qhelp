@@ -14,7 +14,7 @@ perform a Denial of Service attack.
 <recommendation>
 <p>
 Before embedding user input into a regular expression, use a sanitization function such as
-<code>re.escape</code> to escape meta-characters that have a special meaning regarding 
+<code>re.escape</code> to escape meta-characters that have a special meaning regarding
 regular expressions' syntax.
 </p>
 </recommendation>

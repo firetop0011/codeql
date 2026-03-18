@@ -7,7 +7,7 @@
 <overview>
 <p>Comparing two <code>String</code> objects using <code>==</code> or
 <code>!=</code> compares object identity, which may not be intended.
-The same sequence of characters can be represented by two distinct 
+The same sequence of characters can be represented by two distinct
 <code>String</code> objects.
 </p>
 
@@ -29,7 +29,7 @@ it compares the identity of the two string objects rather than their contents.
 For example, if <code>headerStyle</code> was initialized by an XML parser or a JSON
 parser, then it might have been created with code like
 <code>String.valueOf(buf,start,len)</code>. Such code will produce a new string
-object every time it is called.</p>  
+object every time it is called.</p>
 
 <sample src="StringComparison.java" />
 

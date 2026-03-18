@@ -17,8 +17,8 @@ otherwise delete the assignment (taking care not to delete right hand side if it
 
 </recommendation>
 <example>
-<p>In this example, the <code>random_no</code> variable is never read but its assignment 
-has a side effect. Because of this it is important to remove only the left hand side of the 
+<p>In this example, the <code>random_no</code> variable is never read but its assignment
+has a side effect. Because of this it is important to remove only the left hand side of the
 assignment in line 10.</p>
 <sample src="UnusedLocalVariable.py" />
 

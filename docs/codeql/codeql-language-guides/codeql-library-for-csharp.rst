@@ -16,7 +16,7 @@ There is an extensive core library for analyzing CodeQL databases extracted from
 
 Since this is required for all C# queries, it's omitted from code snippets below.
 
-The core library contains all the program elements, including `files <#files>`__, `types <#types>`__, methods, `variables <#variables>`__, `statements <#statements>`__, and `expressions <#expressions>`__. This is sufficient for most queries, however additional libraries can be imported for bespoke functionality such as control flow and data flow. For information about these additional libraries, see ":ref:`CodeQL for C# <codeql-for-csharp>`." 
+The core library contains all the program elements, including `files <#files>`__, `types <#types>`__, methods, `variables <#variables>`__, `statements <#statements>`__, and `expressions <#expressions>`__. This is sufficient for most queries, however additional libraries can be imported for bespoke functionality such as control flow and data flow. For information about these additional libraries, see ":ref:`CodeQL for C# <codeql-for-csharp>`."
 
 Class hierarchies
 ~~~~~~~~~~~~~~~~~
@@ -533,7 +533,7 @@ Find methods that look like ``ToString`` methods but don't override ``Object.ToS
    from Method toString, Method falseToString
    where toString.hasQualifiedName("System.Object.ToString")
     and falseToString.getName().toLowerCase() = "tostring"
-    and not falseToString.overrides*(toString) 
+    and not falseToString.overrides*(toString)
     and falseToString.getNumberOfParameters() = 0
    select falseToString, "This method looks like it overrides Object.ToString but it doesn't."
 
@@ -931,7 +931,7 @@ The attribute of any ``Element`` can be obtained via ``getAnAttribute()``, where
 .. code-block:: ql
 
      attribute = element.getAnAttribute()
-     element = attribute.getTarget() 
+     element = attribute.getTarget()
 
 Class hierarchy
 ~~~~~~~~~~~~~~~
@@ -968,7 +968,7 @@ Model NUnit test fixtures:
      TestFixture() {
        this.getAnAttribute().getType().hasName("TestFixtureAttribute")
      }
-     
+
      TestMethod getATest() {
        result = this.getAMethod()
      }
@@ -1116,8 +1116,8 @@ Here is the fixed version:
    from Element e, Attribute attribute, string reason
    where e = attribute.getTarget()
      and attribute.getType().hasName("ObsoleteAttribute")
-     and if exists(attribute.getArgument(0)) 
-       then reason = attribute.getArgument(0).getValue() 
+     and if exists(attribute.getArgument(0))
+       then reason = attribute.getArgument(0).getValue()
        else reason = "(not given)"
    select e, "This is obsolete because " + reason
 

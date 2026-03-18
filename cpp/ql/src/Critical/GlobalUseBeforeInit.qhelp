@@ -5,8 +5,8 @@
 
 
 <overview>
-<p>This rule finds calls to functions that use a global variable before the variable has been initialized. 
-Not all compilers generate code that zero-out memory, especially when optimizations are enabled or the compiler 
+<p>This rule finds calls to functions that use a global variable before the variable has been initialized.
+Not all compilers generate code that zero-out memory, especially when optimizations are enabled or the compiler
 is not compliant with the latest language standards. Accessing uninitialized memory will lead to undefined results.
 </p>
 

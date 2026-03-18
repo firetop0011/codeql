@@ -12,7 +12,7 @@ The absence of a matching setter method for a property that is defined in a Spri
 </overview>
 <recommendation>
 <p>
-Ensure that there is a setter method in the bean file that matches the property name. 
+Ensure that there is a setter method in the bean file that matches the property name.
 </p>
 
 </recommendation>

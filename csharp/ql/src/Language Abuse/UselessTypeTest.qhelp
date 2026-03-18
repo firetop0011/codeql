@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>For any type <code>B</code>, an instance of a type derived from <code>B </code> is also an instance 
+<p>For any type <code>B</code>, an instance of a type derived from <code>B </code> is also an instance
 of <code>B</code>. There is no need to test for this explicitly.</p>
 
 </overview>

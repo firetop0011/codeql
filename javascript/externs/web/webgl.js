@@ -3384,4 +3384,3 @@ ANGLE_instanced_arrays.prototype.drawElementsInstancedANGLE = function(
  */
 ANGLE_instanced_arrays.prototype.vertexAttribDivisorANGLE = function(
     index, divisor) {};
-

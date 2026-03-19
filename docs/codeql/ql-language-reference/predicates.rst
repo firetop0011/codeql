@@ -5,9 +5,9 @@
 Predicates
 ##########
 
-Predicates are used to describe the logical relations that make up a QL program. 
+Predicates are used to describe the logical relations that make up a QL program.
 
-Strictly speaking, a predicate evaluates to a set of tuples. For example, consider the 
+Strictly speaking, a predicate evaluates to a set of tuples. For example, consider the
 following two predicate definitions:
 
 .. code-block:: ql
@@ -21,9 +21,9 @@ following two predicate definitions:
     }
 
     predicate hasCapital(string country, string capital) {
-      country = "Belgium" and capital = "Brussels" 
+      country = "Belgium" and capital = "Brussels"
       or
-      country = "Germany" and capital = "Berlin" 
+      country = "Germany" and capital = "Berlin"
       or
       country = "France" and capital = "Paris"
     }
@@ -34,10 +34,10 @@ The predicate ``isCountry`` is the set of one-tuples ``{("Belgium"),("Germany"),
 while ``hasCapital`` is the set of two-tuples ``{("Belgium","Brussels"),("Germany","Berlin"),("France","Paris")}``.
 The `arity <https://en.wikipedia.org/wiki/Arity>`_ of these predicates is one and two, respectively.
 
-In general, all tuples in a predicate have the same number of elements. The **arity** of 
+In general, all tuples in a predicate have the same number of elements. The **arity** of
 a predicate is that number of elements, not including a possible ``result`` variable. For more information, see ":ref:`predicates-with-result`."
 
-There are a number of `built-in predicates <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#built-ins>`_ 
+There are a number of `built-in predicates <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#built-ins>`_
 in QL. You can use these in any queries without needing to :ref:`import <importing-modules>`
 any additional modules. In addition to these built-in predicates, you can also define your
 own:
@@ -49,17 +49,17 @@ Defining a predicate
 
 When defining a predicate, you should specify:
 
-#. The keyword ``predicate`` (for a :ref:`predicate without result <predicates-without-result>`), 
+#. The keyword ``predicate`` (for a :ref:`predicate without result <predicates-without-result>`),
    or the type of the result (for a :ref:`predicate with result <predicates-with-result>`).
-#. The name of the predicate. This is an `identifier <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#identifiers>`_ 
+#. The name of the predicate. This is an `identifier <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#identifiers>`_
    starting with a lowercase letter.
 #. The arguments to the predicate, if any, separated by commas. For each argument, specify the
    argument type and an identifier for the argument variable.
-#. The predicate body itself. This is a logical formula enclosed in braces. 
+#. The predicate body itself. This is a logical formula enclosed in braces.
 
 .. pull-quote:: Note
 
-   An :ref:`abstract` or :ref:`external` predicate has no body. To define such a predicate, 
+   An :ref:`abstract` or :ref:`external` predicate has no body. To define such a predicate,
    end the predicate definition with a semicolon (``;``) instead.
 
 .. _predicates-without-result:
@@ -67,19 +67,19 @@ When defining a predicate, you should specify:
 Predicates without result
 =========================
 
-These predicate definitions start with the keyword ``predicate``. If a value satisfies the 
+These predicate definitions start with the keyword ``predicate``. If a value satisfies the
 logical property in the body, then the predicate holds for that value.
 
 For example:
 
 .. code-block:: ql
 
-    predicate isSmall(int i) { 
+    predicate isSmall(int i) {
       i in [1 .. 9]
     }
 
-If ``i`` is an integer, then ``isSmall(i)`` holds if ``i`` is a positive 
-integer less than 10. 
+If ``i`` is an integer, then ``isSmall(i)`` holds if ``i`` is a positive
+integer less than 10.
 
 .. _predicates-with-result:
 
@@ -88,8 +88,8 @@ Predicates with result
 
 .. index:: result
 
-You can define a predicate with result by replacing the keyword ``predicate`` with the type 
-of the result. This introduces the special variable ``result``. 
+You can define a predicate with result by replacing the keyword ``predicate`` with the type
+of the result. This introduces the special variable ``result``.
 
 For example:
 
@@ -100,12 +100,12 @@ For example:
       i in [1 .. 9]
     }
 
-If ``i`` is a positive integer less than 10, then the result of the predicate 
-is the successor of ``i``. 
+If ``i`` is a positive integer less than 10, then the result of the predicate
+is the successor of ``i``.
 
-Note that you can use ``result`` in the same way as any other argument to the predicate. 
-You can express the relation between ``result`` and other variables in any way you like. 
-For example, given a predicate ``getAParentOf(Person x)`` that returns parents of ``x``, you can 
+Note that you can use ``result`` in the same way as any other argument to the predicate.
+You can express the relation between ``result`` and other variables in any way you like.
+For example, given a predicate ``getAParentOf(Person x)`` that returns parents of ``x``, you can
 define a "reverse" predicate as follows:
 
 .. code-block:: ql
@@ -115,13 +115,13 @@ define a "reverse" predicate as follows:
     }
 
 
-It is also possible for a predicate to have multiple results (or none at all) for each value 
+It is also possible for a predicate to have multiple results (or none at all) for each value
 of its arguments. For example:
 
 .. code-block:: ql
 
     string getANeighbor(string country) {
-      country = "France" and result = "Belgium" 
+      country = "France" and result = "Belgium"
       or
       country = "France" and result = "Germany"
       or
@@ -131,7 +131,7 @@ of its arguments. For example:
     }
 
 In this case:
-  - The predicate call ``getANeighbor("Germany")`` returns two results: ``"Austria"`` and 
+  - The predicate call ``getANeighbor("Germany")`` returns two results: ``"Austria"`` and
     ``"Belgium"``.
   - The predicate call ``getANeighbor("Belgium")`` returns no results, since ``getANeighbor``
     does not define a ``result`` for ``"Belgium"``.
@@ -140,11 +140,11 @@ Recursive predicates
 ********************
 
 A predicate in QL can be **recursive**. This means that it depends, directly or indirectly,
-on itself. 
+on itself.
 
-For example, you could use recursion to refine the above example. As it stands, the relation 
-defined in ``getANeighbor`` is not symmetric—it does not capture the fact that if x is a 
-neighbor of y, then y is a neighbor of x. A simple way to capture this is to call this 
+For example, you could use recursion to refine the above example. As it stands, the relation
+defined in ``getANeighbor`` is not symmetric—it does not capture the fact that if x is a
+neighbor of y, then y is a neighbor of x. A simple way to capture this is to call this
 predicate recursively, as shown below:
 
 .. code-block:: ql
@@ -176,17 +176,17 @@ characteristic predicates.
 Non-member predicates are defined outside a class, that is, they are not members of any class.
 
 For more information about the other kinds of predicates, see :ref:`characteristic predicates
-<characteristic-predicates>` and :ref:`member predicates <member-predicates>` in the 
+<characteristic-predicates>` and :ref:`member predicates <member-predicates>` in the
 ":ref:`Classes <classes>`" topic.
 
 Here is an example showing a predicate of each kind:
 
 .. code-block:: ql
 
-    int getSuccessor(int i) {  // 1. Non-member predicate 
+    int getSuccessor(int i) {  // 1. Non-member predicate
       result = i + 1 and
       i in [1 .. 9]
-    } 
+    }
 
     class FavoriteNumbers extends int {
       FavoriteNumbers() {  // 2. Characteristic predicate
@@ -203,8 +203,8 @@ Here is an example showing a predicate of each kind:
         this = 9 and result = "nine"
       }
     }
-   
-You can also annotate each of these predicates. See the list of 
+
+You can also annotate each of these predicates. See the list of
 :ref:`annotations <annotations-overview>` available for each kind of predicate.
 
 .. _predicate-binding:
@@ -212,7 +212,7 @@ You can also annotate each of these predicates. See the list of
 Binding behavior
 ****************
 
-It must be possible to evaluate a predicate in a finite amount of time, so the set it describes 
+It must be possible to evaluate a predicate in a finite amount of time, so the set it describes
 is not usually allowed to be infinite. In other words, a predicate can only contain a finite number of tuples.
 
 The QL compiler reports an error when it can prove that a predicate contains variables that
@@ -231,7 +231,7 @@ Here are a few examples of infinite predicates:
     int multiplyBy4(int i) {
       result = i * 4
     }
-    
+
     /*
       Compilation errors:
       ERROR: "str" is not bound to a value.
@@ -241,12 +241,12 @@ Here are a few examples of infinite predicates:
       str.length() < 10
     }
 
-In ``multiplyBy4``, the argument ``i`` is declared as an ``int``, which is an infinite 
-type. It is used in the binary operation ``*``, which does not bind its operands. 
-``result`` is unbound to begin with, and remains unbound since it is used in an equality 
-check with ``i * 4``, which is also unbound. 
+In ``multiplyBy4``, the argument ``i`` is declared as an ``int``, which is an infinite
+type. It is used in the binary operation ``*``, which does not bind its operands.
+``result`` is unbound to begin with, and remains unbound since it is used in an equality
+check with ``i * 4``, which is also unbound.
 
-In ``shortString``, ``str`` remains unbound since it is declared with the infinite type 
+In ``shortString``, ``str`` remains unbound since it is declared with the infinite type
 ``string``, and the built-in function ``length()`` does not bind it.
 
 .. index:: binding set
@@ -256,7 +256,7 @@ Binding sets
 ============
 
 Sometimes you may want to define an "infinite predicate" anyway, because you only intend to
-use it on a restricted set of arguments. In that case, you can specify an explicit binding 
+use it on a restricted set of arguments. In that case, you can specify an explicit binding
 set using the ``bindingset`` :ref:`annotation <bindingset>`. This annotation is valid for any
 kind of predicate.
 
@@ -273,12 +273,12 @@ For example:
     where i in [1 .. 10]
     select multiplyBy4(i)
 
-Although ``multiplyBy4`` is an infinite predicate, the above QL :ref:`query <queries>` is legal. 
-It first uses the ``bindingset`` annotation to state that the predicate ``multiplyBy4`` will be 
-finite provided that ``i`` is bound to a finite number of values. Then it uses the predicate in 
+Although ``multiplyBy4`` is an infinite predicate, the above QL :ref:`query <queries>` is legal.
+It first uses the ``bindingset`` annotation to state that the predicate ``multiplyBy4`` will be
+finite provided that ``i`` is bound to a finite number of values. Then it uses the predicate in
 a context where ``i`` is restricted to to the range ``[1 .. 10]``.
 
-It is also possible to state multiple binding sets for a predicate. This can be done by adding 
+It is also possible to state multiple binding sets for a predicate. This can be done by adding
 multiple binding set annotations, for example:
 
 .. code-block:: ql
@@ -296,8 +296,8 @@ Multiple binding sets specified this way are independent of each other. The abov
   - If ``x`` is bound, then ``x`` and ``y`` are bound.
   - If ``y`` is bound, then ``x`` and ``y`` are bound.
 
-That is, ``bindingset[x] bindingset[y]``, which states that at least one of ``x`` or ``y`` must 
-be bound, is different from ``bindingset[x, y]``, which states that both ``x`` and ``y`` must be 
+That is, ``bindingset[x] bindingset[y]``, which states that at least one of ``x`` or ``y`` must
+be bound, is different from ``bindingset[x, y]``, which states that both ``x`` and ``y`` must be
 bound.
 
 The latter can be useful when you want to declare a :ref:`predicate with result <predicates-with-result>` that takes multiple input arguments.
@@ -326,10 +326,10 @@ Database predicates
 Each database that you query contains tables expressing relations between values. These tables
 ("database predicates") are treated in the same way as other predicates in QL.
 
-For example, if a database contains a table for persons, you can write 
-``persons(x, firstName, _, age)`` to constrain ``x``, ``firstName``, and ``age`` to be the 
+For example, if a database contains a table for persons, you can write
+``persons(x, firstName, _, age)`` to constrain ``x``, ``firstName``, and ``age`` to be the
 first, second, and fourth columns of rows in that table.
 
 The only difference is that you can't define database predicates in QL. They are defined by the
-underlying database. Therefore, the available database predicates vary according to the 
+underlying database. Therefore, the available database predicates vary according to the
 database that you are querying.

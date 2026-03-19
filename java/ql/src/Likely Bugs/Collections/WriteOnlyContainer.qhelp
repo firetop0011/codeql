@@ -27,7 +27,7 @@ a tree is reachable from <code>ROOT</code>. It maintains a set <code>reachableNo
 which contains all nodes that have previously been found to be reachable. Most likely, this set
 is meant to act as a cache to avoid spurious recomputation, but as it stands the code never checks
 whether any node is contained in the set.
-</p> 
+</p>
 
 <sample src="WriteOnlyContainer.java" />
 

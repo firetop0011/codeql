@@ -12,9 +12,9 @@ import com.semmle.util.basic.ObjectUtil;
  */
 public class ArrayUtil
 {
-	
+
 	/**
-	 * A number slightly smaller than the maximum length of an array on most vms. 
+	 * A number slightly smaller than the maximum length of an array on most vms.
 	 * This matches the constant in ArrayList.
 	 */
 	public static final int MAX_ARRAY_LENGTH = Integer.MAX_VALUE - 8;
@@ -149,7 +149,7 @@ public class ArrayUtil
 		return findFirst(array, element) != -1;
 	}
 
-	
+
 
 	/**
 	 * Query whether the given {@code array} contains any element equal to the given {@code element}.
@@ -209,7 +209,7 @@ public class ArrayUtil
 	{
 		return elements;
 	}
-	
+
 	/**
 	 * Swap two elements in an array.
 	 *

@@ -1390,4 +1390,3 @@ erb_ast_node_info(
   int parent_index: int ref,
   int loc: @location ref
 );
-

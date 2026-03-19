@@ -8,4 +8,3 @@ fun test() {
   rtis.directParameter(null)
 
 }
-

@@ -16,8 +16,8 @@ matched.
 
 <p>
 Include a terminating <code>else</code> clause to <code>if-else-if</code> statements
-to prevent execution from falling through silently. If the terminating <code>else</code> clause is 
-intended to be unreachable code, it is advisable that it throws a <code>RuntimeException</code> to 
+to prevent execution from falling through silently. If the terminating <code>else</code> clause is
+intended to be unreachable code, it is advisable that it throws a <code>RuntimeException</code> to
 alert the user of an internal error.
 </p>
 

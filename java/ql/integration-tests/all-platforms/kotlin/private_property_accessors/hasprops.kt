@@ -6,4 +6,3 @@ class HasProps {
     private set
 
 }
-

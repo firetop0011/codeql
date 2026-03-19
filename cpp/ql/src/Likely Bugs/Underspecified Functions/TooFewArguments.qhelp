@@ -15,7 +15,7 @@
  fewer arguments than there are parameters is extremely dangerous, as the called function
  will nevertheless try to obtain the missing arguments' values, either from the stack
  or from machine registers.  As a result, the function may behave unpredictably.</p>
- 
+
 <p>If the called function <i>modifies</i> a parameter corresponding to a missing argument, it
  may alter the state of the program upon its return.  An attacker could use this to,
  for example, alter the control flow of the program to access forbidden resources.</p>

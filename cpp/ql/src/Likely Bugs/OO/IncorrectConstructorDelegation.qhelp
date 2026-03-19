@@ -37,9 +37,9 @@ private:
   double m_x;
   double m_y;
   double m_radius;
-  
+
   double m_area;
-  
+
 public:
   // Real constructor:
   Circle(double x, double y, double radius) :
@@ -47,7 +47,7 @@ public:
   {
     m_area = 3.14159 * m_radius * m_radius;
   }
-  
+
   Circle() {
     // WRONG: Attempt to define the unit circle by default fails.
     Circle(0, 0, 1);

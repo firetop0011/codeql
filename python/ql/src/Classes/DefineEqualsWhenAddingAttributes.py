@@ -37,4 +37,3 @@ class ColorPoint(Point):
         if not isinstance(other, ColorPoint):
             return False
         return Point.__eq__(self, other) and self._color = other._color
-

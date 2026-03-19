@@ -15,9 +15,9 @@ release the lock.
 
 <recommendation>
 <p>
-The best way to ensure that locks are always unlocked is to use RAII (Resource Acquisition Is Initialization). 
-That means acquiring the lock in the constructor of a class, and releasing it in its destructor. 
-A local-scoped instance of that class will then be destroyed when it leaves scope, even if an exception is thrown, 
+The best way to ensure that locks are always unlocked is to use RAII (Resource Acquisition Is Initialization).
+That means acquiring the lock in the constructor of a class, and releasing it in its destructor.
+A local-scoped instance of that class will then be destroyed when it leaves scope, even if an exception is thrown,
 ensuring that the lock is released.
 </p>
 </recommendation>

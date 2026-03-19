@@ -20,21 +20,21 @@ on a setter method makes the framework check that a dependency is injected using
 </overview>
 <recommendation>
 <p>
-Use setter injection in bean configurations, marking required properties with the <code>@Required</code> annotation. It makes it easier to 
+Use setter injection in bean configurations, marking required properties with the <code>@Required</code> annotation. It makes it easier to
 accommodate a large number of optional properties, and makes the bean more flexible by allowing for re-injection of dependencies.
 </p>
 
 </recommendation>
 <example>
 
-<p>The following example shows a bean that is defined using constructor injection. The bean 
+<p>The following example shows a bean that is defined using constructor injection. The bean
 configuration is followed by the class definition.</p>
 
 <sample src="UseSetterInjection.xml" />
 
 <sample src="UseSetterInjection.java" />
 
-<p>The following example shows how the same bean can be defined using setter injection instead. Again, 
+<p>The following example shows how the same bean can be defined using setter injection instead. Again,
 the bean configuration is followed by the class definition.</p>
 
 <sample src="UseSetterInjectionGood.xml" />
@@ -51,7 +51,7 @@ Martin Fowler:
 </li>
 <li>
 ONJava:
-<a href="http://www.onjava.com/pub/a/onjava/2006/01/25/spring-xml-configuration-best-practices.html?page=3">Twelve Best Practices for Spring XML Configurations</a>. 
+<a href="http://www.onjava.com/pub/a/onjava/2006/01/25/spring-xml-configuration-best-practices.html?page=3">Twelve Best Practices for Spring XML Configurations</a>.
 </li>
 <li>
 Spring Framework Reference Documentation 3.0:

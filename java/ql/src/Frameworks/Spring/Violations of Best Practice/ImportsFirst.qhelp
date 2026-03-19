@@ -6,7 +6,7 @@
 
 <overview>
 <p>
-Putting <code>import</code> statements at the top of Spring XML bean definition files is good practice because they give a quick summary of the 
+Putting <code>import</code> statements at the top of Spring XML bean definition files is good practice because they give a quick summary of the
 file's dependencies, and can even be used to document the general architecture of a system.
 </p>
 
@@ -20,7 +20,7 @@ Make sure that all <code>import</code> statements are at the top of the <code>&l
 <example>
 
 <p>The following example shows a <code>&lt;beans&gt;</code> section of a Spring XML bean definition file in
-which an <code>import</code> statement is in the middle, and a <code>&lt;beans&gt;</code> section in 
+which an <code>import</code> statement is in the middle, and a <code>&lt;beans&gt;</code> section in
 which all the <code>import</code> statements are at the top.</p>
 
 <sample src="ImportsFirst.xml" />

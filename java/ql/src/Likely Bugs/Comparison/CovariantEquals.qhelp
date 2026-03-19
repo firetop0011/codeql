@@ -6,12 +6,12 @@
 
 <overview>
 <p>Classes that define an <code>equals</code> method whose parameter type is not <code>Object</code>
-<i>overload</i> the <code>Object.equals</code> method instead of <i>overriding</i> it. This may not be intended.</p> 
+<i>overload</i> the <code>Object.equals</code> method instead of <i>overriding</i> it. This may not be intended.</p>
 
 </overview>
 <recommendation>
 
-<p>To <i>override</i> the <code>Object.equals</code> method,   
+<p>To <i>override</i> the <code>Object.equals</code> method,
 the parameter of the <code>equals</code> method must have type <code>Object</code>.</p>
 
 </recommendation>

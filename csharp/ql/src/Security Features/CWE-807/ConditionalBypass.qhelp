@@ -31,7 +31,7 @@ actions only when they have been fully authenticated.
 
 <p>
 This example shows two ways of deciding whether to authenticate a user. The first way shows a
-decision that is based on the value of a cookie. Cookies can be easily controlled by the user, and 
+decision that is based on the value of a cookie. Cookies can be easily controlled by the user, and
 so this allows a user to become authenticated without providing valid credentials. The second, more
 secure way shows a decision that is based on looking up the user in a security database.
 </p>

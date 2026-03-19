@@ -17,7 +17,7 @@ When writing MyBatis mapping statements, try to use the syntax <code>#{xxx}</cod
 <p>
 The following sample shows several bad and good examples of MyBatis XML files usage. In <code>bad1</code>,
 <code>bad2</code>, <code>bad3</code>, <code>bad4</code>, and <code >bad5</code> the syntax
-<code>${xxx}</code> is used to build dynamic SQL statements, which causes a SQL injection vulnerability. In <code>good1</code>, 
+<code>${xxx}</code> is used to build dynamic SQL statements, which causes a SQL injection vulnerability. In <code>good1</code>,
 the program uses the <code>${xxx}</code> syntax, but there are subtle restrictions on the data,
 while in <code>good2</code> the syntax <code>#{xxx}</code> is used. In both cases the SQL injection vulnerability is prevented.
 </p>

@@ -13,7 +13,7 @@ Classes that are depended upon by many other classes typically require a lot of
 effort to change, because changing them will force their dependents to change
 as well. This is not necessarily a bad thing -- indeed, most systems will have
 some such classes (one example might be a string class). However, classes with a high number
-of incoming dependencies 
+of incoming dependencies
 and a high number of outgoing dependencies are hard to maintain. They are hard to
 change (high afferent coupling) and yet there are many reasons to
 change them (high efferent coupling). This contradiction yields code that is very
@@ -28,7 +28,7 @@ classes have very few incoming dependencies, however, it can be an indication
 that a class is not pulling its weight. In extreme cases, classes may even
 have an afferent coupling of <code>0</code>, indicating that they are dead
 code.
-</p> 
+</p>
 
 </overview>
 <recommendation>

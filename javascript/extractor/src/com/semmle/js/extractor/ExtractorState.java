@@ -23,7 +23,7 @@ import com.semmle.ts.extractor.TypeScriptParser;
  */
 public class ExtractorState {
   private TypeScriptParser typeScriptParser = new TypeScriptParser();
-  
+
   private final ConcurrentHashMap<Path, FileSnippet> snippets = new ConcurrentHashMap<>();
 
   private static final ConcurrentMap<File, Optional<String>> packageTypeCache = new ConcurrentHashMap<>();

@@ -13,7 +13,7 @@ application will have automatic backups or not.</p>
 <p>For Android applications which process sensitive data, set <code>android:allowBackup</code> to <code>false</code> in the manifest
 file.</p>
 
-<p>Note: Since Android 6.0 (Marshmallow), automatic backups for applications are switched on by default. 
+<p>Note: Since Android 6.0 (Marshmallow), automatic backups for applications are switched on by default.
 </p>
 </recommendation>
 

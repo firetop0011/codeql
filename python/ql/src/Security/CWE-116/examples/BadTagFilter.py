@@ -1,6 +1,6 @@
 import re
 
-def filterScriptTags(content): 
+def filterScriptTags(content):
     oldContent = ""
     while oldContent != content:
         oldContent = content

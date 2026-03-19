@@ -135,7 +135,7 @@ No user-facing changes.
 ### Deprecated APIs
 
 * Some unused predicates in `SsaDefinitions.qll`, `TObject.qll`, `protocols.qll`, and the `pointsto/` folder have been deprecated.
-* Some classes/modules with upper-case acronyms in their name have been renamed to follow our style-guide. 
+* Some classes/modules with upper-case acronyms in their name have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### Minor Analysis Improvements
@@ -154,9 +154,9 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Many classes/predicates/modules with upper-case acronyms in their name have been renamed to follow our style-guide. 
+* Many classes/predicates/modules with upper-case acronyms in their name have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
-* The utility files previously in the `semmle.python.security.performance` package have been moved to the `semmle.python.security.regexp` package.  
+* The utility files previously in the `semmle.python.security.performance` package have been moved to the `semmle.python.security.regexp` package.
   The previous files still exist as deprecated aliases.
 
 ### Minor Analysis Improvements
@@ -249,9 +249,9 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide. 
+* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
-* Some modules that started with a lowercase letter have been renamed to follow our style-guide. 
+* Some modules that started with a lowercase letter have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### New Features

@@ -7,11 +7,11 @@ package com.semmle.util.data;
  */
 public class IntRef {
 	private int value;
-	
+
 	public IntRef(int value) {
 		this.value = value;
 	}
-	
+
 	public int get() { return value; }
 	public void set(int value) { this.value = value; }
 	public void inc() { value++; }

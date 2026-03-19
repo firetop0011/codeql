@@ -5,8 +5,8 @@
 
 
 <overview>
-<p>This rule finds classes that define a non-virtual destructor, yet they have derived classes that also define a non-virtual destructor. 
-This can prevent proper cleanup of resources as only the destructor of the type of the variable will be called (instead of the type of the 
+<p>This rule finds classes that define a non-virtual destructor, yet they have derived classes that also define a non-virtual destructor.
+This can prevent proper cleanup of resources as only the destructor of the type of the variable will be called (instead of the type of the
 object instance).</p>
 
 </overview>

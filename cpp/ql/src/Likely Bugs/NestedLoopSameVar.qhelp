@@ -5,8 +5,8 @@
 
 
 <overview>
-<p>This rule finds nested loops in which the iteration variable is the same for both loops. 
-The behavior of the loop will be difficult to understand as the inner loop will affect the 
+<p>This rule finds nested loops in which the iteration variable is the same for both loops.
+The behavior of the loop will be difficult to understand as the inner loop will affect the
 iteration variable of the outer loop; this is most likely a typo.</p>
 
 <p>The rule flags the condition expression in the inner loop that uses the same variable as the iteration variable of the

@@ -3,8 +3,8 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>This rule finds code that performs string concatenation in a loop using the <code>+</code> 
-operator. If the enclosing loop in question is executed many times, the use of the <code>+</code> 
+<p>This rule finds code that performs string concatenation in a loop using the <code>+</code>
+operator. If the enclosing loop in question is executed many times, the use of the <code>+</code>
 operator may be inefficient.</p>
 
 </overview>
@@ -17,7 +17,7 @@ operator may be inefficient.</p>
 
 </example>
 <section title="Fix With StringBuilder">
-<p>This code performs the same function as the example except it uses <code>StringBuilder</code> so 
+<p>This code performs the same function as the example except it uses <code>StringBuilder</code> so
 it is more efficient.</p>
 <sample src="StringConcatenationInLoopFix.cs" />
 

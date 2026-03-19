@@ -1,7 +1,7 @@
 public class HasFields {
 
   companion object {
-  
+
     const val constField = "taint"
 
     lateinit var lateinitField: String

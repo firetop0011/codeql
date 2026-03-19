@@ -17,7 +17,7 @@ void g() {
 }
 
 void err() {
-	doFoo(); //doFoo is called but its return value is not checked, and 
+	doFoo(); //doFoo is called but its return value is not checked, and
 	         //the value is checked in other locations
 	...
 }

@@ -523,4 +523,3 @@ Further reading
 .. _SeqExpr: https://codeql.github.com/codeql-standard-libraries/javascript/semmle/javascript/Expr.qll/type.Expr$SeqExpr.html
 .. _AwaitExpr: https://codeql.github.com/codeql-standard-libraries/javascript/semmle/javascript/Expr.qll/type.Expr$AwaitExpr.html
 .. _YieldExpr: https://codeql.github.com/codeql-standard-libraries/javascript/semmle/javascript/Expr.qll/type.Expr$YieldExpr.html
-

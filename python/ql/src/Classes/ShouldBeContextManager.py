@@ -23,7 +23,7 @@ class remotelock2(object):     # Resources can be released using a with statemen
     def release(self):
         self.repo.unlock()
         self.repo = None
-        
+
     def __del__(self):
         if self.repo:
             self.release()

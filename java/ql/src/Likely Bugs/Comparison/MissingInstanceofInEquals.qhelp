@@ -7,14 +7,14 @@
 <overview>
 <p>An implementation of <code>equals</code> must be able to handle an argument of any type, to avoid
 failing casts.
-Therefore, the implementation should inspect the type of its argument to see if the argument can be safely cast to 
+Therefore, the implementation should inspect the type of its argument to see if the argument can be safely cast to
 the class in which the <code>equals</code> method is declared.
 </p>
 
 </overview>
 <recommendation>
 
-<p>Usually, an implementation of <code>equals</code> should check 
+<p>Usually, an implementation of <code>equals</code> should check
 the type of its argument using <code>instanceof</code>,
 following the general pattern below.</p>
 

@@ -71,7 +71,7 @@ Let’s write a query to identify instances of `CWE-134 <https://cwe.mitre.org/d
 Exercise: Non-constant format string
 ====================================
 
-Write a query that flags ``printf`` calls where the format argument is not a ``StringLiteral``. 
+Write a query that flags ``printf`` calls where the format argument is not a ``StringLiteral``.
 
 **Hint**: Import ``semmle.code.cpp.commons.Printf`` and use class ``FormattingFunction`` and ``getFormatParameterIndex()``.
 
@@ -104,7 +104,7 @@ We need something better.
   .. code-block:: cpp
 
           const char *format = align == AlignLeft ? "%-*.*s" : "%*.*s";
-      
+
                 if (IsDMLEnabled())
                     DMLOut(format, width, precision, mValue);
                 else
@@ -140,11 +140,11 @@ Define a subclass of ``DataFlow::Node`` representing “source” nodes, that is
 .. note::
 
   Note the scoping of the `don’t-care variable <https://codeql.github.com/docs/ql-language-reference/expressions/#don-t-care-expressions>`__ “_” in this example: the body of the characteristic predicate is equivalent to:
-  
+
   .. code-block:: ql
 
     not exists(DataFlow::Node pred | DataFlow::localFlowStep(pred, this))
-    
+
   which is not the same as:
 
   .. code-block:: ql
@@ -163,9 +163,9 @@ Refine the query to find calls to ``printf``-like functions where the format arg
    import cpp
    import semmle.code.cpp.dataflow.DataFlow
    import semmle.code.cpp.commons.Printf
-   
+
    class SourceNode extends DataFlow::Node { ... }
-   
+
    from FormattingFunction f, Call c, SourceNode src, DataFlow::Node  arg
    where c.getTarget() = f and
          arg.asExpr() = c.getArgument(f.getFormatParameterIndex()) and

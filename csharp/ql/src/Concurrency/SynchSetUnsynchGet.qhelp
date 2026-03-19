@@ -8,7 +8,7 @@ and other errors. <code>lock</code> statements are often needed to make concurre
 that the data is consistent. However <code>lock</code> statements must be used consistently on
 all methods which are potentially called concurrently.</p>
 
-<p>When there is a <code>lock</code> statement on a property setter, it implies that the property could be 
+<p>When there is a <code>lock</code> statement on a property setter, it implies that the property could be
 assigned to concurrently, so the property could also be read concurrently.
 Therefore a <code>lock</code> statement is necessary on the property getter. Even simple getters
 require a <code>lock</code> statement to ensure that there is a memory barrier when reading a field.
@@ -16,7 +16,7 @@ require a <code>lock</code> statement to ensure that there is a memory barrier w
 </overview>
 
 <recommendation>
-<p>Examine the logic of the program to check whether the property could be read concurrently. 
+<p>Examine the logic of the program to check whether the property could be read concurrently.
 Add a <code>lock</code> statement in the property getter if necessary.</p>
 
 <p>Alternatively, remove the <code>lock</code> statement from the property setter if it is

@@ -8,10 +8,10 @@ Use this template:
 .. code-block:: ql
 
    /**
-    * ... 
+    * ...
     * @kind path-problem
     */
-   
+
    import semmle.code.<language>.dataflow.TaintTracking
    import DataFlow::PathGraph
    ...

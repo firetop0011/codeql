@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>The code passes user input as part of a SQL query without escaping special elements. 
+<p>The code passes user input as part of a SQL query without escaping special elements.
 It generates a SQL query using <code>sprintf</code>,
 with the user-supplied data directly passed as an argument
 to <code>sprintf</code>. This leaves the code vulnerable to attack by SQL Injection.</p>

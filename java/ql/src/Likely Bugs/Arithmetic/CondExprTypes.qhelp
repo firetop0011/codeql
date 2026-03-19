@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>Conditional expressions of the form <code>(p ? e1 : e2)</code> can 
+<p>Conditional expressions of the form <code>(p ? e1 : e2)</code> can
 yield unexpected results if <code>e1</code> and <code>e2</code> have
 distinct primitive types.</p>
 
@@ -18,7 +18,7 @@ and the other branch does not have type <code>char</code>.</p>
 <sample src="CondExprTypes.java" />
 
 <p>This unexpected result is due to binary numeric promotion
-of <code>'x'</code> from <code>char</code> to <code>int</code>. 
+of <code>'x'</code> from <code>char</code> to <code>int</code>.
 For details on the result type of
 the conditional operator, see the references.
 </p>
@@ -26,7 +26,7 @@ the conditional operator, see the references.
 </example>
 <recommendation>
 
-<p>When using the ternary conditional operator with numeric operands, 
+<p>When using the ternary conditional operator with numeric operands,
 the second and third operand should have the same numeric type.
 This avoids potentially unexpected results caused by binary numeric promotion.
 </p>

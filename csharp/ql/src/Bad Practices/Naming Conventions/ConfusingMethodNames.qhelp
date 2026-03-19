@@ -3,8 +3,8 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>It is bad practice to have two methods with names that differ only in capitalization. If a developer does not 
-notice both methods they may call the wrong one. If they do notice then they will have to waste time investigating 
+<p>It is bad practice to have two methods with names that differ only in capitalization. If a developer does not
+notice both methods they may call the wrong one. If they do notice then they will have to waste time investigating
 which method needs to be called.</p>
 
 </overview>
@@ -13,7 +13,7 @@ which method needs to be called.</p>
 
 </recommendation>
 <example>
-<p>In this example the <code>ConvertToIso</code> method exists twice with two different capitalizations. One should 
+<p>In this example the <code>ConvertToIso</code> method exists twice with two different capitalizations. One should
 be removed.</p>
 <sample src="ConfusingMethodNames.cs" />
 

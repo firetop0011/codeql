@@ -5,8 +5,8 @@
 
 
 <overview>
-<p>This query finds branching statements with conditions that always evaluate to the same value. 
-It is likely that these conditions indicate an error in the branching condition. 
+<p>This query finds branching statements with conditions that always evaluate to the same value.
+It is likely that these conditions indicate an error in the branching condition.
 Alternatively, the conditions may have been left behind after debugging.</p>
 
 <include src="aliasAnalysisWarning.inc.qhelp" />
@@ -17,8 +17,8 @@ Alternatively, the conditions may have been left behind after debugging.</p>
 </recommendation>
 
 <example>
-<p>This example shows two branch conditions that always evaluate to the same value. 
-The two conditions and their associated branches should be deleted. 
+<p>This example shows two branch conditions that always evaluate to the same value.
+The two conditions and their associated branches should be deleted.
 This will simplify the code and make it easier to maintain.</p>
 
 <sample src="DeadCodeCondition.cpp" />

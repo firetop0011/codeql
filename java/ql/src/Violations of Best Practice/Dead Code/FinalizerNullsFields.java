@@ -2,7 +2,7 @@ class FinalizedClass {
 	Object o = new Object();
 	String s = "abcdefg";
 	Integer i = Integer.valueOf(2);
-	
+
 	@Override
 	protected void finalize() throws Throwable {
 		super.finalize();

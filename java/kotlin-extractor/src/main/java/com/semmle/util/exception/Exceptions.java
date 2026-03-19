@@ -92,7 +92,7 @@ public class Exceptions {
 		if(!cond)
 			throw new CatastrophicError(message);
 	}
-	
+
 	/**
 	 * Turn the given {@link Throwable} into a {@link RuntimeException} by wrapping it if necessary.
 	 */
@@ -102,7 +102,7 @@ public class Exceptions {
 		else
 			return new RuntimeException(t);
 	}
-	
+
 	/**
 	 * Throws an arbitrary {@link Throwable}, wrapping in a runtime exception if necessary.
 	 * Unlike {@link #asUnchecked} it preserves subclasses of {@link Error}.

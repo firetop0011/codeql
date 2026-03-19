@@ -4,7 +4,7 @@ public void arrayExample(){
 
     // Reference equality tested: prints 'false'
     System.out.println(array1.equals(array2));
-    
+
     // Equality of array elements tested: prints 'true'
     System.out.println(Arrays.equals(array1, array2));
 }

@@ -29,7 +29,7 @@ The bits of a floating point could be exposed by:
 </overview>
 <recommendation>
 <p>
-Do not expose the bit contents of a float. 
+Do not expose the bit contents of a float.
 </p>
 
 </recommendation>

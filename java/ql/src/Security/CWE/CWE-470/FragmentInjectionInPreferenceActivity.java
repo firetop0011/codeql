@@ -18,4 +18,3 @@ class SafeActivity extends PreferenceActivity {
     }
 
 }
-

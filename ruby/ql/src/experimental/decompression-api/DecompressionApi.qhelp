@@ -5,7 +5,7 @@
   <overview>
     <p>
       Decompression of user-controlled data without taking proper precaution can
-      result in uncontrolled and massive decompression on the server, resulting 
+      result in uncontrolled and massive decompression on the server, resulting
       in a denial of service.
     </p>
   </overview>
@@ -21,7 +21,7 @@
     </p>
     <sample src="examples/decompress.rb" />
   </example>
-  
+
   <references>
   </references>
 </qhelp>

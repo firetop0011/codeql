@@ -6,6 +6,6 @@ class Audio3D {
   }
 
   setAudioProperties(){
-    // ...  
+    // ...
   }
 }

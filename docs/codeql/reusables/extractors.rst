@@ -4,9 +4,9 @@
 
    * - Language
      - Identifier
-   * - C/C++ 
+   * - C/C++
      - ``cpp``
-   * - C# 
+   * - C#
      - ``csharp``
    * - Go
      - ``go``

@@ -905,8 +905,8 @@ hasLocation(#20283,#20171)
 enclosing_stmt(#20283,#20275)
 expr_containers(#20283,#20001)
 literals("
-  
-   some <cdata> 
+
+   some <cdata>
   ","
   <!-- comment -->
   <![CDATA[ some <cdata> ]]>

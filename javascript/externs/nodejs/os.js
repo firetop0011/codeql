@@ -255,4 +255,3 @@ module.exports.endianness = os.endianness;
 os.tmpDir = function() {};
 
 module.exports.tmpDir = os.tmpDir;
-

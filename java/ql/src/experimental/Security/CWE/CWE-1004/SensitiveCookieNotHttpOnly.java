@@ -25,7 +25,7 @@ class SensitiveCookieNotHttpOnly {
     public void addCookie4(String authId, HttpServletRequest request, HttpServletResponse response) {
         response.addHeader("Set-Cookie", "token=" +authId + ";Secure");
     }
-    
+
     // GOOD - Set a sensitive cookie header using the class `javax.ws.rs.core.Cookie` with the `HttpOnly` flag set through string concatenation.
     public void addCookie5(String accessKey, HttpServletRequest request, HttpServletResponse response) {
         response.setHeader("Set-Cookie", new NewCookie("session-access-key", accessKey, "/", null, null, 0, true) + ";HttpOnly");

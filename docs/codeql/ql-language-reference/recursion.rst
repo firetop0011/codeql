@@ -8,13 +8,13 @@ Recursion
 #########
 
 QL provides strong support for recursion. A predicate in QL is said to be recursive if
-it depends, directly or indirectly, on itself. 
+it depends, directly or indirectly, on itself.
 
-To evaluate a recursive predicate, the QL compiler finds the `least fixed point 
-<https://en.wikipedia.org/wiki/Least_fixed_point>`_ of the recursion. 
-In particular, it starts with the empty set of values, and finds new values by repeatedly 
+To evaluate a recursive predicate, the QL compiler finds the `least fixed point
+<https://en.wikipedia.org/wiki/Least_fixed_point>`_ of the recursion.
+In particular, it starts with the empty set of values, and finds new values by repeatedly
 applying the predicate until the set of values no longer changes. This set is the least fixed
-point and hence the result of the evaluation. 
+point and hence the result of the evaluation.
 Similarly, the result of a QL query is the least fixed point of the predicates referenced in
 the query.
 
@@ -57,23 +57,23 @@ depend on each other. For example, here is a QL query that counts to 100 using e
       or
       result <= 100 and result = getAnOdd() + 1
     }
-    
+
     int getAnOdd() {
       result = getAnEven() + 1
     }
-    
+
     select getAnEven()
-    
+
 The results of this query are the even numbers from 0 to 100.
 You could replace ``select getAnEven()`` with ``select getAnOdd()`` to list the odd numbers from 1 to 101.
-    
+
 .. index:: transitive closure
 .. _transitive-closures:
 
 Transitive closures
 ===================
 
-The `transitive closure <https://en.wikipedia.org/wiki/Transitive_closure>`_ 
+The `transitive closure <https://en.wikipedia.org/wiki/Transitive_closure>`_
 of a predicate is a recursive predicate whose results are obtained by repeatedly
 applying the original predicate.
 
@@ -84,52 +84,52 @@ Since transitive closures are a common form of recursion, QL has two
 helpful abbreviations:
 
 #. **Transitive closure** ``+``
-  
+
    To apply a predicate **one** or more times, append ``+`` to the predicate name.
-   
+
    For example, suppose that you have a class ``Person`` with a :ref:`member predicate
    <member-predicates>` ``getAParent()``. Then ``p.getAParent()`` returns any parents of ``p``.
-   The transitive closure ``p.getAParent+()`` returns parents of ``p``, parents of parents of 
+   The transitive closure ``p.getAParent+()`` returns parents of ``p``, parents of parents of
    ``p``, and so on.
-   
-   Using this ``+`` notation is often simpler than defining the recursive predicate explicitly. 
+
+   Using this ``+`` notation is often simpler than defining the recursive predicate explicitly.
    In this case, an explicit definition could look like this:
 
    .. code-block:: ql
-   
+
        Person getAnAncestor() {
          result = this.getAParent()
          or
          result = this.getAParent().getAnAncestor()
        }
-   
+
    The predicate ``getAnAncestor()`` is equivalent to ``getAParent+()``.
 
 #. **Reflexive transitive closure** ``*``
-  
+
    This is similar to the above transitive closure operator, except that you can use it to apply a
    predicate to itself **zero** or more times.
-   
+
    For example, the result of ``p.getAParent*()`` is an ancestor of ``p`` (as above), or ``p``
    itself.
-   
+
    In this case, the explicit definition looks like this:
 
    .. code-block:: ql
-   
+
        Person getAnAncestor2() {
          result = this
          or
          result = this.getAParent().getAnAncestor2()
        }
-   
+
    The predicate ``getAnAncestor2()`` is equivalent to ``getAParent*()``.
 
 Restrictions and common errors
 ******************************
 
 While QL is designed for querying recursive data, recursive definitions are sometimes difficult
-to get right. If a recursive definition contains an error, then usually you get no results, or 
+to get right. If a recursive definition contains an error, then usually you get no results, or
 a compiler error.
 
 The following examples illustrate common mistakes that lead to invalid recursion:
@@ -141,7 +141,7 @@ Firstly, a valid recursive definition must have a starting point or *base case*.
 If a recursive predicate evaluates to the empty set of values, there is usually something
 wrong.
 
-For example, you might try to define the predicate ``getAnAncestor()`` (from the 
+For example, you might try to define the predicate ``getAnAncestor()`` (from the
 :ref:`above <transitive-closures>` example) as follows:
 
 .. code-block:: ql
@@ -198,11 +198,11 @@ For example, consider the following (slightly macabre) member predicate of class
 ``p.isExtinct()`` holds if ``p`` and all of ``p``'s descendants are dead.
 
 The recursive call to ``isExtinct()`` is nested in an even number of negations, so this is a
-valid definition. 
+valid definition.
 In fact, you could rewrite the second part of the definition as follows:
 
 .. code-block:: ql
 
-    forall(Person descendant | descendant.getAParent+() = this | 
+    forall(Person descendant | descendant.getAParent+() = this |
       descendant.isExtinct()
     )

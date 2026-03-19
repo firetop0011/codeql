@@ -5,7 +5,7 @@
 <overview>
 <p>An <code>import</code> statement that is not necessary (because no part
 of the file that it is in uses any imported type) should be avoided. Although
-importing too many types does not affect performance, redundant <code>import</code> statements 
+importing too many types does not affect performance, redundant <code>import</code> statements
 introduce unnecessary and undesirable dependencies in the code. If an imported type is
 renamed or deleted, the source code cannot be compiled because the
 <code>import</code> statement cannot be resolved.</p>

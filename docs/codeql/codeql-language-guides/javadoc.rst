@@ -37,7 +37,7 @@ We could rewrite the above query to use this API instead of ``getAuthor`` and ``
 .. code-block:: ql
 
    import java
-    
+
    from Class c, Javadoc jdoc, JavadocTag authorTag, JavadocTag versionTag
    where jdoc = c.getDoc().getJavadoc() and
        authorTag.getTagName() = "@author" and authorTag.getParent() = jdoc and

@@ -19,8 +19,8 @@ or it could be moved out of the class as a normal function.
 </recommendation>
 
 <example>
-<p>The following methods can both be used to assign values to variables in a <code>point</code> 
-object. The second method makes the association clearer because the <code>self</code> parameter is 
+<p>The following methods can both be used to assign values to variables in a <code>point</code>
+object. The second method makes the association clearer because the <code>self</code> parameter is
 used.</p>
 <sample src="NonSelf.py" />
 
@@ -28,7 +28,7 @@ used.</p>
 </example>
 <references>
 
-<li>Python PEP 8: <a href="http://www.python.org/dev/peps/pep-0008/#function-and-method-arguments">Function and 
+<li>Python PEP 8: <a href="http://www.python.org/dev/peps/pep-0008/#function-and-method-arguments">Function and
 method arguments</a>.</li>
 <li>Python Tutorial: <a href="http://docs.python.org/2/tutorial/classes.html">Classes</a>.</li>
 

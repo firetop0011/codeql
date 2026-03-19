@@ -32,10 +32,10 @@ whether the strings <code>user</code> and <code>pw</code> are empty. Note that t
 <code>user.equals("")</code> throws a <code>NullPointerException</code> if <code>user</code> is
 <code>null</code>.</p>
 
-<p>In contrast, the class <code>EfficientDBClient</code> uses <code>length</code> instead of 
-<code>equals</code>. The class preserves the behavior of <code>InefficientDBClient</code> by 
-guarding <code>pw.length() == 0</code> but not <code>user.length() == 0</code> with an explicit test 
-for <code>null</code>. Whether or not this guard is desirable depends on the intended behavior of 
+<p>In contrast, the class <code>EfficientDBClient</code> uses <code>length</code> instead of
+<code>equals</code>. The class preserves the behavior of <code>InefficientDBClient</code> by
+guarding <code>pw.length() == 0</code> but not <code>user.length() == 0</code> with an explicit test
+for <code>null</code>. Whether or not this guard is desirable depends on the intended behavior of
 the program.</p>
 
 <sample src="InefficientEmptyStringTest.java" />

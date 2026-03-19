@@ -5,7 +5,7 @@
 <overview>
 <p>This metric measures the number of lines of comments in a function. </p>
 
-<p>Functions that have too few comments are more likely to be insufficiently documented. 
+<p>Functions that have too few comments are more likely to be insufficiently documented.
 Long, complex functions that have no comments at all require particular scrutiny, as these are more likely
 to need explicit documentation in comments.</p>
 

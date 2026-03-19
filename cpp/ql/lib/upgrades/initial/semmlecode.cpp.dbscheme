@@ -115,7 +115,7 @@ numlines(unique int element_id: @sourceline ref,
          int num_code: int ref,
          int num_comment: int ref
         );
-        
+
 diagnostics(unique int id: @diagnostic,
 			int severity: int ref,
 			varchar(900) error_tag: string ref,
@@ -137,7 +137,7 @@ folders(unique int id: @folder,
         varchar(900) name: string ref,
         varchar(900) simple: string ref);
 
-@container = @folder | @file 
+@container = @folder | @file
 
 containerparent(int parent: @container ref,
                 unique int child: @container ref);
@@ -177,7 +177,7 @@ macrolocationbind(int id: @macroinvocation ref,
 functions(unique int id: @function,
           varchar(900) name: string ref,
           int kind: int ref);
-          
+
 function_return_type(int id: @function ref, int return_type: @type ref);
 
 purefunctions(unique int id: @function ref);
@@ -233,7 +233,7 @@ usings(unique int id: @using,
        int container: @element ref,
        int location: @location_default ref);
 
-// each function has an ordered list of parameters 
+// each function has an ordered list of parameters
 params(unique int id: @parameter,
            int function: @functionorblock ref,
            int index: int ref,
@@ -244,12 +244,12 @@ overrides(int new: @function ref, int old: @function ref);
 membervariables(unique int id: @membervariable,
           int type_id: @type ref,
           varchar(900) name: string ref);
-          
+
 properties(unique int id: @property,
            int type_id: @type ref,
            varchar(900) name: string ref,
            int getter: @function ref);
-           
+
 property_setter(int prop: @property ref, int setter: @function ref);
 property_synthesis(int prop: @property ref, int ivar: @membervariable ref);
 property_attribute(int prop: @property ref, int attr: @attribute ref);
@@ -265,7 +265,7 @@ localvariables(unique int id: @localvariable,
 
 autoderivation(unique int var: @variable ref,
                int derivation_type: @type ref);
-          
+
 enumconstants(unique int id: @enumconstant,
           int parent: @usertype ref,
           int index: int ref,
@@ -278,14 +278,14 @@ enumconstants(unique int id: @enumconstant,
 
 /*
   Built-in types are the fundamental types, i.e., integral, floating, and void.
-  kind(1) = error, kind(2) = unknown, kind(3) = void, kind(4) = boolean, 
+  kind(1) = error, kind(2) = unknown, kind(3) = void, kind(4) = boolean,
   kind(5) = char, kind(6) = unsigned char, kind(7) = signed char
   kind(8) = short, kind(9) = unsigned short, kind(10) = signed short
   kind(11) = int, kind(12) = unsigned int, kind(13) = signed int,
   kind(14) = long, kind(15) = unsigned long, kind(16) = signed long,
   kind(17) = long long, kind(18) = unsigned long long, kind(19) = signed long long,
   kind(20) = __int8, kind(21) = __int16, kind(22) = __int32, kind(23) = __int64, // Microsoft specific
-  kind(24) = float, kind(25) = double, kind(26) = long double, 
+  kind(24) = float, kind(25) = double, kind(26) = long double,
   kind(27) = _Complex float, kind(28) = _Complex double, kind(29) = _Complex long double, //C99 specific
   kind(30) = _Imaginary float, kind(31) = _Imaginary double, kind(32) = _Imaginary long double, //C99 specific
   kind(33) = wchar_t, // MS specific
@@ -376,7 +376,7 @@ function_instantiation(unique int to: @function ref,
 function_template_argument(int function_id: @function ref,
                     int index: int ref,
                     int arg_type: @type ref);
-                   
+
 /*
   Fixed point types
   precision(1) = short, precision(2) = default, precision(3) = long
@@ -391,7 +391,7 @@ fixedpointtypes(unique int id: @fixedpointtype,
                 int is_fract_type: int ref,
                 int saturating: int ref);
 */
-                
+
 routinetypes(unique int id: @routinetype,
              int return_type: @type ref);
 
@@ -421,7 +421,7 @@ ptrtomembers(unique int id: @ptrtomember,
     "inline",
     "explicit",
 
-    "near", // near far extension 
+    "near", // near far extension
     "far", // near far extension
     "__ptr32", // Microsoft
     "__ptr64", // Microsoft
@@ -449,7 +449,7 @@ typerefs(unique int id: @typeref,
 
 specifiers(unique int id: @specifier,
            unique varchar(900) str: string ref);
-           
+
 typespecifiers(int type_id: @type ref,
                int spec_id: @specifier ref);
 
@@ -471,7 +471,7 @@ attributes(unique int id: @attribute,
           varchar(100) name: string ref,
           varchar(100) name_space: string ref,
           int location: @location_default ref);
-          
+
 case @attribute.kind of
   0 = @gnuattribute
 | 1 = @stdattribute
@@ -486,7 +486,7 @@ attribute_args(unique int id: @attribute_arg,
                int attribute: @attribute ref,
                int index: int ref,
                int location: @location_default ref);
-               
+
 case @attribute_arg.kind of
   0 = @attribute_arg_empty
 | 1 = @attribute_arg_token
@@ -510,8 +510,8 @@ varattributes(int var_id: @accessible ref,
 stmtattributes(int stmt_id: @stmt ref,
                int spec_id: @attribute ref);
 
-@type = @builtintype | @derivedtype | @usertype /* TODO | @fixedpointtype */ | @routinetype | @ptrtomember | @decltype; 
-      
+@type = @builtintype | @derivedtype | @usertype /* TODO | @fixedpointtype */ | @routinetype | @ptrtomember | @decltype;
+
 member(int parent: @type ref,
        int index: int ref,
        int child: @member ref);
@@ -562,7 +562,7 @@ exprconv(int converted: @expr ref,
          unique int conversion: @expr ref);
 
 compgenerated(unique int id: @element ref);
-            
+
 
 namespaces(unique int id: @namespace,
            varchar(900) name: string ref);
@@ -674,14 +674,14 @@ exprs(unique int id: @expr,
 case @expr.kind of
     1 = @errorexpr
 |   2 = @address_of // & AddressOfExpr
-|   3 = @reference_to // ReferenceToExpr (implicit?) 
+|   3 = @reference_to // ReferenceToExpr (implicit?)
 |   4 = @indirect // * PointerDereferenceExpr
 |   5 = @ref_indirect // ReferenceDereferenceExpr (implicit?)
 // ...
 |   8 = @array_to_pointer // (???)
 |   9 = @vacuous_destructor_call // VacuousDestructorCall
 // ...
-|  11 = @assume // Microsoft 
+|  11 = @assume // Microsoft
 |  12 = @parexpr
 |  13 = @arithnegexpr
 |  14 = @unaryplusexpr
@@ -873,7 +873,7 @@ code_block(unique int block: @literal ref,
 lambdas(unique int expr: @lambdaexpr ref,
         varchar(1) default_capture: string ref,
         boolean has_explicit_return_type: boolean ref);
-        
+
 lambda_capture(unique int id: @lambdacapture,
                int lambda: @lambdaexpr ref,
                int index: int ref,
@@ -936,8 +936,8 @@ isfinally(unique int block: @stmt_block ref);
 
 is_objc_try_stmt(unique int try: @stmt ref);
 is_objc_throw(unique int throw: @throw_expr ref);
-           
-@cfgnode = @stmt | @expr | @function | @initialiser ;      
+
+@cfgnode = @stmt | @expr | @function | @initialiser ;
 successors(int from: @cfgnode ref,
            int to: @cfgnode ref);
 
@@ -993,7 +993,7 @@ case @preprocdirect.kind of
 
 preprocpair(int begin : @ppd_branch ref,
             int end : @ppd_endif ref);
-            
+
 preproctrue(int branch : @ppd_branch ref);
 preprocfalse(int branch : @ppd_branch ref);
 
@@ -1050,58 +1050,58 @@ checkedNull(
 checkedValid(
 	int var : @variable ref,
 	int node : @cfgnode ref);
-	
+
 /* compilation dependencies taking #include directives into account */
-	
+
 #computed
 fileDepends(
 	int src : @file ref,
 	int tgt : @file ref);
 
-/* XML Files */ 
+/* XML Files */
 
 xmlEncoding  (unique int id: @file ref, varchar(900) encoding: string ref);
 
-xmlDTDs       (unique int id: @xmldtd, 
-              varchar(900) root: string ref, 
-              varchar(900) publicId: string ref, 
+xmlDTDs       (unique int id: @xmldtd,
+              varchar(900) root: string ref,
+              varchar(900) publicId: string ref,
               varchar(900) systemId: string ref,
-              int fileid: @file ref); 
-             
-xmlElements   (unique int id: @xmlelement, 
-              varchar(900) name: string ref, 
+              int fileid: @file ref);
+
+xmlElements   (unique int id: @xmlelement,
+              varchar(900) name: string ref,
               int parentid: @xmlparent ref,
               int idx: int ref,
-              int fileid: @file ref);            
+              int fileid: @file ref);
 
-xmlAttrs      (unique int id: @xmlattribute, 
+xmlAttrs      (unique int id: @xmlattribute,
               int elementid: @xmlelement ref,
-              varchar(900) name: string ref, 
+              varchar(900) name: string ref,
               varchar(3600) value: string ref,
               int idx: int ref,
               int fileid: @file ref);
 
-xmlNs         (int id: @xmlnamespace, 
+xmlNs         (int id: @xmlnamespace,
               varchar(900) prefixName: string ref,
               varchar(900) URI: string ref,
-              int fileid: @file ref);  
-               
-xmlHasNs      (int elementId: @xmlnamespaceable ref, 
-              int nsId: @xmlnamespace ref,
-              int fileid: @file ref);  
+              int fileid: @file ref);
 
-xmlComments   (unique int id: @xmlcomment, 
-              varchar(3600) text: string ref, 
+xmlHasNs      (int elementId: @xmlnamespaceable ref,
+              int nsId: @xmlnamespace ref,
+              int fileid: @file ref);
+
+xmlComments   (unique int id: @xmlcomment,
+              varchar(3600) text: string ref,
               int parentid: @xmlparent ref,
-              int fileid: @file ref); 
-               
-xmlChars      (unique int id: @xmlcharacters, 
-              varchar(3600) text: string ref, 
+              int fileid: @file ref);
+
+xmlChars      (unique int id: @xmlcharacters,
+              varchar(3600) text: string ref,
               int parentid: @xmlparent ref,
               int idx: int ref,
               int isCDATA: int ref,
-              int fileid: @file ref);  
-	           	
+              int fileid: @file ref);
+
 @xmlparent = @file | @xmlelement;
 @xmlnamespaceable = @xmlelement | @xmlattribute;
 

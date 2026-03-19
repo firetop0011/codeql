@@ -9,7 +9,7 @@
 is typically a leftover from old refactorings or a sign of incomplete or pending
 code changes.</p>
 
-<p>This rule does not apply to a field in a serializable class because it may be accessed during 
+<p>This rule does not apply to a field in a serializable class because it may be accessed during
 serialization and deserialization.</p>
 
 <p>Fields annotated with <code>@SuppressWarnings("unused")</code> are also not reported.</p>

@@ -11,7 +11,7 @@ These expressions are most likely intended to be part of a condition but were co
 </p>
 
 <p>
-In most cases these are defects caused by the unintended use of the comma operator. It is easy to 
+In most cases these are defects caused by the unintended use of the comma operator. It is easy to
 misuse the comma operator (particularly in conditions)
 and it would be good practice to use it only when the brevity it allows is absolutely necessary (e.g. macro definitions).
 </p>
@@ -19,7 +19,7 @@ and it would be good practice to use it only when the brevity it allows is absol
 </overview>
 <recommendation>
 <p>
-Make sure that the flagged expressions are not oversights. 
+Make sure that the flagged expressions are not oversights.
 To document that the value of the expression is deliberately ignored, you could explicitly cast it to <code>void</code>.
 </p>
 

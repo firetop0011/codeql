@@ -13,7 +13,7 @@ It is more likely that an annotation type should be used to annotate a class.
 </overview>
 <recommendation>
 
-<p>Ensure that any annotations are used to annotate a class, unless they are really supposed to be 
+<p>Ensure that any annotations are used to annotate a class, unless they are really supposed to be
 extended or implemented by the class.
 </p>
 

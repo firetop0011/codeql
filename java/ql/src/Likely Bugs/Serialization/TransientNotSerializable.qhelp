@@ -7,7 +7,7 @@
 <overview>
 <p>
 The <code>transient</code> modifier is used to identify fields that are not part of the persistent state of the class. As such, it only has an
-effect if the class is serializable, and has no purpose in a non-serializable class. 
+effect if the class is serializable, and has no purpose in a non-serializable class.
 </p>
 
 <p>

@@ -5,9 +5,9 @@
 
 
 <overview>
-<p>Reference comparisons (<code>==</code> or <code>!=</code>) 
+<p>Reference comparisons (<code>==</code> or <code>!=</code>)
 with operands where the static type is <code>Object</code> may not work as intended.
-Reference comparisons check if two objects are <i>identical</i>. To check if 
+Reference comparisons check if two objects are <i>identical</i>. To check if
 two objects are <i>equivalent</i>, use <code>Object.equals</code> instead.
 </p>
 
@@ -15,7 +15,7 @@ two objects are <i>equivalent</i>, use <code>Object.equals</code> instead.
 <recommendation>
 
 <p>Use <code>Object.equals</code> instead of <code>==</code> or <code>!=</code>, and override
-the default behavior of the method in a subclass, so that it uses the appropriate notion of 
+the default behavior of the method in a subclass, so that it uses the appropriate notion of
 equality.
 </p>
 

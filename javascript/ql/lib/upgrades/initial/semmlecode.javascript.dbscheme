@@ -3,7 +3,7 @@
 /** Files and folders **/
 
 @location = @location_default;
- 
+
 locations_default(unique int id: @location_default,
           int file: @file ref,
           int beginLine: int ref,
@@ -11,16 +11,16 @@ locations_default(unique int id: @location_default,
           int endLine: int ref,
           int endColumn: int ref
          );
- 
+
 @sourceline = @toplevel;
- 
+
 numlines(int element_id: @sourceline ref,
          int num_lines: int ref,
          int num_code: int ref,
          int num_comment: int ref
         );
- 
- 
+
+
 /*
   fromSource(0) = unknown,
   fromSource(1) = from source,
@@ -31,32 +31,32 @@ files(unique int id: @file,
       varchar(900) simple: string ref,
       varchar(900) ext: string ref,
       int fromSource: int ref);
- 
+
 folders(unique int id: @folder,
         varchar(900) name: string ref,
         varchar(900) simple: string ref);
- 
- 
+
+
 @container = @folder | @file ;
- 
- 
+
+
 containerparent(int parent: @container ref,
                 unique int child: @container ref);
-                
+
 /** Duplicate code **/
 
 duplicateCode(
   unique int id : @duplication,
   varchar(900) relativePath : string ref,
   int equivClass : int ref);
- 
+
 similarCode(
   unique int id : @similarity,
   varchar(900) relativePath : string ref,
   int equivClass : int ref);
- 
+
 @duplication_or_similarity = @duplication | @similarity;
- 
+
 tokens(
   int id : @duplication_or_similarity ref,
   int offset : int ref,
@@ -74,23 +74,23 @@ externalDefects(
   varchar(900) message : string ref,
   float severity : float ref
 );
- 
+
 externalMetrics(
   unique int id : @externalMetric,
   varchar(900) queryPath : string ref,
   int location : @location ref,
   float value : float ref
 );
- 
+
 externalData(
   int id : @externalDataElement,
   varchar(900) path : string ref,
   int column: int ref,
   varchar(900) value : string ref
 );
- 
+
 snapshotDate(unique date snapshotDate : date ref);
- 
+
 sourceLocationPrefix(varchar(900) prefix : string ref);
 
 /** Version control data **/
@@ -102,18 +102,18 @@ svnentries(
   date revisionDate : date ref,
   int changeSize : int ref
 );
- 
+
 svnaffectedfiles(
   int id : @svnentry ref,
   int file : @file ref,
   varchar(500) action : string ref
 );
- 
+
 svnentrymsg(
   int id : @svnentry ref,
   varchar(500) message : string ref
 );
- 
+
 svnchurn(
   int commit : @svnentry ref,
   int file : @file ref,
@@ -134,15 +134,15 @@ case @toplevel.kind of
 |  3 = @javascript_url;
 
 // statements
-stmts (unique int id: @stmt, 
+stmts (unique int id: @stmt,
        int kind: int ref,
-       int parent: @stmtparent ref, 
+       int parent: @stmtparent ref,
        int idx: int ref,
        varchar(900) tostring: string ref);
 
 stmtContainers (int stmt: @stmt ref,
        int container: @stmt_container ref);
-       
+
 semicolonInserted (int stmt: @stmt ref);
 
 jumpTargets (int jump: @stmt ref,
@@ -185,13 +185,13 @@ exprs (unique int id: @expr,
 literals (varchar(900) value: string ref,
        varchar(900) raw: string ref,
        unique int expr: @expr ref);
-       
+
 enclosingStmt (int expr: @expr ref,
        int stmt: @stmt ref);
 
 arraySize (int ae: @arrayexpr ref,
        int sz: int ref);
-       
+
 @exprparent = @expr | @stmt | @property | @vardeclarator;
 
 case @expr.kind of
@@ -292,7 +292,7 @@ case @scope.kind of
 
 scopenodes (int node: @scopenode ref,
             int scope: @scope ref);
-            
+
 scopenesting (int inner: @scope ref,
               int outer: @scope ref);
 
@@ -303,7 +303,7 @@ scopenesting (int inner: @scope ref,
 
 params (unique int id: @param,
         int variable: @variable ref,
-        varchar(900) name: string ref, 
+        varchar(900) name: string ref,
         int pos: int ref,
         int parent: @parameterized ref);
 
@@ -311,7 +311,7 @@ params (unique int id: @param,
 variables (unique int id: @variable,
         varchar(900) name: string ref,
         int scope: @scope ref);
-        
+
 isArgumentsObject (int id: @variable ref);
 
 vardecls (unique int id: @vardeclarator,
@@ -324,10 +324,10 @@ vardecls (unique int id: @vardeclarator,
 // declare variables; this table links the function declaration with its variable
 functionvars (int func: @functiondecl ref,
         int var: @variable ref);
-        
+
 bind (int id: @identifier ref,
       int decl: @variable ref);
-      
+
 @vardeclaration = @param | @vardeclarator | @functiondecl;
 
 // properties in object literals
@@ -369,14 +369,14 @@ errors (unique int id: @error,
 
 case @error.kind of
   0 = @parseerror;
-  
+
 // regular expressions
 regexpterm (unique int id: @regexpterm,
         int kind: int ref,
         int parent: @regexpparent ref,
         int idx: int ref,
         varchar(900) tostring: string ref);
-        
+
 @regexpparent = @regexpterm | @regexpliteral;
 
 case @regexpterm.kind of
@@ -455,7 +455,7 @@ case @token.kind of
 | 8 = @token_punctuator;
 
 // locations
-@locatable = @file 
+@locatable = @file
     | @toplevel | @stmt | @expr | @property | @vardeclaration
     | @comment
     | @line

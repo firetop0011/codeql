@@ -3,7 +3,7 @@ package com.semmle.js.ast;
 /**
  * A meta property access (cf. ECMAScript 2015 Language Specification, Chapter 12.3.8).
  *
- * <p>Currently the only recognised meta properties are <code>new.target</code>, 
+ * <p>Currently the only recognised meta properties are <code>new.target</code>,
  * <code>import.meta</code> and <code> function.sent</code>.
  */
 public class MetaProperty extends Expression {

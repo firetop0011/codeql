@@ -19,13 +19,13 @@ and replace all uses of <code>attr</code> with <code>module.attr</code>.
 </recommendation>
 
 <example>
-<p>In the first of the two modules shown below, <code>from sys import stdout</code> is used to import the <code>stdout</code> attribute, 
+<p>In the first of the two modules shown below, <code>from sys import stdout</code> is used to import the <code>stdout</code> attribute,
 rather than using <code>import sys</code> to import the module. Then <code>stdout</code> is used in the <code>main()</code> function.
 </p>
 <sample src="from_import.py" />
 <p>In the second module, below, a function, <code>redirect_to_file</code> is defined to collect the output from <code>sys.stdout</code> and save it to a file.
-However, <code>redirect_to_file</code> will not work correctly when passed the <code>main()</code> function. 
-This is because the <code>main()</code> function will not see the change to <code>sys.stdout</code>, 
+However, <code>redirect_to_file</code> will not work correctly when passed the <code>main()</code> function.
+This is because the <code>main()</code> function will not see the change to <code>sys.stdout</code>,
 as it uses its own version of <code>stdout</code> that was defined when the module was loaded.
 </p>
 <sample src="redirect.py" />

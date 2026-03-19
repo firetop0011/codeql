@@ -18,7 +18,7 @@ This should be avoided as it can cause confusion about the actual variable being
 </overview>
 <recommendation>
 <p>
-Change the name of the identifier so it does not hide another on an outer scope. 
+Change the name of the identifier so it does not hide another on an outer scope.
 </p>
 
 </recommendation>

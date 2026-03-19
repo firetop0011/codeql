@@ -5,7 +5,7 @@ startActivity(forwardIntent);
 // GOOD: The destination component is checked before launching it
 Intent forwardIntent = (Intent) getIntent().getParcelableExtra("forward_intent");
 ComponentName destinationComponent = forwardIntent.resolveActivity(getPackageManager());
-if (destinationComponent.getPackageName().equals("safe.package") && 
+if (destinationComponent.getPackageName().equals("safe.package") &&
     destinationComponent.getClassName().equals("SafeClass")) {
     startActivity(forwardIntent);
 }

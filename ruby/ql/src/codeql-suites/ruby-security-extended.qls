@@ -2,4 +2,3 @@
 - queries: .
 - apply: security-extended-selectors.yml
   from: codeql/suite-helpers
-

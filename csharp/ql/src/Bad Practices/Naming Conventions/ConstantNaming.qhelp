@@ -7,12 +7,12 @@
 
 </overview>
 <recommendation>
-<p>As per Microsoft's suggested naming conventions, all constant fields should be named using 
+<p>As per Microsoft's suggested naming conventions, all constant fields should be named using
 PascalCase.</p>
 
 </recommendation>
 <example>
-<p>This example demonstrates several different capitalizations that trigger alerts for this 
+<p>This example demonstrates several different capitalizations that trigger alerts for this
 rule. Another developer working on the program might not realize they refer to constants. The <code>
 PascalCase</code> constant is the only one named correctly.</p>
 <sample src="ConstantNaming.cs" />

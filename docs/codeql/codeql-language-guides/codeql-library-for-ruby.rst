@@ -34,7 +34,7 @@ The CFG models the control flow between statements and expressions, for example 
 flow to another expression, or whether an expression "dominates" another one, meaning that all paths to an
 expression must flow through another expression first.
 
-The data flow library is imported using 
+The data flow library is imported using
 
 .. code-block:: ql
 
@@ -103,7 +103,7 @@ to all AST classes:
 Modules
 ~~~~~~~
 
-Modules represent the main structural elements of Ruby programs, and include modules (``Module``), 
+Modules represent the main structural elements of Ruby programs, and include modules (``Module``),
 namespaces  (``Namespace``) and classes (``ClassDeclaration``).
 
 .. list-table:: Callable classes
@@ -120,7 +120,7 @@ namespaces  (``Namespace``) and classes (``ClassDeclaration``).
         - `getAnIncludedModule()` - Gets an included module.
    * - ``Namespace``
      - A class or module definition.
-     
+
        - `getName()` - Gets the name of the module/class.
        - `getAMethod()`, `getMethod(name)` - Gets a method in this namespace.
        - `getAClass()`, `getClass(name)` - Gets a class in this namespace.
@@ -163,7 +163,7 @@ Callables
      - A call to ``private``.
    * - ``Method``
      - A method.
-  
+
        - `getName()` - gets the name of this method
    * - ``SingletonMethod``
      - A singleton method.
@@ -187,7 +187,7 @@ callable. The variables of a parameter are given by the `getAVariable()` predica
      - Description and main predicates
    * - ``Parameter``
      - A parameter.
-  
+
        - `getCallable()` - Gets the callable that this parameter belongs to.
        - `getPosition()` - Gets the zero-based position of this parameter.
        - `getAVariable()`, `getVariable(name)` - Gets a variable introduced by this parameter.
@@ -277,7 +277,7 @@ The following example finds all literals that are returned by a `return` stateme
    import codeql.ruby.AST
 
    from ReturnStmt return, Literal lit
-   where lit.getParent() = return 
+   where lit.getParent() = return
    select lit, "Returning a literal " + lit.getValueText()
 
 Expressions
@@ -292,7 +292,7 @@ Expressions are types of statement that evaluate to a value. The CodeQL class `E
      - Description and main predicates
    * - ``Expr``
      - An expression.
- 
+
        This is the root class for all expressions.
 
        - `getValueText()` - Gets the textual (constant) value of this expression, if any.
@@ -390,7 +390,7 @@ there is an underlying call to the operation.
    * - ``UnaryOperation``
      - A unary operation.
 
-       Types of unary operation include ``UnaryLogicalOperation``, ``NotExpr``, ``UnaryPlusExpr``, ``UnaryMinusExpr``, ``SplatExpr``, 
+       Types of unary operation include ``UnaryLogicalOperation``, ``NotExpr``, ``UnaryPlusExpr``, ``UnaryMinusExpr``, ``SplatExpr``,
        ``HashSplatExpr``, ``UnaryBitwiseOperation``, and ``ComplementExpr``.
    * - ``DefinedExpr``
      - A call to the special `defined?` operator
@@ -412,7 +412,7 @@ there is an underlying call to the operation.
      - An assignment. Assignments are simple assignments (``AssignExpr``), or assignment operations (``AssignOperation``).
 
        The assignment arithmetic operations (``AssignArithmeticOperation``) are ``AssignAddExpr``, ``AssignSubExpr``, ``AssignMulExpr``, ``AssignDivExpr``, ``AssignModuloExpr``, and ``AssignExponentExpr``.
-       
+
        The assignment logical operations (``AssignLogicalOperation``) are ``AssignLogicalAndExpr`` and ``AssignLogicalOrExpr``.
 
        The assignment bitwise operations (``AssignBitwiseOperation``) are ``AssignLShiftExpr``, ``AssignRShiftExpr``, ``AssignBitwiseAndExpr``, ``AssignBitwiseOrExpr``, and ``AssignBitwiseXorExpr``.
@@ -422,7 +422,7 @@ The following example finds "chained assignments" (of the form ``A=B=C``):
 .. code-block:: ql
 
    import codeql.ruby.AST
-   
+
    from Assignment op
    where op.getRightOperand() instanceof Assignment
    select op, "This is a chained assignment."
@@ -436,7 +436,7 @@ Calls pass control to another function, include explicit method calls (``MethodC
      - Description and main predicates
    * - ``Call``
      - A call.
-        
+
        - `getArgument(n)`, `getAnArgument()`, `getKeywordArgument(keyword)` - Gets an argument of this call.
        - `getATarget()` - Gets a potential target of this call, if any.
    * - ``MethodCall``
@@ -516,7 +516,7 @@ Control expressions are expressions used for control flow.  They are classed as 
 The following example finds `if`-expressions that are missing a `then` branch.
 
 .. code-block:: ql
-   
+
    import codeql.ruby.AST
 
    from IfExpr expr
@@ -526,7 +526,7 @@ The following example finds `if`-expressions that are missing a `then` branch.
 Variables
 ~~~~~~~~~
 
-*Variables* are names that hold values in a Ruby program. If you want to query *any* type 
+*Variables* are names that hold values in a Ruby program. If you want to query *any* type
 of variable, then use the ``Variable`` class, otherwise use one of the subclasses
 ``LocalVariable``, ``InstanceVariable``, ``ClassVariable`` or ``GlobalVariable``.
 
@@ -571,8 +571,8 @@ Variable accesses are the uses of a variable in the source code. Note that varia
 Variables are modelled using the ``Variable`` class, whereas uses of the variable are modelled using the ``VariableAccess`` class.
 ``Variable.getAnAccess()`` gets the accesses of a variable.
 
-Variable accesses come in two types: *reads* of the variable (a ``ReadAccess``), and *writes* to the variable (a ``WriteAccess``). 
-Accesses are a type of expression, so extend the ``Expr`` class. 
+Variable accesses come in two types: *reads* of the variable (a ``ReadAccess``), and *writes* to the variable (a ``WriteAccess``).
+Accesses are a type of expression, so extend the ``Expr`` class.
 
 .. list-table:: Variable access classes
    :header-rows: 1

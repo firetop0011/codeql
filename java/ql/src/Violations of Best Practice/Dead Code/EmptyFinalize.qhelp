@@ -5,9 +5,9 @@
 
 
 <overview>
-<p>An empty <code>finalize</code> method is useless and may prevent finalization from 
-working properly. This is because, unlike a constructor, a finalizer does not implicitly call the 
-finalizer of the superclass. Thus, an empty finalizer prevents any finalization logic that is 
+<p>An empty <code>finalize</code> method is useless and may prevent finalization from
+working properly. This is because, unlike a constructor, a finalizer does not implicitly call the
+finalizer of the superclass. Thus, an empty finalizer prevents any finalization logic that is
 defined in any of its superclasses from being executed.</p>
 
 </overview>

@@ -4,11 +4,11 @@
 <qhelp>
 <overview>
 <p>
-A common pattern is to have a channel of communication open with a user, and then to open 
-another channel, for example to transfer data. However, if user authentication is done over 
+A common pattern is to have a channel of communication open with a user, and then to open
+another channel, for example to transfer data. However, if user authentication is done over
 the original channel rather than the alternate
-channel, then an attacker may be able to connect to the alternate channel before the legitimate 
-user does. This allows the attacker to impersonate the user by "piggybacking" on 
+channel, then an attacker may be able to connect to the alternate channel before the legitimate
+user does. This allows the attacker to impersonate the user by "piggybacking" on
 any previous authentication.
 </p>
 </overview>
@@ -23,9 +23,9 @@ always authenticate the user over the new channel.
 <example>
 
 <p>
-This example shows two ways of opening a connection for a user. In the first example, authentication is 
+This example shows two ways of opening a connection for a user. In the first example, authentication is
 determined based on materials that the user has already provided (for example, their username and/or password), and then
-a new channel is opened. However, no authentication is done over the new channel, and so an attacker 
+a new channel is opened. However, no authentication is done over the new channel, and so an attacker
 could connect to it before the user connects.
 </p>
 

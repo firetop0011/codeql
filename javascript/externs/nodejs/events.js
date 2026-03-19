@@ -146,4 +146,3 @@ events.EventEmitter.prototype.eventNames = function() {};
 events.EventEmitter.prototype.listenerCount = function(type) {};
 
 module.exports = events;
-

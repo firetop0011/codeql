@@ -22,15 +22,15 @@ You should do one of the following:</p>
     <li>Throw the exception to the outermost level of nesting.</li>
 </ul>
 
-<p>Note that usually you should catch and handle a checked exception, but you can throw an 
+<p>Note that usually you should catch and handle a checked exception, but you can throw an
 unchecked exception to the outermost level.
 </p>
 
-<p>There is occasionally a valid reason for ignoring an exception. In such cases, 
-you should document the reason to improve the readability of the code. Alternatively, 
-you can implement a static method with an empty body to handle these exceptions. 
-Instead of dropping the exception altogether, you can then pass it to the static method with 
-a string explaining the reason for ignoring it.</p> 
+<p>There is occasionally a valid reason for ignoring an exception. In such cases,
+you should document the reason to improve the readability of the code. Alternatively,
+you can implement a static method with an empty body to handle these exceptions.
+Instead of dropping the exception altogether, you can then pass it to the static method with
+a string explaining the reason for ignoring it.</p>
 
 </recommendation>
 <section title="Examples">

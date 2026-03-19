@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>A value is assigned to a local variable, but the local variable is only 
+<p>A value is assigned to a local variable, but the local variable is only
 read before the assignment, not after it.
 This means that the assignment is suspect, because the state of the local variable that
 it creates is never used.</p>

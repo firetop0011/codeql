@@ -24,7 +24,7 @@ print('Making a dummy database.')
 language = "java"
 workDir = tempfile.mkdtemp()
 projectDir = os.path.join(workDir, "project")
-emptyFile = os.path.join(workDir, "Empty.java") 
+emptyFile = os.path.join(workDir, "Empty.java")
 dbDir = os.path.join(workDir, "db")
 
 # Make dummy project

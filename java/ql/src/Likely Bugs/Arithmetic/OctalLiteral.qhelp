@@ -12,18 +12,18 @@ octal literal. This can lead to two problems:</p>
 <ul>
     <li>An octal literal can be misread by a programmer as a decimal literal.</li>
     <li>A programmer might accidentally start a decimal literal with a zero, so that the compiler
-    treats the decimal literal as an octal literal. For example, <code>010</code> is equal to 
+    treats the decimal literal as an octal literal. For example, <code>010</code> is equal to
     <code>8</code>, not <code>10</code>.</li>
 </ul>
- 
+
 </overview>
 <recommendation>
 
 <p>To avoid these problems:</p>
 
 <ul>
-    <li>Avoid using octal literals so that programmers do not confuse them with decimal literals. 
-    However, if you need to use octal literals, you should add a comment to each octal literal 
+    <li>Avoid using octal literals so that programmers do not confuse them with decimal literals.
+    However, if you need to use octal literals, you should add a comment to each octal literal
     indicating the intention to use octal literals.</li>
     <li>When typing decimal literals, be careful not to begin them with a zero accidentally.</li>
 </ul>

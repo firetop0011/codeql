@@ -14,7 +14,7 @@ public void ldapQueryGood(HttpServletRequest request, LdapConnection c) {
 
   // GOOD: User input is encoded before being used in search filter
   String safeFilter = equal("username", username);
-  
+
   SearchRequest searchRequest = new SearchRequestImpl();
   searchRequest.setBase(safeDn);
   searchRequest.setFilter(safeFilter);

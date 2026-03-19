@@ -12,7 +12,7 @@ carried out in this situation.
 <p>
 There are many XML parsers for Java, and most of them are vulnerable to XXE because their default settings enable parsing of
 external entities. This query currently identifies vulnerable XML parsing from the following parsers: <code>javax.xml.validation.Validator</code>,
-<code>org.dom4j.DocumentHelper</code>, <code>org.rundeck.api.parser.ParserHelper</code>, <code>org.apache.commons.digester3.Digester</code>, 
+<code>org.dom4j.DocumentHelper</code>, <code>org.rundeck.api.parser.ParserHelper</code>, <code>org.apache.commons.digester3.Digester</code>,
 <code>org.apache.commons.digester.Digester</code>, <code>org.apache.tomcat.util.digester.Digester</code>, <code>java.beans.XMLDecoder</code>.
 </p>
 </overview>

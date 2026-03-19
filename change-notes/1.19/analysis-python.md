@@ -52,7 +52,7 @@ with cm as var:
 ## Changes to existing queries
 
 All taint-tracking queries now support visualization of paths in QL for Eclipse.
-Most security alerts are now visible on LGTM by default. This means that you may see results that were previously hidden for the following queries: 
+Most security alerts are now visible on LGTM by default. This means that you may see results that were previously hidden for the following queries:
 
 * Code injection (`py/code-injection`)
 * Reflected server-side cross-site scripting (`py/reflective-xss`)
@@ -72,7 +72,7 @@ Most security alerts are now visible on LGTM by default. This means that you may
 
 ## Improved reporting of encoding errors
 
-The extractor now outputs the location of the first character that triggers an `EncodingError`. 
+The extractor now outputs the location of the first character that triggers an `EncodingError`.
 Any queries that report encoding errors will now show results at the location of the character that caused the error.
 
 ### Improved scalability

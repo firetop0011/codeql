@@ -8,8 +8,8 @@
 <p>
 This rule finds enumerations that initialize their members inconsistently. Only the first enumeration member should be
 initialized using '=', or all of them should be initialized. Inconsistent initialization of members in enumerations
-can easily cause defects, especially when adding or removing members, or if the code relies on the actual integer 
-values of the enumeration members. 
+can easily cause defects, especially when adding or removing members, or if the code relies on the actual integer
+values of the enumeration members.
 </p>
 
 

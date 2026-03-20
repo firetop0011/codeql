@@ -4,4 +4,3 @@ def unsafe_format():
         return the_format.format(1, 2)
     else:
         return the_format.format(1, 2, 3)
-

@@ -7,7 +7,7 @@
 <overview>
 <p>
 Public APIs (including methods, constructors, classes, structs and interfaces) should be documented
-to help make the API easier to understand and maintain. For the purpose of code maintainability, 
+to help make the API easier to understand and maintain. For the purpose of code maintainability,
 it is also advisable to document non-public APIs.
 </p>
 
@@ -15,8 +15,8 @@ it is also advisable to document non-public APIs.
 <recommendation>
 
 <p>
-Add appropriate documentation. The documentation comment should describe 
-<em>what</em> the method or constructor does rather than <em>how</em> it does it, 
+Add appropriate documentation. The documentation comment should describe
+<em>what</em> the method or constructor does rather than <em>how</em> it does it,
 to allow for any potential implementation change that is
 invisible to users of an API. It should include the following:</p>
 <ul>
@@ -37,8 +37,8 @@ and can be transformed automatically into HTML format.
 </recommendation>
 <example>
 
-<p>The following example shows a fully documented class, illustrating the use of 
-<code>&lt;summary&gt;</code>, <code>&lt;param&gt;</code>, <code>&lt;returns&gt;</code>, 
+<p>The following example shows a fully documented class, illustrating the use of
+<code>&lt;summary&gt;</code>, <code>&lt;param&gt;</code>, <code>&lt;returns&gt;</code>,
 and <code>&lt;exception&gt;</code> tags.
 </p>
 
@@ -49,7 +49,7 @@ and <code>&lt;exception&gt;</code> tags.
 
 <li>
   MSDN, C# Programming Guide:
-  <a href="http://msdn.microsoft.com/en-us/library/b2s063f7.aspx">XML Documentation Comments</a>, 
+  <a href="http://msdn.microsoft.com/en-us/library/b2s063f7.aspx">XML Documentation Comments</a>,
   <a href="http://msdn.microsoft.com/en-us/library/z04awywx.aspx">How to: Use the XML Documentation Features</a>,
   <a href="http://msdn.microsoft.com/en-us/library/5ast78ax.aspx">Recommended Tags for Documentation Comments</a>.
 </li>

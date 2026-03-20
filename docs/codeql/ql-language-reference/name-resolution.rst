@@ -7,20 +7,20 @@ Name resolution
 
 The QL compiler resolves names to program elements.
 
-As in other programming languages, there is a distinction between the names used in QL code, 
+As in other programming languages, there is a distinction between the names used in QL code,
 and the underlying QL entities they refer to.
 
-It is possible for different entities in QL to have the same name, for example if they are 
-defined in separate modules. Therefore, it is important that the QL compiler can resolve the 
-name to the correct entity. 
+It is possible for different entities in QL to have the same name, for example if they are
+defined in separate modules. Therefore, it is important that the QL compiler can resolve the
+name to the correct entity.
 
-When you write your own QL, you can use different kinds of expressions to refer to entities. 
+When you write your own QL, you can use different kinds of expressions to refer to entities.
 Those expressions are then resolved to QL entities in the appropriate :ref:`namespace <namespaces>`.
 
 In summary, the kinds of expressions are:
   - **Module expressions**
       - These refer to modules.
-      - They can be simple :ref:`names <names>`, :ref:`qualified references <qualified-references>` 
+      - They can be simple :ref:`names <names>`, :ref:`qualified references <qualified-references>`
         (in import statements), :ref:`selections <selections>`, or :ref:`instantiations <parameterized-modules>`.
   - **Type expressions**
       - These refer to types.
@@ -43,16 +43,16 @@ To resolve a simple name (with arity), the compiler looks for that name (and ari
 in the :ref:`namespaces <namespaces>` of the current module.
 
 In an :ref:`import statement <import-statements>`, name resolution is slightly more complicated.
-For example, suppose you define a :ref:`query module <query-modules>` ``Example.ql`` with the 
+For example, suppose you define a :ref:`query module <query-modules>` ``Example.ql`` with the
 following import statement:
 
 .. code-block:: ql
 
     import javascript
 
-The compiler first checks for a :ref:`library module <library-modules>` ``javascript.qll``, 
-using the steps described below for qualified references. If that fails, it checks for an 
-:ref:`explicit module <explicit-modules>` named ``javascript`` defined in the 
+The compiler first checks for a :ref:`library module <library-modules>` ``javascript.qll``,
+using the steps described below for qualified references. If that fails, it checks for an
+:ref:`explicit module <explicit-modules>` named ``javascript`` defined in the
 :ref:`module namespace <namespaces>` of ``Example.ql``.
 
 .. _qualified-references:
@@ -61,31 +61,31 @@ Qualified references
 ********************
 
 A qualified reference is a module expression that uses ``.`` as a file path separator. You can
-only use such an expression in :ref:`import statements <import-statements>`, to import a 
+only use such an expression in :ref:`import statements <import-statements>`, to import a
 library module defined by a relative path.
 
-For example, suppose you define a :ref:`query module <query-modules>` ``Example.ql`` with the 
+For example, suppose you define a :ref:`query module <query-modules>` ``Example.ql`` with the
 following import statement:
 
 .. code-block:: ql
 
     import examples.security.MyLibrary
 
-To find the precise location of this :ref:`library module <library-modules>`, the QL compiler processes the import 
+To find the precise location of this :ref:`library module <library-modules>`, the QL compiler processes the import
 statement as follows:
 
-  #. The ``.``\ s in the qualified reference correspond to file path separators, so it first looks 
-     up ``examples/security/MyLibrary.qll`` from the directory containing ``Example.ql``. 
+  #. The ``.``\ s in the qualified reference correspond to file path separators, so it first looks
+     up ``examples/security/MyLibrary.qll`` from the directory containing ``Example.ql``.
 
-  #. If that fails, it looks up ``examples/security/MyLibrary.qll`` relative to the query 
+  #. If that fails, it looks up ``examples/security/MyLibrary.qll`` relative to the query
      directory, if any.
      The query directory is the first enclosing directory containing a file called ``qlpack.yml``. (Or, in legacy products, a file called ``queries.xml``.)
-  
+
   #. If the compiler can't find the library file using the above two checks, it looks up ``examples/security/MyLibrary.qll``
      relative to each library path entry.
      The library path is usually specified using the ``libraryPathDependencies`` of the ``qlpack.yml`` file, though it may also depend on the tools you use to run your query, and whether you have specified any extra settings.
      For more information, see "`Library path <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#library-path>`__" in the QL language specification.
-     
+
 If the compiler cannot resolve an import statement, then it gives a compilation error.
 
 .. _selections:
@@ -93,14 +93,14 @@ If the compiler cannot resolve an import statement, then it gives a compilation 
 Selections
 **********
 
-You can use a selection to refer to a module, type, or predicate inside a particular 
+You can use a selection to refer to a module, type, or predicate inside a particular
 module. A selection is of the form:
 
 .. code-block:: ql
 
     <module_expression>::<name>
 
-The compiler resolves the module expression first, and then looks for the name in 
+The compiler resolves the module expression first, and then looks for the name in
 the :ref:`namespaces <namespaces>` for that module.
 
 Example
@@ -139,7 +139,7 @@ to refer to the class ``EuropeanCountries``:
 
     import CountriesLib
 
-    from M::EuropeanCountries ec 
+    from M::EuropeanCountries ec
     select ec
 
 Alternatively, you could import the contents of ``M`` directly by using the selection
@@ -147,9 +147,9 @@ Alternatively, you could import the contents of ``M`` directly by using the sele
 
 .. code-block:: ql
 
-    import CountriesLib::M 
+    import CountriesLib::M
 
-    from EuropeanCountries ec 
+    from EuropeanCountries ec
     select ec
 
 That gives the query access to everything within ``M``, but nothing within ``CountriesLib`` that
@@ -161,7 +161,7 @@ isn't also in ``M``.
 Namespaces
 **********
 
-When writing QL, it's useful to understand how namespaces (also known as 
+When writing QL, it's useful to understand how namespaces (also known as
 `environments <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#name-resolution>`_) work.
 
 As in many other programming languages, a namespace is a mapping from **keys** to
@@ -172,7 +172,7 @@ Each module in QL has six namespaces:
 
     - The **module namespace**, where the keys are module names and the entities are modules.
     - The **type namespace**, where the keys are type names and the entities are types.
-    - The **predicate namespace**, where the keys are pairs of predicate names and arities, 
+    - The **predicate namespace**, where the keys are pairs of predicate names and arities,
       and the entities are predicates.
     - The **module signature namespace**, where the keys are module signature names and the entities are module signatures.
     - The **type signature namespace**, where the keys are type signature names and the entities are type signatures.
@@ -189,18 +189,18 @@ The six namespaces of any module are not completely independent of each other:
     - No keys may be shared between the **module signature namespace** and the **type signature namespace**.
 
 There is no relation between names in namespaces of different modules.
-For example, two different modules can define a predicate ``getLocation()`` without confusion. As long as 
+For example, two different modules can define a predicate ``getLocation()`` without confusion. As long as
 it's clear which namespace you are in, the QL compiler resolves the name to the correct predicate.
 
 Global namespaces
 =================
 
-The namespaces containing all the built-in entities are called **global namespaces**, 
+The namespaces containing all the built-in entities are called **global namespaces**,
 and are automatically available in any module.
-In particular: 
+In particular:
 
     - The **global module namespace** has a single entry ``QlBuiltins``.
-    - The **global type namespace** has entries for the :ref:`primitive types <primitive-types>` ``int``, ``float``, 
+    - The **global type namespace** has entries for the :ref:`primitive types <primitive-types>` ``int``, ``float``,
       ``string``, ``boolean``, and ``date``, as well as any :ref:`database types <database-types>` defined in the database schema.
     - The **global predicate namespace** includes all the `built-in predicates <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#built-ins>`_,
       as well as any :ref:`database predicates <database-predicates>`.
@@ -213,7 +213,7 @@ underlying database that you are querying.
 Local namespaces
 ================
 
-In addition to the global module, type, and predicate namespaces, each module defines a number of local 
+In addition to the global module, type, and predicate namespaces, each module defines a number of local
 module, type, and predicate namespaces.
 
 For a module ``M``, it is useful to distinguish between its **privately declared**, **publically declared**, **exported**, and **visible** namespaces.
@@ -234,7 +234,7 @@ For a module ``M``, it is useful to distinguish between its **privately declared
     6. all parameters of ``M``.
 
 
-This is easiest to understand in an example: 
+This is easiest to understand in an example:
 
 **OneTwoThreeLib.qll**
 
@@ -269,22 +269,22 @@ Example
 
 Let's see what the module, type, and predicate namespaces look like in a concrete example:
 
-For example, you could define a library module ``Villagers`` containing some of the classes and predicates that 
+For example, you could define a library module ``Villagers`` containing some of the classes and predicates that
 were defined in the :ref:`QL tutorials <ql-tutorials>`:
-    
+
 **Villagers.qll**
 
 .. code-block:: ql
 
     import tutorial
-        
+
     predicate isBald(Person p) {
       not exists(string c | p.getHairColor() = c)
     }
- 
+
     class Child extends Person {
-      Child() { 
-        this.getAge() < 10 
+      Child() {
+        this.getAge() < 10
       }
     }
 
@@ -292,7 +292,7 @@ were defined in the :ref:`QL tutorials <ql-tutorials>`:
       predicate isSouthern(Person p) {
         p.getLocation() = "south"
       }
-      
+
       class Southerner extends Person {
         Southerner() {
           isSouthern(this)
@@ -302,11 +302,11 @@ were defined in the :ref:`QL tutorials <ql-tutorials>`:
 
 **Module namespace**
 
-The module namespace of ``Villagers`` has entries for: 
+The module namespace of ``Villagers`` has entries for:
     - The module ``S``.
     - Any modules exported by ``tutorial``.
 
-The module namespace of ``S`` also has entries for the module ``S`` itself, and for any 
+The module namespace of ``S`` also has entries for the module ``S`` itself, and for any
 modules exported by ``tutorial``.
 
 **Type namespace**
@@ -324,7 +324,7 @@ The type namespace of ``S`` has entries for:
 
 The predicate namespace of ``Villagers`` has entries for:
     - The predicate ``isBald``, with arity 1.
-    - Any predicates (and their arities) exported by ``tutorial``. 
+    - Any predicates (and their arities) exported by ``tutorial``.
     - The `built-in predicates <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#built-ins>`_.
 
 The predicate namespace of ``S`` has entries for:

@@ -5,13 +5,13 @@
 			<ref bean="dao"/>
 		</property>
 	</bean>
-	
+
 	<bean id="orderService" class="documentation.examples.spring.OrderService">
 		<!--GOOD: This form of reference allows the XML parser to find any errors at parse time-->
 		<property name="dao">
 			<idref local="dao"/>
 		</property>
 	</bean>
-	
+
 	<bean id="dao" class="documentation.examples.spring.DAO"/>
 </beans>

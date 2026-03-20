@@ -6,7 +6,7 @@ index 06d5644..012184a 100644
  var tests = [];
 +var ntests = 0;
 +var fs = require("fs");
- 
+
  exports.test = function(code, ast, options) {
 -  tests.push({code: code, ast: ast, options: options});
 +  var testName = "test" + (ntests++);
@@ -57,5 +57,5 @@ index 06d5644..012184a 100644
 +  throw new Error("Cannot handle tests with explicit assertions.");
 +//  tests.push({code: code, assert: assert, options: options});
  };
- 
+
  exports.runTests = function(config, callback) {

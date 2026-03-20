@@ -1,4 +1,4 @@
-// BAD: DES is a weak algorithm 
+// BAD: DES is a weak algorithm
 Cipher des = Cipher.getInstance("DES");
 cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
 

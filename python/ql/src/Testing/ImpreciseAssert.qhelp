@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>The class <code>unittest.TestCase</code> provides a range of assertion methods. As well as the general forms <code>assertTrue()</code> and <code>assertFalse()</code> 
+<p>The class <code>unittest.TestCase</code> provides a range of assertion methods. As well as the general forms <code>assertTrue()</code> and <code>assertFalse()</code>
 more specific forms such as <code>assertGreaterEquals()</code> and <code>assertNotIn()</code> are provided.
 By using the more specific forms it is possible to get more precise and informative failure messages in the event of a test failing. This can speed up the debugging process.
 </p>
@@ -20,8 +20,8 @@ Alternatively, provide a tailored failure message using the <code>assertTrue(con
 <example>
 <p>In this example, <code>assertTrue()</code> and <code>assertFalse()</code> are used.</p>
 <sample src="ImpreciseAssert.py" />
-<p> 
-This will make it more difficult to determine what has gone wrong when <code>self.assertTrue(1 in [])</code> fails. 
+<p>
+This will make it more difficult to determine what has gone wrong when <code>self.assertTrue(1 in [])</code> fails.
 The failure message "AssertionError: False is not true" is not very helpful.
 </p>
 

@@ -21,7 +21,7 @@
 | User-controlled data in arithmetic expression (`cpp/tainted-arithmetic`) | More results | The query is extended to analyze increment, decrement, addition-assignment, and subtraction-assignment operations. |
 | Variable used in its own initializer (`cpp/use-in-own-initializer`) | Fewer false positive results | Results where a macro is used to indicate deliberate uninitialization are now excluded. |
 |Uncontrolled data in arithmetic expression (`cpp/uncontrolled-arithmetic`) | More results | The query is extended to analyze increment, decrement, addition-assignment, and subtraction-assignment operations. |
- 
+
 ## Changes to QL libraries
 
 * The `ClassAggregateLiteral.getFieldExpr()` and `ArrayAggregateLiteral.getElementExpr()` predicates incorrectly assumed that initializer expressions appeared in the same order as the declaration order of the elements. This resulted in the association of the expressions with the wrong elements when designated initializers were used. This has been fixed.

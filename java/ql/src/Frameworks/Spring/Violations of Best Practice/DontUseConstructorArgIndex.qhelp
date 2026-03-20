@@ -20,8 +20,8 @@ The bean definition's <code>constructor-arg</code> elements should use type matc
 </recommendation>
 <example>
 
-<p>The following example shows a bean, <code>billingService1</code>, whose <code>constructor-arg</code> 
-elements use index matching, and an improved version of the bean, <code>billingService2</code>, 
+<p>The following example shows a bean, <code>billingService1</code>, whose <code>constructor-arg</code>
+elements use index matching, and an improved version of the bean, <code>billingService2</code>,
 whose <code>constructor-arg</code> elements use type matching.</p>
 
 <sample src="DontUseConstructorArgIndex.xml" />

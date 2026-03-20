@@ -17,8 +17,8 @@ jump target lies outside of the <code>finally</code> block.
 <recommendation>
 
 <p>To avoid suppressing exceptions that are thrown in a <code>try</code> block,
-design the code so that the corresponding <code>finally</code> block 
-always completes normally. Remove any of the following statements that 
+design the code so that the corresponding <code>finally</code> block
+always completes normally. Remove any of the following statements that
 may cause it to terminate abnormally:
 </p>
 

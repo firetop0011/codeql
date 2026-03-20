@@ -17,7 +17,7 @@ class Test {
 			int scaled = data * 10;
 
 			//...
-			
+
 			// GOOD: use a guard to ensure no overflows occur
 			int scaled2;
 			if (data < Integer.MAX_VALUE / 10)

@@ -3,10 +3,10 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>If a class has a <code>close()</code> or similar method to release resources, then it 
-should be made a context manager. Using a context manager allows instances of the class to be used 
-in the  <code>with</code> statement, improving code size and readability. This is a simpler and more 
-reliable method than implementing just a <code>__del__</code> method. 
+<p>If a class has a <code>close()</code> or similar method to release resources, then it
+should be made a context manager. Using a context manager allows instances of the class to be used
+in the  <code>with</code> statement, improving code size and readability. This is a simpler and more
+reliable method than implementing just a <code>__del__</code> method.
 </p>
 
 </overview>
@@ -22,7 +22,7 @@ is acquired in the <code>__init__</code> method</li>
 
 </recommendation>
 <example>
-<p>The following example shows how a class definition that implements <code>__del__</code> can be 
+<p>The following example shows how a class definition that implements <code>__del__</code> can be
 updated to use a context manager.</p>
 
 <sample src="ShouldBeContextManager.py" />

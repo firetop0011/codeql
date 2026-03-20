@@ -7,13 +7,13 @@
 
 </overview>
 <recommendation>
-<p>Complex expressions can often be made easier to read by separating them into different variables 
-or even giving some parts of the condition their own boolean valued method. Using separate methods 
+<p>Complex expressions can often be made easier to read by separating them into different variables
+or even giving some parts of the condition their own boolean valued method. Using separate methods
 both reduces code reuse and simplifies the expression.</p>
 
 </recommendation>
 <example>
-<p>This example demonstrates some possible conditions and whether or not they are acceptable. As 
+<p>This example demonstrates some possible conditions and whether or not they are acceptable. As
 you can see, the length of the condition is not the only thing that contributes to its complexity.
 </p>
 <sample src="ComplexCondition.cs" />

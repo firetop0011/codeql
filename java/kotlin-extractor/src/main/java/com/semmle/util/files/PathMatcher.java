@@ -11,8 +11,8 @@ import com.semmle.util.data.StringUtil;
  * <p>
  * In ant-like mode:
  * <ul>
- *   <li>'**' matches zero or more characters (most notably including '/'). 
- *   <li>'*' matches zero or more characters except for '/'. 
+ *   <li>'**' matches zero or more characters (most notably including '/').
+ *   <li>'*' matches zero or more characters except for '/'.
  *   <li>'?' matches any character (other than '/').
  * </ul>
  * <p>
@@ -25,24 +25,24 @@ import com.semmle.util.data.StringUtil;
  * </ul>
  */
 public class PathMatcher {
-	
+
 	public enum Mode {
 		Ant, Rsync;
 	}
-	
+
 	private final Mode mode;
 	private final Pattern pattern;
 	private final String originalPattern;
-	
+
 	/**
 	 * Create a {@link PathMatcher}.
-	 * 
+	 *
 	 * @param pattern An ant-like pattern
 	 */
 	public PathMatcher(String pattern) {
 		this(Mode.Ant, pattern);
 	}
-	
+
 	/** Create a {@link PathMatcher}.
 	 *
 	 * @param mode The {@link Mode} to use
@@ -58,15 +58,15 @@ public class PathMatcher {
 	}
 
 	/** Create a {@link PathMatcher}.
-	 * 
+	 *
 	 * @param patterns Several ant-like patterns
 	 */
 	public PathMatcher(Iterable<String> patterns) {
 		this(Mode.Ant, patterns);
 	}
-	
+
 	/** Create a {@link PathMatcher}.
-	 * 
+	 *
 	 * @param mode The {@link Mode} to use.
 	 * @param patterns Several patterns, interpreted as ant-like or rsync-like depending
 	 *     on the value of {@code mode}.
@@ -100,7 +100,7 @@ public class PathMatcher {
 		// replace "*" with "[^/]*
 		// replace "?" with "[^/]"
 		int i = 0;
-		
+
 		// In rsync-mode, a leading slash is an 'anchor' -- the pattern is only matched
 		// when rooted at the start of the path. This is the default behaviour for ant-like
 		// patterns.
@@ -140,7 +140,7 @@ public class PathMatcher {
 			}
 		}
 	}
-	
+
 	/**
 	 * Match the specified path against a shell pattern. The path is normalised by replacing '\' with '/'.
 	 * @param path The path to match.
@@ -152,7 +152,7 @@ public class PathMatcher {
 			path = path.substring(0, path.length()-1);
 		return pattern.matcher(path).matches();
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Matches " + originalPattern + " [" + pattern + "]";

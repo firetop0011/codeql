@@ -120,5 +120,5 @@ Here is a short example from ``Stdlib.qll``, which has been slightly simplified.
 
 This has the effect that any call to ``Print``, ``Printf``, or
 ``Println`` in the package ``fmt`` is recognized as a logger call.
-Any query that uses logger calls as a sink will then identify when tainted data 
+Any query that uses logger calls as a sink will then identify when tainted data
 has been passed as an argument to ``Print``, ``Printf``, or ``Println``.

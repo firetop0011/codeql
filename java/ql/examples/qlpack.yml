@@ -1,5 +1,5 @@
 name: codeql/java-examples
-groups: 
+groups:
   - java
   - examples
 dependencies:

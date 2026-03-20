@@ -1,6 +1,6 @@
 public class BadSuiteMethod extends TestCase {
 	// BAD: JUnit 3.8 does not detect the following method as a 'suite' method.
-	// The method should be public, static, and return 'junit.framework.Test' 
+	// The method should be public, static, and return 'junit.framework.Test'
 	// or one of its subtypes.
 	static Test suite() {
 		TestSuite suite = new TestSuite();

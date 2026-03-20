@@ -28,7 +28,7 @@ No user-facing changes.
 
 ### New Queries
 
-* Added a new query, `rb/regex/badly-anchored-regexp`, to detect regular expression validators that use `^` and `$` 
+* Added a new query, `rb/regex/badly-anchored-regexp`, to detect regular expression validators that use `^` and `$`
   as anchors and therefore might match only a single line of a multi-line string.
 
 ### Minor Analysis Improvements
@@ -129,7 +129,7 @@ No user-facing changes.
 * Added a new query, `rb/incomplete-multi-character-sanitization`. The query
   finds string transformations that do not replace all occurrences of a
   multi-character substring.
-* Added a new query, `rb/suspicious-regexp-range`, to detect character ranges in regular expressions that seem to match 
+* Added a new query, `rb/suspicious-regexp-range`, to detect character ranges in regular expressions that seem to match
   too many characters.
 
 ## 0.3.2

@@ -14,7 +14,7 @@ more difficult to understand and maintain, and can waste a programmer's time.</p
 <recommendation>
 
 <p>This rule applies to variables that are never used as well as variables that are only
-written to but never read. In both cases, ensure that no operations are missing that would use the 
+written to but never read. In both cases, ensure that no operations are missing that would use the
 local variable. If appropriate, simply remove the declaration. However, if the variable is
 written to, ensure that any side-effects in the assignments are retained. (For further
 details, see the example.)</p>
@@ -23,7 +23,7 @@ details, see the example.)</p>
 <example>
 
 <p>In the following example, the local variable <code>oldQuantity</code> is assigned a value but
-never read. In the fixed version of the example, the variable is removed but the call to 
+never read. In the fixed version of the example, the variable is removed but the call to
 <code>items.put</code> in the assignment is retained.</p>
 
 <sample src="UnreadLocal.java" />

@@ -1,2 +1,2 @@
 lgtm,codescanning
-* Added support for modern compound assignments (`||=`, `&&=`, and `??=`) in the type inference. 
+* Added support for modern compound assignments (`||=`, `&&=`, and `??=`) in the type inference.

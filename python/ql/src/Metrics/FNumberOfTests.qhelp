@@ -10,7 +10,7 @@
 
 <p>
   A function or method is considered to be a "test" if one of the major
-  testing frameworks would invoke it as part of a test run. 
+  testing frameworks would invoke it as part of a test run.
   Recognized frameworks include unittest, pytest, doctest and nose.
 </p>
 

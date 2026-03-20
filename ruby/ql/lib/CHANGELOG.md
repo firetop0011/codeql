@@ -12,7 +12,7 @@ No user-facing changes.
 
 ### Minor Analysis Improvements
 
-* Control flow graph: the evaluation order of scope expressions and receivers in multiple assignments has been adjusted to match the changes made in Ruby 
+* Control flow graph: the evaluation order of scope expressions and receivers in multiple assignments has been adjusted to match the changes made in Ruby
 3.1 and 3.2.
 * The clear-text storage (`rb/clear-text-storage-sensitive-data`) and logging (`rb/clear-text-logging-sensitive-data`) queries now use built-in flow through hashes, for improved precision. This may result in both new true positives and less false positives.
 * Accesses of `params` in Sinatra applications are now recognized as HTTP input accesses.
@@ -48,7 +48,7 @@ No user-facing changes.
 * The Active Record query methods `reorder` and `count_by_sql` are now recognized as SQL executions.
 * Calls to `ActiveRecord::Connection#execute`, including those via subclasses, are now recognized as SQL executions.
 * Data flow through `ActionController::Parameters#require` is now tracked properly.
-* The severity of parse errors was reduced to warning (previously error). 
+* The severity of parse errors was reduced to warning (previously error).
 * Deleted the deprecated `getQualifiedName` predicate from the `ConstantWriteAccess` class.
 * Deleted the deprecated `getWhenBranch` and `getAWhenBranch` predicates from the `CaseExpr` class.
 * Deleted the deprecated `Self`, `PatternParameter`, `Pattern`, `VariablePattern`, `TuplePattern`, and `TuplePatternParameter` classes.
@@ -180,7 +180,7 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Some classes/modules with upper-case acronyms in their name have been renamed to follow our style-guide. 
+* Some classes/modules with upper-case acronyms in their name have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### Minor Analysis Improvements
@@ -198,7 +198,7 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* The utility files previously in the `codeql.ruby.security.performance` package have been moved to the `codeql.ruby.security.regexp` package.  
+* The utility files previously in the `codeql.ruby.security.performance` package have been moved to the `codeql.ruby.security.regexp` package.
   The previous files still exist as deprecated aliases.
 
 ### Minor Analysis Improvements
@@ -297,7 +297,7 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide. 
+* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### New Features

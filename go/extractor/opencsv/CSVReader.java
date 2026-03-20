@@ -25,9 +25,9 @@ import java.util.List;
 
 /**
  * A very simple CSV reader released under a commercial-friendly license.
- * 
+ *
  * @author Glen Smith
- * 
+ *
  */
 public class CSVReader implements Closeable {
 
@@ -36,7 +36,7 @@ public class CSVReader implements Closeable {
     private boolean hasNext = true;
 
     private final CSVParser parser;
-    
+
     private final int skipLines;
 
     private boolean linesSkipped;
@@ -54,7 +54,7 @@ public class CSVReader implements Closeable {
 
     /**
      * Constructs CSVReader using a comma for the separator.
-     * 
+     *
      * @param reader
      *            the reader to an underlying CSV source.
      */
@@ -67,7 +67,7 @@ public class CSVReader implements Closeable {
 
     /**
      * Constructs CSVReader with supplied separator and quote char.
-     * 
+     *
      * @param reader
      *            the reader to an underlying CSV source.
      * @param separator
@@ -91,10 +91,10 @@ public class CSVReader implements Closeable {
 	/**
      * Reads the entire file into a List with each element being a String[] of
      * tokens.
-     * 
+     *
      * @return a List of String[], with each String[] representing a line of the
      *         file.
-     * 
+     *
      * @throws IOException
      *             if bad things happen during the read
      */
@@ -112,10 +112,10 @@ public class CSVReader implements Closeable {
 
     /**
      * Reads the next line from the buffer and converts to a string array.
-     * 
+     *
      * @return a string array with each comma-separated element as a separate
      *         entry, or null if there are no more lines to read.
-     * 
+     *
      * @throws IOException
      *             if bad things happen during the read
      */
@@ -150,7 +150,7 @@ public class CSVReader implements Closeable {
 
     /**
      * Reads the next line from the file.
-     * 
+     *
      * @return the next line from the file without trailing newline
      * @throws IOException
      *             if bad things happen during the read
@@ -174,7 +174,7 @@ public class CSVReader implements Closeable {
 
     /**
      * Closes the underlying reader.
-     * 
+     *
      * @throws IOException if the close fails
      */
     @Override

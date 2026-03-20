@@ -4,7 +4,7 @@ public class SensitiveGetQuery extends HttpServlet {
 		String password = request.getParameter("password");
 		System.out.println("password = " + password);
 	}
-	
+
 	// GOOD - Tests sending sensitive information in a POST request.
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String password = request.getParameter("password");

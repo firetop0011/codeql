@@ -90,4 +90,3 @@ module.exports.getHeapStatistics = v8.getHeapStatistics;
 module.exports.getHeapSpaceStatistics = v8.getHeapSpaceStatistics;
 
 module.exports.setFlagsFromString = v8.setFlagsFromString;
-

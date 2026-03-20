@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>The software uses external input to dynamically construct an XQuery expression which is then used to retrieve data from an XML database. 
+<p>The software uses external input to dynamically construct an XQuery expression which is then used to retrieve data from an XML database.
 However, the input is not neutralized, or is incorrectly neutralized, which allows an attacker to control the structure of the query.</p>
 
 </overview>
@@ -21,7 +21,7 @@ However, the input is not neutralized, or is incorrectly neutralized, which allo
 </example>
 <references>
 
-<li>Balisage: 
+<li>Balisage:
 <a href="https://www.balisage.net/Proceedings/vol7/html/Vlist02/BalisageVol7-Vlist02.html">XQuery Injection</a>.</li>
 
 

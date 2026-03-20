@@ -5,7 +5,7 @@
 <overview>
 <p>A formatting expression, that is an expression of the format <code>fmt % arguments</code> must have the correct number of
 arguments on the right hand side of the expression. Otherwise, a <code>TypeError</code> will be raised.
-    
+
 </p>
 
 </overview>

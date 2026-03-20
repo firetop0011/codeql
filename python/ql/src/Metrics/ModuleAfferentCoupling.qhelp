@@ -13,9 +13,9 @@ Modules that are depended upon by many other modules typically require a lot of
 effort to change, because changing them will force their dependents to change
 as well. This is not necessarily a bad thing -- indeed, most systems will have
 some such modules (one example might be an I/O module). However, modules with a high number
-of incoming dependencies and a high number of outgoing dependencies are hard to maintain. 
+of incoming dependencies and a high number of outgoing dependencies are hard to maintain.
 A module with both high afferent coupling <em>and</em> high efferent coupling can be problematic
-because, on the one hand they are hard to change (high afferent coupling), yet on the other they 
+because, on the one hand they are hard to change (high afferent coupling), yet on the other they
 have many reasons to change (high efferent coupling). This contradiction yields code that is very
 hard to maintain or test.
 </p>
@@ -28,7 +28,7 @@ modules have very few incoming dependencies, however, it can be an indication
 that a module is not pulling its weight. In extreme cases, modules may even
 have an afferent coupling of <code>0</code>, indicating that they are dead
 code.
-</p> 
+</p>
 
 </overview>
 <recommendation>

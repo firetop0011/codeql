@@ -12,7 +12,7 @@ and the use. This can lead to a "time-of-check/time-of-use" (TOCTOU) race condit
 </p>
 
 <p>
-In Java, classes may present state inspection methods and operation methods which are synchronized. 
+In Java, classes may present state inspection methods and operation methods which are synchronized.
 This prevents multiple threads from executing those methods simultaneously, but it does not prevent a
 state change in between separate method invocations.
 </p>
@@ -23,7 +23,7 @@ state change in between separate method invocations.
 on a monitor that will prevent any other access to the object during your operations.
 </p>
 <p>
-If the class that you are using has a well-designed interface, then synchronizing on the object itself will 
+If the class that you are using has a well-designed interface, then synchronizing on the object itself will
 prevent its state being changed inappropriately.
 </p>
 </recommendation>

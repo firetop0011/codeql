@@ -244,4 +244,3 @@ module.exports.clearScreenDown = readline.clearScreenDown;
 readline.Interface = function() {};
 
 module.exports.Interface = readline.Interface;
-

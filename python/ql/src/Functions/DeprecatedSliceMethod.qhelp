@@ -10,7 +10,7 @@ In general, no class should implement these methods.
 <p>
 The only exceptions to this rule are classes that inherit from <code>list</code> and override <code>__getitem__</code>,
 <code>__setitem__</code> or <code>__delitem__</code>.
-Since <code>list</code> implements the slicing methods any class inheriting from <code>list</code> must implement the 
+Since <code>list</code> implements the slicing methods any class inheriting from <code>list</code> must implement the
 the slicing methods to ensure correct behavior of <code>__getitem__</code>, <code>__setitem__</code> and <code>__delitem__</code>.
 These exceptions to the rule will not be treated as violations.
 </p>

@@ -7,7 +7,7 @@
 <overview>
 <p>
 Javadoc comments for public methods, constructors and generic classes should use the <code>@param</code> tag to describe the available
-parameters and type parameters. If the comment includes any empty, incorrect or outdated parameter names then this will make 
+parameters and type parameters. If the comment includes any empty, incorrect or outdated parameter names then this will make
 the documentation more difficult to read.
 </p>
 

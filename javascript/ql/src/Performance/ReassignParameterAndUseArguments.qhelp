@@ -26,7 +26,7 @@ variable and reassign that local variable instead.
 In the following example, function <code>sum</code> takes two arguments <code>xs</code> and
 <code>start</code>, and returns the sum of all elements in the array <code>xs</code>, plus
 the value of <code>start</code>. The argument <code>start</code> is optional and defaults
-to <code>0</code>. 
+to <code>0</code>.
 </p>
 
 <sample src="examples/ReassignParameterAndUseArguments.js" />

@@ -7,14 +7,14 @@
 
 </overview>
 <recommendation>
-<p>In some languages, using a marker interface is a useful design pattern, but in C# it is better to 
-use custom attributes. Marker interfaces are always inherited and so they cannot be 
-applied to a single class without applying it to all subclasses. Custom attributes do 
+<p>In some languages, using a marker interface is a useful design pattern, but in C# it is better to
+use custom attributes. Marker interfaces are always inherited and so they cannot be
+applied to a single class without applying it to all subclasses. Custom attributes do
 not have this limitation.</p>
 
 </recommendation>
 <example>
-<p>In this example, the <code>IsPrintable</code> interface has no defined methods and is simply 
+<p>In this example, the <code>IsPrintable</code> interface has no defined methods and is simply
 being used as a marker.</p>
 <sample src="EmptyInterfaceBad.cs" />
 

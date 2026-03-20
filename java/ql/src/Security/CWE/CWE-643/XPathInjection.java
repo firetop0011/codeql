@@ -1,6 +1,6 @@
-final String xmlStr = "<users>" + 
-                        "   <user name=\"aaa\" pass=\"pass1\"></user>" + 
-                        "   <user name=\"bbb\" pass=\"pass2\"></user>" + 
+final String xmlStr = "<users>" +
+                        "   <user name=\"aaa\" pass=\"pass1\"></user>" +
+                        "   <user name=\"bbb\" pass=\"pass2\"></user>" +
                         "</users>";
 try {
     DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
@@ -55,7 +55,7 @@ try {
         System.out.println(isExist);
 
 
-        // Bad Dom4j 
+        // Bad Dom4j
         org.dom4j.io.SAXReader reader = new org.dom4j.io.SAXReader();
         org.dom4j.Document document = reader.read(new InputSource(new StringReader(xmlStr)));
         isExist = document.selectSingleNode("/users/user[@name='" + user + "' and @pass='" + pass + "']") != null;

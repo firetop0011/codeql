@@ -7,7 +7,7 @@
 <p>
 Code that queries the contents of a collection (such as <code>ContainsKey</code>
 or <code>Count</code>) is invoked on an object that is known to be empty. Such queries
-do not return interesting results, and may indicate missing code or a logic error. 
+do not return interesting results, and may indicate missing code or a logic error.
 </p>
 
 </overview>
@@ -15,7 +15,7 @@ do not return interesting results, and may indicate missing code or a logic erro
 
 <p>
 Either remove the collection if it is unnecessary, or ensure that it contains the
-correct data. 
+correct data.
 </p>
 
 </recommendation>
@@ -23,9 +23,9 @@ correct data.
 
 <p>
 The following example code is supposed to return the name of the day, but does not work
-because the collection <code>daysOfWeek</code> is never populated. When this code is run, an 
+because the collection <code>daysOfWeek</code> is never populated. When this code is run, an
 <code>ArgumentOutOfRangeException</code> exception is thrown.
-</p> 
+</p>
 
 <sample src="ReadOnlyContainer.cs" />
 

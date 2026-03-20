@@ -14,7 +14,7 @@ for example by computing the field twice.
 <ol>
 <li>Avoid double-checked locking, and simply perform everything within the lock statement.</li>
 <li>Make the field volatile using the <code>volatile</code> keyword.</li>
-<li>Use the <code>System.Lazy</code> class, which is guaranteed to be thread-safe. 
+<li>Use the <code>System.Lazy</code> class, which is guaranteed to be thread-safe.
 This can often lead to more elegant code.</li>
 <li>Use <code>System.Threading.LazyInitializer</code>.</li>
 </ol>
@@ -23,13 +23,13 @@ This can often lead to more elegant code.</li>
 <example>
 <p>The following code defines a property called <code>Name</code>, which calls the method
 <code>LoadNameFromDatabase</code> the first time that the property is read, and then
-caches the result. This code is efficient but will not work properly if the property 
+caches the result. This code is efficient but will not work properly if the property
 is accessed from multiple threads, because <code>LoadNameFromDatabase</code> could
 be called several times.</p>
 
 <sample src="UnsafeLazyInitialization1.cs"/>
 
-<p>A common solution to this is <em>double-checked locking</em>, 
+<p>A common solution to this is <em>double-checked locking</em>,
 which checks whether the stored value is <code>null</code> before locking the mutex.
 This is efficient because it avoids a potentially expensive lock operation if a
 value has already been assigned to <code>name</code>.</p>

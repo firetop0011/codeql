@@ -13,10 +13,10 @@ and maintain, and usually can be split into smaller, less complex functions.</p>
 
 </overview>
 <recommendation>
-<p>With increasing cyclomatic complexity there need to be more test cases that are necessary to achieve a complete branch coverage when testing the function. 
+<p>With increasing cyclomatic complexity there need to be more test cases that are necessary to achieve a complete branch coverage when testing the function.
 Try to reduce the function's complexity by splitting it into several more cohesive functions.
-A particularly effective way of reducing complexity is to put code that handles a particular case in an large <code>if</code> or 
-<code>switch</code> statement into a separate function with a descriptive name. This not only reduces the complexity of the function, 
+A particularly effective way of reducing complexity is to put code that handles a particular case in an large <code>if</code> or
+<code>switch</code> statement into a separate function with a descriptive name. This not only reduces the complexity of the function,
 but makes it considerably more readable as the function's descriptive name gives an idea of its purpose without the developer
 analyzing each line of code.
 </p>

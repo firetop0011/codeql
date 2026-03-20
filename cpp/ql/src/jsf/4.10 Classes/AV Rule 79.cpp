@@ -18,13 +18,13 @@ public:
 // This class relies on its client to release any stream it
 // allocates. Note that this means the client must have
 // intimate knowledge of the implementation of the class to
-// decide whether it is safe to release the stream. 
+// decide whether it is safe to release the stream.
 class StreamPool {
 private:
   Stream *instance;
 public:
   Stream *createStream(char *name) {
-    if (!instance) 
+    if (!instance)
       instance = new Stream(name);
     return instance;
   }

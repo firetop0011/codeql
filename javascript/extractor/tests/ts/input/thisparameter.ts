@@ -11,4 +11,3 @@ class C {
 interface I {
   method(this: I);
 }
-

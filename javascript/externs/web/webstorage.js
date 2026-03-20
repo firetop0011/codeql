@@ -145,4 +145,3 @@ StorageEvent.prototype.initStorageEvent = function(typeArg, canBubbleArg,
                                                    cancelableArg, keyArg,
                                                    oldValueArg, newValueArg,
                                                    urlArg, storageAreaArg) {};
-

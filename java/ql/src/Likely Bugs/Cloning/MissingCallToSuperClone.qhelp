@@ -29,7 +29,7 @@ runtime type is created.
 
 <sample src="MissingCallToSuperCloneBad.java" />
 
-<p>However, in the following modified example, the attempt to clone <code>Employee</code> succeeds 
+<p>However, in the following modified example, the attempt to clone <code>Employee</code> succeeds
 because <code>super.clone</code> is implemented correctly in its superclass <code>Person</code>.</p>
 
 <sample src="MissingCallToSuperCloneGood.java" />

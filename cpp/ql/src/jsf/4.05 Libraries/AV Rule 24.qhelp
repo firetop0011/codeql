@@ -14,7 +14,7 @@ This query highlights calls to the standard library functions <code>abort, exit,
 The functions <code>abort</code> and <code>exit</code> should not be called as they immediately terminate the program
 and will bypass all the normal error and exception handling routines in the software. This is especially important in
 software which is run on systems without an interactive OS, as restarting the software may require a complete reboot
-of the system. <code>getenv</code> and <code>system</code> will usually not work at all on systems that do not have a 
+of the system. <code>getenv</code> and <code>system</code> will usually not work at all on systems that do not have a
 command processor.
 </p>
 
@@ -22,7 +22,7 @@ command processor.
 </overview>
 <recommendation>
 <p>
-Do not use any of the functions mentioned above. Use the error/exception handling mechanism of the software system you are using 
+Do not use any of the functions mentioned above. Use the error/exception handling mechanism of the software system you are using
 instead of <code>exit</code> or <code>abort</code>, or write your own functions to emulate the functionality provided
 by running OS commands through <code>system</code> and <code>getenv</code>.
 </p>

@@ -6,7 +6,7 @@
 
 <overview>
 <p>The behavior of nested loops in which the iteration variable is the same for both loops
-is difficult to understand because the inner loop affects the iteration variable of the outer loop. 
+is difficult to understand because the inner loop affects the iteration variable of the outer loop.
 This is probably a typographical error.
 </p>
 

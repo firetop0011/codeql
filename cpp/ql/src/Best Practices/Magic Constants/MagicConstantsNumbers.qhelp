@@ -25,7 +25,7 @@ constant (for example, the line marked (4) below).</p>
 
 </overview>
 <recommendation>
-<p>Consider creating a <code>const</code> or a macro to encapsulate the literal, 
+<p>Consider creating a <code>const</code> or a macro to encapsulate the literal,
 then replace all the relevant occurrences in the code.</p>
 
 </recommendation>
@@ -38,7 +38,7 @@ then replace all the relevant occurrences in the code.</p>
 <a href="http://en.wikipedia.org/wiki/Magic_number_%28programming%29#Unnamed_numerical_constants">Magic number (Wikipedia)</a>
 </li>
 <li>
-  Mats Henricson and Erik Nyquist, <i>Industrial Strength C++</i>, published by Prentice Hall PTR (1997). 
+  Mats Henricson and Erik Nyquist, <i>Industrial Strength C++</i>, published by Prentice Hall PTR (1997).
   Chapter 5: Object Life Cycle, Rec 5.4 (<a href="https://web.archive.org/web/20190919025638/https://mongers.org/industrial-c++/">PDF</a>).
 </li>
 <li>

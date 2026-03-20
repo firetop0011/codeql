@@ -28,8 +28,8 @@
      <example>
 
           <p>
-               The following code uses the different packages to encrypt/hash 
-               some secret data. The first few examples uses DES, MD5, RC4, and SHA1, 
+               The following code uses the different packages to encrypt/hash
+               some secret data. The first few examples uses DES, MD5, RC4, and SHA1,
                which are older algorithms that are now considered weak. The following
                examples use AES and SHA256, which are stronger, more modern algorithms.
           </p>

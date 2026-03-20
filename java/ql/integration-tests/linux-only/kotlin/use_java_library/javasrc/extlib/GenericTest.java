@@ -7,4 +7,3 @@ public class GenericTest<T> {
   public void takesSelfMethod(GenericTest<T> selfLike) { }
 
 }
-

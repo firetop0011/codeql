@@ -5,11 +5,11 @@
 
 
 <overview>
-<p>Many methods in the Java Development Kit (for examples, see the references below) 
-return status values (for example, as an <code>int</code>) to indicate 
-whether the method execution finished normally. They may return an 
+<p>Many methods in the Java Development Kit (for examples, see the references below)
+return status values (for example, as an <code>int</code>) to indicate
+whether the method execution finished normally. They may return an
 error code if the method did not finish normally.
-If the method result is not checked, exceptional method executions 
+If the method result is not checked, exceptional method executions
 may cause subsequent code to fail.
 </p>
 
@@ -22,11 +22,11 @@ may cause subsequent code to fail.
 <example>
 
 <p>
-The following example uses the <code>java.io.InputStream.read</code> method to 
+The following example uses the <code>java.io.InputStream.read</code> method to
 read 16 bytes from an input stream and store them in an array.
 However, <code>read</code> may not actually be able to read as many
-bytes as requested, for example because the stream is exhausted. 
-Therefore, the code should not simply rely on the array <code>b</code> being filled with 
+bytes as requested, for example because the stream is exhausted.
+Therefore, the code should not simply rely on the array <code>b</code> being filled with
 precisely 16 bytes from the input stream.
 Instead, the code should check the method's return value, which indicates the number of bytes actually read.</p>
 
@@ -50,7 +50,7 @@ Instead, the code should check the method's return value, which indicates the nu
 </li>
 <li>
   Java API Specification, java.util.concurrent.locks.Condition: <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/locks/Condition.html#await(long,java.util.concurrent.TimeUnit)">
-    await</a>, 
+    await</a>,
   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/locks/Condition.html#awaitUntil(java.util.Date)">
     awaitUntil</a>,
   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/locks/Condition.html#awaitNanos(long)">

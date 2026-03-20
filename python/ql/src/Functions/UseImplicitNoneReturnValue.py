@@ -14,4 +14,3 @@ def main():
 def main():
     my_print(sys.argv)
     #The rest of the code can be removed as None as always false
-

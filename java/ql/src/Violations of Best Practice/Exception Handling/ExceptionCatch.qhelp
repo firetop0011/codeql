@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>Catching <code>Throwable</code> or <code>Exception</code> is dangerous 
+<p>Catching <code>Throwable</code> or <code>Exception</code> is dangerous
 because these can include an <code>Error</code> such as <code>OutOfMemoryError</code>
 or a <code>RuntimeException</code> such as <code>ArrayIndexOutOfBoundsException</code>.
 These should normally be propagated to the outermost level because they generally
@@ -20,10 +20,10 @@ are as specific as possible to avoid inadvertently suppressing more serious prob
 </recommendation>
 <example>
 
-<p>In the following example, the <code>catch</code> clause in the first <code>try</code> block 
-catches <code>Throwable</code>. However, when performing read operations on a 
-<code>FileInputStream</code> within a <code>try</code> block, the corresponding <code>catch</code> 
-clause should normally catch <code>IOException</code> instead. This is shown in the second, modified 
+<p>In the following example, the <code>catch</code> clause in the first <code>try</code> block
+catches <code>Throwable</code>. However, when performing read operations on a
+<code>FileInputStream</code> within a <code>try</code> block, the corresponding <code>catch</code>
+clause should normally catch <code>IOException</code> instead. This is shown in the second, modified
 <code>try</code> block.
 </p>
 
@@ -34,7 +34,7 @@ clause should normally catch <code>IOException</code> instead. This is shown in 
 
 
 <li>
-  J. Bloch and N. Gafter, <em>Java Puzzlers: Traps, Pitfalls, and Corner Cases</em>, 
+  J. Bloch and N. Gafter, <em>Java Puzzlers: Traps, Pitfalls, and Corner Cases</em>,
   Puzzle 44.
   Addison-Wesley, 2005.
 </li>

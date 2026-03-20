@@ -20,14 +20,14 @@ consistently simplifies most uses of that variable.</p>
 <p>Secondly, extracting part of a condition into a Boolean-valued method can simplify the condition
 and also allow code reuse, with all its benefits.</p>
 
-<p>Thirdly, assigning each subcondition of the condition to a local variable, and then using the variables in 
+<p>Thirdly, assigning each subcondition of the condition to a local variable, and then using the variables in
 the condition instead can simplify the condition.</p>
 
 </recommendation>
 <example>
 
 <p>The following example shows a complex condition found
-in a real program used by millions of people. The condition is so confusing that even the programmer 
+in a real program used by millions of people. The condition is so confusing that even the programmer
 who wrote it is not sure if he got it right (see the <code>TODO</code> comment).</p>
 
 <sample src="ComplexCondition.java" />

@@ -2,7 +2,7 @@
 def print_fellows(fellows):
     for f in fellows:
         print(f)
-        
+
 #...
 
 def print_records():

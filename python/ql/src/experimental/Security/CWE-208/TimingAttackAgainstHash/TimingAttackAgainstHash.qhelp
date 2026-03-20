@@ -3,8 +3,8 @@
 
 <overview>
 <p>
-  Timing Attack is based on the leakage of information by studying how long it takes the system to respond to different inputs. 
-  it can be circumvented by using a constant-time algorithm for checking the value of Hash, 
+  Timing Attack is based on the leakage of information by studying how long it takes the system to respond to different inputs.
+  it can be circumvented by using a constant-time algorithm for checking the value of Hash,
 more precisely, the comparison time should not depend on the content of the input. Otherwise the attacker gains
 information that is indirectly leaked by the application. This information may then be used for malicious purposes.
 </p>
@@ -13,14 +13,14 @@ information that is indirectly leaked by the application. This information may t
 
 <recommendation>
 <p>
- Two types of countermeasures can be applied against timing attacks. The first one consists 
+ Two types of countermeasures can be applied against timing attacks. The first one consists
 in eliminating timing variations whereas the second renders these variations useless for an attacker.
 The only absolute way to prevent timing attacks is to make the computation strictly constant time,
 independent of the input.
 
  Use <code>hmac.compare_digest()</code> method to securely check the value of Hash.
 If this method is used, then the calculation time depends only on the length of input byte arrays,
-and does not depend on the contents of the arrays. 
+and does not depend on the contents of the arrays.
  Unlike <code>==</code> is a fail fast check, If the first byte is not equal, it will return immediately.
 </p>
 </recommendation>
@@ -30,7 +30,7 @@ and does not depend on the contents of the arrays.
 </p>
 <sample src="UnSafeComparisonOfHash.py" />
 
-<p> 
+<p>
   The next example use a safe constant-time algorithm for validating a Hash:
 </p>
 <sample src="SafeComparisonOfHash.py" />

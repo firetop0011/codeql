@@ -7,12 +7,12 @@
 
 </overview>
 <recommendation>
-<p>Check the assignment carefully for mistakes. If the assignment is truly redundant and not simply 
+<p>Check the assignment carefully for mistakes. If the assignment is truly redundant and not simply
 incorrect then remove it.</p>
 
 </recommendation>
 <example>
-<p>In this example the programmer clearly intends to assign to <code>this.i</code> but made a 
+<p>In this example the programmer clearly intends to assign to <code>this.i</code> but made a
 mistake.</p>
 <sample src="SelfAssignment.cs" />
 </example>

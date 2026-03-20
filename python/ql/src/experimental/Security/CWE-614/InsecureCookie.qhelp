@@ -6,7 +6,7 @@
 <overview>
 <p>Setting the 'secure' flag on a cookie to <code>False</code> can cause it to be sent in cleartext.
 Setting the 'httponly' flag on a cookie to <code>False</code> may allow attackers access it via JavaScript.
-Setting the 'samesite' flag on a cookie to <code>'None'</code> will make the cookie to be sent in third-party 
+Setting the 'samesite' flag on a cookie to <code>'None'</code> will make the cookie to be sent in third-party
 contexts which may be attacker-controlled.</p>
 </overview>
 

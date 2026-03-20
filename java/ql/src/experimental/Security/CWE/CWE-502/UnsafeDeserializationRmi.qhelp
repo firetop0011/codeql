@@ -4,7 +4,7 @@
 <overview>
 <p>
 Java RMI uses the default Java serialization mechanism (in other words, <code>ObjectInputStream</code>)
-to pass parameters in remote method invocations. This mechanism is known to be unsafe when deserializing 
+to pass parameters in remote method invocations. This mechanism is known to be unsafe when deserializing
 untrusted data. If a registered remote object has a method that accepts a complex object,
 an attacker can take advantage of the unsafe deserialization mechanism.
 In the worst case, it results in remote code execution.

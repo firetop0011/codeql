@@ -1,5 +1,5 @@
 ======================
-Program representation 
+Program representation
 ======================
 
 CodeQL for C/C++
@@ -27,7 +27,7 @@ AST CodeQL classes
 Important AST CodeQL classes include:
 
 - ``Expr``: expressions such as assignments, variable references, function calls, ...
-- ``Stmt``: statements such as conditionals, loops, try statements, ... 
+- ``Stmt``: statements such as conditionals, loops, try statements, ...
 - ``DeclarationEntry``: places where functions, variables or types are declared and/or defined
 
 These three (and all other AST CodeQL classes) are subclasses of ``Element``.

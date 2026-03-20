@@ -1,6 +1,6 @@
 int main(int argc, char** argv) {
   char *userAndFile = argv[2];
-  
+
   {
     char fileBuffer[FILENAME_MAX] = "/home/";
     char *fileName = fileBuffer;

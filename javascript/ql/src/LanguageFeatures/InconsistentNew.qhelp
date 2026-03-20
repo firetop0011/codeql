@@ -40,7 +40,7 @@ The easiest way to fix this is to rewrite the call on line 7 to use <code>new</c
 <p>
 Alternatively, if you absolutely have to make it possible to call <code>Point</code> both with and without
 <code>new</code>, you could insert a guard that intercepts calls without <code>new</code> as follows:
-</p> 
+</p>
 
 <sample src="examples/InconsistentNewGood2.js" />
 

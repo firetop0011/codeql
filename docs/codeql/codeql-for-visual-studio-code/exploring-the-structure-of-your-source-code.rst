@@ -25,7 +25,7 @@ Viewing the abstract syntax tree of a source file
       :alt: Open a source file
 
 2. Run **CodeQL: View AST** from the Command Palette. This runs a CodeQL query (usually called ``printAST.ql``) over the active file, which may take a few seconds.
-   
+
    .. pull-quote:: Note
 
       If you don't have an appropriate ``printAST.ql`` query in your workspace, the **CodeQL: View AST** command won't work. To fix this, you can update your copy of the `CodeQL <https://github.com/github/codeql>`__ repository from ``main``. If you do this, you may need to upgrade your databases. Also, query caches may be discarded and your next query runs could be slower.

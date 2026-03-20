@@ -15,4 +15,3 @@ class D : protected Superclass1, protected Superclass2,
 {
     //implementation
 };
-

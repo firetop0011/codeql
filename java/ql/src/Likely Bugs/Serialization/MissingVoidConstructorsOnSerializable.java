@@ -22,7 +22,7 @@ class WrongSubItem extends WrongItem implements Serializable {
 class Item {
     private String name;
 
-    // GOOD: This class declares a no-argument constructor, which allows serializable 
+    // GOOD: This class declares a no-argument constructor, which allows serializable
     // subclasses to be deserialized without error.
     public Item() {}
 
@@ -32,8 +32,8 @@ class Item {
 }
 
 class SubItem extends Item implements Serializable {
-    public SubItem() { 
-        super(null); 
+    public SubItem() {
+        super(null);
     }
 
     public SubItem(String name) {

@@ -26,7 +26,7 @@ such as <code>..</code>. Such a path could point to any directory on the file sy
 
 <example>
 <p>
-The following code shows two bad examples. 
+The following code shows two bad examples.
 </p>
 
 <sample src="PathInjectionBad.swift" />
@@ -40,7 +40,7 @@ In the first, a file name is read from an HTTP request and then used to access a
 In the second bad example, it appears that the user is restricted to opening a file within the
 <code>"/Library/Caches"</code> home directory. In this case, a malicious response could contain a file name containing
 special characters. For example, the string <code>"../../Documents/sensitive.data"</code> will result in the code
-reading the file located at <code>"/Applications/(current_application)/Library/Caches/../../Documents/sensitive.data"</code>, 
+reading the file located at <code>"/Applications/(current_application)/Library/Caches/../../Documents/sensitive.data"</code>,
 which contains users' sensitive data. This file may then be made accessible to an attacker, giving them access to all this data.
 </p>
 

@@ -5,7 +5,7 @@ public class LoadFileFromAppActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == LoadFileFromAppActivity.REQUEST_CODE__SELECT_CONTENT_FROM_APPS &&
                 resultCode == RESULT_OK) {
-            
+
             {
                 // BAD: Load file without validation
                 loadOfContentFromApps(data, resultCode);
@@ -15,7 +15,7 @@ public class LoadFileFromAppActivity extends Activity {
                 // GOOD: load file with validation
                 if (!data.getData().getPath().startsWith("/data/data")) {
                     loadOfContentFromApps(data, resultCode);
-                }    
+                }
             }
         }
     }

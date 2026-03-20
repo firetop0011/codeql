@@ -21,7 +21,7 @@
 
 <ul>
     <li>By extending the <code>Thread</code> class and overriding its <code>run</code> method.</li>
-    <li>By passing an argument of type <code>Runnable</code> to the constructor of the 
+    <li>By passing an argument of type <code>Runnable</code> to the constructor of the
   <code>Thread</code> class.</li>
 </ul>
 
@@ -32,9 +32,9 @@
 
 <sample src="EmptyRunMethodInThread.java" />
 
-<p>In the following example, class <code>GoodWithOverride</code> shows how to extend the 
-<code>Thread</code> class and override its <code>run</code> method, and class 
-<code>GoodWithRunnable</code> shows how to pass an argument of type <code>Runnable</code> to the 
+<p>In the following example, class <code>GoodWithOverride</code> shows how to extend the
+<code>Thread</code> class and override its <code>run</code> method, and class
+<code>GoodWithRunnable</code> shows how to pass an argument of type <code>Runnable</code> to the
 constructor of the <code>Thread</code> class.
 
 </p><sample src="EmptyRunMethodInThreadGood.java" />

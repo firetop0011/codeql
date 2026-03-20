@@ -15,4 +15,4 @@ public void transform(Socket socket, String inputXml) throws Exception {
   // GOOD: The secure processing mode is enabled
   factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
   factory.newTransformer(xslt).transform(xml, new StreamResult(result));
-}  
+}

@@ -7,7 +7,7 @@
 
 		<p>
 
-			Strict HTTP parsing may cause problems with interoperability with some 
+			Strict HTTP parsing may cause problems with interoperability with some
 			non-conformant HTTP implementations. But disabling it is strongly discouraged,
 			as it opens the door to several threats including HTTP Request Smuggling.
 
@@ -29,9 +29,9 @@
 
 		<p>
 
-			The following example shows the instantiation of an http server. This 
+			The following example shows the instantiation of an http server. This
 			server is vulnerable to HTTP Request Smuggling because the
-			<code>insecureHTTPParser</code> option of the server instantiation is 
+			<code>insecureHTTPParser</code> option of the server instantiation is
 			set to <code>true</code>. As a consequence, malformed packets may attempt
 			to exploit any number of weaknesses including ranging from Web Cache Poisoning
 			Attacks to bypassing firewall protection mecahanisms.

@@ -16,7 +16,7 @@ public static void main(String[] args) {
 	{
 		SSLContext sslContext = SSLContext.getInstance("TLS");
 		final SSLSocketFactory socketFactory = sslContext.getSocketFactory();
-		SSLSocket socket = (SSLSocket) socketFactory.createSocket("www.example.com", 443); 
+		SSLSocket socket = (SSLSocket) socketFactory.createSocket("www.example.com", 443);
 		SSLParameters sslParameters = sslEngine.getSSLParameters();
 		sslParameters.setEndpointIdentificationAlgorithm("HTTPS"); //GOOD: Set a valid endpointIdentificationAlgorithm for SSL socket to trigger hostname verification
 		socket.setSSLParameters(sslParameters);

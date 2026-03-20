@@ -26,7 +26,7 @@ after checking the desired behavior.</p>
 <example>
 
 <p>The following example uses a loop and a nested loop to check whether any of the
-currently active shopping carts contains a particular item. On line 4, the <code>carts:</code> label 
+currently active shopping carts contains a particular item. On line 4, the <code>carts:</code> label
 is unused. Inspecting the code, we can see that the <code>break</code> statement on line 10
 is inefficient because it only breaks out of the nested loop. It
 could in fact break out of the outer loop, which should improve

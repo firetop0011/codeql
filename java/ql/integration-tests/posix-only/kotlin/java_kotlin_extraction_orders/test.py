@@ -104,7 +104,7 @@ def java_instantiate_classes(classes):
 
 def make_java_user(user_filename, classes):
   with open(user_filename, "w") as f:
-     f.write("public class %s { private static void noop(Object x) { } public static void user() { %s } }" % (user_filename.replace(".java", ""), java_instantiate_classes(classes))) 
+     f.write("public class %s { private static void noop(Object x) { } public static void user() { %s } }" % (user_filename.replace(".java", ""), java_instantiate_classes(classes)))
 
 make_java_user(java_first_user, java_first_classes)
 make_java_user(java_second_user, kotlin_first_classes)

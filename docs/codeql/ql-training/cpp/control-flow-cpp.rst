@@ -56,13 +56,13 @@ Control flow graphs
       } else {
         return 2;
       }
- 
+
 .. container:: column-right
 
   Possible execution order is usually represented by a *control flow graph*:
 
    .. graphviz::
-      
+
          digraph {
          graph [ dpi = 1000 ]
          node [shape=polygon,sides=4,color=blue4,style="filled,rounded",fontname=consolas,fontcolor=white]
@@ -81,9 +81,9 @@ Control flow graphs
 
 .. note::
 
-   The control flow graph is a static over-approximation of possible control flow at runtime. 
-   Its nodes are program elements such as expressions and statements. 
-   If there is an edge from one node to another, then it means that the semantic operation corresponding to the first node may be immediately followed by the operation corresponding to the second node. 
+   The control flow graph is a static over-approximation of possible control flow at runtime.
+   Its nodes are program elements such as expressions and statements.
+   If there is an edge from one node to another, then it means that the semantic operation corresponding to the first node may be immediately followed by the operation corresponding to the second node.
    Some nodes (such as conditions of “if” statements or loop conditions) have more than one successor, representing conditional control flow at runtime.
 
 Modeling control flow
@@ -113,7 +113,7 @@ Example: malloc/free pairs
 
 Find calls to ``free`` that are reachable from an allocation on the same variable:
 
-.. literalinclude:: ../query-examples/cpp/control-flow-cpp-1.ql 
+.. literalinclude:: ../query-examples/cpp/control-flow-cpp-1.ql
    :language: ql
 
 .. note::
@@ -126,12 +126,12 @@ Exercise: use after free
 Based on this query, write a query that finds accesses to the variable that occur after the free.
 
 .. rst-class:: build
-  
+
 - What do you find? What problems occur with this approach to detecting use-after-free vulnerabilities?
 
   .. rst-class:: build
 
-      .. literalinclude:: ../query-examples/cpp/control-flow-cpp-2.ql 
+      .. literalinclude:: ../query-examples/cpp/control-flow-cpp-2.ql
          :language: ql
 
 Utilizing recursion
@@ -146,13 +146,13 @@ Utilizing recursion
 
 .. code-block:: ql
 
-   ControlFlowNode reachesWithoutReassignment(FunctionCall free, LocalScopeVariable v) 
+   ControlFlowNode reachesWithoutReassignment(FunctionCall free, LocalScopeVariable v)
    {
      freeCall(free, v.getAnAccess()) and
      (
        // base case
        result = free
-       or 
+       or
        // recursive case
        exists(ControlFlowNode mid |
          mid = reachesWithoutReassignment(free, v) and
@@ -169,11 +169,11 @@ Exercise
 
 Find local variables that are written to, and then never accessed again.
 
-**Hint**: Use ``LocalVariable.getAnAssignment()``. 
+**Hint**: Use ``LocalVariable.getAnAssignment()``.
 
 .. rst-class:: build
 
-   .. literalinclude:: ../query-examples/cpp/control-flow-cpp-3.ql 
+   .. literalinclude:: ../query-examples/cpp/control-flow-cpp-3.ql
       :language: ql
 
 .. rst-class:: background2
@@ -203,7 +203,7 @@ Write a query to find unreachable basic blocks.
 
 .. rst-class:: build
 
-.. literalinclude:: ../query-examples/cpp/control-flow-cpp-4.ql 
+.. literalinclude:: ../query-examples/cpp/control-flow-cpp-4.ql
    :language: ql
 
 .. note::
@@ -222,8 +222,8 @@ A ``GuardCondition`` is a ``Boolean`` condition that controls one or more basic 
 Further materials
 =================
 
-- CodeQL for C/C++: https://codeql.github.com/docs/codeql-language-guides/codeql-for-cpp/ 
-- API reference: https://codeql.github.com/codeql-standard-libraries/cpp 
+- CodeQL for C/C++: https://codeql.github.com/docs/codeql-language-guides/codeql-for-cpp/
+- API reference: https://codeql.github.com/codeql-standard-libraries/cpp
 
 .. rst-class:: end-slide
 
@@ -247,14 +247,14 @@ Exercise: unresolvable calls
 
 Write a query that finds all calls for which no call target can be determined, and run it on libjpeg-turbo.
 
-Examine the results. What do you notice? 
+Examine the results. What do you notice?
 
 .. rst-class:: build
 
    .. code-block:: ql
-   
+
       import cpp
-   
+
       from Call c
       where not exists(c.getTarget())
       select c
@@ -272,7 +272,7 @@ Write a query that resolves the call at `cjpeg.c:640 <https://github.com/libjpeg
 
 .. rst-class:: build
 
-.. literalinclude:: ../query-examples/cpp/control-flow-cpp-5.ql 
+.. literalinclude:: ../query-examples/cpp/control-flow-cpp-5.ql
    :language: ql
 
 Exercise: customizing the call graph
@@ -318,13 +318,13 @@ Write a query that finds all calls to a field called ``error_exit``.
 .. code-block:: ql
 
    class CallThroughVariable extends ExprCall { ... }
-   
+
    class ErrorExitCall extends CallThroughVariable {
      override Field v;
-   
+
      ErrorExitCall() { v.getName() = "error_exit" }
    }
-   
+
    from ErrorExitCall eec
    select eec
 
@@ -333,19 +333,19 @@ Exercise: customizing the control-flow graph
 
 Override ``ControlFlowNode`` to mark calls to ``error_exit`` as non-returning.
 
-**Hint**: ``ExprCall`` is an indirect subclass of ``ControlFlowNode``. 
+**Hint**: ``ExprCall`` is an indirect subclass of ``ControlFlowNode``.
 
 .. rst-class:: build
 
 .. code-block:: ql
 
    class CallThroughVariable extends ExprCall { ... }
-   
+
    class ErrorExitCall extends CallThroughVariable {
      override Field v;
-   
+
      ErrorExitCall() { v.getName() = "error_exit" }
-   
+
      override ControlFlowNode getASuccessor() { none() }
    }
 
@@ -359,7 +359,7 @@ In particular, it has an ``exprExits`` predicate that can be overridden to more 
 .. code-block:: ql
 
    import Options
-   
+
    class MyOptions extends CustomOptions {
     override predicate exprExits(Expr e) {
       super.exprExits(e) or ...

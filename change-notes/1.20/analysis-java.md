@@ -28,5 +28,3 @@
   input and taint steps from the following frameworks: Guice, Protobuf, Thrift and Struts.
   This affects all security queries, which may yield additional results on projects
   that use these frameworks.
-
-

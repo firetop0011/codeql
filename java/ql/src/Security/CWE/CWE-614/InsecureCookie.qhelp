@@ -25,7 +25,7 @@ way leaves out the setting of the 'secure' flag; the second way includes the set
 
 <li>SEI CERT Oracle Coding Standard for Java:
   <a href="https://wiki.sei.cmu.edu/confluence/display/java/SER03-J.+Do+not+serialize+unencrypted+sensitive+data">SER03-J. Do not serialize unencrypted, sensitive data</a>.</li>
-<li>Java Platform, Enterprise Edition (Java EE) 7, API Specification: 
+<li>Java Platform, Enterprise Edition (Java EE) 7, API Specification:
 <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/http/Cookie.html">Class Cookie</a>.</li>
 
 

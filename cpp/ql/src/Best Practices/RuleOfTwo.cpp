@@ -23,4 +23,3 @@ public:
 
 	//No copy constructor, will just copy the pointer other and not create a new object
 };
-

@@ -39,4 +39,3 @@ if !exists("g:qlVarNoHighlight")
 endif
 hi def link qlKeyword     Keyword
 hi def link qlQualified   Normal
-

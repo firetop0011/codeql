@@ -13,7 +13,7 @@ of a <code>case</code>.</p>
 </overview>
 <recommendation>
 
-<p>End each <code>case</code> with a <code>break</code> statement or, if execution is 
+<p>End each <code>case</code> with a <code>break</code> statement or, if execution is
 supposed to fall through to the next <code>case</code>, comment the last line of the
 <code>case</code> with the following comment: <code>/* falls through */</code></p>
 
@@ -24,8 +24,8 @@ supposed to share the same implementation with the subsequent <code>case</code>.
 <example>
 
 <p>In the following example, the <code>PING</code> case is missing a
-<code>break</code> statement. As a result, after <code>reply</code> is assigned the value of 
-<code>Message.PONG</code>, execution falls through to the <code>TIMEOUT</code> case. Then the value 
+<code>break</code> statement. As a result, after <code>reply</code> is assigned the value of
+<code>Message.PONG</code>, execution falls through to the <code>TIMEOUT</code> case. Then the value
 of <code>reply</code> is erroneously assigned the value of <code>Message.PING</code>. To fix this,
 insert <code>break;</code> at the end of the <code>PING</code> case.</p>
 

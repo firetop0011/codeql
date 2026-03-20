@@ -39,7 +39,7 @@ If `preservesValue = true` then value flow is propagated. If it is `false` then
 only taint flow is propagated.
 
 Any call to `chomp` in the database will be translated, in the dataflow graph,
-to a call to this fake definition. 
+to a call to this fake definition.
 
 `input` and `output` define the "from" and "to" locations in the flow summary.
 They use a custom string-based syntax which is similar to that used in `path`

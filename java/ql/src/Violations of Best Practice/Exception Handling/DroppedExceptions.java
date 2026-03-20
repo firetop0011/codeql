@@ -1,4 +1,4 @@
-// Dropped exception, with no information on whether 
+// Dropped exception, with no information on whether
 // the exception is expected or not
 synchronized void waitIfAutoSyncScheduled() {
 	try {

@@ -69,7 +69,7 @@ unwanted dependencies, see the references (particularly [Lakos]).
 <p>In this example <code>BadModel</code> and <code>BadView</code> are mutually dependent.</p>
 <sample src="MutualDependency.java" />
 <p>The interface technique can be used to break the dependency between the model and the view. The <code>ModelListener</code> interface allows <code>BetterView</code> to interact with <code>BetterModel</code> without dependency.</p>
-<sample src="MutualDependencyFix.java" /> 
+<sample src="MutualDependencyFix.java" />
 
 </example>
 <references>

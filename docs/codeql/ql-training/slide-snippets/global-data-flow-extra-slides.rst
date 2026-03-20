@@ -9,12 +9,12 @@ Implement a ``flowStep`` predicate extending ``localFlowStep`` with steps throug
      exists(int i | arg.asExpr() = c.getArgument(i) |
        parm.asParameter() = c.getTarget().getParameter(i))
    }
-   
+
    predicate stepOut(Call c, DataFlow::Node ret, DataFlow::Node res) {
      exists(ReturnStmt retStmt | retStmt.getEnclosingFunction() = c.getTarget() |
        ret.asExpr() = retStmt.getExpr() and res.asExpr() = c)
    }
-   
+
    predicate flowStep(DataFlow::Node pred, DataFlow::Node succ) {
      DataFlow::localFlowStep(pred, succ) or
      stepIn(_, pred, succ) or
@@ -53,7 +53,7 @@ Summary-based global data flow
 - To avoid traversing the same paths many times, we compute function summaries that record if a function parameter flows into a return value:
 
    .. code-block:: ql
-   
+
       predicate returnsParameter(Function f, int i) {
         exists (Parameter p, ReturnStmt retStmt, Expr ret |
           p = f.getParameter(i) and
@@ -64,4 +64,3 @@ Summary-based global data flow
       }
 
 - Use this predicate in ``balancedPath`` instead of ``stepIn``/``stepOut`` pairs.
-

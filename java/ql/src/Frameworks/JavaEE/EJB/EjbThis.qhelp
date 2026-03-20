@@ -12,8 +12,8 @@ The Enterprise JavaBeans 3.0 core specification, Section 21.1.2, states:
 <blockquote>
 <p>
 The enterprise bean must not attempt to pass <code>this</code> as an argument or method result. The
-enterprise bean must pass the result of <code>SessionContext.getBusinessObject</code>, 
-<code>SessionContext.getEJBObject</code>, <code>SessionContext.getEJBLocalObject</code>, 
+enterprise bean must pass the result of <code>SessionContext.getBusinessObject</code>,
+<code>SessionContext.getEJBObject</code>, <code>SessionContext.getEJBLocalObject</code>,
 <code>EntityContext.getEJBObject</code>, or <code>EntityContext.getEJBLocalObject</code> instead.
 </p>
 </blockquote>

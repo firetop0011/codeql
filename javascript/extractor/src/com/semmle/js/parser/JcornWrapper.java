@@ -32,7 +32,7 @@ public class JcornWrapper {
 
     Program program = null;
     List<ParseError> errors = new ArrayList<>();
-    
+
     try {
       try {
         // First try to parse as a regular JavaScript program.

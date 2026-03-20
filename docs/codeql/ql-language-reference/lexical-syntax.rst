@@ -7,7 +7,7 @@ Lexical syntax
 
 The QL syntax includes different kinds of keywords, identifiers, and comments.
 
-For an overview of the lexical syntax, see "`Lexical syntax 
+For an overview of the lexical syntax, see "`Lexical syntax
 <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#lexical-syntax>`_" in the QL language specification.
 
 .. index:: comment, QLDoc
@@ -16,7 +16,7 @@ For an overview of the lexical syntax, see "`Lexical syntax
 Comments
 ********
 
-All standard one-line and multiline comments are ignored by the QL 
+All standard one-line and multiline comments are ignored by the QL
 compiler and are only visible in the source code.
 You can also write another kind of comment, namely **QLDoc comments**. These comments describe
 QL entities and are displayed as pop-up information in QL editors.
@@ -34,7 +34,7 @@ The following example uses these three different kinds of comments:
       }
     }
 
-    /* 
-      A standard multiline comment, perhaps to provide 
+    /*
+      A standard multiline comment, perhaps to provide
       additional details, or to write a TODO comment.
     */

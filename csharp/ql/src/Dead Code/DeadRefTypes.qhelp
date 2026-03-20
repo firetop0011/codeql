@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>This rule detects classes that are not public and not used. These classes are redundant as they cannot be accessed from 
+<p>This rule detects classes that are not public and not used. These classes are redundant as they cannot be accessed from
 outside the project.</p>
 
 </overview>

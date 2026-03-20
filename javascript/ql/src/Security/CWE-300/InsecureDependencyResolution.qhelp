@@ -5,11 +5,11 @@
 
 <overview>
 <p>
-Using an insecure protocol like HTTP or FTP to download build dependencies makes the build process vulnerable to a 
+Using an insecure protocol like HTTP or FTP to download build dependencies makes the build process vulnerable to a
 man-in-the-middle (MITM) attack.
 </p>
 <p>
-This can allow attackers to inject malicious code into the downloaded dependencies, and thereby 
+This can allow attackers to inject malicious code into the downloaded dependencies, and thereby
 infect the build artifacts and execute arbitrary code on the machine building the artifacts.
 </p>
 
@@ -34,13 +34,13 @@ The fix is to change the protocol to HTTPS.
 
 <references>
 <li>
-  Jonathan Leitschuh: 
+  Jonathan Leitschuh:
   <a href="https://infosecwriteups.com/want-to-take-over-the-java-ecosystem-all-you-need-is-a-mitm-1fc329d898fb">
     Want to take over the Java ecosystem? All you need is a MITM!
   </a>
 </li>
 <li>
-  Max Veytsman: 
+  Max Veytsman:
   <a href="https://max.computer/blog/how-to-take-over-the-computer-of-any-java-or-clojure-or-scala-developer/">
     How to take over the computer of any Java (or Closure or Scala) Developer.
   </a>

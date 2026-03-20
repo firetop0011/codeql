@@ -23,7 +23,7 @@ Declare all members of the bit field to be unsigned.
 </recommendation>
 
 <example>
-<p>The code below shows two examples of bit fields. The second field is declared to be unsigned which ensures portability. 
+<p>The code below shows two examples of bit fields. The second field is declared to be unsigned which ensures portability.
 The first field should also be declared to be unsigned.
 </p>
 <sample src="AV Rule 154.cpp" />

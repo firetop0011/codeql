@@ -7,8 +7,8 @@
 <overview>
 <p>Calls of the form <code>x.equals(y)</code>,
 where <code>x</code> and <code>y</code> have incomparable types,
-should always return <code>false</code> because the runtime types 
-of <code>x</code> and <code>y</code> will be different. 
+should always return <code>false</code> because the runtime types
+of <code>x</code> and <code>y</code> will be different.
 Two types are incomparable if they are distinct
 and do not have a common subtype.</p>
 

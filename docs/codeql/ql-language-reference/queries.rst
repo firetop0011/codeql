@@ -11,8 +11,8 @@ Queries are the output of a QL program. They evaluate to sets of results.
 
 There are two kinds of queries. For a given :ref:`query module <query-modules>`, the queries in that module are:
   - The :ref:`select clause <select-clauses>`, if any, defined in that module.
-  - Any :ref:`query predicates <query-predicates>` in that module's predicate 
-    :ref:`namespace <namespaces>`. That is, they can be defined in the module itself, or 
+  - Any :ref:`query predicates <query-predicates>` in that module's predicate
+    :ref:`namespace <namespaces>`. That is, they can be defined in the module itself, or
     imported from a different module.
 
 We often also refer to the whole QL program as a query.
@@ -46,7 +46,7 @@ For example:
 
 .. code-block:: ql
 
-    from int x, int y 
+    from int x, int y
     where x = 3 and y in [0 .. 2]
     select x, y, x * y as product, "product: " + product
 
@@ -62,7 +62,7 @@ This select clause returns the following results:
 | 3 | 2 | 6       | product: 6 |
 +---+---+---------+------------+
 
-You could also add ``order by y desc`` at the end of the select clause. Now the results are 
+You could also add ``order by y desc`` at the end of the select clause. Now the results are
 ordered according to the values in the ``y`` column, in descending order:
 
 +---+---+---------+------------+
@@ -80,7 +80,7 @@ ordered according to the values in the ``y`` column, in descending order:
 Query predicates
 ****************
 
-A query predicate is a :ref:`non-member predicate <non-member-predicates>` with a ``query`` 
+A query predicate is a :ref:`non-member predicate <non-member-predicates>` with a ``query``
 annotation. It returns all the tuples that the predicate evaluates to.
 
 For example:
@@ -88,8 +88,8 @@ For example:
 .. code-block:: ql
 
     query int getProduct(int x, int y) {
-      x = 3 and 
-      y in [0 .. 2] and 
+      x = 3 and
+      y in [0 .. 2] and
       result = x * y
     }
 

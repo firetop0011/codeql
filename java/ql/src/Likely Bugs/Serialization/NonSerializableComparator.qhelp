@@ -15,19 +15,19 @@ using a comparator serializes successfully only if the comparator is serializabl
 <p>
 The <code>Collection</code>s in the Java Standard Library that require a comparator
 (<code>TreeSet</code>, <code>TreeMap</code>, <code>PriorityQueue</code>) all call
-<code>ObjectOutputStream.defaultWriteObject</code>, which tries to serialize every 
-non-static, non-transient field in the class. As the comparator 
-is stored in a field in these collections, the attempt to serialize a non-serializable 
+<code>ObjectOutputStream.defaultWriteObject</code>, which tries to serialize every
+non-static, non-transient field in the class. As the comparator
+is stored in a field in these collections, the attempt to serialize a non-serializable
 comparator throws a <code>java.io.NotSerializableException</code>.
 </p>
 
 </overview>
 <recommendation>
 <p>
-Comparators should be serializable if they are used in sorted collections that 
+Comparators should be serializable if they are used in sorted collections that
 may be serialized. In most cases, simply changing the comparator so it also implements
-<code>Serializable</code> is enough. Comparators that have 
-internal state may require additional changes (for example, custom <code>writeObject</code> and 
+<code>Serializable</code> is enough. Comparators that have
+internal state may require additional changes (for example, custom <code>writeObject</code> and
 <code>readObject</code> methods). In these cases, it is best to follow general best practices
 for serializable objects (see references below).
 </p>
@@ -35,8 +35,8 @@ for serializable objects (see references below).
 </recommendation>
 <example>
 
-<p>In the following example, <code>WrongComparator</code> is not serializable because it does not 
-implement <code>Serializable</code>. However, <code>StringComparator</code> is serializable because 
+<p>In the following example, <code>WrongComparator</code> is not serializable because it does not
+implement <code>Serializable</code>. However, <code>StringComparator</code> is serializable because
 it does implement <code>Serializable</code>.
 
 </p><sample src="NonSerializableComparator.java" />

@@ -211,7 +211,7 @@ class Type extends ... {
 
   /** ... */
   Type getATypeParameter() { ... }
-  
+
   /** Gets the SSA variable ... */
   predicate getSsaVariable() { ... }
 }

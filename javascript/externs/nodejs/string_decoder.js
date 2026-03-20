@@ -77,4 +77,3 @@ string_decoder.NodeStringDecoder = function() {};
 string_decoder.NodeStringDecoder.prototype.detectIncompleteChar = function(buffer) {};
 
 module.exports.NodeStringDecoder = string_decoder.NodeStringDecoder;
-

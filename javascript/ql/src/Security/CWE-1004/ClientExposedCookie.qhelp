@@ -20,7 +20,7 @@ Set the <code>httpOnly</code> flag on all cookies that are not needed by the cli
 
 <example>
 <p>
-The following example stores an authentication token in a cookie that can 
+The following example stores an authentication token in a cookie that can
 be viewed by the client.
 </p>
 <sample src="examples/ClientExposedCookieBad.js"/>

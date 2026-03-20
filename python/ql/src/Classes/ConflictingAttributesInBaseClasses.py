@@ -1,11 +1,11 @@
 
 class TCPServer(object):
-    
+
     def process_request(self, request, client_address):
         self.do_work(request, client_address)
         self.shutdown_request(request)
 
-    
+
 class ThreadingMixIn:
     """Mix-in class to handle each request in a new thread."""
 

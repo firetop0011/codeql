@@ -1,4 +1,4 @@
-void printMembership(Set<Fellow> fellows, Set<Member> members, 
+void printMembership(Set<Fellow> fellows, Set<Member> members,
                      Set<Associate> associates, Set<Student> students) {
     for(Fellow f: fellows) {
         System.out.println(f);

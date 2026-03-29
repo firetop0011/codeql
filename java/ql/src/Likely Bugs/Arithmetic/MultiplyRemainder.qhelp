@@ -15,7 +15,7 @@ left-associative.</p>
 <recommendation>
 
 <p>
-When you use the remainder operator with the multiplication operator, ensure that the expression is 
+When you use the remainder operator with the multiplication operator, ensure that the expression is
 evaluated as you expect. If necessary, add parentheses.</p>
 
 </recommendation>

@@ -20,8 +20,8 @@ public class Streams {
 			return System.out;
 		}
 	};
-	
-	private static final InheritableThreadLocal<PrintStream> err = 
+
+	private static final InheritableThreadLocal<PrintStream> err =
 			new InheritableThreadLocal<PrintStream>() {
 		@Override
 		protected PrintStream initialValue() {
@@ -29,31 +29,31 @@ public class Streams {
 		}
 	};
 
-	private static final InheritableThreadLocal<InputStream> in = 
+	private static final InheritableThreadLocal<InputStream> in =
 			new InheritableThreadLocal<InputStream>() {
 		@Override
 		protected InputStream initialValue() {
 			return System.in;
 		}
 	};
-	
+
 	private static class SavedContext {
 		public PrintStream out, err;
 		public InputStream in;
 	}
-	
-	private static final ThreadLocal<Stack<SavedContext>> contexts = 
+
+	private static final ThreadLocal<Stack<SavedContext>> contexts =
 			new ThreadLocal<Stack<SavedContext>>() {
 		@Override
 		protected Stack<SavedContext> initialValue() {
 			return new Stack<SavedContext>();
 		}
 	};
-	
+
 	public static PrintStream out() {
 		return out.get();
 	}
-	
+
 	public static PrintStream err() {
 		return err.get();
 	}
@@ -75,7 +75,7 @@ public class Streams {
 		// showAllLogs=True, and we don't want the extra
 		// noise when executing the child, so we set a
 		// fresh log state for the duration of the child.
-		
+
 		contexts.get().push(context);
 		out.set(asPrintStream(stdout));
 		err.set(asPrintStream(stderr));
@@ -86,7 +86,7 @@ public class Streams {
 		return stdout instanceof PrintStream ?
 				(PrintStream)stdout : new PrintStream(stdout);
 	}
-	
+
 	public static void popContext() {
 		Stack<SavedContext> context = contexts.get();
 		out.get().flush();

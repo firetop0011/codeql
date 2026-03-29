@@ -14,7 +14,7 @@
  arguments to the function. (Variadic functions can accept additional arguments.)  Providing
  more arguments than there are parameters incurs an unneeded computational overhead, both
  in terms of time and of additional stack space.</p>
- 
+
 </overview>
 <recommendation>
 <p>Call the function with the correct number of arguments.</p>

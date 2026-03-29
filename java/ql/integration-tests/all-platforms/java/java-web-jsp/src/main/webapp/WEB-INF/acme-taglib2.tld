@@ -27,9 +27,8 @@
         </variable>
         <attribute>
             <name>format</name>
-            <required>true</required>           
+            <required>true</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
 </taglib>
-

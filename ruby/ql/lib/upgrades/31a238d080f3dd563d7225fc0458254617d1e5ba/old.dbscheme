@@ -1313,4 +1313,3 @@ erb_ast_node_parent(
   int parent: @erb_ast_node_parent ref,
   int parent_index: int ref
 );
-

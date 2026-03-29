@@ -14,4 +14,3 @@ public:
 		FILE fp = NULL;
 	}
 };
-

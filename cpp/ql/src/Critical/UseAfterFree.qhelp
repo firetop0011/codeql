@@ -6,9 +6,9 @@
 
 <overview>
 <p>
-This rule finds accesses through a pointer of a memory location that has already been freed (i.e. through a dangling pointer). 
-Such memory blocks have already been released to the dynamic memory manager, and modifying them can lead to anything 
-from a segfault to memory corruption that would cause subsequent calls to the dynamic memory manger to behave 
+This rule finds accesses through a pointer of a memory location that has already been freed (i.e. through a dangling pointer).
+Such memory blocks have already been released to the dynamic memory manager, and modifying them can lead to anything
+from a segfault to memory corruption that would cause subsequent calls to the dynamic memory manger to behave
 erratically, to a possible security vulnerability.
 </p>
 

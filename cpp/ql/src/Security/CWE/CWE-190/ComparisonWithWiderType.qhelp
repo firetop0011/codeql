@@ -16,13 +16,13 @@ comparison is at least as wide as the value it is being compared with.</p>
 </recommendation>
 <example>
 
-<p>In this example, <code>bytes_received</code> is compared against <code>max_get</code> in a 
-<code>while</code> loop. However, <code>bytes_received</code> is an <code>int16_t</code>, and 
-<code>max_get</code> is an <code>int32_t</code>. Because <code>max_get</code> is larger than 
-<code>INT16_MAX</code>, the loop condition is always <code>true</code>, so the loop never 
+<p>In this example, <code>bytes_received</code> is compared against <code>max_get</code> in a
+<code>while</code> loop. However, <code>bytes_received</code> is an <code>int16_t</code>, and
+<code>max_get</code> is an <code>int32_t</code>. Because <code>max_get</code> is larger than
+<code>INT16_MAX</code>, the loop condition is always <code>true</code>, so the loop never
 terminates.</p>
 
-<p>This problem is avoided in the 'GOOD' case because <code>bytes_received2</code> is an 
+<p>This problem is avoided in the 'GOOD' case because <code>bytes_received2</code> is an
 <code>int32_t</code>, which is as wide as the type of <code>max_get</code>.</p>
 
 <sample src="ComparisonWithWiderType.c" />

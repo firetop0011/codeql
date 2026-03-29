@@ -16,7 +16,7 @@ using different names.</p>
 </recommendation>
 <example>
 
-<p>In the following example, it is not clear that the <code>attendees</code> field refers to the 
+<p>In the following example, it is not clear that the <code>attendees</code> field refers to the
 inner class <code>Attendees</code> and not the class <code>com.company.util.Attendees</code>.</p>
 
 <sample src="SameNameAsSuper.java" />
@@ -28,7 +28,7 @@ inner class <code>Attendees</code> and not the class <code>com.company.util.Atte
 
 
 <li>
-R. C. Martin, <em>Clean Code: A Handbook of Agile Software Craftsmanship</em>, &sect;17.N4. Prentice 
+R. C. Martin, <em>Clean Code: A Handbook of Agile Software Craftsmanship</em>, &sect;17.N4. Prentice
 Hall, 2008.
 </li>
 

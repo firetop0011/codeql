@@ -14,15 +14,15 @@ new String("hello")</code>. Furthermore, this practice is not memory efficient.<
 </overview>
 <recommendation>
 <p>The copied string is functionally indistinguishable from the argument that
-was passed into the <code>String</code> constructor, so you can simply omit the constructor call and 
-use the argument passed into it directly. Unless an explicit copy of the argument string is needed, 
+was passed into the <code>String</code> constructor, so you can simply omit the constructor call and
+use the argument passed into it directly. Unless an explicit copy of the argument string is needed,
 this is a safe transformation.</p>
 
 </recommendation>
 <example>
 
-<p>The following example shows three cases of copying a string using the <code>String</code> 
-constructor, which is inefficient. In each case, simply removing the constructor call 
+<p>The following example shows three cases of copying a string using the <code>String</code>
+constructor, which is inefficient. In each case, simply removing the constructor call
 <code>new String</code> and leaving the argument results in better code and less
 memory churn.</p>
 

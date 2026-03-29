@@ -4,15 +4,15 @@
 <qhelp>
 
 <overview>
-<p> The <code>exit</code> and <code>quit</code> "functions" are actually <code>site.Quitter</code> objects and 
+<p> The <code>exit</code> and <code>quit</code> "functions" are actually <code>site.Quitter</code> objects and
 are loaded, at interpreter start up, from <code>site.py</code>.
-However, if the interpreter is started with the <code>-S</code> flag, or a custom <code>site.py</code> 
+However, if the interpreter is started with the <code>-S</code> flag, or a custom <code>site.py</code>
 is used then <code>exit</code> and <code>quit</code> may not be present.
 </p>
 
 </overview>
 <recommendation>
-<p> Replace uses of <code>exit()</code> and <code>quit()</code> with <code>sys.exit()</code> which is 
+<p> Replace uses of <code>exit()</code> and <code>quit()</code> with <code>sys.exit()</code> which is
 built into the interpreter and is guaranteed to be present.</p>
 
 </recommendation>

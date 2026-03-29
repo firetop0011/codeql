@@ -4,7 +4,7 @@
 	<description>
 	This file configures the various service beans.
 	</description>
-	
+
 	<!--You can also put a description element in a bean-->
 	<bean id="baseService" abstract="true">
 		<description>
@@ -13,13 +13,13 @@
 		...
 	</bean>
 
-	<bean id="shippingService" 
+	<bean id="shippingService"
 			class="documentation.examples.spring.ShippingService"
 			parent="baseService">
 		...
 	</bean>
-	
-	<bean id="orderService" 
+
+	<bean id="orderService"
 			class="documentation.examples.spring.OrderService"
 			parent="baseService">
 		...

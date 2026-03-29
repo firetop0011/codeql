@@ -3,10 +3,10 @@
 
 <overview>
 <p>
-MVEL is an expression language based on Java-syntax, 
+MVEL is an expression language based on Java-syntax,
 which offers many features
 including invocation of methods available in the JVM.
-If a MVEL expression is built using attacker-controlled data, 
+If a MVEL expression is built using attacker-controlled data,
 and then evaluated, then it may allow attackers to run arbitrary code.
 </p>
 </overview>

@@ -28,7 +28,7 @@ if the array is empty:
 </p>
 <sample src="NegativeLengthCheck.go" />
 <p>
-However, the emptiness check is ineffective: since <code>len(xs)</code> is never less than zero, 
+However, the emptiness check is ineffective: since <code>len(xs)</code> is never less than zero,
 the condition will never hold and no panic will be triggered. Instead, the index expression
 <code>xs[0]</code> will cause a panic.
 </p>

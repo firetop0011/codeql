@@ -303,8 +303,8 @@ public class RegExpParser {
         hi = lo;
       }
       if (!this.match("}")) {
-        // Not a quantifier, just parsing it as a constant. 
-        // E.g. a Regexp such as `/a{|X/`, where there is no matching `}`. 
+        // Not a quantifier, just parsing it as a constant.
+        // E.g. a Regexp such as `/a{|X/`, where there is no matching `}`.
         return this.finishTerm(new Sequence(loc, Arrays.asList(atom, new Constant(loc, matched))));
       }
       return this.finishTerm(new Range(loc, atom, !this.match("?"), lo, hi));

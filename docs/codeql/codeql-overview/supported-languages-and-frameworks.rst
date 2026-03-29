@@ -26,9 +26,9 @@ The current versions of the CodeQL library and query packs (`source <https://git
 .. pull-quote::
 
     Tip
-    
-    If you're interested in other libraries or frameworks, you can extend the analysis to cover them. 
+
+    If you're interested in other libraries or frameworks, you can extend the analysis to cover them.
     For example, by extending the data flow libraries to include data sources
     and sinks for additional libraries or frameworks.
-    
+
 .. include:: ../reusables/supported-frameworks.rst

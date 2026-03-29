@@ -6,7 +6,7 @@
 + semmlecode-cpp-queries/Likely Bugs/Arithmetic/PointlessSelfComparison.ql: /Readability/Expressions
 + semmlecode-cpp-queries/Likely Bugs/Arithmetic/ComparisonWithCancelingSubExpr.ql: /Readability/Expressions
   # Control Flow
-+ semmlecode-cpp-queries/Best Practices/Likely Errors/EmptyBlock.ql: /Readability/Control Flow 
++ semmlecode-cpp-queries/Best Practices/Likely Errors/EmptyBlock.ql: /Readability/Control Flow
 + semmlecode-cpp-queries/Likely Bugs/Likely Typos/FutileConditional.ql: /Readability/Control Flow
 + semmlecode-cpp-queries/Likely Bugs/Likely Typos/DubiousNullCheck.ql: /Readability/Control Flow
 + semmlecode-cpp-queries/jsf/4.24 Control Flow Structures/AV Rule 197.ql: /Readability/Control Flow # Avoid floats in for loops
@@ -32,4 +32,3 @@
 + semmlecode-cpp-queries/jsf/4.13 Functions/AV Rule 114.ql: /Readability/Safe Language
      @name Missing return statement
 + semmlecode-cpp-queries/Best Practices/UseOfGoto.ql: /Readability/Safe Language
-

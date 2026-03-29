@@ -3,8 +3,8 @@ public static void main(String args[]) {
 	// a pseudo-random integer is required.
 	int notReallyRandom = new Random().nextInt();
 	int notReallyRandom2 = new Random().nextInt();
-	
-	// GOOD: The same 'Random' object is used to generate 
+
+	// GOOD: The same 'Random' object is used to generate
 	// two pseudo-random integers.
 	Random r = new Random();
 	int random1 = r.nextInt();

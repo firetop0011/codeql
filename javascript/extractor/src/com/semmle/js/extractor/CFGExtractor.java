@@ -192,7 +192,7 @@ public class CFGExtractor {
         return Collections.singleton(x);
       }
     }
-    
+
     if (x == null) {
       return Collections.singleton(y);
     }
@@ -253,7 +253,7 @@ public class CFGExtractor {
     if (ys == null || ys.size() == 0) {
       return xs;
     }
-    
+
     List<Node> result = new ArrayList<>(xs);
     for (Node y : ys) {
       if (!result.contains(y)) {
@@ -264,7 +264,7 @@ public class CFGExtractor {
   }
 
   /**
-   * Adds tuples in the `successor` relation from `prev` to one-or-more successors in `succs`. 
+   * Adds tuples in the `successor` relation from `prev` to one-or-more successors in `succs`.
    */
   private void writeSuccessors(INode prev, Collection<Node> succs) {
     Label prevKey = trapwriter.localID(prev);
@@ -272,7 +272,7 @@ public class CFGExtractor {
   }
 
   /**
-   * Adds a in the `successor` relation from `prev` to `succ`. 
+   * Adds a in the `successor` relation from `prev` to `succ`.
    */
   private void writeSuccessor(INode prev, Node succ) {
     if (succ == null) {
@@ -989,7 +989,7 @@ public class CFGExtractor {
 
     /**
      * Creates a new collection that contains the same elements, but is reversed.
-     * 
+     *
      * @return The reversed collection.
      */
     private <T> Collection<T> reverse(Collection<T> col) {
@@ -1001,9 +1001,9 @@ public class CFGExtractor {
 
     /**
      * Visit each of the `nodes` in reverse order, with the successor of the `i`th node set to the `i+1`th node, such that the `followingCache` for a given node is populated when visiting the previous node.
-     * 
+     *
      * Each `node` in `nodes` can be a single `Node` or a collection of `Node`s.
-     * 
+     *
      * @return The earliest non-null (collection of) node from `nodes`.
      */
     @SuppressWarnings("unchecked")
@@ -1685,7 +1685,7 @@ public class CFGExtractor {
           // the union of the above - truthyness is unknown.
           visitWithSuccessors(nd.getLeft(), union(First.of(nd.getRight()), i.getAllSuccessors()));
         }
-        
+
         visitWithSuccessors(nd.getRight(), nd); // from right to assignment.
 
         writeSuccessors(nd, i.getGuardedSuccessors(nd));

@@ -1,4 +1,4 @@
-// Problem 1: Miss out cleanup code 
+// Problem 1: Miss out cleanup code
 class FileOutput {
     boolean write(String[] s) {
         try {

@@ -4,12 +4,12 @@
 <qhelp>
 
 <overview>
-<p>This query highlights functions that are non-public, non-virtual, and are never called. 
-Dead functions are often deprecated pieces of code, and should be removed. 
+<p>This query highlights functions that are non-public, non-virtual, and are never called.
+Dead functions are often deprecated pieces of code, and should be removed.
 If left in the code base they increase object code size, decrease code comprehensibility, and create the possibility of misuse.</p>
 
 <p>
-<code>public</code> and <code>protected</code> functions are ignored by this query. 
+<code>public</code> and <code>protected</code> functions are ignored by this query.
 This type of function may be part of the program's API and could be used by external programs.
 </p>
 

@@ -132,4 +132,3 @@ module.exports.parse = url.parse;
 module.exports.format = url.format;
 
 module.exports.resolve = url.resolve;
-

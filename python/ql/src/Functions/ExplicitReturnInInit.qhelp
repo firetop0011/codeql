@@ -15,7 +15,7 @@ or omit it altogether if it is at the end of the method.</p>
 
 </recommendation>
 <example>
-<p>In this example, the <code>__init__</code> method attempts to return the newly created 
+<p>In this example, the <code>__init__</code> method attempts to return the newly created
 object. This is an error and the return method should be removed.</p>
 <sample src="ExplicitReturnInInit.py" />
 

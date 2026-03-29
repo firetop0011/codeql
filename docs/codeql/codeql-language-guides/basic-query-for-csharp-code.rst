@@ -30,7 +30,7 @@ Running a quick query
       from IfStmt ifstmt, BlockStmt block
       where ifstmt.getThen() = block and
         block.isEmpty()
-      select ifstmt, "This 'if' statement is redundant."  
+      select ifstmt, "This 'if' statement is redundant."
 
  .. include:: ../reusables/vs-code-basic-instructions/run-quick-query-2.rst
 

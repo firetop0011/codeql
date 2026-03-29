@@ -21,9 +21,9 @@ public enum ScopeKind {
   ENUM(14),
   EXTERNAL_MODULE(15),
   CONDITIONAL_TYPE(16);
-  
+
   private int value;
-  
+
   private ScopeKind(int value) {
     this.value = value;
   }

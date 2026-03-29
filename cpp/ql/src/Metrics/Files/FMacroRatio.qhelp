@@ -5,14 +5,14 @@
 <overview>
 <p>This metric measures the percentage of lines of code in each file that use macros.</p>
 
-<p>Macros are useful for defining constants in header files to avoid having magic constants scattered 
-throughout a project. However, files with a high percentage of lines that use macros are likely to be 
-using macros to encapsulate functionality. Such use can lead to code that is hard to read and understand, 
-because standard assumptions about the control-flow of a function, and how many times expressions are 
+<p>Macros are useful for defining constants in header files to avoid having magic constants scattered
+throughout a project. However, files with a high percentage of lines that use macros are likely to be
+using macros to encapsulate functionality. Such use can lead to code that is hard to read and understand,
+because standard assumptions about the control-flow of a function, and how many times expressions are
 evaluated, may no longer hold.</p>
 
-<p>With regards to performance, modern compilers usually perform aggressive inlining and the difference 
-between a macro invocation and a function call is negligible. Functions have much better error checking 
+<p>With regards to performance, modern compilers usually perform aggressive inlining and the difference
+between a macro invocation and a function call is negligible. Functions have much better error checking
 and IDE support than macros.</p>
 
 <sample src="FMacroRatio.cpp" />

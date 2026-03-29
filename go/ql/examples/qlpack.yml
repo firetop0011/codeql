@@ -1,5 +1,5 @@
 name: codeql/go-examples
-groups: 
+groups:
   - go
   - examples
 dependencies:

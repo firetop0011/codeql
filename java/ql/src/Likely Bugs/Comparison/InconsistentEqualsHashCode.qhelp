@@ -21,7 +21,7 @@ retrieving objects of such a class in a hashing data structure.
 </recommendation>
 <example>
 
-<p>In the following example, the class <code>InconsistentEqualsHashCode</code> overrides 
+<p>In the following example, the class <code>InconsistentEqualsHashCode</code> overrides
 <code>hashCode</code> but not <code>equals</code>.</p>
 
 <sample src="InconsistentEqualsHashCode.java" />

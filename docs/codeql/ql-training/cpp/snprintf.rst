@@ -34,19 +34,19 @@ For this example you should download:
 - ``printf``: Returns number of characters printed.
 
   .. code-block:: cpp
-  
+
     printf("Hello %s!", name)
 
 - ``sprintf``: Returns number of characters written to ``buf``.
 
   .. code-block:: cpp
-  
+
     sprintf(buf, "Hello %s!", name)
-  
+
 - ``snprintf``: Returns number of characters it **would have written** to ``buf`` had ``n`` been sufficiently large, **not** the number of characters actually written.
 
   .. code-block:: cpp
-  
+
     snprintf(buf, n, "Hello %s!", name)
 
 - In pre-C99 versions of glibc ``snprintf`` would return -1 if ``n`` was too small!
@@ -57,7 +57,7 @@ RCE in rsyslog
 - Vulnerable code looked similar to this (`original <https://github.com/rsyslog/librelp/blob/532aa362f0f7a8d037505b0a27a1df452f9bac9e/src/tcp.c#L1195-L1211>`__):
 
   .. code-block:: cpp
-  
+
     char buf[1024];
     int pos = 0;
     for (int i = 0; i < n; i++) {

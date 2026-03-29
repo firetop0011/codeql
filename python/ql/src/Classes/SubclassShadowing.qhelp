@@ -16,9 +16,9 @@ the superclass hides the method in the subclass.
 
 </recommendation>
 <example>
-<p>The following code includes an example of subclass shadowing. When you call <code>Cow().milk()</code> 
-an error is raised because <code>Cow().milk</code> is interpreted as the 'milk' attribute set in 
-<code>Mammal.__init__</code>, not the 'milk' method defined within <code>Cow</code>. This can be fixed 
+<p>The following code includes an example of subclass shadowing. When you call <code>Cow().milk()</code>
+an error is raised because <code>Cow().milk</code> is interpreted as the 'milk' attribute set in
+<code>Mammal.__init__</code>, not the 'milk' method defined within <code>Cow</code>. This can be fixed
 by changing the name of either the 'milk' attribute or the 'milk' method.</p>
 
 <sample src="SubclassShadowing.py" />

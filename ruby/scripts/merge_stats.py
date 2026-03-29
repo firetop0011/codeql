@@ -76,7 +76,7 @@ def do_xml_files(output, scaled_xml_files, unscaled_xml_files, name):
     # For each value of <relation><name>, take the <relation> tag with
     # the biggest <relation><cardinality>
     stats = etree.SubElement(result, "stats")
-    
+
     relnames = sorted(set ([relation.find("name").text for relation in merged_xml.xpath("dbstats/stats/relation") ]))
     for relname in relnames:
         rels = merged_xml.xpath("dbstats/stats/relation[name='" + relname + "']")

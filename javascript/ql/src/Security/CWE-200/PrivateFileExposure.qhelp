@@ -5,12 +5,12 @@
 
 <overview>
   <p>
-    Libraries like <code>express</code> provide easy methods for serving entire 
+    Libraries like <code>express</code> provide easy methods for serving entire
     directories of static files from a web server.
-    However, using these can sometimes lead to accidental information exposure. 
+    However, using these can sometimes lead to accidental information exposure.
     If for example the <code>node_modules</code> folder is served, then an attacker
-    can access the <code>_where</code> field from a <code>package.json</code> file, 
-    which gives access to the absolute path of the file. 
+    can access the <code>_where</code> field from a <code>package.json</code> file,
+    which gives access to the absolute path of the file.
   </p>
 </overview>
 
@@ -22,7 +22,7 @@
 
 <example>
   <p>
-    In the example below, all the files from the <code>node_modules</code> are served. 
+    In the example below, all the files from the <code>node_modules</code> are served.
     This allows clients to easily access all the files inside that folder,
     which includes potentially private information inside <code>package.json</code> files.
   </p>

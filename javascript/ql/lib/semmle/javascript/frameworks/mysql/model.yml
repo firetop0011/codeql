@@ -1,5 +1,5 @@
 extensions:
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeModel
     data:
@@ -61,7 +61,7 @@ extensions:
       - ["mysql2/typings/mysql/lib/Connection", "mysql2/typings/mysql/lib/PoolConnection", ""]
       - ["mysql2/typings/mysql/lib/PoolConnection", "mysql2/typings/mysql.PoolConnection", ""]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: summaryModel
     data:

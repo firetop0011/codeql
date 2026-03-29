@@ -23,6 +23,6 @@ int fun() {
 		// GOOD: the RAII_Mutex is destroyed, releasing the lock
 		return -1
 	}
-	
+
 	return 1;
 }

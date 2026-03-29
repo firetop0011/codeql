@@ -6,7 +6,7 @@
         on behalf of the victim app.</p>
     </overview>
     <recommendation>
-        <p>Do not export components that start other components from a user-provided Intent. 
+        <p>Do not export components that start other components from a user-provided Intent.
         They can be made private by setting the <code>android:exported</code> property to <code>false</code> in the app's Android Manifest.</p>
         <p>If this is not possible, restrict either which apps can send Intents to the affected component, or which components can be started from it.</p>
     </recommendation>

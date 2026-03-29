@@ -6,9 +6,9 @@
 
 <overview>
 <p>Some downcasts on arrays will fail at runtime.
-An object <code>a</code> with dynamic type <code>A[]</code> cannot be cast to <code>B[]</code>, 
+An object <code>a</code> with dynamic type <code>A[]</code> cannot be cast to <code>B[]</code>,
 where <code>B</code> is a subtype of <code>A</code>,
-even if all the elements of <code>a</code> can be cast to <code>B</code>. 
+even if all the elements of <code>a</code> can be cast to <code>B</code>.
 </p>
 
 </overview>

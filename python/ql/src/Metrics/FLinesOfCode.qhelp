@@ -3,15 +3,15 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>This metric measures the number of lines of code in each file. The value excludes docstrings, comments and 
+<p>This metric measures the number of lines of code in each file. The value excludes docstrings, comments and
 blank lines.</p>
 
 <p>Organizing source into very large files is not recommended because:</p>
-<ul><li>it can be difficult to understand and maintain the code, even with good support from 
+<ul><li>it can be difficult to understand and maintain the code, even with good support from
 development tools</li>
-<li>it increases the risk that multiple developers will work on the same file at once, and increases the 
+<li>it increases the risk that multiple developers will work on the same file at once, and increases the
 incidence of merge conflicts</li>
-<li>it may be a symptom of weak code organization, where many different features are handled by functions in 
+<li>it may be a symptom of weak code organization, where many different features are handled by functions in
 a  single file.</li>
 </ul>
 
@@ -19,7 +19,7 @@ a  single file.</li>
 <recommendation>
 
 <p>The solution depends on the underlying cause:</p>
-<ul><li>if individual classes or functions are too large then they should be refactored into smaller 
+<ul><li>if individual classes or functions are too large then they should be refactored into smaller
 modules</li>
 <li>if the class contains many classes or functions, they should be
 moved to their own modules (sometimes in a subsidiary module, where appropriate)</li>

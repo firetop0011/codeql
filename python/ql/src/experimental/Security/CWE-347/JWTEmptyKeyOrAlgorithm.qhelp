@@ -14,7 +14,7 @@ is empty or <code>None</code>.</p>
 <example>
 <p>This example shows two PyJWT encoding calls.
 
-In the first place, the encoding process use a None algorithm whereas the second example uses an 
+In the first place, the encoding process use a None algorithm whereas the second example uses an
 empty key. Both examples leave the payload insecurely encoded.
 </p>
 

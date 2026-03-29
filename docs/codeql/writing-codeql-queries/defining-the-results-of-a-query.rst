@@ -10,20 +10,20 @@ About query results
 
 The information contained in the results of a query is controlled by the ``select`` statement. Part of the process of developing a useful query is to make the results clear and easy for other users to understand.
 When you write your own queries in the CodeQL :ref:`extension for VS Code <codeql-for-visual-studio-code>` there are no constraints on what can be selected.
-However, if you want to use a query to create alerts for code scanning or generate valid analysis results using the `CodeQL CLI <https://docs.github.com/en/code-security/codeql-cli>`__, you'll need to make the ``select`` statement report results in the required format. 
-You must also ensure that the query has the appropriate metadata properties defined. 
-This topic explains how to write your select statement to generate helpful analysis results. 
+However, if you want to use a query to create alerts for code scanning or generate valid analysis results using the `CodeQL CLI <https://docs.github.com/en/code-security/codeql-cli>`__, you'll need to make the ``select`` statement report results in the required format.
+You must also ensure that the query has the appropriate metadata properties defined.
+This topic explains how to write your select statement to generate helpful analysis results.
 
 Overview
 --------
 
-Alert queries must have the property ``@kind problem`` defined in their metadata. For more information, see ":doc:`Metadata for CodeQL queries <metadata-for-codeql-queries>`." 
+Alert queries must have the property ``@kind problem`` defined in their metadata. For more information, see ":doc:`Metadata for CodeQL queries <metadata-for-codeql-queries>`."
 In their most basic form, the ``select`` statement must select two 'columns':
 
 -  **Element**—a code element that's identified by the query. This defines the location of the alert.
 -  **String**—a message to display for this code element, describing why the alert was generated.
 
-If you look at some of the existing queries, you'll see that they can select extra element/string pairs, which are combined with ``$@`` placeholder markers in the message to form links. For example, `Dereferenced variable may be null <https://github.com/github/codeql/blob/95e65347cafe502bbd0d9f48d1175fd3d66e0459/java/ql/src/Likely%20Bugs/Nullness/NullMaybe.ql>`__ (Java), or `Duplicate switch case <https://github.com/github/codeql/blob/95e65347cafe502bbd0d9f48d1175fd3d66e0459/javascript/ql/src/Expressions/DuplicateSwitchCase.ql>`__ (JavaScript). 
+If you look at some of the existing queries, you'll see that they can select extra element/string pairs, which are combined with ``$@`` placeholder markers in the message to form links. For example, `Dereferenced variable may be null <https://github.com/github/codeql/blob/95e65347cafe502bbd0d9f48d1175fd3d66e0459/java/ql/src/Likely%20Bugs/Nullness/NullMaybe.ql>`__ (Java), or `Duplicate switch case <https://github.com/github/codeql/blob/95e65347cafe502bbd0d9f48d1175fd3d66e0459/javascript/ql/src/Expressions/DuplicateSwitchCase.ql>`__ (JavaScript).
 
 .. pull-quote::
 
@@ -44,9 +44,9 @@ Basic select statement
     /**
      * @kind problem
      */
-    
+
     import java
-    
+
     from Class c, Class superclass
     where superclass = c.getASupertype()
     select c, "This class extends another class."

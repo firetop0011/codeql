@@ -15,8 +15,8 @@ When writing MyBatis mapping statements, use the syntax <code>#{xxx}</code> when
 
 <example>
 <p>
-The following sample shows a bad and a good example of MyBatis annotations usage. The <code>bad1</code> method uses <code>$(name)</code> 
-in the <code>@Select</code> annotation to dynamically build a SQL statement, which causes a SQL injection vulnerability. 
+The following sample shows a bad and a good example of MyBatis annotations usage. The <code>bad1</code> method uses <code>$(name)</code>
+in the <code>@Select</code> annotation to dynamically build a SQL statement, which causes a SQL injection vulnerability.
 The <code>good1</code> method uses <code>#{name}</code> in the <code>@Select</code> annotation to dynamically include the parameter in a SQL statement, which causes the MyBatis framework to sanitize the input provided, preventing the vulnerability.
 </p>
 <sample src="MyBatisAnnotationSqlInjection.java" />

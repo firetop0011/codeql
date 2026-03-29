@@ -6,7 +6,7 @@
 
 <overview>
 <p>
-A public method or constructor that does not have a Javadoc comment makes an API more 
+A public method or constructor that does not have a Javadoc comment makes an API more
 difficult to understand and maintain.
 </p>
 
@@ -36,7 +36,7 @@ and can be transformed automatically into HTML format.
 </recommendation>
 <example>
 
-<p>The following example shows a good Javadoc comment, which clearly explains what the method does, 
+<p>The following example shows a good Javadoc comment, which clearly explains what the method does,
 its parameter, return value, and thrown exception.</p>
 
 <sample src="MissingJavadocMethods.java" />
@@ -55,7 +55,7 @@ Help - Eclipse Platform:
 </li>
 <li>
   Java SE Documentation:
-  <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">How to Write Doc Comments for the Javadoc Tool</a>, 
+  <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">How to Write Doc Comments for the Javadoc Tool</a>,
   <a href="https://www.oracle.com/java/technologies/javase/api-specifications.html">Requirements for Writing Java API Specifications</a>.
 </li>
 

@@ -42,4 +42,3 @@ def safe2(request):
     #Note the '.' preceding example.com
     if host and host.endswith(".example.com"):
         return redirect(target)
-

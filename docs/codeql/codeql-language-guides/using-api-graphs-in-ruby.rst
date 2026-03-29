@@ -16,7 +16,7 @@ code. API graphs are particularly useful when you want to model the remote flow 
 Module and class references
 ---------------------------
 
-The most common entry point into the API graph is when a top-level module or class is accessed. 
+The most common entry point into the API graph is when a top-level module or class is accessed.
 For example, you can access the API graph node corresponding to the ``::Regexp`` class
 by using the ``API::getTopLevelMember`` method defined in the ``codeql.ruby.ApiGraphs`` module, as the
 following snippet demonstrates.
@@ -62,7 +62,7 @@ to methods on those instances. The following snippet finds instantiations of the
 
     select API::getTopLevelMember("Regexp").getInstance()
 
-Note that the ``getInstance`` method also includes subclasses. For example if there is a 
+Note that the ``getInstance`` method also includes subclasses. For example if there is a
 ``class SpecialRegexp < Regexp`` then ``getInstance`` also finds ``SpecialRegexp.new``.
 
 The following snippet builds on the above to find calls of the ``Regexp#match?`` instance method:
@@ -81,7 +81,7 @@ in the API graph, you can use the ``getASubclass`` method to get the API graph n
 the immediate subclasses of a node. To find *all* subclasses, use ``*`` or ``+`` to apply the
 method repeatedly. You can see an example where all subclasses are identified using ``getASubclass*`` below.
 
-Note that ``getASubclass`` can only return subclasses that are extracted as part of the CodeQL database 
+Note that ``getASubclass`` can only return subclasses that are extracted as part of the CodeQL database
 that you are analyzing. When libraries have predefined subclasses, you will need to explicitly include them in your model.
 For example, the ``ActionController::Base`` class has a predefined subclass ``Rails::ApplicationController``. To find
 all subclasses of ``ActionController::Base``, you must explicitly include the subclasses of ``Rails::ApplicationController`` as well.
@@ -106,14 +106,14 @@ Using the API graph in dataflow queries
 ---------------------------------------
 
 Dataflow queries often search for points where data from external sources enters the code base
-as well as places where data leaves the code base. API graphs provide a convenient way to refer 
-to external API components such as library functions and their inputs and outputs. 
-However, you do not use API graph nodes directly in dataflow queries. 
+as well as places where data leaves the code base. API graphs provide a convenient way to refer
+to external API components such as library functions and their inputs and outputs.
+However, you do not use API graph nodes directly in dataflow queries.
 
 - API graph nodes model entities that are defined outside your code base.
-- Dataflow nodes model entities defined within the current code base. 
+- Dataflow nodes model entities defined within the current code base.
 
-You bridge the gap between the entities outside and inside your code base using 
+You bridge the gap between the entities outside and inside your code base using
 the API node class methods: ``asSource()`` and ``asSink()``.
 
 The ``asSource()`` method is used to select dataflow nodes where a value from an external source
@@ -153,7 +153,7 @@ The following snippet of CodeQL finds parameters of blocks of ``File.open`` meth
 
     select API::getTopLevelMember("File").getMethod("open").getBlock().getParameter(0).asSource()
 
-The following example is a dataflow query that that uses API graphs to find cases where data that 
+The following example is a dataflow query that that uses API graphs to find cases where data that
 is read flows into a call to ``File.write``.
 
 .. code-block:: ql

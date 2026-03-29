@@ -26,4 +26,3 @@
     deprecated: //
 - exclude:
     query path: /^experimental\/.*/
-

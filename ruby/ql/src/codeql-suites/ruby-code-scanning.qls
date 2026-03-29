@@ -2,4 +2,3 @@
 - queries: .
 - apply: code-scanning-selectors.yml
   from: codeql/suite-helpers
-

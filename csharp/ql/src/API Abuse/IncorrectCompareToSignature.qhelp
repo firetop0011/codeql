@@ -3,10 +3,10 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>If you wish to make a class comparable with type <code>T</code> then you should both make a 
-<code>CompareTo(T)</code> method and inherit from the <code>IComparable&lt;T&gt;</code> interface. 
-If a <code>CompareTo(T)</code> method has been added without the interface also being implemented, 
-it is sometimes an indication that the programmer has forgotten to inherit the interface despite 
+<p>If you wish to make a class comparable with type <code>T</code> then you should both make a
+<code>CompareTo(T)</code> method and inherit from the <code>IComparable&lt;T&gt;</code> interface.
+If a <code>CompareTo(T)</code> method has been added without the interface also being implemented,
+it is sometimes an indication that the programmer has forgotten to inherit the interface despite
 providing the implementation for it.</p>
 
 </overview>

@@ -13,4 +13,3 @@ void process(Fields[] record) {
         process(fields[fieldCtr]);
     }
 }
-

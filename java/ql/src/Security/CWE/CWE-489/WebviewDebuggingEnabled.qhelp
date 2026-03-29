@@ -23,12 +23,12 @@ whereas the GOOD case only enables it if the <code>android:debuggable</code> att
 <references>
 
 <li>
-  Android Developers: 
+  Android Developers:
   <a href="https://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)">setWebContentsDebuggingEnabled</a>.
 </li>
 
 <li>
-  Android Developers: 
+  Android Developers:
   <a href="https://developer.chrome.com/docs/devtools/remote-debugging/webviews/">Remote debugging WebViews</a>.
 </li>
 

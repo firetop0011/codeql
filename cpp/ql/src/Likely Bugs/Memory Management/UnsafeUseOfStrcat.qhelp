@@ -3,13 +3,13 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>The standard library function <code>strcat</code> appends a source string to a target string. If you do not check the size of the source string then you cannot guarantee that 
+<p>The standard library function <code>strcat</code> appends a source string to a target string. If you do not check the size of the source string then you cannot guarantee that
 appending the data to the target string will not cause a buffer overflow. Buffer overflows can lead to anything from a segmentation fault to a security vulnerability.</p>
 
 </overview>
 <recommendation>
-<p>Check the highlighted function calls carefully to ensure that no buffer overflow is possible. 
-For a more robust solution, consider adding explicit range checks or using the <code>strncat</code> 
+<p>Check the highlighted function calls carefully to ensure that no buffer overflow is possible.
+For a more robust solution, consider adding explicit range checks or using the <code>strncat</code>
 function instead.</p>
 
 </recommendation>

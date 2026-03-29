@@ -235,4 +235,3 @@ module.exports.createSocket = dgram.createSocket;
 module.exports.createSocket = dgram.createSocket;
 
 module.exports.Socket = dgram.Socket;
-

@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>Performing calculations on user-controlled data can result in integer overflows 
+<p>Performing calculations on user-controlled data can result in integer overflows
 unless the input is validated.</p>
 
 <p>If the user is free to enter very large numbers, even arithmetic operations that would usually
@@ -17,7 +17,7 @@ following:</p>
 
 <ul>
 <li>Validate the user input.</li>
-<li>Define a guard on the arithmetic expression, so that the operation is performed only if the 
+<li>Define a guard on the arithmetic expression, so that the operation is performed only if the
 result can be known to be less than, or equal to, the maximum value for the type, for example <code>MAX_VALUE</code>.</li>
 <li>Use a wider type, so that larger input values do not cause overflow.</li>
 </ul>

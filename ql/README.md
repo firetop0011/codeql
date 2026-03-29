@@ -1,12 +1,12 @@
 # QL for QL
 
-QL for QL is a CodeQL analysis designed to find common bug patterns in QL code.  
-This analysis is mostly used as a PR check in [`github/codeql`](https://github.com/github/codeql).   
-QL for QL is experimental technology and not a supported product. 
+QL for QL is a CodeQL analysis designed to find common bug patterns in QL code.
+This analysis is mostly used as a PR check in [`github/codeql`](https://github.com/github/codeql).
+QL for QL is experimental technology and not a supported product.
 
 This directory contains the extractor, CodeQL libraries, and queries that power QL for QL.
 
-Some setup is required to use QL for QL (see the below sections). 
+Some setup is required to use QL for QL (see the below sections).
 
 ## Building the tools from source
 
@@ -36,7 +36,7 @@ Then run
 codeql database create <database-path> -l ql -s <project-source-path> --search-path <extractor-pack-path>
 ```
 
-CodeQL can be configured to remember the extractor by setting the config file `~/.config/codeql/config` to: 
+CodeQL can be configured to remember the extractor by setting the config file `~/.config/codeql/config` to:
 ```bash
 --search-path /full/path/to/extractor-pack
 ```

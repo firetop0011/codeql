@@ -9,7 +9,7 @@ public class SandboxGroovyClassLoader extends ClassLoader {
     static void runWithSandboxGroovyClassLoader() throws Exception {
         // GOOD: route all class-loading via sand-boxing classloader.
         SandboxGroovyClassLoader classLoader = new GroovyClassLoader(new SandboxGroovyClassLoader());
-        
+
         Class<?> scriptClass = classLoader.parseClass(untrusted.getQueryString());
         Object scriptInstance = scriptClass.newInstance();
         Object result = scriptClass.getDeclaredMethod("bar", new Class[]{}).invoke(scriptInstance, new Object[]{});

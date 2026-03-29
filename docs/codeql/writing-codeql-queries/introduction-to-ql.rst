@@ -1,6 +1,6 @@
 .. _introduction-to-ql:
 
-Introduction to QL 
+Introduction to QL
 ==================
 
 Work through some simple exercises and examples to learn about the basics of QL and CodeQL.
@@ -109,7 +109,7 @@ Example CodeQL queries
 ----------------------
 
 The previous examples used the primitive types built in to QL. Although we chose a project to query, we didn't use the information in that project's database.
-The following example queries *do* use these databases and give you an idea of how to use CodeQL to analyze projects. 
+The following example queries *do* use these databases and give you an idea of how to use CodeQL to analyze projects.
 
 Queries using the CodeQL libraries can find errors and uncover variants of important security vulnerabilities in codebases.
 Visit `GitHub Security Lab <https://securitylab.github.com/>`__ to read about examples of vulnerabilities that we have recently found in open source projects.
@@ -166,7 +166,7 @@ Exercise 1
    from string s
    where s = "lgtm"
    select s.length()
-   
+
 There is often more than one way to define a query. For example, we can also write the above query in the shorter form:
 
 .. code-block:: ql

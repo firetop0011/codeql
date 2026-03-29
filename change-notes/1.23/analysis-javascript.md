@@ -15,7 +15,7 @@
   - [optimist](https://www.npmjs.com/package/optimist)
   - [parse-torrent](https://www.npmjs.com/package/parse-torrent)
   - [rate-limiter-flexible](https://www.npmjs.com/package/rate-limiter-flexible)
-  - [yargs](https://www.npmjs.com/package/yargs) 
+  - [yargs](https://www.npmjs.com/package/yargs)
 
 * The call graph has been improved to resolve method calls in more cases. This may produce more security alerts.
 
@@ -45,7 +45,7 @@
 | Illegal invocation (`js/illegal-invocation`) | Fewer false positive results | This rule now correctly handles methods named `call` and `apply`. |
 | Incomplete string escaping or encoding (`js/incomplete-sanitization`) | Fewer false positive results | This rule now recognizes additional ways delimiters can be stripped away. |
 | Incorrect suffix check (`js/incorrect-suffix-check`) | Fewer false positive results | The query recognizes valid checks in more cases. |
-| Network data written to file (`js/http-to-file-access`) | Fewer false positive results | This query has been renamed to better match its intended purpose, and now only considers network data untrusted. | 
+| Network data written to file (`js/http-to-file-access`) | Fewer false positive results | This query has been renamed to better match its intended purpose, and now only considers network data untrusted. |
 | Password in configuration file (`js/password-in-configuration-file`) | Fewer false positive results | This rule now flags fewer password examples. |
 | Prototype pollution (`js/prototype-pollution`) | More results | The query now highlights vulnerable uses of jQuery and Angular, and the results are shown on LGTM by default. |
 | Reflected cross-site scripting (`js/reflected-xss`) | Fewer false positive results | The query now recognizes more sanitizers. |

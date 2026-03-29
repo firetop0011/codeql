@@ -7,8 +7,8 @@
 <p>The Java Scripting API has been available since the release of Java 6. It allows
   applications to interact with scripts written in languages such as JavaScript. It serves
   as an embedded scripting engine inside Java applications which allows Java-to-JavaScript
-  interoperability and provides a seamless integration between the two languages. If an 
-  expression is built using attacker-controlled data, and then evaluated in a powerful 
+  interoperability and provides a seamless integration between the two languages. If an
+  expression is built using attacker-controlled data, and then evaluated in a powerful
   context, it may allow the attacker to run arbitrary code.</p>
 </overview>
 
@@ -27,7 +27,7 @@
 
 <p>The following example shows two ways of using Rhino expression. In the 'BAD' case,
   an unsafe context is initialized with <code>initStandardObjects</code> that allows arbitrary
-  Java code to be executed. In the 'GOOD' case, a safe context is initialized with 
+  Java code to be executed. In the 'GOOD' case, a safe context is initialized with
   <code>initSafeStandardObjects</code> or <code>setClassShutter</code>.</p>
   <sample src="RhinoInjection.java" />
 </example>

@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>The standard library function <code>strncat</code> appends a source string to a target string. 
+<p>The standard library function <code>strncat</code> appends a source string to a target string.
 The third argument defines the maximum number of characters to append and should be less than or equal
 to the remaining space in the destination buffer.</p>
 

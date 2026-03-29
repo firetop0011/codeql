@@ -19,7 +19,7 @@ For this example you should download:
    For this example, we will be analyzing `VIVO Vitro <https://github.com/vivo-project/Vitro>`__.
 
    You can also query the project in `the query console <https://lgtm.com/query/project:14040005/lang:java/>`__ on LGTM.com.
-   
+
    .. insert database-note.rst to explain differences between database available to download and the version available in the query console.
 
    .. include:: ../slide-snippets/database-note.rst
@@ -54,7 +54,7 @@ SPARQL injection
 - The same type of vulnerability can occur for SPARQL as for SQL: if the SPARQL query is constructed through string concatenation, a malicious user can subvert the query:
 
   .. code-block:: sql
-  
+
      sparqlAskQuery("ASK { <" + individualURI + "> ?p ?o }");
 
 - SPARQL is used by many projects, but we will be looking at `VIVO Vitro <https://github.com/vivo-project/Vitro/>`__.
@@ -73,24 +73,24 @@ Let’s start by looking for calls to methods with names of the form ``sparql*Qu
 
 .. rst-class:: build
 
-.. literalinclude:: ../query-examples/java/query-injection-java-1.ql 
+.. literalinclude:: ../query-examples/java/query-injection-java-1.ql
 
 .. note::
 
   - When performing variant analysis, it is usually helpful to write a simple query that finds the simple syntactic pattern, before trying to go on to describe the cases where it goes wrong.
   - In this case, we start by looking for all the method calls that appear to run, before trying to refine the query to find cases which are vulnerable to query injection.
   - The ``select`` clause defines what this query is looking for:
-  
+
     - a ``MethodAccess``: the call to a SPARQL query method
     - a ``Method``: the SPARQL query method.
-  
+
   - The ``where`` part of the query ties these variables together using `predicates <https://codeql.github.com/docs/ql-language-reference/predicates/>`__ defined in the `standard CodeQL library for Java <https://codeql.github.com/codeql-standard-libraries/java/>`__.
 
 CodeQL query: find string concatenation
 =======================================
 
 - We now need to define what would make these API calls unsafe.
-- A simple heuristic would be to look for string concatenation used in the query argument. 
+- A simple heuristic would be to look for string concatenation used in the query argument.
 - We may want to reuse this logic, so let us create a separate predicate.
 
 Looking at autocomplete suggestions, we see that we can get the type of an expression using the ``getType()`` method.

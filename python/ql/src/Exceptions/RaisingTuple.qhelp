@@ -8,7 +8,7 @@ If the first element is itself a tuple, then the first element of that is used a
 This unlikely to be the intended effect and will most likely indicate some sort of error.</p>
 
 <p>It is important to note that the exception in <code>raise Exception, message</code> is <em>not</em> a tuple, whereas the exception
-in <code>ex = Exception, message; raise ex</code> <em>is</em> a tuple.</p> 
+in <code>ex = Exception, message; raise ex</code> <em>is</em> a tuple.</p>
 
 <p>
 In Python 3, raising a tuple is an error.
@@ -18,10 +18,10 @@ In Python 3, raising a tuple is an error.
 </overview>
 <recommendation>
 
-<p>Given that all but the first element of the tuple is ignored, 
-the tuple should be replaced with its first element in order to 
-improve the clarity of the code. If the subsequent parts of the tuple 
-were intended to form the message, then they should be passed as an argument 
+<p>Given that all but the first element of the tuple is ignored,
+the tuple should be replaced with its first element in order to
+improve the clarity of the code. If the subsequent parts of the tuple
+were intended to form the message, then they should be passed as an argument
 when creating the exception.
 </p>
 
@@ -32,7 +32,7 @@ when creating the exception.
 
 <p>In the following example the intended error message is mistakenly used to form a tuple.</p>
 <sample src="RaisingTuple.py" />
-<p>This can be fixed, either by using the message to create the exception or using the message in the raise 
+<p>This can be fixed, either by using the message to create the exception or using the message in the raise
 statement, as shown below.</p>
 <sample src="RaisingTuple2.py" />
 

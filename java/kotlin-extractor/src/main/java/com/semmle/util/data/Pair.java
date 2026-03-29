@@ -14,7 +14,7 @@ package com.semmle.util.data;
 public class Pair<X,Y> extends Tuple2<X, Y>
 {
 	private static final long serialVersionUID = -2871892357006076659L;
-	
+
 	/*
 	 * Constructor and factory
 	 */

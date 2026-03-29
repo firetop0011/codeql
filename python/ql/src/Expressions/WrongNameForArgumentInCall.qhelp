@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>
-Using a named argument whose name does not correspond to a parameter of the called function (or method), will result in a 
+Using a named argument whose name does not correspond to a parameter of the called function (or method), will result in a
 <code>TypeError</code> at runtime.
 </p>
 

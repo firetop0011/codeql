@@ -3,15 +3,15 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>It is common to want to check an object against <code>null</code>, but this should not be done 
+<p>It is common to want to check an object against <code>null</code>, but this should not be done
 using the <code>Equals</code> method. If the object really is <code>null</code>, a <code>
-NullReferenceException</code> is thrown when attempting to call <code>Equals</code>, with 
+NullReferenceException</code> is thrown when attempting to call <code>Equals</code>, with
 unexpected results.</p>
 
 </overview>
 <recommendation>
 <p>The offending call should be replaced with either <code>==</code> or <code>ReferenceEquals</code>
- (the difference being that <code>==</code> can be overridden but <code>ReferenceEquals</code> 
+ (the difference being that <code>==</code> can be overridden but <code>ReferenceEquals</code>
 cannot).</p>
 
 </recommendation>

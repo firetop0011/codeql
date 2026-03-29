@@ -393,4 +393,3 @@ class MetaAnnotationSupport(private val logger: FileLogger, private val pluginCo
         // This is essentially AdditionalClassAnnotationLowering adapted to run outside the backend.
         listOfNotNull(generateTargetAnnotation(c), generateRetentionAnnotation(c), generateRepeatableAnnotation(c, extractAnnotationTypeAccesses), generateDocumentedAnnotation(c))
 }
-

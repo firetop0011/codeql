@@ -1,5 +1,5 @@
 <script language="javascript">
   $(function() {
-    init(); 
+    init();
   });
 </script>

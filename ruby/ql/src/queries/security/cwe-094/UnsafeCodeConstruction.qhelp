@@ -5,7 +5,7 @@
 
 <overview>
 <p>
-When a library function dynamically constructs code in a potentially unsafe way, 
+When a library function dynamically constructs code in a potentially unsafe way,
 it's important to document to clients of the library that the function should only be
 used with trusted inputs.
 
@@ -18,7 +18,7 @@ client vulnerable to code-injection attacks.
 
 <recommendation>
 <p>
-Properly document library functions that construct code from unsanitized 
+Properly document library functions that construct code from unsanitized
 inputs, or avoid constructing code in the first place.
 </p>
 </recommendation>
@@ -28,14 +28,14 @@ inputs, or avoid constructing code in the first place.
 The following example shows two methods implemented using <code>eval</code>: a simple
 deserialization routine and a getter method.
 If untrusted inputs are used with these methods,
-then an attacker might be able to execute arbitrary code on the system. 
+then an attacker might be able to execute arbitrary code on the system.
 </p>
 
 <sample src="examples/UnsafeCodeConstruction.rb" />
 
 <p>
 To avoid this problem, either properly document that the function is potentially
-unsafe, or use an alternative solution such as <code>JSON.parse</code> or another library 
+unsafe, or use an alternative solution such as <code>JSON.parse</code> or another library
 that does not allow arbitrary code to be executed.
 </p>
 
@@ -45,20 +45,20 @@ that does not allow arbitrary code to be executed.
 
 <example>
 <p>
-As another example, consider the below code which dynamically constructs 
+As another example, consider the below code which dynamically constructs
 a class that has a getter method with a custom name.
 </p>
 
 <sample src="examples/UnsafeCodeConstruction2.rb" />
 
 <p>
-The example dynamically constructs a string which is then executed using <code>module_eval</code>.  
-This code will break if the specified name is not a valid Ruby identifier, and 
+The example dynamically constructs a string which is then executed using <code>module_eval</code>.
+This code will break if the specified name is not a valid Ruby identifier, and
 if the value is controlled by an attacker, then this could lead to code-injection.
 </p>
 
 <p>
-A more robust implementation, that is also immune to code-injection, 
+A more robust implementation, that is also immune to code-injection,
 can be made by using <code>module_eval</code> with a block and using <code>define_method</code>
 to define the getter method.
 </p>
@@ -84,10 +84,10 @@ safe because <code>class_variable_set</code> is not susceptible to code-injectio
 </p>
 
 <p>
-<code>send</code> is used to dynamically call the method specified by <code>name</code>.  
+<code>send</code> is used to dynamically call the method specified by <code>name</code>.
 This is a more robust alternative than the previous example, because it does not allow
 arbitrary code to be executed, but it does still allow for any method to be called
-on the target object. 
+on the target object.
 </p>
 
 <sample src="examples/UnsafeCodeConstruction3Safe.rb" />

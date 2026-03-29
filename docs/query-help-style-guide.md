@@ -13,7 +13,7 @@ When you contribute a new [supported query](supported-queries.md) to this reposi
 
 ### Location and file name
 
-Query help files must have the same base name as the query they describe and must be located in the same directory.  
+Query help files must have the same base name as the query they describe and must be located in the same directory.
 
 ### File structure and layout
 
@@ -151,13 +151,13 @@ later. For example, it's easy to see at a glance which part of the code is in th
 scope of an <code>if</code> statement, and adding more statements to the body of the <code>if</code>
 statement is less error-prone.</p>
 
-<p>You should also ensure that the indentation of the code is consistent with the actual flow of 
+<p>You should also ensure that the indentation of the code is consistent with the actual flow of
 control, so that it does not confuse programmers.</p>
 
 </recommendation>
 <example>
 
-<p>In the example below, the original version of <code>Cart</code> is missing braces. This means 
+<p>In the example below, the original version of <code>Cart</code> is missing braces. This means
 that the code triggers a <code>NullPointerException</code> at runtime if <code>i</code>
 is <code>null</code>.</p>
 

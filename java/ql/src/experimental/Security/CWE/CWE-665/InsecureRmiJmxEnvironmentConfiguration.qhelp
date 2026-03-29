@@ -6,11 +6,11 @@
 <overview>
 <p>For special use cases some applications may implement a custom service which handles JMX-RMI connections.</p>
 
-<p>When creating such a custom service, a developer should pass a certain environment configuration to the JMX-RMI server initialization, 
+<p>When creating such a custom service, a developer should pass a certain environment configuration to the JMX-RMI server initialization,
 as otherwise the JMX-RMI service is susceptible to an unsafe deserialization vulnerability.</p>
 
-<p>This is because the JMX-RMI service allows attackers to supply arbitrary objects to the service authentication 
-method, resulting in the attempted deserialization of an attacker-controlled object. 
+<p>This is because the JMX-RMI service allows attackers to supply arbitrary objects to the service authentication
+method, resulting in the attempted deserialization of an attacker-controlled object.
 In the worst case scenario this could allow an attacker to achieve remote code execution within the context of the application server.</p>
 
 <p>By setting the appropriate environment, the deserialization can be controlled via a deserialization filter.</p>

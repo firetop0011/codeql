@@ -5,7 +5,7 @@
   if((c1<50)&&(c>10))
   switch(c1){
     case 300: // BAD: the code will not be executed
-...  
+...
   if((i1<5)&&(i1>0))
   switch(i1){ // BAD
     case 21: // BAD: the code will not be executed
@@ -17,7 +17,7 @@
   }
 
 ...
-  switch(c1){ 
+  switch(c1){
       i1=c1*2; // BAD: the code will not be executed
     case 12:
 ...

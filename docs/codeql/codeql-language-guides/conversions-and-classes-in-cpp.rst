@@ -65,7 +65,7 @@ It is as though the conversions are not there! The reason for this is that ``Con
 
 .. |arrow| unicode:: U+21b3
 
-| ``AssignExpr, i = (myInt)1`` 
+| ``AssignExpr, i = (myInt)1``
 | |arrow| ``VariableAccess, i``
 | |arrow|  ``Literal, 1``
 |   |arrow|  ``CStyleCast, myInt (explicit)``
@@ -126,7 +126,7 @@ Unlike the earlier versions of the query, this query would return each side of t
 .. pull-quote::
 
    Note
-   
+
     In general, predicates named ``getAXxx`` exploit the ability to return multiple results (multiple instances of ``Xxx``) whereas plain ``getXxx`` predicates usually return at most one specific instance of ``Xxx``.
 
 Classes

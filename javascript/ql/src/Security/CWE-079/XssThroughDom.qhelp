@@ -9,8 +9,8 @@ Extracting text from a DOM node and interpreting it as HTML can lead to a cross-
 </p>
 <p>
 A webpage with this vulnerability reads text from the DOM, and afterwards adds the text as HTML to the DOM.
-Using text from the DOM as HTML effectively unescapes the text, and thereby invalidates any escaping done on the text. 
-If an attacker is able to control the safe sanitized text, then this vulnerability can be exploited to perform a cross-site scripting attack. 
+Using text from the DOM as HTML effectively unescapes the text, and thereby invalidates any escaping done on the text.
+If an attacker is able to control the safe sanitized text, then this vulnerability can be exploited to perform a cross-site scripting attack.
 </p>
 </overview>
 
@@ -23,22 +23,22 @@ writing text to the page, or one of the other solutions that are mentioned in th
 
 <example>
 <p>
-The following example shows a webpage using a <code>data-target</code> attribute 
-to select and manipulate a DOM element using the JQuery library. In the example, the 
-<code>data-target</code> attribute is read into the <code>target</code> variable, and the 
-<code>$</code> function is then supposed to use the <code>target</code> variable as a CSS 
+The following example shows a webpage using a <code>data-target</code> attribute
+to select and manipulate a DOM element using the JQuery library. In the example, the
+<code>data-target</code> attribute is read into the <code>target</code> variable, and the
+<code>$</code> function is then supposed to use the <code>target</code> variable as a CSS
 selector to determine which element should be manipulated.
 </p>
 <sample src="examples/XssThroughDom.js" />
 <p>
-However, if an attacker can control the <code>data-target</code> attribute, 
+However, if an attacker can control the <code>data-target</code> attribute,
 then the value of <code>target</code> can be used to cause the <code>$</code> function
-to execute arbitrary JavaScript. 
+to execute arbitrary JavaScript.
 </p>
 <p>
-The above vulnerability can be fixed by using <code>$.find</code> instead of <code>$</code>. 
-The <code>$.find</code> function will only interpret <code>target</code> as a CSS selector 
-and never as HTML, thereby preventing an XSS attack. 
+The above vulnerability can be fixed by using <code>$.find</code> instead of <code>$</code>.
+The <code>$.find</code> function will only interpret <code>target</code> as a CSS selector
+and never as HTML, thereby preventing an XSS attack.
 </p>
 <sample src="examples/XssThroughDomFixed.js" />
 </example>

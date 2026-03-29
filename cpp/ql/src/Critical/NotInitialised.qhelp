@@ -6,9 +6,9 @@
 
 <overview>
 <p>
-This query finds variables that are used before they are initialized. Values of uninitialized variables are 
-undefined, as not all compilers zero out memory, especially when optimizations are enabled or the compiler 
-is not compliant with the latest language standards. 
+This query finds variables that are used before they are initialized. Values of uninitialized variables are
+undefined, as not all compilers zero out memory, especially when optimizations are enabled or the compiler
+is not compliant with the latest language standards.
 </p>
 </overview>
 

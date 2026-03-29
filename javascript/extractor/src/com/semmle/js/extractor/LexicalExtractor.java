@@ -30,11 +30,11 @@ public class LexicalExtractor {
     this.tokens = tokens;
     this.comments = comments;
   }
-  
+
   public TextualExtractor getTextualExtractor() {
     return textualExtractor;
   }
-  
+
   public TrapWriter getTrapwriter() {
     return trapwriter;
   }

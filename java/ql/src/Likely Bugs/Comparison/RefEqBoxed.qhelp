@@ -11,18 +11,18 @@
 </overview>
 <recommendation>
 
-<p>Usually, you should compare non-primitive objects, for example boxed primitive values, by using 
+<p>Usually, you should compare non-primitive objects, for example boxed primitive values, by using
 their <code>equals</code> methods.</p>
 
 </recommendation>
 <example>
 
-<p>With the following definition, the method call <code>refEq(new Integer(2), new Integer(2))</code> returns <code>false</code> 
+<p>With the following definition, the method call <code>refEq(new Integer(2), new Integer(2))</code> returns <code>false</code>
 because the objects are not identical.</p>
 
 <sample src="RefEqBoxedBad.java" />
 
-<p>With the following definition, the method call <code>realEq(new Integer(2), new Integer(2))</code> 
+<p>With the following definition, the method call <code>realEq(new Integer(2), new Integer(2))</code>
 returns <code>true</code> because the objects contain equal values.</p>
 
 <sample src="RefEqBoxed.java" />

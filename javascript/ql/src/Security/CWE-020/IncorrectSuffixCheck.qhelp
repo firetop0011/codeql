@@ -42,7 +42,7 @@
         </p>
 
         <sample src="examples/IncorrectSuffixCheck.js"/>
-        
+
         <p>
 
             However, if <code>y</code> is one character longer than <code>x</code>, the right-hand side
@@ -51,7 +51,7 @@
             end with <code>y</code>.
 
         </p>
-        
+
         <p>
 
             To avoid this, explicitly check for the -1 case:

@@ -1,5 +1,5 @@
 ================================
-Introduction to variant analysis 
+Introduction to variant analysis
 ================================
 
 CodeQL for Java
@@ -105,8 +105,8 @@ Each query library also implicitly defines a module.
 
 .. note::
 
-  Queries are always contained in query files with the file extension ``.ql``. 
-  
+  Queries are always contained in query files with the file extension ``.ql``.
+
   Parts of queries can be lifted into `library files <https://codeql.github.com/docs/ql-language-reference/modules/#library-modules>`__ with the extension ``.qll``. Definitions within such libraries can be brought into scope using “import” statements, and similarly QLL files can import each other’s definitions using “import” statements.
 
   Logic can be encapsulated as user-defined `predicates <https://codeql.github.com/docs/ql-language-reference/predicates/>`__ and `classes <https://codeql.github.com/docs/ql-language-reference/types/#classes>`__, and organized into `modules <https://codeql.github.com/docs/ql-language-reference/modules/>`__. Each QLL file implicitly defines a module, but QL and QLL files can also contain explicit module definitions, as we will see later.

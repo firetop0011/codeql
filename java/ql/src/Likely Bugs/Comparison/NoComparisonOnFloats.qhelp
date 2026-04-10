@@ -15,10 +15,10 @@ evaluates to <code>false</code>.
 </overview>
 <recommendation>
 
-<p>Instead of testing for <i>exact equality</i> between floating point values, check that the 
+<p>Instead of testing for <i>exact equality</i> between floating point values, check that the
 difference between the values is within an appropriate error margin.</p>
 
-<p>Alternatively, if you do not want any inaccuracy when testing for equality, use one of the 
+<p>Alternatively, if you do not want any inaccuracy when testing for equality, use one of the
 following instead of floating point values:</p>
 <ul>
     <li><code>BigDecimal</code> class. This can store decimal values with higher precision.</li>
@@ -29,7 +29,7 @@ following instead of floating point values:</p>
 </recommendation>
 <example>
 <p>In the following example, <code>(0.1 + 0.2) == 0.3</code> evaluates to <code>false</code>, even
-though you would expect it to evaluate to <code>true</code>. This is because of the imprecision of 
+though you would expect it to evaluate to <code>true</code>. This is because of the imprecision of
 floating point data types.</p>
 <sample src="NoComparisonOnFloats.java" />
 
@@ -45,7 +45,7 @@ between the two values, and checking if the difference is within the error margi
 J. Bloch, <em>Effective Java (second edition)</em>, Item 48. Addison-Wesley, 2008.
 </li>
 <li>
-Numerical Computation Guide: 
+Numerical Computation Guide:
 <a href="https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html">What Every Computer Scientist Should Know About Floating-Point Arithmetic</a>.
 </li>
 

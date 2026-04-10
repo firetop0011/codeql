@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
   <include src="LeapYear.inc.qhelp" />
-  
+
 <p>When using a function that transforms a date structure, and the year on the input argument for the API has been manipulated, it is important to check for the return value of the function to make sure it succeeded.</p>
 <p>Otherwise, the function may have failed, and the output parameter may contain invalid data that can cause any number of problems on the affected system.</p>
 <p>The following is a list of the functions that this query covers:</p>

@@ -17,11 +17,11 @@ the mistake.</p>
 </recommendation>
 <example>
 
-<p>The following example shows part of a method that is intended to make a copy of an existing 
+<p>The following example shows part of a method that is intended to make a copy of an existing
 <code>MotionEvent</code> without preserving its history. On line 8, <code>o.mFlags</code> is
 assigned to itself. Given that the statement is surrounded by
 statements that transfer information from the fields of <code>o</code> to the
-fields of the new event, <code>ev</code>, the statement is clearly a mistake. To correct this, the 
+fields of the new event, <code>ev</code>, the statement is clearly a mistake. To correct this, the
 <code>mFlags</code> value should be assigned to <code>ev.mFlags</code> instead, as shown in the
 corrected method.</p>
 

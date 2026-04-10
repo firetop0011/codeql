@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>If an LDAP query is built using string concatenation, and the
-components of the concatenation include user input, a user 
+components of the concatenation include user input, a user
 is likely to be able to run malicious LDAP queries.</p>
 </overview>
 

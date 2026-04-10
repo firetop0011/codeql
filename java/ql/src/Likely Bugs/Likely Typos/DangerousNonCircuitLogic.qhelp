@@ -32,7 +32,7 @@ conditional-or.</p>
 <p>In the following example, the <code>hasForename</code> method is implemented correctly. For a forename
 to be valid it must be a non-null string with a non-zero length. The method has
 two expressions (<code>forename != null</code> and <code>forename.length() &gt;
-0</code>) to check these two properties. The second check is 
+0</code>) to check these two properties. The second check is
 executed only if the first succeeds, because they are combined using a conditional-and
 operator (<code>&amp;&amp;</code>).</p>
 

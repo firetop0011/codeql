@@ -21,4 +21,3 @@ public class LogInjection {
         return username;
     }
 }
-

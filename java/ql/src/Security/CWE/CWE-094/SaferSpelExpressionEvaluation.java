@@ -5,7 +5,7 @@ public Object evaluate(Socket socket) throws IOException {
     String string = reader.readLine();
     ExpressionParser parser = new SpelExpressionParser();
     Expression expression = parser.parseExpression(string);
-    SimpleEvaluationContext context 
+    SimpleEvaluationContext context
         = SimpleEvaluationContext.forReadWriteDataBinding().build();
     return expression.getValue(context);
   }

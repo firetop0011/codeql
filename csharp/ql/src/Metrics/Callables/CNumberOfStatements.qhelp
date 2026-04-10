@@ -3,8 +3,8 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>This metric measures the number of statements per method. If methods have too many statements 
-they may be difficult to understand and hence a source of defects. It is also an indication that 
+<p>This metric measures the number of statements per method. If methods have too many statements
+they may be difficult to understand and hence a source of defects. It is also an indication that
 methods may be trying to do too much.</p>
 
 </overview>

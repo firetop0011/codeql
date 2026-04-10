@@ -193,4 +193,3 @@ module.exports.Buffer = BuffType;
 module.exports.SlowBuffer = SlowBuffType;
 
 module.exports.INSPECT_MAX_BYTES = buffer.INSPECT_MAX_BYTES;
-

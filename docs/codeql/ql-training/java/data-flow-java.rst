@@ -90,12 +90,12 @@ We want to improve our query to catch more of these cases.
    For more details of the CVE, see: https://github.com/Semmle/SecurityExploits/tree/master/vivo-project/CVE-2019-6986
 
    As an example, consider this SPARQL query call:
-   
+
    .. code-block:: none
-   
+
       String queryString = "ASK { <" + individualURI + "> ?p ?o }";
        sparqlAskQuery(queryString);
-   
+
    Here the concatenation occurs before the call, so the existing query would miss this - the string concatenation does not occur *directly* as the first argument of the call.
 
 .. include general data flow slides
@@ -122,7 +122,7 @@ Refinements (take home exercise)
 In Java, strings are often created using ``StringBuilder`` and ``StringBuffer`` classes. For example:
 
     .. code-block:: java
-    
+
        StringBuilder queryBuilder = new StringBuilder();
        queryBuilder.add("ASK { <");
        queryBuilder.add(individualURI);

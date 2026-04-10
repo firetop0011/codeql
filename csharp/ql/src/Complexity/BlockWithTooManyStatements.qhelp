@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>Some blocks of code have too many complex statements (branching statements and loops). These blocks are prime candidates for 
+<p>Some blocks of code have too many complex statements (branching statements and loops). These blocks are prime candidates for
 refactoring.</p>
 
 </overview>

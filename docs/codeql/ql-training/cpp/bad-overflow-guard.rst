@@ -39,7 +39,7 @@ Checking for overflow in C
       } else {
           result = v + b;
       }
-    
+
    Where might this go wrong?
 
 .. note::
@@ -77,7 +77,7 @@ Checking for overflow in C revisited
 Which branch gets executed in this example? What is the value of ``result``?
 
    .. code-block:: cpp
-   
+
      uint16_t v = 65535;
      uint16_t b = 1;
      uint16_t result;
@@ -86,7 +86,7 @@ Which branch gets executed in this example? What is the value of ``result``?
      } else {
          result = v + b;
      }
-   
+
 .. note::
 
   In this example the second branch is executed, even though there is a 16-bit overflow, and ``result`` is set to zero.
@@ -98,7 +98,7 @@ Here is the example again, with the conversions made explicit:
 
    .. code-block:: cpp
      :emphasize-lines: 4,7
-   
+
      uint16_t v = 65535;
      uint16_t b = 1;
      uint16_t result;
@@ -107,7 +107,7 @@ Here is the example again, with the conversions made explicit:
      } else {
          result = (uint16_t)((int)v + (int)b);
      }
-   
+
 .. note::
 
   In this example the second branch is executed, even though there is a 16-bit overflow, and result is set to zero.
@@ -196,7 +196,7 @@ Now our query becomes:
   - We could write this by using our helper predicate ``isSmall`` to specify that each individual operand to the addition ``isSmall`` (that is under 32-bits):
 
     .. code-block:: ql
-  
+
       isSmall(a.getLeftOperand()) and
       isSmall(a.getRightOperand())
 

@@ -3,21 +3,21 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>When writing an <code>operator==</code>, it is common to want to check whether or not an operand 
+<p>When writing an <code>operator==</code>, it is common to want to check whether or not an operand
 is null or check if both operands refer to the same object. Attempting to do this using <code>==
-</code> will not work as it will simply call the overridden <code>operator==</code> that is being 
+</code> will not work as it will simply call the overridden <code>operator==</code> that is being
 defined.</p>
 
 </overview>
 <recommendation>
-<p>There are two suggested ways to fix the problem. The tidiest approach is to simply replace the 
-call to <code>operator==</code> with a call to <code>ReferenceEquals</code> (see code below). As a 
+<p>There are two suggested ways to fix the problem. The tidiest approach is to simply replace the
+call to <code>operator==</code> with a call to <code>ReferenceEquals</code> (see code below). As a
 less preferable alternative, it is also possible to simply cast the parameters to <code>object
 </code>.</p>
 
 </recommendation>
 <example>
-<p>In this example the <code>==</code> overload will constantly call itself to compare the initial 
+<p>In this example the <code>==</code> overload will constantly call itself to compare the initial
 arguments passed to it with null.</p>
 <sample src="RecursiveOperatorEquals.cs" />
 

@@ -6,18 +6,18 @@
 
 <overview>
 <p>
-This rule looks for two files that share too much information about each other (accessing many operations or variables in both directions). 
+This rule looks for two files that share too much information about each other (accessing many operations or variables in both directions).
 It would be better to invert some of the dependencies to reduce the coupling between the two files.
 </p>
 
 <p>
 Having two files have too many dependencies on each other makes it difficult to modify one file without requiring modifications to the
-other. This could lead to defects when the programmer forgets to put in the necessary changes to one file when he makes a change to the other. 
+other. This could lead to defects when the programmer forgets to put in the necessary changes to one file when he makes a change to the other.
 </p>
 
 </overview>
 <recommendation>
-<p>Move some of the methods and variables from one file to another, so that most of the dependencies go only in one direction. If possible, 
+<p>Move some of the methods and variables from one file to another, so that most of the dependencies go only in one direction. If possible,
 try to make all the dependencies go in one direction.</p>
 
 </recommendation>

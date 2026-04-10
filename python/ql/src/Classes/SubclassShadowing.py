@@ -14,4 +14,3 @@ class Cow(Mammal):
 
 #Cow().milk() will raise an error as Cow().milk is the 'milk' attribute
 #set in Mammal.__init__, not the 'milk' method defined on Cow.
-

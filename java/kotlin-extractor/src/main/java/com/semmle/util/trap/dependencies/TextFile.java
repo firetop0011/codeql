@@ -22,14 +22,14 @@ public abstract class TextFile {
 
 	protected String version;
 	protected final Set<String> traps = new LinkedHashSet<String>();
-	
+
 	protected abstract Set<String> getSet(Path path, String label);
 	protected abstract void parseError(Path path);
-	
+
 	public TextFile(String version) {
 		this.version = version;
 	}
-	
+
 	/**
 	 * Load the current text file, checking that it matches the expected header.
 	 *
@@ -48,7 +48,7 @@ public abstract class TextFile {
 	 * {@link #getSet(File, String)}) on a line by itself, followed by file paths,
 	 * one per line.
 	 * </ul>
-	 * 
+	 *
 	 * <p>
 	 * Empty lines are permitted throughout.
 	 * </p>
@@ -91,23 +91,23 @@ public abstract class TextFile {
 			throw new ResourceError("Couldn't read " + path, e);
 		}
 	}
-	
+
 	/**
 	 * @return the format version of the loaded file
 	 */
 	public String version() {
 		return version;
 	}
-	
+
 	/**
 	 * Save this object to a file (or throw a ResourceError on failure)
-	 * 
+	 *
 	 * @param file the file in which to save this object
 	 */
 	public void save(Path file) {
 		new WholeIO().strictwrite(file, toString());
 	}
-	
+
 	protected void appendHeaderString(StringBuilder sb, String header, String version) {
 		sb.append(header).append(' ').append(version).append('\n');
 	}
@@ -117,7 +117,7 @@ public abstract class TextFile {
 		for (String s : set)
 			sb.append(s).append('\n');
 	}
-	
+
 	protected void appendSingleton(StringBuilder sb, String title, String s) {
 		sb.append('\n').append(title).append('\n');
 		sb.append(s).append('\n');

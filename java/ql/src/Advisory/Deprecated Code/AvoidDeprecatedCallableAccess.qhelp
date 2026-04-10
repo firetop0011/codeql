@@ -6,14 +6,14 @@
 
 <overview>
 <p>
-A method (or constructor) can be marked as deprecated using either the <code>@Deprecated</code> 
-annotation or the <code>@deprecated</code> Javadoc tag. Using a method that has been 
+A method (or constructor) can be marked as deprecated using either the <code>@Deprecated</code>
+annotation or the <code>@deprecated</code> Javadoc tag. Using a method that has been
 marked as deprecated is bad practice, typically for one or more of the following reasons:</p>
 
 <ul>
 <li>The method is dangerous.</li>
 <li>There is a better alternative method.</li>
-<li>Methods that are marked as deprecated are often removed from future versions of an API. So using 
+<li>Methods that are marked as deprecated are often removed from future versions of an API. So using
 a deprecated method may cause extra maintenance effort when the API is upgraded.</li>
 </ul>
 
@@ -21,7 +21,7 @@ a deprecated method may cause extra maintenance effort when the API is upgraded.
 <recommendation>
 
 <p>Avoid using a method that has been marked as deprecated. Follow any guidance that
-is provided with the <code>@deprecated</code> Javadoc tag, which should explain how to replace the 
+is provided with the <code>@deprecated</code> Javadoc tag, which should explain how to replace the
 call to the deprecated method.
 </p>
 

@@ -6,7 +6,7 @@
 
 <overview>
 <p>
-This rule finds functions that are declared in a block. 
+This rule finds functions that are declared in a block.
 It is confusing to declare a function at block scope, and the visibility of the function is not what would be expected.
 <code>extern</code> function declarations inside a block, which are allowed in C, are particularly confusing, as the scope
 of the declaration is the entire file, not just the block where it was declared.

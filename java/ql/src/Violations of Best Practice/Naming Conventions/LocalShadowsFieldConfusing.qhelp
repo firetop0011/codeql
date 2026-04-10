@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>If a method declares a local variable with the same name as a field, 
+<p>If a method declares a local variable with the same name as a field,
 then it is very easy to mix up the two when reading or modifying
 the program.</p>
 

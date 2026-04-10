@@ -6,7 +6,7 @@
 
 <overview>
 <p>
-Beans that share a considerable number of similar properties exhibit unnecessary repetition in the 
+Beans that share a considerable number of similar properties exhibit unnecessary repetition in the
 bean definitions and make the system's architecture more difficult to see.
 </p>
 
@@ -20,12 +20,12 @@ in the bean definitions and gives a clearer picture of the system's architecture
 </recommendation>
 <example>
 
-<p>The following example shows a configuration file that contains two beans that share several 
+<p>The following example shows a configuration file that contains two beans that share several
 properties with the same values.</p>
 
 <sample src="MissingParentBean.xml" />
 
-<p>The following example shows how the shared properties have been moved into a parent bean, 
+<p>The following example shows how the shared properties have been moved into a parent bean,
 <code>baseService</code>.</p>
 
 <sample src="MissingParentBeanGood.xml" />
@@ -35,7 +35,7 @@ properties with the same values.</p>
 
 
 <li>
-Spring Framework Reference Documentation 3.0: 
+Spring Framework Reference Documentation 3.0:
 <a href="http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/beans.html#beans-ref-element">3.4.2.2 References to other beans (collaborators)</a>.
 </li>
 

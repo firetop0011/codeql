@@ -6,7 +6,7 @@
 
 <overview>
 <p>
-This rule finds functions that use more functions and variables from another file than functions and variables from its own file. 
+This rule finds functions that use more functions and variables from another file than functions and variables from its own file.
 This function may be better placed in the other file, to avoid exposing internals of the file it depends on.
 </p>
 

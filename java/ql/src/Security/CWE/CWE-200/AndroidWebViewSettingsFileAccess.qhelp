@@ -39,8 +39,8 @@
     <sample src="WebViewFileAccessSafe.java"/>
 
     <p>
-      As mentioned previously, asset loaders can load files without file system 
-      access. In the following (good) example, an asset loader is configured to 
+      As mentioned previously, asset loaders can load files without file system
+      access. In the following (good) example, an asset loader is configured to
       load assets over HTTPS.
     </p>
 

@@ -1,5 +1,5 @@
 lgtm,codescanning
-* The security queries now track taint through XML parsers. 
+* The security queries now track taint through XML parsers.
   Affected packages are
     [xml2js](https://www.npmjs.com/package/xml2js),
     [sax](https://www.npmjs.com/package/sax),

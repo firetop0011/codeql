@@ -1428,5 +1428,3 @@ extensions:
       - ["org.apache.commons.io", "UncheckedIOExceptions", "UncheckedIOExceptions", "()", "summary", "df-generated"]
       - ["org.apache.commons.io", "UncheckedIOExceptions", "create", "(Object)", "summary", "df-generated"]
       - ["org.apache.commons.io", "UncheckedIOExceptions", "wrap", "(IOException,Object)", "summary", "df-generated"]
-
-        

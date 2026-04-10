@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>
-A comment that includes the words <code>TODO</code>, <code>FIXME</code>, or similar words 
+A comment that includes the words <code>TODO</code>, <code>FIXME</code>, or similar words
 often indicates code that is incomplete or broken, or highlights ambiguities in the
 software's specification.
 </p>

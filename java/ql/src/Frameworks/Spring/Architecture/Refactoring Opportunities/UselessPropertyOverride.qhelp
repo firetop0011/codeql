@@ -13,7 +13,7 @@ is useless. This is because the bean inherits the property from its parent anywa
 </overview>
 <recommendation>
 <p>
-If possible, remove the property in the child bean. 
+If possible, remove the property in the child bean.
 </p>
 
 </recommendation>

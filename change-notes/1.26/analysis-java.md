@@ -17,4 +17,3 @@ The following changes in version 1.26 affect Java analysis in all applications.
 
 
 ## Changes to libraries
-

@@ -32,4 +32,3 @@ class H(G):
 
     def __init__(self):
         G.__init__(self, 1)
-

@@ -15,7 +15,7 @@ handle the exception but never wrote the code to do so.</p>
 
 </recommendation>
 <example>
-<p>In this example the program keeps running with the same privileges if it fails to drop to lower 
+<p>In this example the program keeps running with the same privileges if it fails to drop to lower
 privileges.</p>
 <sample src="EmptyExcept.py" />
 

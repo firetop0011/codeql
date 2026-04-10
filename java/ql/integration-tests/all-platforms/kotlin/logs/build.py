@@ -15,4 +15,3 @@ for t in ['Test1', 'sun.something.Test2']:
     runSuccessfully(['java', t])
     print('Test ' + t + ' ended.')
     sys.stdout.flush()
-

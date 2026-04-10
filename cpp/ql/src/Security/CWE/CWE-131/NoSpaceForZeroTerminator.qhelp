@@ -5,7 +5,7 @@
 
 <overview>
 <p>
-This rule identifies calls to <code>malloc</code> that call <code>strlen</code> to determine 
+This rule identifies calls to <code>malloc</code> that call <code>strlen</code> to determine
 the required buffer size, but do not allocate space for the zero terminator.
 </p>
 

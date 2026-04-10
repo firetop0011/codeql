@@ -36,4 +36,3 @@ Note that the CWE coverage includes both "`supported queries <https://github.com
    javascript-cwe
    python-cwe
    ruby-cwe
-

@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>
-Using a named argument whose name does not correspond to a parameter of the <code>__init__</code> method of the class being instantiated, will result in a 
+Using a named argument whose name does not correspond to a parameter of the <code>__init__</code> method of the class being instantiated, will result in a
 <code>TypeError</code> at runtime.
 </p>
 
@@ -19,7 +19,7 @@ specified or whether the wrong class has been specified.
 
 </recommendation>
 <example>
-  <sample src="WrongNameForArgumentInClassInstantiation.py"/>    
+  <sample src="WrongNameForArgumentInClassInstantiation.py"/>
 </example>
 
 <references>

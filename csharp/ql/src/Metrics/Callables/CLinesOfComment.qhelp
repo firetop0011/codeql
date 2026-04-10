@@ -3,15 +3,15 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>This metric measures the (absolute) number of comment lines per method. The value of this metric 
-should be considered in the context of the complexity of the method: a simple method with little 
+<p>This metric measures the (absolute) number of comment lines per method. The value of this metric
+should be considered in the context of the complexity of the method: a simple method with little
 documentation may be fine but a more complex method may be difficult to understand and maintain.</p>
 
 </overview>
 <recommendation>
-<p>Consider if the method needs more documentation. Simple methods might not but most methods should have at least a 
-comment explaining their purpose. If the method is particularly long and complicated it might be a good idea to 
-extract parts of it into different methods. If these methods are given meaningful names then readability will be 
+<p>Consider if the method needs more documentation. Simple methods might not but most methods should have at least a
+comment explaining their purpose. If the method is particularly long and complicated it might be a good idea to
+extract parts of it into different methods. If these methods are given meaningful names then readability will be
 increased without the need for more comments.</p>
 
 </recommendation>

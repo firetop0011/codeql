@@ -29,7 +29,7 @@ class PointUpdated(object):
             return False
         return self._x == other._x and self._y == other._y
 
-    def __hash__(self):  
+    def __hash__(self):
         return hash(self._x) ^ hash(self._y)
 
 # Improved: equality method defined and class instances made unhashable
@@ -49,4 +49,3 @@ class UnhashablePoint(object):
 
     #Tell the interpreter that instances of this class cannot be hashed
     __hash__ = None
-

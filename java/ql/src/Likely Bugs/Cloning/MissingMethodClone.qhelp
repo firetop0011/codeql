@@ -16,8 +16,8 @@ that does not have a <code>clone</code> method indicates that the class is break
 
 <recommendation>
 <p>
-The necessity of creating a deep copy of an object's internal state means that, for most objects, 
-<code>clone</code> must be overridden to satisfy the <code>Cloneable</code> contract. Implement a 
+The necessity of creating a deep copy of an object's internal state means that, for most objects,
+<code>clone</code> must be overridden to satisfy the <code>Cloneable</code> contract. Implement a
 <code>clone</code> method that properly creates the internal state of the cloned object.
 </p>
 
@@ -39,8 +39,8 @@ stack affecting the <code>ws1</code> stack.</p>
 
 <sample src="MissingMethodCloneBad.java" />
 
-<p>In the following modified example, <code>RightStack</code> <i>does</i> implement 
-<code>clone</code>. This means that when <code>rs1clone</code> is cloned from <code>rs1</code>, 
+<p>In the following modified example, <code>RightStack</code> <i>does</i> implement
+<code>clone</code>. This means that when <code>rs1clone</code> is cloned from <code>rs1</code>,
 operations on the <code>rs1clone</code> stack do not affect the <code>rs1</code> stack.</p>
 
 <sample src="MissingMethodCloneGood.java" />

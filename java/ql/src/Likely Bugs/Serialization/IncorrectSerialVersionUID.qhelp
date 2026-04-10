@@ -22,7 +22,7 @@ Make sure that the <code>serialVersionUID</code> field in a serialized class is 
 <p>In the following example, <code>WrongNote</code> defines <code>serialVersionUID</code> using the wrong
 type, so that it is not used by the Java serialization framework. However, <code>Note</code> defines it correctly
 so that it is used by the framework.</p>
- 
+
 <sample src="IncorrectSerialVersionUID.java" />
 
 </example>

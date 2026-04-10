@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>If an LDAP query doesn't carry any kind of authentication, anonymous binds causes an empty or None-set password 
+<p>If an LDAP query doesn't carry any kind of authentication, anonymous binds causes an empty or None-set password
 to result in a successful authentication.</p>
 </overview>
 

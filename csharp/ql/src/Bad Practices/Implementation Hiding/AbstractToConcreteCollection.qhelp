@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>Casting from an abstract collection to a concrete implementation is bad practice. It makes your code fragile because it becomes 
+<p>Casting from an abstract collection to a concrete implementation is bad practice. It makes your code fragile because it becomes
 more difficult to change which implementation you are using at a later date.</p>
 
 </overview>

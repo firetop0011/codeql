@@ -80,7 +80,7 @@ No user-facing changes.
 
 * Attributes on methods in CIL are now extracted (Bugfix).
 * Support for `static virtual` and `static abstract` interface members.
-* Support for *operators* in interface definitions. 
+* Support for *operators* in interface definitions.
 * C# 11: Added support for the unsigned right shift `>>>` and unsigned right shift assignment `>>>=` operators.
 * Query id's have been aligned such that they are prefixed with `cs` instead of `csharp`.
 
@@ -120,13 +120,13 @@ No user-facing changes.
 ### Minor Analysis Improvements
 
 * `DateTime` expressions are now considered simple type sanitizers. This affects a wide range of security queries.
-* ASP.NET Core controller definition has been made more precise. The amount of introduced taint sources or eliminated false positives should be low though, since the most common pattern is to derive all user defined ASP.NET Core controllers from the standard Controller class, which is not affected. 
+* ASP.NET Core controller definition has been made more precise. The amount of introduced taint sources or eliminated false positives should be low though, since the most common pattern is to derive all user defined ASP.NET Core controllers from the standard Controller class, which is not affected.
 
 ## 0.4.0
 
 ### Deprecated APIs
 
-* Some classes/modules with upper-case acronyms in their name have been renamed to follow our style-guide. 
+* Some classes/modules with upper-case acronyms in their name have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### Bug Fixes
@@ -139,7 +139,7 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Many classes/predicates/modules with upper-case acronyms in their name have been renamed to follow our style-guide. 
+* Many classes/predicates/modules with upper-case acronyms in their name have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### Minor Analysis Improvements
@@ -186,7 +186,7 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide. 
+* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### New Features

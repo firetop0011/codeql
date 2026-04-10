@@ -67,5 +67,5 @@ public class MultiMemberGZIPInputStream extends GZIPInputStream {
 			return charsRead;
 		}
 	}
-	
+
 }

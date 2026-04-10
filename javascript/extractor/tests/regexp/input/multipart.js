@@ -7,25 +7,25 @@ var reg3 = new RegExp(
     "foo" + "bar");
 
 var reg4 = new RegExp(
-    "foo" + 
-    "bar" + 
-    "baz" + 
+    "foo" +
+    "bar" +
+    "baz" +
     "qux"
 );
 
 var bad95 = new RegExp(
-    "(a" + 
-    "|" + 
-    "aa)*" + 
+    "(a" +
+    "|" +
+    "aa)*" +
     "b$"
 );
 
-var bad96 = new RegExp("(" + 
-    "(c|cc)*|" + 
+var bad96 = new RegExp("(" +
+    "(c|cc)*|" +
     "(d|dd)*|" +
     "(e|ee)*" +
 ")f$");
 
 var bad97 = new RegExp(
-    "(g|gg" + 
+    "(g|gg" +
     ")*h$");

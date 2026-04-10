@@ -15,13 +15,13 @@ explicitly thrown in <code>throw</code> statements.
 </overview>
 <recommendation>
 
-<p>The Javadoc comment for a method or constructor should include a Javadoc tag element that 
+<p>The Javadoc comment for a method or constructor should include a Javadoc tag element that
 describes each thrown exception.</p>
 
 </recommendation>
 <example>
 
-<p>The following example shows a good Javadoc comment, which clearly explains the method's 
+<p>The following example shows a good Javadoc comment, which clearly explains the method's
 thrown exception.</p>
 
 <sample src="MissingJavadocMethods.java" />
@@ -40,7 +40,7 @@ Help - Eclipse Platform:
 </li>
 <li>
   Java SE Documentation:
-  <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">How to Write Doc Comments for the Javadoc Tool</a>, 
+  <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">How to Write Doc Comments for the Javadoc Tool</a>,
   <a href="https://www.oracle.com/java/technologies/javase/api-specifications.html">Requirements for Writing Java API Specifications</a>.
 </li>
 

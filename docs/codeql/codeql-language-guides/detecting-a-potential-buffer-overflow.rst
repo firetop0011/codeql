@@ -43,7 +43,7 @@ Calls to ``strlen`` can be identified using the library `StrlenCall <https://cod
    }
 
 .. pull-quote::
-    
+
    Note
 
    You could easily extend this class to include similar functions such as ``realloc``, or your own custom allocator. With a little effort they could even include C++ ``new`` expressions (to do this, ``MallocCall`` would need to extend a common superclass of both ``FunctionCall`` and ``NewExpr``, such as ``Expr``).

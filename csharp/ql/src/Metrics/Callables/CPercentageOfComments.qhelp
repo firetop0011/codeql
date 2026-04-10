@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>This metric measures the percentage of lines in methods that are comments. A low number of 
+<p>This metric measures the percentage of lines in methods that are comments. A low number of
 comments may indicate methods that are difficult to understand due to poor documentation.</p>
 
 </overview>

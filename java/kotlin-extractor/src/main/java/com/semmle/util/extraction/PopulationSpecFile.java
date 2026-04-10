@@ -23,16 +23,16 @@ public class PopulationSpecFile {
 	public PopulationSpecFile(File specFile) {
 		FileReader fileReader = null;
 		BufferedReader reader = null;
-		
+
 		try {
 			fileReader = new FileReader(specFile);
 			reader = new BufferedReader(fileReader);
-	
+
 			File dbPath = null;
 			File trapFolder = null;
 			File sourceArchivePath = null;
 			List<String> patterns = new ArrayList<String>();
-			
+
 			String line;
 			while ((line = reader.readLine()) != null) {
 				line = line.trim();
@@ -60,7 +60,7 @@ public class PopulationSpecFile {
 					patterns.add(normalisePathAndCase(path) + "/");
 				}
 			}
-			
+
 			if (dbPath != null)
 				specs.add(new SpecFileEntry(trapFolder, sourceArchivePath, patterns));
 		} catch (IOException e) {
@@ -70,7 +70,7 @@ public class PopulationSpecFile {
 			FileUtil.close(fileReader);
 		}
 	}
-	
+
 	/**
 	 * Get the entry for a file, or <code>null</code> if there is no matching entry
 	 */
@@ -80,7 +80,7 @@ public class PopulationSpecFile {
 		for (SpecFileEntry entry : specs)
 			if (entry.matches(path))
 				return entry;
-		
+
 		return null;
 	}
 

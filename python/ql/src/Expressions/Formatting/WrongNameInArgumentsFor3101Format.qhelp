@@ -16,7 +16,7 @@ Change the format to match the arguments and ensure that the arguments have the 
 
 </recommendation>
 <example>
-<p>In the following example, if <code>unlikely_condition()</code> is true, then a <code>KeyError</code> will be raised 
+<p>In the following example, if <code>unlikely_condition()</code> is true, then a <code>KeyError</code> will be raised
 as the keyword parameter <code>eggs</code> is missing.
 Adding a keyword parameter named <code>eggs</code> would fix this.
 </p>

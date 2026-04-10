@@ -8,8 +8,8 @@ If a class contains two distinct methods of the same name such that:</p>
 <ol><li>One method is only ever called from the other method.</li>
 <li>The calling method calls only the other method and nothing else.</li></ol>
 <p>
-Then the first method is no more than a forwarding method for the second and the two methods can 
-probably be merged.</p> 
+Then the first method is no more than a forwarding method for the second and the two methods can
+probably be merged.</p>
 
 <p>
 There are several
@@ -24,7 +24,7 @@ advantages to doing this:
 
 </overview>
 <example>
-<p>In this example, the two <code>print</code> methods in <code>Bad</code> can be merged, as one is simply a forwarder for the other. The two classes <code>Better1</code> and <code>Better2</code> 
+<p>In this example, the two <code>print</code> methods in <code>Bad</code> can be merged, as one is simply a forwarder for the other. The two classes <code>Better1</code> and <code>Better2</code>
 show two alternative ways of merging the methods.</p>
 
 <sample src="PointlessForwardingMethod.java" /></example>

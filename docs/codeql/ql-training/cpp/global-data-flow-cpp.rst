@@ -3,7 +3,7 @@ Introduction to global data flow
 ================================
 
 CodeQL for C/C++
-   
+
 .. rst-class:: setup
 
 Setup
@@ -171,14 +171,14 @@ Data flow models
 - Example: model of taint flow from third to first parameter of ``memcpy``
 
    .. code-block:: ql
-   
+
       class MemcpyFunction extends TaintFunction {
             MemcpyFunction() { this.hasName("memcpy") }
-            override predicate hasTaintFlow(FunctionInput i, FunctionOutput o) 
+            override predicate hasTaintFlow(FunctionInput i, FunctionOutput o)
                 i.isInParameter(2) and o.isOutParameterPointer(0)
             }
       }
-   
+
 .. note::
 
   See the API documentation for more details about ``FunctionInput`` and ``FunctionOutput``.

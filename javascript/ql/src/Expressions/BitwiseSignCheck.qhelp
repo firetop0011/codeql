@@ -5,7 +5,7 @@
 <overview>
 <p>
 Checking whether the result of a bitwise operation is greater than zero may yield unexpected results
-due to arithmetic overflow. 
+due to arithmetic overflow.
 </p>
 
 </overview>
@@ -20,7 +20,7 @@ It is more robust to check whether the result of the bitwise operation is <i>non
 
 <p>
 In the following example, function <code>bitIsSet</code> is meant to implement a check
-whether the <code>n</code>th bit of value <code>x</code> is set. 
+whether the <code>n</code>th bit of value <code>x</code> is set.
 </p>
 
 <sample src="examples/BitwiseSignCheck.js" />
@@ -28,8 +28,8 @@ whether the <code>n</code>th bit of value <code>x</code> is set.
 <p>
 However, this check fails to produce the correct value when <code>x</code> is set to
 <code>-1</code> (that is, all its bits are ones), and <code>n</code> is set to
-<code>31</code>: in this case, the expression <code>x &amp; (1&lt;&lt;n)</code> 
-evaluates to <code>-2147483648</code>. So the function returns <code>false</code>, 
+<code>31</code>: in this case, the expression <code>x &amp; (1&lt;&lt;n)</code>
+evaluates to <code>-2147483648</code>. So the function returns <code>false</code>,
 even though the 31st bit of <code>x</code> is, in fact, set.
 
 </p><p>

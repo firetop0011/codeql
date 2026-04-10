@@ -149,4 +149,3 @@ class MetricElement extends Element {
  * ckjm: Chidamber and Kemerer Java Metrics:
  * http://www.spinellis.gr/sw/ckjm/
  */
-

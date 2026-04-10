@@ -2,16 +2,16 @@
 <qhelp>
 <overview>
 <p>
-Rethrowing an exception variable will lose the stack trace in the original exception, and 
+Rethrowing an exception variable will lose the stack trace in the original exception, and
 replace it with the stack trace from the <code>throw</code> statement.
 This will make debugging the root cause of the exception more difficult, for example
 if the stack trace is written to a log file.
-</p> 
+</p>
 
 </overview>
 <recommendation>
 <p>
-Consider using <code>throw;</code> to rethrow the original exception. Not only is this simpler, 
+Consider using <code>throw;</code> to rethrow the original exception. Not only is this simpler,
 but it will retain the original stack information.
 </p>
 

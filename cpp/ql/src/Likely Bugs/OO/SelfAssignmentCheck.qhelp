@@ -5,10 +5,10 @@
 
 
 <overview>
-<p>This rule finds copy assignment operators that deallocate memory but do not check for self assignment. 
+<p>This rule finds copy assignment operators that deallocate memory but do not check for self assignment.
 This could lead to accessing an already freed memory location.</p>
 
-<p>This rule is particularly important if the copy assignment operator puts the current object in an invalid state 
+<p>This rule is particularly important if the copy assignment operator puts the current object in an invalid state
 before getting a new value from the object on the right hand side.</p>
 
 </overview>
@@ -18,8 +18,8 @@ before getting a new value from the object on the right hand side.</p>
 </recommendation>
 
 <example>
-<p>This example shows a copy assignment operator that fails to check for self assignment. 
-The corrected version of the same operator is also included. 
+<p>This example shows a copy assignment operator that fails to check for self assignment.
+The corrected version of the same operator is also included.
 </p>
 <sample src="SelfAssignmentCheck.cpp" />
 </example>

@@ -1,5 +1,5 @@
 name: codeql/csharp-examples
-groups: 
+groups:
   - csharp
   - examples
 dependencies:

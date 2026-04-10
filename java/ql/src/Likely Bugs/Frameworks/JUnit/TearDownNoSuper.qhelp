@@ -22,7 +22,7 @@ Call <code>super.tearDown</code> at the end of the overriding <code>tearDown</co
 
 <p>In the following example, <code>TearDownNoSuper.tearDown</code> does not call <code>super.tearDown</code>,
 which may cause subsequent tests to fail, or allow the internal state to be maintained. However, <code>TearDownSuper.tearDown</code>
-<em>does</em> call <code>super.tearDown</code>, at the end of the method, to enable 
+<em>does</em> call <code>super.tearDown</code>, at the end of the method, to enable
 <code>FrameworkTestCase.tearDown</code> to perform de-initialization.</p>
 
 <sample src="TearDownNoSuper.java" />

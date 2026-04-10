@@ -22,7 +22,7 @@ To begin, consider this code snippet:
 
 If ``l`` is bigger than 2\ :sup:`31`\ - 1 (the largest positive value of type ``int``), then this loop will never terminate: ``i`` will start at zero, being incremented all the way up to 2\ :sup:`31`\ - 1, which is still smaller than ``l``. When it is incremented once more, an arithmetic overflow occurs, and ``i`` becomes -2\ :sup:`31`\, which also is smaller than ``l``! Eventually, ``i`` will reach zero again, and the cycle repeats.
 
-.. pull-quote::   
+.. pull-quote::
 
    More about overflow
 
@@ -115,7 +115,7 @@ Now we rewrite our query to make use of these new classes:
 
     import java
 
-    // Return the width (in bits) of a given integral type 
+    // Return the width (in bits) of a given integral type
     int width(PrimitiveType pt) {
     (pt.hasName("byte") and result=8) or
     (pt.hasName("short") and result=16) or
@@ -124,7 +124,7 @@ Now we rewrite our query to make use of these new classes:
     (pt.hasName("long") and result=64)
     }
 
-    // Find any comparison where the width of the type on the smaller end of 
+    // Find any comparison where the width of the type on the smaller end of
     // the comparison is less than the width of the type on the greater end
     abstract class OverflowProneComparison extends ComparisonExpr {
     Expr getLesserOperand() { none() }

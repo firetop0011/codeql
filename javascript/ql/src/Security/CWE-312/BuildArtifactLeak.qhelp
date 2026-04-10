@@ -23,7 +23,7 @@
     <sample src="examples/build-leak.js"/>
     <p>
       The environment variables might include API keys or other sensitive information, and the build-system
-      should instead insert only the environment variables that are supposed to be public. 
+      should instead insert only the environment variables that are supposed to be public.
     </p>
     <p>
       The issue has been fixed below, where only the <code>DEBUG</code> environment variable is inserted into the artifact.

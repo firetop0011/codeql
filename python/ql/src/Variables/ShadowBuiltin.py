@@ -3,6 +3,6 @@ def test():
     def print_int():  # shadowing the int() built-in function
         print int
     print_int()
-    print int 
+    print int
 
 test()

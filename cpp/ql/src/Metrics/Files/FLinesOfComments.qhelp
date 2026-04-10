@@ -5,7 +5,7 @@
 <overview>
 <p>This metric measures the number of lines of comments in a file. </p>
 
-<p>Files that have too few comments are more likely to be insufficiently documented. 
+<p>Files that have too few comments are more likely to be insufficiently documented.
 Long files that have no comments at all require particular scrutiny, as these are more likely
 to need explicit documentation in comments.</p>
 

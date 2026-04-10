@@ -3,10 +3,10 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>Custom error messages for constraint validators support different types of interpolation, 
+<p>Custom error messages for constraint validators support different types of interpolation,
 including <a href="https://docs.jboss.org/hibernate/validator/5.1/reference/en-US/html/chapter-message-interpolation.html#section-interpolation-with-message-expressions">Java EL expressions</a>.
 Controlling part of the message template being passed to <code>ConstraintValidatorContext.buildConstraintViolationWithTemplate()</code>
-argument can lead to arbitrary Java code execution. Unfortunately, it is common that validated (and therefore, normally 
+argument can lead to arbitrary Java code execution. Unfortunately, it is common that validated (and therefore, normally
 untrusted) bean properties flow into the custom error message.</p>
 </overview>
 
@@ -23,7 +23,7 @@ context.addMessageParameter("foo", "bar");
 context.buildConstraintViolationWithTemplate("My violation message contains a parameter {foo}")
    .addConstraintViolation();</pre>
 <ul>
-<li>Sanitize the validated bean properties to make sure that there are no EL expressions. 
+<li>Sanitize the validated bean properties to make sure that there are no EL expressions.
 An example of valid sanitization logic can be found <a href="https://github.com/hibernate/hibernate-validator/blob/master/engine/src/main/java/org/hibernate/validator/internal/engine/messageinterpolation/util/InterpolationHelper.java#L17">here</a>.</li>
 <li>Disable the EL interpolation and only use <code>ParameterMessageInterpolator</code>:
 </li>

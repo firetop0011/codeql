@@ -23,7 +23,7 @@ which should be removed.
 <p>
 In the following example, function <code>findBox</code> contains incomplete code: the string
 literal and its containing block statement are not properly terminated, leading to a syntax
-error. 
+error.
 </p>
 
 <sample src="examples/SyntaxError.js" />

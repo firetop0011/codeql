@@ -109,7 +109,7 @@ This query finds the filename argument passed in each call to ``File.open``:
 
     import codeql.ruby.DataFlow
     import codeql.ruby.ApiGraphs
-    
+
     from DataFlow::CallNode call
     where call = API::getTopLevelMember("File").getAMethodCall("open")
     select call.getArgument(0)
@@ -124,7 +124,7 @@ So we use local data flow to find all expressions that flow into the argument:
 
     import codeql.ruby.DataFlow
     import codeql.ruby.ApiGraphs
-    
+
     from DataFlow::CallNode call, DataFlow::ExprNode expr
     where
       call = API::getTopLevelMember("File").getAMethodCall("open") and
@@ -141,7 +141,7 @@ We can update the query to specify that ``expr`` is an instance of a ``LocalSour
 
     import codeql.ruby.DataFlow
     import codeql.ruby.ApiGraphs
-    
+
     from DataFlow::CallNode call, DataFlow::ExprNode expr
     where
       call = API::getTopLevelMember("File").getAMethodCall("open") and
@@ -156,7 +156,7 @@ That would allow us to use the member predicate ``flowsTo`` on ``LocalSourceNode
 
     import codeql.ruby.DataFlow
     import codeql.ruby.ApiGraphs
-    
+
     from DataFlow::CallNode call, DataFlow::ExprNode expr
     where
       call = API::getTopLevelMember("File").getAMethodCall("open") and
@@ -169,7 +169,7 @@ As an alternative, we can ask more directly that ``expr`` is a local source of t
 
     import codeql.ruby.DataFlow
     import codeql.ruby.ApiGraphs
-    
+
     from DataFlow::CallNode call, DataFlow::ExprNode expr
     where
       call = API::getTopLevelMember("File").getAMethodCall("open") and
@@ -188,7 +188,7 @@ This query finds instances where a parameter is used as the name when opening a 
 
     import codeql.ruby.DataFlow
     import codeql.ruby.ApiGraphs
-    
+
     from DataFlow::CallNode call, DataFlow::ParameterNode p
     where
       call = API::getTopLevelMember("File").getAMethodCall("open") and
@@ -204,7 +204,7 @@ This query finds calls to ``File.open`` where the file name is derived from a pa
     import codeql.ruby.DataFlow
     import codeql.ruby.TaintTracking
     import codeql.ruby.ApiGraphs
-    
+
     from DataFlow::CallNode call, DataFlow::ParameterNode p
     where
       call = API::getTopLevelMember("File").getAMethodCall("open") and
@@ -337,17 +337,17 @@ The following global taint-tracking query finds path arguments in filesystem acc
     import codeql.ruby.TaintTracking
     import codeql.ruby.Concepts
     import codeql.ruby.dataflow.RemoteFlowSources
-    
+
     class RemoteToFileConfiguration extends TaintTracking::Configuration {
       RemoteToFileConfiguration() { this = "RemoteToFileConfiguration" }
-    
+
       override predicate isSource(DataFlow::Node source) { source instanceof RemoteFlowSource }
-    
+
       override predicate isSink(DataFlow::Node sink) {
         sink = any(FileSystemAccess fa).getAPathArgument()
       }
     }
-    
+
     from DataFlow::Node input, DataFlow::Node fileAccess, RemoteToFileConfiguration config
     where config.hasFlow(input, fileAccess)
     select fileAccess, "This file access uses data from $@.", input, "user-controllable input."
@@ -362,22 +362,22 @@ The following global data-flow query finds calls to ``File.open`` where the file
     import codeql.ruby.DataFlow
     import codeql.ruby.controlflow.CfgNodes
     import codeql.ruby.ApiGraphs
-    
+
     class EnvironmentToFileConfiguration extends DataFlow::Configuration {
       EnvironmentToFileConfiguration() { this = "EnvironmentToFileConfiguration" }
-    
+
       override predicate isSource(DataFlow::Node source) {
         exists(ExprNodes::ConstantReadAccessCfgNode env |
           env.getExpr().getName() = "ENV" and
           env = source.asExpr().(ExprNodes::ElementReferenceCfgNode).getReceiver()
         )
       }
-    
+
       override predicate isSink(DataFlow::Node sink) {
         sink = API::getTopLevelMember("File").getAMethodCall("open").getArgument(0)
       }
     }
-    
+
     from EnvironmentToFileConfiguration config, DataFlow::Node environment, DataFlow::Node fileOpen
     where config.hasFlow(environment, fileOpen)
     select fileOpen, "This call to 'File.open' uses data from $@.", environment,

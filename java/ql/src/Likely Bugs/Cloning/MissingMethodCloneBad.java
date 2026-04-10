@@ -42,5 +42,3 @@ public class MissingMethodClone {
                                                         // elements, this prints 3 instead of 2
     }
 }
-
-

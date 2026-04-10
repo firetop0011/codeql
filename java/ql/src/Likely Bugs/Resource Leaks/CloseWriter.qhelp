@@ -6,7 +6,7 @@
 
 <overview>
 <p>A subclass of <code>Writer</code> or <code>OutputStream</code> that is opened for writing
-but not properly closed later may cause a resource leak.  
+but not properly closed later may cause a resource leak.
 </p>
 
 </overview>
@@ -26,7 +26,7 @@ is to declare them within a <code>try-with-resources</code> statement, so that t
 
 <sample src="CloseWriter.java" />
 
-<p>In the following example, the resource <code>bw</code> is opened in a <code>try</code> block and 
+<p>In the following example, the resource <code>bw</code> is opened in a <code>try</code> block and
 later closed in a <code>finally</code> block.</p>
 
 <sample src="CloseWriterGood.java" />

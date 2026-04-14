@@ -21,7 +21,7 @@ Calls to <code>verify()</code> functions should use a cryptographic secret or ke
 
 <example>
 <p>
-In the example below, <code>false</code> is used to disable the integrity enforcement of a JWT payload. 
+In the example below, <code>false</code> is used to disable the integrity enforcement of a JWT payload.
 This may allow a malicious actor to make changes to a JWT payload.
 </p>
 

@@ -11,7 +11,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-# For details of all possible config values, 
+# For details of all possible config values,
 # see https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project-specific configuration -----------------------------------
@@ -22,7 +22,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'CodeQL query help'
 
-# Add md parser to process query help markdown files 
+# Add md parser to process query help markdown files
 extensions = [
     'recommonmark',
     'sphinx_markdown_tables',
@@ -39,7 +39,7 @@ source_suffix = {
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {'font_size': '16px',
-                      'body_text': '#333', 
+                      'body_text': '#333',
                       'link': '#2F1695',
                       'link_hover': '#2F1695',
                       'show_powered_by': False,

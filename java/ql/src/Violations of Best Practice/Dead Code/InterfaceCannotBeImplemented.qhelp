@@ -21,7 +21,7 @@ do not clash with methods in <code>Object</code>. Otherwise you should delete th
 </recommendation>
 <example>
 
-<p>In the following example, the interface <code>I</code> is useless because the 
+<p>In the following example, the interface <code>I</code> is useless because the
 <code>clone</code> method must return type <code>java.lang.Object</code>:</p>
 
 <sample src="InterfaceCannotBeImplemented.java" />

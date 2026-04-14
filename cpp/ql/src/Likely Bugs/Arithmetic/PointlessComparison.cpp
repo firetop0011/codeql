@@ -6,7 +6,7 @@ int f() {
     total += i;
   }
 
-  for (i = 0; i < 10; i = i+1) {  // BAD: comparison is always true, because i <= 5. 
+  for (i = 0; i < 10; i = i+1) {  // BAD: comparison is always true, because i <= 5.
     i = i % 5;
     total += i;
   }

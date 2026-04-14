@@ -16,7 +16,7 @@ can be (but are not always) an indication that an initial change was not
 successful and had to be revisited within a short time period. The intuition
 is that the original change may have been difficult to get right, and hence
 the code in the file may be more than usually defect-prone. The concept is
-somewhat similar to that of 'change bursts', as described in [Nagappan]. 
+somewhat similar to that of 'change bursts', as described in [Nagappan].
 </p>
 
 </overview>

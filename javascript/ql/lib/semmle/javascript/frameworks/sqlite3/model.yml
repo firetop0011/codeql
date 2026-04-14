@@ -1,5 +1,5 @@
 extensions:
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeModel
     data:
@@ -19,7 +19,7 @@ extensions:
       - [sqlite3.sqlite3, sqlite3.sqlite3, "Member[verbose].ReturnValue"]
       - [sqlite3.sqlite3, sqlite3, "Member[verbose].ReturnValue"]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: summaryModel
     data:

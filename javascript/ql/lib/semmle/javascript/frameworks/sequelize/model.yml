@@ -1,5 +1,5 @@
 extensions:
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: sinkModel
     data:
@@ -11,7 +11,7 @@ extensions:
       - [sequelize, "Argument[1]", "credentials[username]"]
       - [sequelize, "Argument[2]", "credentials[password]"]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeModel
     data:
@@ -264,7 +264,7 @@ extensions:
       - [sequelize.ThroughOptions, sequelize.AssociationOptionsBelongsToMany, "Member[through]"]
       - [sequelize.Utils, sequelize.SequelizeStaticAndInstance, "Member[Utils]"]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: summaryModel
     data:
@@ -274,7 +274,7 @@ extensions:
       - [sequelize.Model, "", "", "Member[schema,scope,unscoped].ReturnValue", type]
       - [sequelize.Model, "", "", "Member[sync].ReturnValue.Awaited", type]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeVariableModel
     data:

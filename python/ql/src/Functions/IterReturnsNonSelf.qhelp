@@ -15,14 +15,14 @@ iterator that must obey this constraint.
 
 </overview>
 <recommendation>
-<p>Make the <code>__iter__</code> return self unless the class should not be an iterator, 
-in which case rename the <code>next</code> (Python 2) or <code>__next__</code> (Python 3) 
+<p>Make the <code>__iter__</code> return self unless the class should not be an iterator,
+in which case rename the <code>next</code> (Python 2) or <code>__next__</code> (Python 3)
 to something else.</p>
 
 </recommendation>
 <example>
-<p>In this example the <code>Counter</code> class's <code>__iter__</code> method does not 
-return self (or even an iterator). This will cause the program to fail when anyone attempts 
+<p>In this example the <code>Counter</code> class's <code>__iter__</code> method does not
+return self (or even an iterator). This will cause the program to fail when anyone attempts
 to use the iterator in a <code>for</code> loop or <code>in</code> statement.</p>
 <sample src="IterReturnsNonSelf.py" />
 

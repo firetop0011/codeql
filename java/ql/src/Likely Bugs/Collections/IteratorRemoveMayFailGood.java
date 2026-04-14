@@ -5,11 +5,11 @@ import java.util.ArrayList;
 
 public class A {
 	private List<Integer> l;
-	
+
 	public A(Integer... is) {
 		this.l = new ArrayList<Integer>(Arrays.asList(is));
 	}
-	
+
 	public List<Integer> getList() {
 		return l;
 	}

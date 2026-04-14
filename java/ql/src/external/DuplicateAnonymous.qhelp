@@ -12,7 +12,7 @@ places is usually a sign that refactoring is necessary.</p>
 
 <p>Code duplication in general is highly undesirable for a range of reasons. The artificially
 inflated amount of code is more difficult to understand, and sequences of similar but subtly different lines
-can mask the real purpose or intention behind them. Also, there is always a risk that only one 
+can mask the real purpose or intention behind them. Also, there is always a risk that only one
 of several copies of the code is updated to address a defect or add a feature.</p>
 
 </overview>
@@ -25,8 +25,8 @@ of this concrete class.</p>
 </recommendation>
 <example>
 
-<p>In the following example, the definition of the class <code>addActionListener</code> is duplicated for 
-each button that needs to use it. A better solution is shown that defines just one class, 
+<p>In the following example, the definition of the class <code>addActionListener</code> is duplicated for
+each button that needs to use it. A better solution is shown that defines just one class,
 <code>MultiplexingListener</code>, which is used by each button.</p>
 
 <sample src="DuplicateAnonymous.java" />
@@ -34,9 +34,9 @@ each button that needs to use it. A better solution is shown that defines just o
 </example>
 <references>
 
-<li>E. Juergens, F. Deissenboeck, B. Hummel, S. Wagner. 
+<li>E. Juergens, F. Deissenboeck, B. Hummel, S. Wagner.
 <em>Do code clones matter?</em> Proceedings of the 31st International Conference on
-Software Engineering, 
+Software Engineering,
 485-495, 2009.</li>
 
 </references>

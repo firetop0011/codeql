@@ -22,7 +22,7 @@ being dereferenced.  If it's clear that the pointer cannot be null, consider rem
 <li>
   <a href="https://www.owasp.org/index.php/Null_Dereference">
     Null Dereference
-  </a> 
+  </a>
 </li>
 </references>
 

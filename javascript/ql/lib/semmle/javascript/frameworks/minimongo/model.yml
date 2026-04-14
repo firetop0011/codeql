@@ -1,5 +1,5 @@
 extensions:
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeModel
     data:

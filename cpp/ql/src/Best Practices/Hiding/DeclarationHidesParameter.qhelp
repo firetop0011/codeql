@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>This rule finds declarations of local variables that hide parameters of the surrounding function. Such declarations 
+<p>This rule finds declarations of local variables that hide parameters of the surrounding function. Such declarations
 create variables with the same name but different scopes. This makes it hard to understand which variable is actually
 being used in an expression.</p>
 

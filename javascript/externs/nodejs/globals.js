@@ -32,7 +32,7 @@
 //                 Zane Hannan AU <https://github.com/ZaneHannanAU>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-/*                                                       
+/*
 *        Automatically generated from globals.d.ts
 */
 /**
@@ -2141,4 +2141,3 @@ Console.prototype.groupEnd = function() {};
  * @return {void}
  */
 Console.prototype.clear = function() {};
-

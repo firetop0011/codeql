@@ -19,7 +19,7 @@ efficient to combine the operations using the <code>TryGetValue</code> method.</
 looking up the value.</p>
 <sample src="UseTryGetValue.cs" />
 
-<p>This code performs the same function as the example above, but uses <code>TryGetValue</code>, 
+<p>This code performs the same function as the example above, but uses <code>TryGetValue</code>,
 which makes it is more efficient.</p>
 
 <sample src="UseTryGetValueFix.cs" />

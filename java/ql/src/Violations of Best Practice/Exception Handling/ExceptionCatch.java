@@ -8,6 +8,6 @@ try {
 FileInputStream fis = ...
 try {
 	fis.read();
-} catch (IOException e) {  // GOOD: The exception is specific. 
+} catch (IOException e) {  // GOOD: The exception is specific.
 	// Handle this exception
 }

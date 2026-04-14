@@ -11,7 +11,7 @@
 		</property>
 	</bean>
 
-	<bean id="shippingService" 
+	<bean id="shippingService"
 			class="documentation.examples.spring.ShippingService"
 			parent="baseShippingService">
 		<!--AVOID: This property is already defined with the same value in the parent bean.-->

@@ -17,7 +17,7 @@
 
         </p>
   </overview>
-  
+
   <recommendation>
     <p>
 
@@ -36,7 +36,7 @@
 
     </p>
   </recommendation>
-  
+
   <example>
 
     <p>
@@ -48,10 +48,10 @@
     </p>
 
     <sample src="examples/EnablingNodeIntegration.js"/>
-   
+
   </example>
 
-  
+
   <references>
     <li>Electron Documentation: <a href="https://electronjs.org/docs/tutorial/security#2-disable-nodejs-integration-for-remote-content">Security, Native Capabilities, and Your Responsibility</a></li>
   </references>

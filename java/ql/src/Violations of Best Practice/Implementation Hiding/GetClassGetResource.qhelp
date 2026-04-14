@@ -9,7 +9,7 @@
 some non-code resources with an application.</p>
 
 <p>There are problems when this is called using <code>x.getClass().getResource()</code>,
-for some variable <code>x</code>. This is not a safe way to retrieve a resource. The method 
+for some variable <code>x</code>. This is not a safe way to retrieve a resource. The method
 <code>getClass</code> returns the <em>run-time</em> class of <code>x</code> (that is, its actual, "most
 derived" class, rather than its declared type), which causes two potential problems:</p>
 
@@ -28,7 +28,7 @@ failures that are difficult to diagnose.</li>
 </overview>
 <recommendation>
 <p>Rather than using the <code>getClass</code> method, which relies on dynamic dispatch
-and run-time types, use <code>class</code> literals instead. For example, instead of calling 
+and run-time types, use <code>class</code> literals instead. For example, instead of calling
 <code>getClass().getResource()</code> on an object of type <code>Foo</code>,
 call <code>Foo.class.getResource()</code>. Class literals always refer to the
 declared type they are used on, removing the dependency on run-time types.</p>

@@ -20,7 +20,7 @@ Catching <code>BaseException</code>, rather than its subclasses may prevent prop
 <code>KeyboardInterrupt</code> or <code>SystemExit</code>. It is easy to catch <code>BaseException</code>
 accidentally as it is caught implicitly by an empty <code>except:</code> statement.
 </p>
-    
+
 </overview>
 <recommendation>
 
@@ -45,7 +45,7 @@ leaving <code>KeyboardInterrupt</code> to propagate.
 </example>
 <references>
 
-<li>Python Language Reference: <a href="http://docs.python.org/2.7/reference/compound_stmts.html#try">The try statement</a>, 
+<li>Python Language Reference: <a href="http://docs.python.org/2.7/reference/compound_stmts.html#try">The try statement</a>,
 <a href="http://docs.python.org/2.7/reference/executionmodel.html#exceptions">Exceptions</a>.</li>
 <li>M. Lutz, Learning Python, Section 35.3: Exception Design Tips and Gotchas, O'Reilly Media, 2013.</li>
 <li>Python Tutorial: <a href="https://docs.python.org/2/tutorial/errors.html">Errors and Exceptions</a>.</li>

@@ -29,4 +29,3 @@ class PointUpdated(object):
 
     def __ne__(self, other):  # Improved: equality and inequality method defined (hash method still missing)
         return not self == other
-

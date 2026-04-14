@@ -25,7 +25,7 @@ assignment may simply be unnecessary, in which case it can be removed.
 
 <p>
 In the following example, the <code>getName</code> method of <code>Person</code> contains a useless
-assignment to <code>name</code>. 
+assignment to <code>name</code>.
 </p>
 
 <sample src="examples/ReturnAssignsLocal.js" />

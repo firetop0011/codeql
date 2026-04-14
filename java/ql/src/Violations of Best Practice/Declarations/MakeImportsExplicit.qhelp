@@ -31,7 +31,7 @@ is used that could originate from several implicit imports.</li>
 <recommendation>
 
 <p>For readability, it is recommended to use explicit imports instead of implicit imports.
-Many modern IDEs provide automatic functionality to help achieve this, typically under the name 
+Many modern IDEs provide automatic functionality to help achieve this, typically under the name
 "Organize imports". They can also fold away the import declarations, and automatically
 manage imports: adding them when a particular type is auto-completed by the editor, and
 removing them when they are not necessary. This functionality makes implicit imports mainly

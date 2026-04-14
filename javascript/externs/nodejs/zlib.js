@@ -530,4 +530,3 @@ module.exports.Z_UNKNOWN = zlib.Z_UNKNOWN;
 module.exports.Z_DEFLATED = zlib.Z_DEFLATED;
 
 module.exports.Z_NULL = zlib.Z_NULL;
-

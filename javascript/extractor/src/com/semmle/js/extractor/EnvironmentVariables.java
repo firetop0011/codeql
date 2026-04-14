@@ -7,7 +7,7 @@ import com.semmle.util.process.Env.Var;
 public class EnvironmentVariables {
   public static final String CODEQL_EXTRACTOR_JAVASCRIPT_ROOT_ENV_VAR =
       "CODEQL_EXTRACTOR_JAVASCRIPT_ROOT";
- 
+
   public static final String CODEQL_EXTRACTOR_JAVASCRIPT_SCRATCH_DIR_ENV_VAR =
       "CODEQL_EXTRACTOR_JAVASCRIPT_SCRATCH_DIR";
 

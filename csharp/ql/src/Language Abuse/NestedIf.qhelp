@@ -4,10 +4,10 @@
 <qhelp>
 <overview>
 <p>
-It is unnecessary to nest <code>if</code> statements when neither of them has an 
-<code>else</code> part. The code can be written more simply by combining the statements 
+It is unnecessary to nest <code>if</code> statements when neither of them has an
+<code>else</code> part. The code can be written more simply by combining the statements
 into a single <code>if</code> statement.
-</p> 
+</p>
 
 </overview>
 <recommendation>

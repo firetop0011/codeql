@@ -32,7 +32,7 @@ other forms of HTML injection.
 <example>
 <p>In the first example, a username, provided by the user, is logged using `console.info`. In
 the first case, it is logged without any sanitization. In the second case, the username is used to build an error that is logged using `console.error`.
-If a malicious user provides `username=Guest%0a[INFO]+User:+Admin%0a` as a username parameter, 
+If a malicious user provides `username=Guest%0a[INFO]+User:+Admin%0a` as a username parameter,
 the log entry will be splitted in two different lines, where the second line will be `[INFO]+User:+Admin`.
 </p>
 <sample src="examples/logInjectionBad.js" />

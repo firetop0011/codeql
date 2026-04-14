@@ -12,7 +12,7 @@ explanation. It is considered bad practice to use magic strings because:</p>
 <ul>
 <li>A string in isolation can be difficult for other programmers to understand.
 </li>
-<li>It can be difficult to update the code if the requirements change. For example, if the magic 
+<li>It can be difficult to update the code if the requirements change. For example, if the magic
 string represents a protocol, changing the protocol means that you must change
 every occurrence of the protocol.
 </li>
@@ -35,7 +35,7 @@ update if the requirements change, because you have to update the string in only
 </recommendation>
 <example>
 
-<p>The following example shows a magic string <code>internalIp</code>. This should be replaced by  
+<p>The following example shows a magic string <code>internalIp</code>. This should be replaced by
 the existing named constant, as shown in the fixed version.</p>
 
 <sample src="MagicStringsUseConstant.java" />

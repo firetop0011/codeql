@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>This rule finds classes that depend on many other types. Depending on too many other classes makes a class vulnerable to changes 
+<p>This rule finds classes that depend on many other types. Depending on too many other classes makes a class vulnerable to changes
 and defects in its dependencies, and is also a sign that the class lacks cohesion (i.e. a single purpose). These classes
 could be refactored into smaller, more cohesive classes.</p>
 

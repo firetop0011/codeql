@@ -4,13 +4,13 @@
 <qhelp>
 <overview>
 <p>Each call to the <code>printf</code> function or a related function should include
-the type and sequence of arguments defined by the format. If the function is passed arguments 
+the type and sequence of arguments defined by the format. If the function is passed arguments
 of a different type or in a different sequence then the arguments are reinterpreted to fit the type and sequence expected, resulting in unpredictable behavior.</p>
 
 </overview>
 <recommendation>
-<p>Review the format and arguments expected by the highlighted function calls. Update either 
-the format or the arguments so that the expected type and sequence of arguments are passed to 
+<p>Review the format and arguments expected by the highlighted function calls. Update either
+the format or the arguments so that the expected type and sequence of arguments are passed to
 the function.
 </p>
 

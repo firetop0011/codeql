@@ -1,4 +1,4 @@
-+ odasa-cpp-metrics/Files/NumberOfPublicGlobals.ql: /Maintainability/Coupling 
++ odasa-cpp-metrics/Files/NumberOfPublicGlobals.ql: /Maintainability/Coupling
    @warning-from 11
 + odasa-cpp-metrics/Files/FEfferentCoupling.ql: /Maintainability/Coupling
    @warning-from 120

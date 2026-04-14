@@ -6,7 +6,7 @@
 <p>
 JavaScript methods can call other methods of the same class instance through the use of the <code>this</code> keyword.
 In other object-oriented languages such as Java, the use of the <code>this</code> keyword for such method calls is optional. It is however <em>not</em> optional in JavaScript.
-If the <code>this</code> keyword is left out, the call is a regular function call. 
+If the <code>this</code> keyword is left out, the call is a regular function call.
 </p>
 
 </overview>

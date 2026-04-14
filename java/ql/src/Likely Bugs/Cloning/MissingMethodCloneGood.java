@@ -39,5 +39,3 @@ public class MissingMethodClone {
         System.out.println(rs1.pop());                  // Correctly prints 2
     }
 }
-
-

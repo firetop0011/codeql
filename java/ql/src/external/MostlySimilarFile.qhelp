@@ -6,12 +6,12 @@
 
 <overview>
 <p>When most of the lines in one file have corresponding "similar" lines in one or more other
-files, the files themselves are regarded as <em>mostly similar</em>. Two lines are defined as 
+files, the files themselves are regarded as <em>mostly similar</em>. Two lines are defined as
 similar if they are either identical or contain only very minor differences.</p>
 
 <p>Code duplication in general is highly undesirable for a range of reasons. The artificially
 inflated amount of code is more difficult to understand, and sequences of similar but subtly different lines
-can mask the real purpose or intention behind them. Also, there is always a risk that only one 
+can mask the real purpose or intention behind them. Also, there is always a risk that only one
 of several copies of the code is updated to address a defect or add a feature.</p>
 
 </overview>
@@ -30,9 +30,9 @@ should a new level of abstraction be introduced?</p>
 </recommendation>
 <references>
 
-<li>E. Juergens, F. Deissenboeck, B. Hummel, S. Wagner. 
+<li>E. Juergens, F. Deissenboeck, B. Hummel, S. Wagner.
 <em>Do code clones matter?</em> Proceedings of the 31st International Conference on
-Software Engineering, 
+Software Engineering,
 485-495, 2009.</li>
 
 </references>

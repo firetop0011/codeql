@@ -3,18 +3,18 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>When you allocate an array from memory using <code>malloc</code>, <code>calloc</code> or 
-<code>realloc</code>, you should ensure that you allocate enough memory to contain an 
-instance of the required pointer type. Calls that are assigned to a non-void pointer 
-variable, but do not allocate enough memory will cause a buffer overflow when a field accessed 
-on the pointer points to memory that is beyond the allocated array. Buffer overflows can lead 
+<p>When you allocate an array from memory using <code>malloc</code>, <code>calloc</code> or
+<code>realloc</code>, you should ensure that you allocate enough memory to contain an
+instance of the required pointer type. Calls that are assigned to a non-void pointer
+variable, but do not allocate enough memory will cause a buffer overflow when a field accessed
+on the pointer points to memory that is beyond the allocated array. Buffer overflows can lead
 to anything from a segmentation fault to a security vulnerability.</p>
 
 </overview>
 <recommendation>
 <p>
-The highlighted call allocates memory that is too small to contain an instance of the type of 
-the pointer, which can cause a memory overrun. Use the <code>sizeof</code> operator to ensure 
+The highlighted call allocates memory that is too small to contain an instance of the type of
+the pointer, which can cause a memory overrun. Use the <code>sizeof</code> operator to ensure
 that the function call allocates enough memory for that type.
 </p>
 

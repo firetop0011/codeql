@@ -5,10 +5,10 @@ public class Example
    public static void Main()
    {
       var cal = new JapaneseCalendar();
-      // constructing date using current era 
+      // constructing date using current era
       var dat = cal.ToDateTime(2, 1, 2, 0, 0, 0, 0);
       Console.WriteLine($"{dat:s}");
-      // constructing date using current era 
+      // constructing date using current era
       dat = new DateTime(2, 1, 2, cal);
       Console.WriteLine($"{dat:s}");
    }

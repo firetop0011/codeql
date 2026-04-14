@@ -21,9 +21,9 @@ redirects on the server; then choose from that list based on the user input prov
 <example>
 
 <p>The following examples show the bad case and the good case respectively.
-The <code>bad</code> methods show an HTTP request parameter being used directly 
-in a URL redirect without validating the input, which facilitates phishing attacks. 
-In the <code>good1</code> method, it is shown how to solve this problem by verifying whether 
+The <code>bad</code> methods show an HTTP request parameter being used directly
+in a URL redirect without validating the input, which facilitates phishing attacks.
+In the <code>good1</code> method, it is shown how to solve this problem by verifying whether
 the user input is a known fixed string beginning.
 </p>
 

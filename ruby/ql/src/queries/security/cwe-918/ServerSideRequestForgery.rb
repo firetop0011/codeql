@@ -13,7 +13,7 @@ class PostsController < ActionController::Base
     # GOOD - path is validated against a known fixed string
     path = if params[:users_service_path] == "v1/users"
              "v1/users"
-           else 
+           else
              "v2/users"
            end
     response = Excon.post("users-service/#{path}", body: {user_id: user}).body

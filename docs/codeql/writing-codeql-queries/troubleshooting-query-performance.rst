@@ -13,7 +13,7 @@ Before reading the tips below, it is worth reiterating a few important points ab
 
 - CodeQL :ref:`predicates <predicates>` and :ref:`classes <classes>` are evaluated to database `tables <https://en.wikipedia.org/wiki/Table_(database)>`__. Large predicates generate large tables with many rows, and are therefore expensive to compute.
 - The QL language is implemented using standard database operations and `relational algebra <https://en.wikipedia.org/wiki/Relational_algebra>`__ (such as join, projection, and union). For more information about query languages and databases, see ":ref:`About the QL language <about-the-ql-language>`."
-- Queries are evaluated *bottom-up*, which means that a predicate is not evaluated until *all* of the predicates that it depends on are evaluated. For more information on query evaluation, see ":ref:`Evaluation of QL programs <evaluation-of-ql-programs>`." 
+- Queries are evaluated *bottom-up*, which means that a predicate is not evaluated until *all* of the predicates that it depends on are evaluated. For more information on query evaluation, see ":ref:`Evaluation of QL programs <evaluation-of-ql-programs>`."
 
 Performance tips
 ----------------
@@ -23,10 +23,10 @@ Follow the guidelines below to ensure that you don't get tripped up by the most 
 Eliminate cartesian products
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The performance of a predicate can often be judged by considering roughly how many results it has. 
+The performance of a predicate can often be judged by considering roughly how many results it has.
 One way of creating badly performing predicates is by using two variables without relating them in any way, or only relating them using a negation.
 This leads to computing the `Cartesian product <https://en.wikipedia.org/wiki/Cartesian_product>`__ between the sets of possible values for each variable, potentially generating a huge table of results.
-This can occur if you don't specify restrictions on your variables. 
+This can occur if you don't specify restrictions on your variables.
 For instance, consider the following predicate that checks whether a Java method ``m`` may access a field ``f``:
 
 .. code-block:: ql
@@ -47,7 +47,7 @@ This example shows a similar mistake in a member predicate:
 
      class Foo extends Class {
        ...
-       // BAD! Does not use ‘this’ 
+       // BAD! Does not use ‘this’
        Method getToString() {
          result.getName() = "ToString"
        }
@@ -60,7 +60,7 @@ To avoid making this mistake, ``this`` should be restricted in the member predic
 Use specific types
 ~~~~~~~~~~~~~~~~~~
 
-":ref:`Types <types>`" provide an upper bound on the size of a relation. 
+":ref:`Types <types>`" provide an upper bound on the size of a relation.
 This helps the query optimizer be more effective, so it's generally good to use the most specific types possible. For example:
 
 .. code-block:: ql
@@ -139,7 +139,7 @@ In the following example, we explore some lookups on two ``Element``\ s:
      e1.getLocation().getStartLine() = e2.getLocation().getStartLine()
    }
 
-Going from ``Element -> File`` and ``Element -> Location -> StartLine`` is linear--that is, there is only one ``File``, ``Location``, etc. for each ``Element``. 
+Going from ``Element -> File`` and ``Element -> Location -> StartLine`` is linear--that is, there is only one ``File``, ``Location``, etc. for each ``Element``.
 
 However, as written it is difficult for the optimizer to pick out the best ordering. Joining first and then doing the linear lookups later would likely result in poor performance. Generally, we want to do the quick, linear parts first, and then join on the resultant larger tables. We can initiate this kind of ordering by splitting the above predicate as follows:
 
@@ -150,7 +150,7 @@ However, as written it is difficult for the optimizer to pick out the best order
      f = e.getFile() and
      startLine = e.getLocation().getStartLine()
    }
-   
+
    predicate sameLoc(Element e1, Element e2) {
      exists(string name, File f, int startLine |
        locInfo(e1, name, f, startLine) and

@@ -1,9 +1,9 @@
 <beans>
     <import resource="services.xml"/>
-    
+
     <bean id="bean1" class="..."/>
     <bean id="bean2" class="..."/>
-    
+
     <!--AVOID: Imports in the middle of a bean configuration make it difficult
         to immediately determine the dependencies of the configuration-->
     <import resource="resources/messageSource.xml"/>
@@ -18,7 +18,7 @@
         what the dependencies of the configuration are-->
     <import resource="services.xml"/>
     <import resource="resources/messageSource.xml"/>
-    
+
     <bean id="bean1" class="..."/>
     <bean id="bean2" class="..."/>
     <bean id="bean3" class="..."/>

@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>If a call is made to a method from an inner class A, and a method of that name is 
+<p>If a call is made to a method from an inner class A, and a method of that name is
 defined in both a superclass of A and an outer class of A, it is not clear to a programmer
 which method is intended to be called.</p>
 
@@ -17,7 +17,7 @@ method that is defined in <code>Outer</code> or <code>Super</code>.</p>
 
 <sample src="AmbiguousOuterSuper.java" />
 
-<p>Inherited methods take precedence over methods in outer classes, so the method in the superclass 
+<p>Inherited methods take precedence over methods in outer classes, so the method in the superclass
 is called. However, such situations are a potential cause of confusion and defects.</p>
 
 </example>
@@ -31,7 +31,7 @@ is called. However, such situations are a potential cause of confusion and defec
 </ul>
 
 <p> In the above example, the call to <code>printMessage</code> could be replaced by
-either <code>Outer.this.printMessage</code> or <code>super.printMessage</code>, depending on which 
+either <code>Outer.this.printMessage</code> or <code>super.printMessage</code>, depending on which
 method you intend to call. To preserve the behavior in the example, use <code>super.printMessage</code>.</p>
 
 </recommendation>

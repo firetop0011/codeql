@@ -29,7 +29,7 @@ public class JSchOSInjectionSanitized {
             if (untrusted.contains(badChar)) {
                 System.out.println("Invalid host");
                 return;
-            }    
+            }
         }
 
         JSch jsch = new JSch();
@@ -43,4 +43,3 @@ public class JSchOSInjectionSanitized {
         channel.connect();
     }
 }
-

@@ -1,5 +1,5 @@
 name: codeql/javascript-examples
-groups: 
+groups:
   - javascript
   - examples
 dependencies:

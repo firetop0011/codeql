@@ -1,4 +1,4 @@
-# QLDoc style guide 
+# QLDoc style guide
 
 ## Introduction
 
@@ -84,7 +84,7 @@ Valid QL comments are known as QLDoc. This document describes the recommended st
 ### Deprecated predicates
 
 The documentation for deprecated predicates should be updated to emphasize the deprecation and specify what predicate to use as an alternative.
-Insert a sentence of the form `DEPRECATED: Use <other predicate> instead.` at the start of the QLDoc comment. 
+Insert a sentence of the form `DEPRECATED: Use <other predicate> instead.` at the start of the QLDoc comment.
 
 #### Example
 
@@ -109,11 +109,11 @@ Some predicates are internal-only declarations that cannot be made private. The 
 
 Certain special predicates should be documented consistently.
 
-- Always document `toString` as 
-  
+- Always document `toString` as
+
   ```ql
   /** Gets a textual representation of this element. */
-  string toString() { ... } 
+  string toString() { ... }
   ```
 
 - Always document `hasLocationInfo` as
@@ -163,7 +163,7 @@ class Callable extends ...
 
 ## QLDoc for modules
 
-Modules should be documented using a third-person verb phrase of the form `Provides <classes and predicates to do something>.` 
+Modules should be documented using a third-person verb phrase of the form `Provides <classes and predicates to do something>.`
 
 #### Example
 

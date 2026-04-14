@@ -1,5 +1,5 @@
 extensions:
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: sinkModel
     data:
@@ -30,7 +30,7 @@ extensions:
       - [mongoose.Query, "Member[find].WithArity[1,2,3,4].Argument[0]", mongodb.sink]
       - [mongoose.QueryStatic, "Argument[2]", mongodb.sink]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeModel
     data:
@@ -646,7 +646,7 @@ extensions:
       - ["mongoose/inferschematype.ResolvePathType", "mongoose/inferschematype.ResolvePathType", "TypeVar[mongoose.IfEquals.3].TypeVar[mongoose.Types.DocumentArray.0]"]
       - [mongoose, mongoose, "Member[mongoose]"]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: summaryModel
     data:
@@ -683,7 +683,7 @@ extensions:
       - [mongoose.Types.ObjectId, "", "", "Member[_id]", type]
       - [mongoose.VirtualType, "", "", "Member[get,set].ReturnValue", type]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeVariableModel
     data:

@@ -122,4 +122,3 @@
  * We might naively implement this as `predicate test_is_true(ControlFlowNode test, Context ctx)` but this would lead to negative recursion if we want to know when the test can be false.
  * Instead we implement it as `boolean test_result(ControlFlowNode test, Context ctx)` where the absence of a value indicates merely that we do (yet) know what value the test may have.
  */
-

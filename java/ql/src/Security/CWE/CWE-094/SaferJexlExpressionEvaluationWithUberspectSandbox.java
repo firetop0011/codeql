@@ -1,10 +1,10 @@
 public void evaluate(Socket socket) throws IOException {
   try (BufferedReader reader = new BufferedReader(
         new InputStreamReader(socket.getInputStream()))) {
-    
+
     JexlUberspect sandbox = new JexlUberspectSandbox();
     JexlEngine jexl = new JexlBuilder().uberspect(sandbox).create();
-      
+
     String input = reader.readLine();
     JexlExpression expression = jexl.createExpression(input);
     JexlContext context = new MapContext();
@@ -85,6 +85,6 @@ public void evaluate(Socket socket) throws IOException {
     @Override
     public JexlArithmetic.Uberspect getArithmetic(JexlArithmetic arithmetic) {
       return uberspect.getArithmetic(arithmetic);
-    } 
+    }
   }
 }

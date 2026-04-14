@@ -9,14 +9,14 @@ public class UserError extends NestedError {
 	private static final long serialVersionUID = 4132771414092814913L;
 
 	private final boolean reportAsInfoMessage;
-	
+
 	public UserError(String message) {
 		this(message, false);
 	}
-	
+
 	/**
 	 * A user-visible error
-	 * 
+	 *
 	 * @param message The message to display
 	 * @param reportAsInfoMessage If <code>true</code>, report as information only - not an error
 	 */
@@ -24,12 +24,12 @@ public class UserError extends NestedError {
 		super(message);
 		this.reportAsInfoMessage = reportAsInfoMessage;
 	}
-	
+
 	public UserError(String message, Throwable throwable) {
 		super(message,throwable);
 		this.reportAsInfoMessage = false;
 	}
-	
+
 	/**
 	 * If <code>true</code>, report the message without interpreting it as a fatal error
 	 */

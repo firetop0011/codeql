@@ -27,7 +27,7 @@ Ensure that the signature of the <code>readResolve</code> method in the class ma
 If <code>readResolve</code> is used for instance control of a serializable singleton,
 (that is, to make sure that deserializing a singleton class does not result in another instance of the singleton)
 it may be possible to use an <code>enum</code> with a single element instead. The Java serialization specification
-explicitly ensures that deserializing an <code>enum</code> does not create a new instance. 
+explicitly ensures that deserializing an <code>enum</code> does not create a new instance.
 (For details about this technique, see [Bloch].)
 </p>
 

@@ -124,4 +124,3 @@ module.exports._unrefActive = timers._unrefActive;
 module.exports.unenroll = timers.unenroll;
 
 module.exports.enroll = timers.enroll;
-

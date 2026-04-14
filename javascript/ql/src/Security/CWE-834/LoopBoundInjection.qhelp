@@ -7,10 +7,10 @@
 	<p>
 		Using the <code>.length</code> property of an untrusted object as a loop bound may
 		cause indefinite looping since a malicious attacker can set the
-		<code>.length</code> property to a very large number. For example, 
+		<code>.length</code> property to a very large number. For example,
 		when a program that expects an array is passed a JSON object such as
 		<code>{length: 1e100}</code>, the loop will be run for 10<sup>100</sup>
-		iterations. This may cause the program to hang or run out of memory, 
+		iterations. This may cause the program to hang or run out of memory,
 		which can be used to mount a denial-of-service (DoS) attack.
 	</p>
 </overview>
@@ -24,7 +24,7 @@
 
 <example>
 	<p>
-		In the example below, an HTTP request handler iterates over a 
+		In the example below, an HTTP request handler iterates over a
 		user-controlled object <code>obj</code> using the
 		<code>obj.length</code> property in order to copy the elements from
 		<code>obj</code> to an array.

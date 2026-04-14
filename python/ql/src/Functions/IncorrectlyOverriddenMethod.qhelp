@@ -19,16 +19,16 @@ overridden method.</p>
 
 </recommendation>
 <example>
-<p>In this example there is a mismatch between the legal parameters for the base 
-class method <code>(self, source, filename, symbol)</code> and the extension method 
-<code>(self, source)</code>. The extension method can be used to override the base 
+<p>In this example there is a mismatch between the legal parameters for the base
+class method <code>(self, source, filename, symbol)</code> and the extension method
+<code>(self, source)</code>. The extension method can be used to override the base
 method as long as values are not specified for the <code>filename</code> and (optional)
-<code>symbol</code> parameters. If the extension method was passed the additional 
+<code>symbol</code> parameters. If the extension method was passed the additional
 parameters accepted by the base method then an error would occur.</p>
 
 <sample src="SignatureIncorrectlyOverriddenMethod.py" />
 
-<p>The extension method should be updated to support the <code>filename</code> and 
+<p>The extension method should be updated to support the <code>filename</code> and
 <code>symbol</code> parameters supported by the overridden method.</p>
 
 </example>

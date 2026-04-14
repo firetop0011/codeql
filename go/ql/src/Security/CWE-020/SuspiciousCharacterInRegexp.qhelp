@@ -51,7 +51,7 @@
     <p>The check does not work, but can be fixed by escaping the backslash:</p>
     <sample src="SuspiciousCharacterInRegexpGood.go"/>
     <p>
-    Alternatively, you can use backtick-delimited raw string literals. 
+    Alternatively, you can use backtick-delimited raw string literals.
     For example, the <code>\b</code> in <code>regexp.Compile(`hello\bworld`)</code>
     matches a word boundary, not a backspace character, as within backticks <code>\b</code> is not an
     escape sequence.

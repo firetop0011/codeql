@@ -9,7 +9,7 @@ This metric measures the number of public functions for each public class.
 
 <p>
 A class with too many public functions is generally trying to do too much,
-either at the interface or implementation level or both. 
+either at the interface or implementation level or both.
 It can be difficult for readers to understand because there is a
 confusing list of operations. Such classes often lack cohesion and are prime candidates for refactoring.
 </p>
@@ -33,7 +33,7 @@ Class' refactoring from [Fowler].
 </li>
 
 <li>
-There may be lots of duplication within the class itself, that is, the actions of 
+There may be lots of duplication within the class itself, that is, the actions of
 some of the public functions may overlap. In this case, the solution
 is to redesign the interface so that each new public function has a single,
 unique responsibility.

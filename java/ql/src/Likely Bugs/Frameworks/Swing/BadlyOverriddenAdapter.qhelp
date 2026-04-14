@@ -64,14 +64,14 @@ Ensure that any overriding methods have exactly the same name as the overridden 
 <example>
 
 <p>In the following example, the programmer has tried to implement the <code>mouseClicked</code>
-function but has misspelled the function name. This makes the function inoperable but the programmer 
+function but has misspelled the function name. This makes the function inoperable but the programmer
 gets no warning about this from the compiler.</p>
 
 <sample src="BadlyOverriddenAdapter.java" />
 
 <p>
 In the following modified example, the function name is spelled correctly. It is also preceded by the
-<code>@Override</code> annotation, which will cause the compiler to display an error if there is 
+<code>@Override</code> annotation, which will cause the compiler to display an error if there is
 not a function of the same name to be overridden.</p>
 
 <sample src="BadlyOverriddenAdapterGood.java" />

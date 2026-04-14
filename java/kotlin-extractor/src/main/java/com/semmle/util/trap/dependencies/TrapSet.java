@@ -38,7 +38,7 @@ public class TrapSet extends TextFile
 	public TrapSet() {
 		super(LATEST_VERSION);
 	}
-	
+
 	@Override
 	protected Set<String> getSet(Path file, String label) {
 		if (label.equals(SOURCES)) return sources;
@@ -51,7 +51,7 @@ public class TrapSet extends TextFile
 
 	/**
 	 * Load a TRAP set (.set) file
-	 * 
+	 *
 	 * @param path the file to load
 	 */
 	public TrapSet(Path path) {
@@ -70,7 +70,7 @@ public class TrapSet extends TextFile
 	public Path getFile() {
 		return file;
 	}
-	
+
 	@Override
 	protected void parseError(Path file) {
 		throw new ResourceError("Corrupt TRAP set: " + file);
@@ -93,12 +93,12 @@ public class TrapSet extends TextFile
 	/**
 	 * @return the paths of the TRAP files contained in this TRAP set
 	 *         (relative to the trap directory)
-	 *         
+	 *
 	 */
 	public Set<String> trapFiles() {
 		return Collections.unmodifiableSet(traps);
 	}
-	
+
 	/**
 	 * @return the object names in this TRAP set
 	 *
@@ -117,7 +117,7 @@ public class TrapSet extends TextFile
 
 	/**
 	 * Add a fully-qualified path to a source-file.
-	 * 
+	 *
 	 * @param source the path to the source file to add
 	 */
 	public void addSource(String source) {
@@ -135,7 +135,7 @@ public class TrapSet extends TextFile
 
 	/**
 	 * Add a path to a TRAP file (relative to the trap directory).
-	 * 
+	 *
 	 * @param trap the path to the trap file to add
 	 * @return true if the path was not already present
 	 */
@@ -145,7 +145,7 @@ public class TrapSet extends TextFile
 
 	/**
 	 * Check if this set contains a TRAP path
-	 * 
+	 *
 	 * @param trap the path to check
 	 * @return true if this set contains the path
 	 */
@@ -156,8 +156,8 @@ public class TrapSet extends TextFile
 	/**
 	 * Are the sources mentioned in this TRAP set disjoint from the given
 	 * set of paths?
-	 * 
-	 * @param paths the set of paths to check disjointness with 
+	 *
+	 * @param paths the set of paths to check disjointness with
 	 * @return true if and only if the paths are disjoint
 	 */
 	public boolean sourcesDisjointFrom(Set<String> paths) {
@@ -169,7 +169,7 @@ public class TrapSet extends TextFile
 
 	/**
 	 * Save this TRAP set to a .set file (or throw a ResourceError on failure)
-	 * 
+	 *
 	 * @param file the file in which to save this set
 	 */
 	@Override

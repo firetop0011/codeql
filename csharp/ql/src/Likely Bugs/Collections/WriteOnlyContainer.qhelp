@@ -20,10 +20,10 @@ Either remove the collection if it is no longer needed, or ensure that it is use
 <example>
 
 <p>
-In this example, the property <code>Names</code> returns the wrong collection 
-(<code>genres</code>). This logic error means that the <code>names</code> collection 
+In this example, the property <code>Names</code> returns the wrong collection
+(<code>genres</code>). This logic error means that the <code>names</code> collection
 is populated but never accessed.
-</p> 
+</p>
 
 <sample src="WriteOnlyContainer.cs" />
 

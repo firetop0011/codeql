@@ -11,7 +11,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     http
       .csrf(csrf ->
         // BAD - CSRF protection shouldn't be disabled
-        csrf.disable() 
+        csrf.disable()
       );
   }
 }

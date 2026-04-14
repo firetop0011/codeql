@@ -30,7 +30,7 @@ is only loaded if the user input matches one of those options.</p>
 </example>
 
 <references>
-  <li>Microsoft: 
+  <li>Microsoft:
     <a href="https://docs.microsoft.com/en-us/dotnet/api/system.reflection.assembly?view=netframework-4.8">System.Reflection.Assembly</a>.
   </li>
 </references>

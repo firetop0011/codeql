@@ -37,11 +37,11 @@ public class Test
         byte[] saltBytes = GenerateSalt();
 
         // Add the salt to the hash.
-        byte[] rawSalted  = new byte[passBytes.Length + saltBytes.Length]; 
+        byte[] rawSalted  = new byte[passBytes.Length + saltBytes.Length];
         passBytes.CopyTo(rawSalted, 0);
         saltBytes.CopyTo(rawSalted, passBytes.Length);
 
-        //Create the salted hash.         
+        //Create the salted hash.
         SHA256 sha256 = SHA256.Create();
         byte[] saltedPassBytes = sha256.ComputeHash(rawSalted);
 

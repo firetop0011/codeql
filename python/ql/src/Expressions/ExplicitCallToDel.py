@@ -13,4 +13,3 @@ def extract_good(zippath, dest):
         zipped.extractall(dest)
     finally:
         zipped.close()
-

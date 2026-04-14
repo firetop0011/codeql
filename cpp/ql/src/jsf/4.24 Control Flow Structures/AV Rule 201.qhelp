@@ -7,9 +7,9 @@
 <overview>
 <p>
 This rule finds <code>for</code> loop variables that are being modified in the loop body. <code>for</code> loops should
-be reserved for simple iteration, use <code>while</code> loops for more complicated cases. Most developers assume that 
+be reserved for simple iteration, use <code>while</code> loops for more complicated cases. Most developers assume that
 the <code>for</code> loop iteration statement is the only thing that changes the value of the loop counter, so changing it
-inside the loop body can lead to confusion. 
+inside the loop body can lead to confusion.
 </p>
 
 
@@ -38,7 +38,7 @@ loop if the loop requires more complicated variable iteration.
   <a href="http://www.learncpp.com/cpp-tutorial/57-for-statements/">For statements</a>
 </li>
 <li>
-  Mats Henricson and Erik Nyquist, <i>Industrial Strength C++</i>, published by Prentice Hall PTR (1997). 
+  Mats Henricson and Erik Nyquist, <i>Industrial Strength C++</i>, published by Prentice Hall PTR (1997).
   Chapter 4: Control Flow, Rule 4.1 (<a href="https://web.archive.org/web/20190919025638/https://mongers.org/industrial-c++/">PDF</a>).
 </li>
 

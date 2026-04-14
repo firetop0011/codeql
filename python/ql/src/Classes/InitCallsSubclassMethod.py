@@ -44,5 +44,3 @@ class Sub(Super):
 
     def sub_set_up(self, arg):
         "Do some more set up"
-
-

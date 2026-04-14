@@ -12,26 +12,26 @@ Process
 
 When a QL program is run against a database, it is compiled into a variant of the logic
 programming language `Datalog <https://en.wikipedia.org/wiki/Datalog>`_. It is optimized for
-performance, and then evaluated to produce results. 
+performance, and then evaluated to produce results.
 
 These results are sets of ordered tuples. An ordered tuple is a finite, ordered sequence of
 values. For example, ``(1, 2, "three")`` is an ordered tuple with two integers and a string.
-There may be intermediate results produced while the program is being evaluated: these are also 
+There may be intermediate results produced while the program is being evaluated: these are also
 sets of tuples.
 
 A QL program is evaluated from the bottom up, so a predicate is usually only evaluated after
-all the predicates it depends on are evaluated. 
+all the predicates it depends on are evaluated.
 
-The database includes sets of ordered tuples for the `built-in predicates 
-<https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#built-ins>`_ and :ref:`external predicates <external>`. 
+The database includes sets of ordered tuples for the `built-in predicates
+<https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#built-ins>`_ and :ref:`external predicates <external>`.
 Each evaluation starts from these sets of tuples.
-The remaining predicates and types in the program are organized into a number of layers, based 
+The remaining predicates and types in the program are organized into a number of layers, based
 on the dependencies between them.
 These layers are evaluated to produce their own sets of tuples, by finding the least fixed point
 of each predicate. (For example, see ":ref:`recursion`.")
 
-The program's :ref:`queries <query>` determine which of these sets of tuples make up the final 
-results of the program. The results are sorted according to any ordering directives 
+The program's :ref:`queries <query>` determine which of these sets of tuples make up the final
+results of the program. The results are sorted according to any ordering directives
 (``order by``) in the queries.
 
 For more details about each step of the evaluation process, see the "`QL language specification
@@ -51,13 +51,13 @@ compilation errors:
   The QL compiler returns the error ``'i' is not bound to a value``:
 
   .. code-block:: ql
-  
+
       from int i
       select i
 
 - The following predicate generates two errors: ``'n' is not bound to a value`` and ``'result' is
   not bound to a value``:
-  
+
   .. code-block:: ql
 
       int timesTwo(int n) {
@@ -67,9 +67,9 @@ compilation errors:
 - The following class ``Person`` contains all strings that start with ``"Peter"``. There are
   infinitely many such strings, so this is another invalid definition. The QL compiler gives the
   error message ``'this' is not bound to a value``:
-  
+
   .. code-block:: ql
-  
+
       class Person extends string {
         Person() {
           this.matches("Peter%")
@@ -94,23 +94,23 @@ To avoid infinite relations in your queries, you must ensure that there are no u
 To do this, you can use the following mechanisms:
 
 #. **Finite types**: Variables of a finite :ref:`type <types>` are bound. In particular, any
-   type that is not :ref:`primitive <primitive-types>` is finite. 
+   type that is not :ref:`primitive <primitive-types>` is finite.
    To give a finite type to a variable, you can :ref:`declare <variable-declarations>` it with
    a finite type, use a :ref:`cast <casts>`, or use a :ref:`type check <type-checks>`.
 
 #. **Predicate calls**: A valid :ref:`predicate <predicates>` is usually range-restricted, so it
    :ref:`binds <predicate-binding>` all its arguments.
    Therefore, if you :ref:`call <calls>` a predicate on a variable, the variable becomes bound.
-   
-   .. pull-quote:: Important 
-      
+
+   .. pull-quote:: Important
+
       If a predicate uses non-standard binding sets, then it does **not** always bind
       all its arguments. In such a case, whether the predicate call binds a specific argument
       depends on which other arguments are bound, and what the binding sets say about the
       argument in question. For more information, see ":ref:`binding-sets`."
 
 #. **Binding operators**: Most operators, such as the :ref:`arithmetic operators <binary-operations>`,
-   require that all their operands are bound. For example, you can't add two variables in QL 
+   require that all their operands are bound. For example, you can't add two variables in QL
    unless you have a finite set of possible values for both of them.
 
    However, there are some built-in operators that can bind their arguments. For example, if
@@ -178,9 +178,9 @@ example, instead of ``int timesTwo(int n) { result = n * 2 }``, you could write:
 .. code-block:: ql
 
     int timesTwo(int n) {
-      n in [0 .. 10] and 
+      n in [0 .. 10] and
       result = n * 2
     }
 
-The predicate now binds ``n``, and the variable ``result`` automatically becomes bound by the 
+The predicate now binds ``n``, and the variable ``result`` automatically becomes bound by the
 computation ``result = n * 2``.

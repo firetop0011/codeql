@@ -23,6 +23,6 @@
        <name>tz</name>
        <required>false</required>
     </attribute>
-  </tag>       
+  </tag>
 
 </taglib>

@@ -1,5 +1,5 @@
 ...
-SSL_shutdown(ssl); 
+SSL_shutdown(ssl);
 SSL_shutdown(ssl); // BAD
 ...
     switch ((ret = SSL_shutdown(ssl))) {

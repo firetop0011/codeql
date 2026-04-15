@@ -1,7 +1,7 @@
 class Bad extends WebViewClient {
     // BAD: All certificates are trusted.
     public void onReceivedSslError (WebView view, SslErrorHandler handler, SslError error) { // $hasResult
-        handler.proceed(); 
+        handler.proceed();
     }
 }
 
@@ -18,5 +18,5 @@ class Good extends WebViewClient {
         catch (CertificateException|NoSuchAlgorithmException|InvalidKeyException|NoSuchProviderException|SignatureException e) {
             handler.cancel();
         }
-    }    
+    }
 }

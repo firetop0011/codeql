@@ -16,4 +16,3 @@ fun isExternalDeclaration(d: IrDeclaration): Boolean {
  * Returns true if `d` is not itself a class, but is a member of an external file class.
  */
 fun isExternalFileClassMember(d: IrDeclaration) = d !is IrClass && (d.parentClassOrNull?.let { it.isFileClass } ?: false)
-

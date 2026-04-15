@@ -211,4 +211,3 @@ Exercise 2
    from Southerner s
    where s.isAllowedIn("north") and isBald(s)
    select s
-

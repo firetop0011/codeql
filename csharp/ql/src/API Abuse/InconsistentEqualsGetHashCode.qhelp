@@ -19,7 +19,7 @@ retrieving objects of such a class in a hashing data structure.
 
 <example>
 
-<p>In the following example, the class <code>Bad</code> overrides 
+<p>In the following example, the class <code>Bad</code> overrides
 <code>Equals(object)</code> but not <code>GetHashCode()</code>.</p>
 
 <sample src="InconsistentEqualsGetHashCodeBad.cs" />

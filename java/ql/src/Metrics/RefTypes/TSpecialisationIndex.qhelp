@@ -15,7 +15,7 @@ behavior of its ancestor classes. It is computed as follows:</p>
 </ol>
 
 <p>
-If a class overrides many of the methods of its ancestor classes, it 
+If a class overrides many of the methods of its ancestor classes, it
 indicates that the abstractions in the ancestor classes should be reviewed.
 This is particularly true for subclasses that are lower down in the
 inheritance hierarchy. In general, subclasses should <em>add</em> behavior to their

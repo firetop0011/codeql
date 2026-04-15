@@ -3,10 +3,10 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>Python 2.3 introduced new-style classes (classes inheriting from object). New-style classes use 
-the C3 linearization method to determine a method resolution ordering (MRO) for each class. The C3 
-linearization method ensures that for a class C, if a class C1 precedes a class C2 in the MRO of C 
-then C1 should also precede C2 in the MRO of all subclasses of C. It is possible to create a 
+<p>Python 2.3 introduced new-style classes (classes inheriting from object). New-style classes use
+the C3 linearization method to determine a method resolution ordering (MRO) for each class. The C3
+linearization method ensures that for a class C, if a class C1 precedes a class C2 in the MRO of C
+then C1 should also precede C2 in the MRO of all subclasses of C. It is possible to create a
 situation where it is impossible to achieve this consistency and this will guarantee that a <code>
 TypeError</code> will be raised at runtime.</p>
 
@@ -16,8 +16,8 @@ TypeError</code> will be raised at runtime.</p>
 
 </recommendation>
 <example>
-<p>The MRO of class <code>X</code> is just <code>X, object</code>. The program will fail when the MRO 
-of class <code>Y</code> needs to be calculated because <code>object</code> precedes <code>X</code> in 
+<p>The MRO of class <code>X</code> is just <code>X, object</code>. The program will fail when the MRO
+of class <code>Y</code> needs to be calculated because <code>object</code> precedes <code>X</code> in
 the definition of <code>Y</code> but the opposite is true in the MRO of <code>X</code>.</p>
 <sample src="InconsistentMRO.py" />
 

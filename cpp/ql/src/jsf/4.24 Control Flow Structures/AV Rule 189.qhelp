@@ -8,15 +8,15 @@
 <!-- Mention that this rule may not be applicable in projects that don't follow the JSF standard. -->
 <include src="../jsfNote.inc.qhelp" />
 
-<p>Use of goto statements makes code more difficult to understand and maintain. Consequently, the use 
-of goto statements is deprecated except as a mechanism for breaking out of multiple nested loops. 
+<p>Use of goto statements makes code more difficult to understand and maintain. Consequently, the use
+of goto statements is deprecated except as a mechanism for breaking out of multiple nested loops.
 This rule identifies any goto statements that are called directly or from a single nested loop as violations.</p>
 
 </overview>
 <recommendation>
 <p>
-In most cases you should replace the goto statement in the highlighted code with an alternative jump statement 
-(break, continue or return). In deeply nested loops you may need to use a goto statement because 
+In most cases you should replace the goto statement in the highlighted code with an alternative jump statement
+(break, continue or return). In deeply nested loops you may need to use a goto statement because
 the break statement only exits from one level of the loop.</p>
 
 </recommendation>
@@ -32,7 +32,7 @@ the break statement only exits from one level of the loop.</p>
   MSDN Library: <a href="https://docs.microsoft.com/en-us/cpp/cpp/goto-statement-cpp">goto Statement (C++)</a>.
 </li>
 <li>
-  Mats Henricson and Erik Nyquist, <i>Industrial Strength C++</i>, published by Prentice Hall PTR (1997). 
+  Mats Henricson and Erik Nyquist, <i>Industrial Strength C++</i>, published by Prentice Hall PTR (1997).
   Chapter 4: Control Flow, Rule 4.6 (<a href="https://web.archive.org/web/20190919025638/https://mongers.org/industrial-c++/">PDF</a>).
 </li>
 <li>

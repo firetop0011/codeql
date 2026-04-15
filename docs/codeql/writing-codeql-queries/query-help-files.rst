@@ -5,18 +5,18 @@ Query help files
 
 Query help files tell users the purpose of a query, and recommend how to solve the potential problem the query finds.
 
-This topic provides detailed information on the structure of query help files. 
+This topic provides detailed information on the structure of query help files.
 For more information about how to write useful query help in a style that is consistent with the standard CodeQL queries, see the `Query help style guide <https://github.com/github/codeql/blob/main/docs/query-help-style-guide.md>`__ on GitHub.
 
 
 .. pull-quote::
 
    Note
- 
+
    You can access the query help for CodeQL queries by visiting `CodeQL query help <https://codeql.github.com/codeql-query-help>`__.
    You can also access the raw query help files in the `GitHub repository <https://github.com/github/codeql>`__.
-   For example, see the `JavaScript security queries <https://github.com/github/codeql/tree/main/javascript/ql/src/Security>`__ and `C/C++ critical queries <https://github.com/github/codeql/tree/main/cpp/ql/src/Critical>`__. 
-      
+   For example, see the `JavaScript security queries <https://github.com/github/codeql/tree/main/javascript/ql/src/Security>`__ and `C/C++ critical queries <https://github.com/github/codeql/tree/main/cpp/ql/src/Critical>`__.
+
 Overview
 ========
 
@@ -31,19 +31,19 @@ Query help files are written using a custom XML format, and stored in a file wit
 
    <!DOCTYPE qhelp SYSTEM "qhelp.dtd">
    <qhelp>
-       CONTAINS one or more section-level elements 
+       CONTAINS one or more section-level elements
    </qhelp>
 
-The header and single top-level ``qhelp`` element are both mandatory. 
+The header and single top-level ``qhelp`` element are both mandatory.
 The following sections explain additional elements that you may include in your query help files.
 
 .. pull-quote::
 
-   Code scanning does not process ``.qhelp`` files for custom CodeQL queries, so to show 
-   query help for custom queries in the code scanning UI you must convert the ``.qhelp`` files to markdown 
+   Code scanning does not process ``.qhelp`` files for custom CodeQL queries, so to show
+   query help for custom queries in the code scanning UI you must convert the ``.qhelp`` files to markdown
    and then include the markdown-rendered query help in SARIF files generated during an analysis.
-   For more information, see 
-   "`Analyzing databases with the CodeQL CLI <https://docs.github.com/en/code-security/codeql-cli/using-the-codeql-cli/analyzing-databases-with-the-codeql-cli#including-query-help-for-custom-codeql-queries-in-sarif-files>`__." 
+   For more information, see
+   "`Analyzing databases with the CodeQL CLI <https://docs.github.com/en/code-security/codeql-cli/using-the-codeql-cli/analyzing-databases-with-the-codeql-cli#including-query-help-for-custom-codeql-queries-in-sarif-files>`__."
 
 Section-level elements
 ======================
@@ -107,7 +107,7 @@ The following elements are optional child elements of the ``section``, ``example
    +----------------+----------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | ``warning``    | None                                                     | Text               | Display a warning that will be displayed very visibly on the resulting page. Such warnings are sometimes used on queries that are known to have low precision for many code bases; such queries are often disabled by default.                                                                            |
    +----------------+----------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   
+
 List elements
 =============
 
@@ -176,11 +176,11 @@ The ``include`` element can be used as a section or block element. The content o
 Section-level include elements
 ------------------------------
 
-Section-level ``include`` elements can be located beneath the top-level ``qhelp`` element. For example, in `StoredXSS.qhelp <https://github.com/github/codeql/blob/main/csharp/ql/src/Security%20Features/CWE-079/StoredXSS.qhelp>`__, a full query help file is reused: 
+Section-level ``include`` elements can be located beneath the top-level ``qhelp`` element. For example, in `StoredXSS.qhelp <https://github.com/github/codeql/blob/main/csharp/ql/src/Security%20Features/CWE-079/StoredXSS.qhelp>`__, a full query help file is reused:
 
-.. code-block:: xml 
-   
-   <qhelp> 
+.. code-block:: xml
+
+   <qhelp>
        <include src="XSS.qhelp" />
    </qhelp>
 
@@ -191,8 +191,8 @@ Block-level include elements
 
 Block-level ``include`` elements can be included beneath section-level elements. For example, an ``include`` element is used beneath the ``overview`` section in `ThreadUnsafeICryptoTransform.qhelp <https://github.com/github/codeql/blob/main/csharp/ql/src/Likely%20Bugs/ThreadUnsafeICryptoTransform.qhelp>`__:
 
-.. code-block:: xml 
-   
+.. code-block:: xml
+
    <qhelp>
        <overview>
            <include src="ThreadUnsafeICryptoTransformOverview.inc.qhelp" />
@@ -202,9 +202,9 @@ Block-level ``include`` elements can be included beneath section-level elements.
 
 The included file, `ThreadUnsafeICryptoTransformOverview.inc.qhelp <https://github.com/github/codeql/blob/main/csharp/ql/src/Likely%20Bugs/ThreadUnsafeICryptoTransformOverview.inc.qhelp>`_, may only contain one or more ``fragment`` sections. For example:
 
-.. code-block:: xml 
+.. code-block:: xml
 
-   <!DOCTYPE qhelp SYSTEM "qhelp.dtd"> 
+   <!DOCTYPE qhelp SYSTEM "qhelp.dtd">
    <qhelp>
       <fragment>
          <p>
@@ -212,4 +212,3 @@ The included file, `ThreadUnsafeICryptoTransformOverview.inc.qhelp <https://gith
          </p>
       </fragment>
    </qhelp>
-

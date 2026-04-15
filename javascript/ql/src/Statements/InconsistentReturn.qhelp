@@ -9,7 +9,7 @@ values of different types under different circumstances. In particular, a functi
 the special value <code>undefined</code>, while at other times it returns, say, a number. If this is
 the desired behavior, it should be documented by explicitly returning <code>undefined</code> or
 an expression that evaluates to <code>undefined</code> (such as <code>void 0</code>) rather than
-using a return statement without an explicit return value. 
+using a return statement without an explicit return value.
 </p>
 
 </overview>

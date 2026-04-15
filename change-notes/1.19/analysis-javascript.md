@@ -15,8 +15,8 @@
 
 * Type inference for function calls has been improved. This may give additional results for queries that rely on type inference.
 
-* Path explanations have been added to the relevant security queries. 
-Use [QL for Eclipse](https://help.semmle.com/ql-for-eclipse/Content/WebHelp/getting-started.html) 
+* Path explanations have been added to the relevant security queries.
+Use [QL for Eclipse](https://help.semmle.com/ql-for-eclipse/Content/WebHelp/getting-started.html)
 to run queries and explore the data flow in results.
 
 ## New LGTM queries

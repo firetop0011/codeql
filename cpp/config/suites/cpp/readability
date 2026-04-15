@@ -6,7 +6,7 @@
 + semmlecode-cpp-queries/Likely Bugs/Arithmetic/PointlessSelfComparison.ql: /Readability/Expressions
 + semmlecode-cpp-queries/Likely Bugs/Arithmetic/ComparisonWithCancelingSubExpr.ql: /Readability/Expressions
   # Control Flow
-+ semmlecode-cpp-queries/Best Practices/Likely Errors/EmptyBlock.ql: /Readability/Control Flow 
++ semmlecode-cpp-queries/Best Practices/Likely Errors/EmptyBlock.ql: /Readability/Control Flow
 + semmlecode-cpp-queries/Likely Bugs/Likely Typos/FutileConditional.ql: /Readability/Control Flow
 + semmlecode-cpp-queries/Likely Bugs/Likely Typos/DubiousNullCheck.ql: /Readability/Control Flow
 + semmlecode-cpp-queries/jsf/4.24 Control Flow Structures/AV Rule 197.ql: /Readability/Control Flow # Avoid floats in for loops
@@ -46,4 +46,3 @@
 + semmlecode-cpp-queries/jsf/4.10 Classes/AV Rule 88.ql: /Readability/JSF # Undisciplined multiple inheritance
 + semmlecode-cpp-queries/jsf/4.10 Classes/AV Rule 89.ql: /Readability/JSF # Inconsistent virtual inheritance
 + semmlecode-cpp-queries/jsf/4.10 Classes/AV Rule 95.ql: /Readability/JSF # Redefined default parameter
-

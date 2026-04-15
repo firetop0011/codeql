@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>Passing a character to the constructor of <code>StringBuilder</code> is probably intended to insert
-the character into the string. In fact, however, the character value is converted to an integer and 
+the character into the string. In fact, however, the character value is converted to an integer and
 interpreted as the internal buffer's initial capacity, so the character value is not inserted into the string.</p>
 </overview>
 
@@ -12,7 +12,7 @@ interpreted as the internal buffer's initial capacity, so the character value is
 
 <p>The following example shows a <code>ToString()</code> method which formats the contents of an array.
 However, the expression <code>new StringBuilder('(')</code> does not add the character <code>'('</code>
-to the string <code>str</code> but merely initializes the size of the buffer, so the resulting string 
+to the string <code>str</code> but merely initializes the size of the buffer, so the resulting string
 does not contain the leading <code>'('</code> character.</p>
 
 <sample src="StringBuilderCharInit.cs" />

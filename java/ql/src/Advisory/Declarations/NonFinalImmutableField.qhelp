@@ -5,10 +5,10 @@
 
 
 <overview>
-<p>A field of immutable type that is not declared <code>final</code>, but is assigned to only in a 
+<p>A field of immutable type that is not declared <code>final</code>, but is assigned to only in a
 constructor or static initializer of its declaring type, may lead to defects and makes code less
-readable. This is because other parts of the code may be based on the assumption that the field has 
-a constant value, and a later modification, which includes an assignment to the field, may 
+readable. This is because other parts of the code may be based on the assumption that the field has
+a constant value, and a later modification, which includes an assignment to the field, may
 invalidate this assumption.
 </p>
 
@@ -16,7 +16,7 @@ invalidate this assumption.
 <recommendation>
 
 <p>If a field of immutable type is assigned to only during class or instance initialization,
-you should usually declare it <code>final</code>. This forces the compiler to verify that the field 
+you should usually declare it <code>final</code>. This forces the compiler to verify that the field
 value cannot be changed subsequently, which can help to avoid defects and increase code readability.
 </p>
 

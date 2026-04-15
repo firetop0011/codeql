@@ -50,4 +50,3 @@ public class Date2Tag extends SimpleTagSupport
         fragment.invoke(null);
     }
 }
-

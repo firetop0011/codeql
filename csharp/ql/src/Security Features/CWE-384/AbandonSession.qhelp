@@ -13,7 +13,7 @@ session may be started.
 <recommendation>
 
 <p>
-Always call <code>HttpSessionState.Abandon()</code> to ensure that the previous session is not used 
+Always call <code>HttpSessionState.Abandon()</code> to ensure that the previous session is not used
 by the new user.
 </p>
 

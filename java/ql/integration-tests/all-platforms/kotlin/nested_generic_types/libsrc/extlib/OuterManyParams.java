@@ -19,4 +19,3 @@ public class OuterManyParams<A, B> {
   }
 
 }
-

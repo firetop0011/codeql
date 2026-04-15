@@ -14,7 +14,7 @@
       and configure the Rails routes in your application to call them accordingly.
     </p>
   </recommendation>
-  
+
   <references>
     <li>
       See https://guides.rubyonrails.org/routing.html for more information.

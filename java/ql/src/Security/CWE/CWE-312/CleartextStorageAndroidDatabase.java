@@ -12,7 +12,7 @@ public void sqliteStorageSafe(Context ctx, String name, String password) {
 
 public void sqlCipherStorageSafe(String name, String password, String databasePassword) {
 	// GOOD - sensitive information saved using SQLCipher.
-	net.sqlcipher.database.SQLiteDatabase db = 
+	net.sqlcipher.database.SQLiteDatabase db =
 		net.sqlcipher.database.SQLiteDatabase.openOrCreateDatabase("test", databasePassword, null);
 	db.execSQL("INSERT INTO users VALUES (?, ?)", new String[] {name, password});
 }

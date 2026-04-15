@@ -60,7 +60,7 @@ class Converter:
         extensions = { }
         for key in rows:
             extensions[key] = helpers.addsToTemplate.format(f"codeql/{self.language}-all", predicate, rows[key])
-    
+
         return extensions
 
 

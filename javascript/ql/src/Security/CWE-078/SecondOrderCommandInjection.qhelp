@@ -4,8 +4,8 @@
 <qhelp>
 <overview>
 <p>
-Some shell commands, like <code>git ls-remote</code>, can execute 
-arbitrary commands if a user provides a malicious URL that starts with 
+Some shell commands, like <code>git ls-remote</code>, can execute
+arbitrary commands if a user provides a malicious URL that starts with
 <code>--upload-pack</code>. This can be used to execute arbitrary code on
 the server.
 </p>

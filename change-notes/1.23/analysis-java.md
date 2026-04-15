@@ -22,8 +22,8 @@ The following changes in version 1.23 affect Java analysis in all applications.
 
 ## Changes to libraries
 
-The data-flow library has been extended with a new feature to aid debugging. 
-Previously, to explore the possible flow from all sources you could specify `isSink(Node n) { any() }` on a configuration. 
-Now you can use the new `Configuration::hasPartialFlow` predicate, 
+The data-flow library has been extended with a new feature to aid debugging.
+Previously, to explore the possible flow from all sources you could specify `isSink(Node n) { any() }` on a configuration.
+Now you can use the new `Configuration::hasPartialFlow` predicate,
 which gives a more complete picture of the partial flow paths from a given source, including flow that doesn't reach any sink.
 The feature is disabled by default and can be enabled for individual configurations by overriding `int explorationLimit()`.

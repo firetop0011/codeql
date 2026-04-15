@@ -17,7 +17,7 @@ formatting of the string are avoided.</p>
 </recommendation>
 <example>
 
-<p>In the following example, <code>latlonCoords</code> contains a string 
+<p>In the following example, <code>latlonCoords</code> contains a string
 that has been entered by a user but not validated by the program. This
 allows the user to, for example, append an ampersand (&amp;) followed by the command for
 a malicious program to the end of the string. The ampersand instructs

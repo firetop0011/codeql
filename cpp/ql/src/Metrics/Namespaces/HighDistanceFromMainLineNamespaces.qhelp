@@ -7,7 +7,7 @@
 <overview>
 <p>This query finds namespaces that do not have a good balance between abstractness and stability where:</p>
 <ul>
-<li> 
+<li>
 Abstractness measures the proportion of abstract types in a namespace relative to the total number of types in that namespace.
 </li>
 <li>

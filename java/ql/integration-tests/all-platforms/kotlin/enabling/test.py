@@ -6,4 +6,3 @@ for var in ['CODEQL_EXTRACTOR_JAVA_AGENT_ENABLE_KOTLIN',
         del(os.environ[var])
 
 run_codeql_database_create(['"%s" build.py' % sys.executable], lang="java")
-

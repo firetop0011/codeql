@@ -1,6 +1,6 @@
 /**
  * This is a constant.
- * 
+ *
  * @const x
  */
 /** @class {Object} klass */

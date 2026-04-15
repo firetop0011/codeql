@@ -3,8 +3,8 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>Passing an identity function to LINQ's <code>Select</code> method (either explicitly or 
-implicitly) yields a sequence that is the same as the one on which <code>Select</code> was called - 
+<p>Passing an identity function to LINQ's <code>Select</code> method (either explicitly or
+implicitly) yields a sequence that is the same as the one on which <code>Select</code> was called -
 such a call is redundant.</p>
 
 </overview>

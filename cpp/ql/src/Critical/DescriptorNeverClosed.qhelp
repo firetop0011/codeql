@@ -18,7 +18,7 @@ Leaving descriptors open will cause a resource leak that will persist even after
 </recommendation>
 
 <example>
-<p>In the example below, the <code>sockfd</code> socket remains open when the <code>main</code> program finishes. 
+<p>In the example below, the <code>sockfd</code> socket remains open when the <code>main</code> program finishes.
 The code should be updated to ensure that the socket is always closed when the program terminates.
 </p>
 

@@ -1,5 +1,5 @@
 lgtm,codescanning
-* Server side form parsing libraries are now recognized as source of remote user input. 
+* Server side form parsing libraries are now recognized as source of remote user input.
   Affected packages are
     [multer](https://www.npmjs.com/package/multer),
     [busboy](https://www.npmjs.com/package/busboy),

@@ -17,7 +17,7 @@ for one of two reasons:
 One or more individual methods of the type contain too many statements, making
 them hard to understand, difficult to check and a common source of defects
 (particularly towards the end of the methods, since few people ever read that
-far). These methods typically lack cohesion because they are trying to do too many things. 
+far). These methods typically lack cohesion because they are trying to do too many things.
 </li>
 
 <li>

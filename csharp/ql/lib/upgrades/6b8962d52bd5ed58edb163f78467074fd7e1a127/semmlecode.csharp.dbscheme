@@ -472,7 +472,7 @@ type_mention_location(
  */
 type_annotation(int id: @has_type_annotation ref, int annotation: int ref);
 
-/** The annotation of type arguments of a constructed type or method. */ 
+/** The annotation of type arguments of a constructed type or method. */
 type_argument_annotation(int constructedgeneric: @generic ref, int position: int ref, int annotation: int ref);
 
 /** GENERICS **/
@@ -972,7 +972,7 @@ case @expr.kind of
 | 109 = @local_function_invocation_expr
 | 110 = @ref_expr
 | 111 = @discard_expr
-/* C# 8.0 */ 
+/* C# 8.0 */
 | 112 = @range_expr
 | 113 = @index_expr
 | 114 = @switch_expr

@@ -1,7 +1,7 @@
 class WrongNote implements Serializable {
 	// BAD: serialVersionUID must be static, final, and 'long'
 	private static final int serialVersionUID = 1;
-	
+
 	//...
 }
 

@@ -22,4 +22,3 @@ class Spam:
 
     def __str__(self):
         return '%s and %s' % (self.spam, self.eggs) # OK
-

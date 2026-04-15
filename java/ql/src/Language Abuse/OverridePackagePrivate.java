@@ -19,11 +19,11 @@ package gui.extras;
 class PhotoResizerWidget extends Widget
 {
     // ...
- 
+
     // Return the new width (of the photo when resized)
     public int width() {
         // ...
     }
-   
+
     // ...
 }

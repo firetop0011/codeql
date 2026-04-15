@@ -3,9 +3,9 @@
 About CodeQL packs
 ==================
 
-.. pull-quote:: 
+.. pull-quote::
   This article was moved to "`About CodeQL packs <https://docs.github.com/en/code-security/codeql-cli/codeql-cli-reference/about-codeql-packs>`__" on the `GitHub Docs <https://docs.github.com/en/code-security/codeql-cli>`__ site as of January 2023.
-  
+
   .. include:: ../reusables/codeql-cli-articles-migration-note.rst
 
 .. include:: ../reusables/codeql-cli-migration-toc-note.rst

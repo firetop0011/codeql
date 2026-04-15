@@ -10,12 +10,12 @@ Formulas define logical relations between the free variables used in expressions
 Depending on the values assigned to those :ref:`free variables <free-variables>`, a formula can be true or false.
 When a formula is true, we often say that the formula *holds*.
 For example, the formula ``x = 4 + 5`` holds if the value ``9`` is assigned to ``x``, but it
-doesn't hold for other assignments to ``x``. 
-Some formulas don't have any free variables. For example ``1 < 2`` always holds, and ``1 > 2`` 
+doesn't hold for other assignments to ``x``.
+Some formulas don't have any free variables. For example ``1 < 2`` always holds, and ``1 > 2``
 never holds.
 
 You usually use formulas in the bodies of classes, predicates, and select clauses to constrain
-the set of values that they refer to. 
+the set of values that they refer to.
 For example, you can define a class containing all integers ``i`` for which the formula ``i in
 [0 .. 9]`` holds.
 
@@ -36,7 +36,7 @@ Order
 =====
 
 To compare two expressions using one of these order operators, each expression must have a type
-and those types must be :ref:`compatible <type-compatibility>` and 
+and those types must be :ref:`compatible <type-compatibility>` and
 `orderable <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#ordering>`_.
 
 +--------------------------+--------+
@@ -51,7 +51,7 @@ and those types must be :ref:`compatible <type-compatibility>` and
 | Less than or equal to    | ``<=`` |
 +--------------------------+--------+
 
-For example, the formulas ``"Ann" < "Anne"`` and ``5 + 6 >= 11`` both hold. 
+For example, the formulas ``"Ann" < "Anne"`` and ``5 + 6 >= 11`` both hold.
 
 .. index:: equals
 .. _equality:
@@ -119,7 +119,7 @@ A type check is a formula that looks like:
 
     <expression> instanceof <type>
 
-You can use a type check formula to check whether an expression has a certain type. For 
+You can use a type check formula to check whether an expression has a certain type. For
 example, ``x instanceof Person`` holds if the variable ``x`` has type ``Person``.
 
 .. index:: in
@@ -133,11 +133,11 @@ A range check is a formula that looks like:
 
     <expression> in <range>
 
-You can use a range check formula to check whether a numeric expression is in a given 
-:ref:`range <ranges>`. For example, ``x in [2.1 .. 10.5]`` holds if the variable ``x`` is 
+You can use a range check formula to check whether a numeric expression is in a given
+:ref:`range <ranges>`. For example, ``x in [2.1 .. 10.5]`` holds if the variable ``x`` is
 between the values ``2.1`` and ``10.5`` (including ``2.1`` and ``10.5`` themselves).
 
-Note that ``<expression> in <range>`` is equivalent to ``<expression> = <range>``. 
+Note that ``<expression> in <range>`` is equivalent to ``<expression> = <range>``.
 Both formulas check whether the set of values denoted by ``<expression>`` is the same as the
 set of values denoted by ``<range>``.
 
@@ -146,18 +146,18 @@ set of values denoted by ``<range>``.
 Calls to predicates
 *******************
 
-A call is a formula or :ref:`expression <expressions>` that consists of a reference to a 
-predicate and a number of arguments. 
+A call is a formula or :ref:`expression <expressions>` that consists of a reference to a
+predicate and a number of arguments.
 
 For example, ``isThree(x)`` might be a call to a predicate that holds if the argument ``x`` is
 ``3``, and ``x.isEven()`` might be a call to a member predicate that holds if ``x`` is even.
 
 A call to a predicate can also contain a closure operator, namely ``*`` or ``+``. For example,
-``a.isChildOf+(b)`` is a call to the :ref:`transitive closure <transitive-closures>` of 
+``a.isChildOf+(b)`` is a call to the :ref:`transitive closure <transitive-closures>` of
 ``isChildOf()``, so it holds if ``a`` is a descendant of ``b``.
 
-The predicate reference must resolve to exactly one predicate. For more information about how a predicate 
-reference is resolved, see ":ref:`name-resolution`." 
+The predicate reference must resolve to exactly one predicate. For more information about how a predicate
+reference is resolved, see ":ref:`name-resolution`."
 
 If the call resolves to a predicate without result, then the call is a formula.
 
@@ -170,7 +170,7 @@ Parenthesized formulas
 **********************
 
 A parenthesized formula is any formula surrounded by parentheses, ``(`` and ``)``. This formula
-has exactly the same meaning as the enclosed formula. The parentheses often help to improve 
+has exactly the same meaning as the enclosed formula. The parentheses often help to improve
 readability and group certain formulas together.
 
 .. _quantified-formulas:
@@ -186,7 +186,7 @@ This is a way to create new formulas from existing ones.
 Explicit quantifiers
 ====================
 
-The following explicit "quantifiers" are the same as the usual existential and universal quantifiers in 
+The following explicit "quantifiers" are the same as the usual existential and universal quantifiers in
 mathematical logic.
 
 .. index:: exists
@@ -209,7 +209,7 @@ that the variables could take to make the formula in the body true.
 For example, ``exists(int i | i instanceof OneTwoThree)`` introduces a temporary variable of
 type ``int`` and holds if any value of that variable has type ``OneTwoThree``.
 
-.. index:: forall 
+.. index:: forall
 
 ``forall``
 ----------
@@ -221,14 +221,14 @@ This quantifier has the following syntax:
     forall(<variable declarations> | <formula 1> | <formula 2>)
 
 ``forall`` introduces some new variables, and typically has two formulas in its body. It holds
-if ``<formula 2>`` holds for all values that ``<formula 1>`` holds for. 
+if ``<formula 2>`` holds for all values that ``<formula 1>`` holds for.
 
 For example, ``forall(int i | i instanceof OneTwoThree | i < 5)`` holds if all integers
 that are in the class ``OneTwoThree`` are also less than ``5``.
 In other words, if there is a value in ``OneTwoThree`` that is greater than or equal to ``5``,
 then the formula doesn't hold.
 
-Note that ``forall(<vars> | <formula 1> | <formula 2>)`` is 
+Note that ``forall(<vars> | <formula 1> | <formula 2>)`` is
 logically the same as ``not exists(<vars> | <formula 1> | not <formula 2>)``.
 
 .. index:: forex
@@ -246,12 +246,12 @@ This quantifier exists as a shorthand for:
 
 .. code-block:: ql
 
-    forall(<vars> | <formula 1> | <formula 2>) and 
+    forall(<vars> | <formula 1> | <formula 2>) and
     exists(<vars> | <formula 1> | <formula 2>)
 
 In other words, ``forex`` works in a similar way to ``forall``, except that it ensures that
 there is at least one value for which ``<formula 1>`` holds.
-To see why this is useful, note that the ``forall`` quantifier could hold trivially. 
+To see why this is useful, note that the ``forall`` quantifier could hold trivially.
 For example, ``forall(int i | i = 1 and i = 2 | i = 3)`` holds: there are no integers ``i``
 which are equal to both ``1`` and ``2``, so the second part of the body ``(i = 3)`` holds for
 every integer for which the first part holds.
@@ -264,8 +264,8 @@ useful shorthand.
 Implicit quantifiers
 ====================
 
-Implicitly quantified variables can be introduced using "don't care expressions." These are used 
-when you need to introduce a variable to use as an argument to a predicate call, but don't care 
+Implicitly quantified variables can be introduced using "don't care expressions." These are used
+when you need to introduce a variable to use as an argument to a predicate call, but don't care
 about its value. For further information, see ":ref:`Don't-care expressions <don-t-care-expressions>`."
 
 .. _logical-connectives:
@@ -357,7 +357,7 @@ The following query selects files that are not HTML files.
     where not f.getFileType().isHtml()
     select f
 
-.. pull-quote:: Note 
+.. pull-quote:: Note
 
    You should be careful when using ``not`` in a recursive definition, as this could lead to
    non-monotonic recursion. For more information, ":ref:`non-monotonic-recursion`."
@@ -390,8 +390,8 @@ a public class and returns ``"private"`` otherwise:
 ``and``
 =======
 
-You can use the keyword ``and`` between two formulas. The resulting formula is called a 
-conjunction. 
+You can use the keyword ``and`` between two formulas. The resulting formula is called a
+conjunction.
 
 ``A and B`` holds if, and only if, both ``A`` and ``B`` hold.
 
@@ -403,7 +403,7 @@ than 200 lines of code:
 .. code-block:: ql
 
     from File f
-    where f.getExtension() = "js" and 
+    where f.getExtension() = "js" and
       f.getNumberOfLinesOfCode() < 200
     select f
 
@@ -413,8 +413,8 @@ than 200 lines of code:
 ``or``
 ======
 
-You can use the keyword ``or`` between two formulas. The resulting formula is called a 
-disjunction. 
+You can use the keyword ``or`` between two formulas. The resulting formula is called a
+disjunction.
 
 ``A or B`` holds if at least one of ``A`` or ``B`` holds.
 
@@ -437,7 +437,7 @@ With the following definition, an integer is in the class ``OneTwoThree`` if it 
 ``implies``
 ===========
 
-You can use the keyword ``implies`` between two formulas. The resulting formula is called an 
+You can use the keyword ``implies`` between two formulas. The resulting formula is called an
 implication. This is just a simplified notation: ``A implies B`` is the same as writing ``(not A) or B``.
 
 **Example**
@@ -456,7 +456,7 @@ The following query selects any ``SmallInt`` that is odd, or a multiple of ``4``
 
 .. rubric:: Footnotes
 
-.. [#] The difference between ``A != B`` and ``not A = B`` is due to the underlying quantifiers. 
+.. [#] The difference between ``A != B`` and ``not A = B`` is due to the underlying quantifiers.
        If you think of ``A`` and ``B`` as sets of values, then ``A != B`` means:
 
        .. code-block:: ql
@@ -468,6 +468,6 @@ The following query selects any ``SmallInt`` that is odd, or a multiple of ``4``
        .. code-block:: ql
 
            not exists( a, b | a in A and b in B | a = b )
-       
+
        This is equivalent to ``forall( a, b | a in A and b in B | a != b )``, which is very
        different from the first formula.

@@ -1,7 +1,7 @@
 from create_database_utils import *
 import glob
 
-# Compile Java untraced. Note the Java source is hidden under `javasrc` so the Kotlin compiler 
+# Compile Java untraced. Note the Java source is hidden under `javasrc` so the Kotlin compiler
 # will certainly reference the jar, not the source or class file for extlib.Lib
 
 os.mkdir('build')

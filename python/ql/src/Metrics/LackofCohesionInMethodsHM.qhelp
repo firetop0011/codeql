@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>
-A cohesive class is one in which most methods access the same fields. A class that 
+A cohesive class is one in which most methods access the same fields. A class that
 lacks cohesion is usually one that has multiple responsibilities.
 </p>
 
@@ -25,8 +25,8 @@ disjoint subgraphs in a graph of intra-class dependencies.
 
 <p>
 Classes generally lack cohesion because they have more responsibilities
-than they should (see [Martin]). In general, the solution is to identify each 
-of the different responsibilities that the class has, and split them 
+than they should (see [Martin]). In general, the solution is to identify each
+of the different responsibilities that the class has, and split them
 into multiple classes, using the 'Extract Class' refactoring from [Fowler], for
 example.
 </p>

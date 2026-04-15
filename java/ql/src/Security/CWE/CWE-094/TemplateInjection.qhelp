@@ -15,7 +15,7 @@ use a sandboxed environment where access to unsafe attributes and methods is pro
 </recommendation>
 <example>
 <p>
-In the example given below, an untrusted HTTP parameter <code>code</code> is used as a Velocity template string. 
+In the example given below, an untrusted HTTP parameter <code>code</code> is used as a Velocity template string.
 This can lead to remote code execution.
 </p>
 <sample src="SSTIBad.java" />

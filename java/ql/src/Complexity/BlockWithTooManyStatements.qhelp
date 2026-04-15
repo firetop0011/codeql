@@ -19,7 +19,7 @@ For the purposes of this rule, loops and switch statements are considered to be 
 </overview>
 <recommendation>
 
-<p>To make the code more understandable and less complex, identify logical units and extract them to 
+<p>To make the code more understandable and less complex, identify logical units and extract them to
 new methods. As a result, the top-level logic becomes clearer.</p>
 
 </recommendation>

@@ -29,4 +29,3 @@ runs:
       run: |
         echo "$VERSION"
         echo "version=${VERSION}" >> $GITHUB_OUTPUT
-

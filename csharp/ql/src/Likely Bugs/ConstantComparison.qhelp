@@ -9,7 +9,7 @@
     For example unsigned integers are always greater than or equal to zero, and <code>byte</code>
     values are always less than 256.
     </p>
-    
+
     <p>The following expressions always have the same result:</p>
     <ul>
     <li><code>Unsigned &lt; 0</code> is always false,</li>
@@ -20,24 +20,24 @@
     <li><code>Byte &lt; 512</code> is always true.</li>
     </ul>
   </overview>
-    
+
   <recommendation>
     <p>
     Examine the logic of the program to determine whether the comparison is necessary.
     Either change the data types, or remove the unnecessary code.
     </p>
   </recommendation>
-    
+
   <example>
     <p>The following example attempts to count down from <code>numberOfOrders</code> to <code>0</code>,
     however the loop never terminates because <code>order</code> is an unsigned integer and so the
     condition <code>order >= 0</code> is always true.</p>
 
-    <sample src="ConstantComparison.cs"/> 
-    
+    <sample src="ConstantComparison.cs"/>
+
     <p>The solution is to change the type of the variable <code>order</code>.</p>
   </example>
-  
+
   <references>
     <li>
       MSDN Library: <a href="https://msdn.microsoft.com/en-us/library/6a71f45d.aspx">C# Operators</a>.

@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>
-A method that contains a high level of nesting can be very difficult to understand. As noted in 
+A method that contains a high level of nesting can be very difficult to understand. As noted in
 [McConnell], the human brain cannot easily handle more than three levels of nested <code>if</code>
 statements.</p>
 
@@ -20,7 +20,7 @@ For more ways to reduce the level of nesting in a method, see [McConnell].
 </p>
 
 <p>
-Furthermore, a method that has a high level of nesting often indicates that its design can be 
+Furthermore, a method that has a high level of nesting often indicates that its design can be
 improved in other ways, as well as dealing with the nesting problem itself.
 </p>
 

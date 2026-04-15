@@ -5,12 +5,12 @@
 
 
 <overview>
-<p>This rule finds expressions that take the size of a function parameter of array type. 
-In C, function parameters of array type are treated as if they had the corresponding pointer type, 
+<p>This rule finds expressions that take the size of a function parameter of array type.
+In C, function parameters of array type are treated as if they had the corresponding pointer type,
 so their size is always the size of the pointer type (typically either four or eight).
 In particular, one cannot determine the size of a memory buffer passed as a parameter in this way.
 
-Using the <code>sizeof</code> operator on pointer types will produce unexpected results if the developer intended 
+Using the <code>sizeof</code> operator on pointer types will produce unexpected results if the developer intended
 to get the size of an array instead of the pointer.
 </p>
 

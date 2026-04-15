@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>In a loop condition, comparison of a value of a narrow type with a value of a wide type may 
+<p>In a loop condition, comparison of a value of a narrow type with a value of a wide type may
 always evaluate to <code>true</code> if the wider value is sufficiently large (or small). This is
 because the narrower value may overflow. This can lead to an infinite loop.</p>
 
@@ -16,13 +16,13 @@ comparison is at least as wide as the value it is being compared with.</p>
 </recommendation>
 <example>
 
-<p>In this example, <code>bytesReceived</code> is compared against <code>MAXGET</code> in a 
-<code>while</code> loop. However, <code>bytesReceived</code> is a <code>short</code>, and 
-<code>MAXGET</code> is a <code>long</code>. Because <code>MAXGET</code> is larger than 
-<code>Short.MAX_VALUE</code>, the loop condition is always <code>true</code>, so the loop never 
+<p>In this example, <code>bytesReceived</code> is compared against <code>MAXGET</code> in a
+<code>while</code> loop. However, <code>bytesReceived</code> is a <code>short</code>, and
+<code>MAXGET</code> is a <code>long</code>. Because <code>MAXGET</code> is larger than
+<code>Short.MAX_VALUE</code>, the loop condition is always <code>true</code>, so the loop never
 terminates.</p>
 
-<p>This problem is avoided in the 'GOOD' case because <code>bytesReceived2</code> is a 
+<p>This problem is avoided in the 'GOOD' case because <code>bytesReceived2</code> is a
 <code>long</code>, which is as wide as the type of <code>MAXGET</code>.</p>
 
 <sample src="ComparisonWithWiderType.java" />

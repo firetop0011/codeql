@@ -23,8 +23,8 @@ It is important that the correct escaping is used for the type of evaluation tha
 <example>
 <p>
 The following example shows two functions setting a name from a request.
-The first function uses <code>exec</code> to execute the <code>setname</code> function. 
-This is dangerous as it can allow a malicious user to execute arbitrary code on the server. 
+The first function uses <code>exec</code> to execute the <code>setname</code> function.
+This is dangerous as it can allow a malicious user to execute arbitrary code on the server.
 For example, the user could supply the value <code>"' + subprocess.call('rm -rf') + '"</code>
 to destroy the server's file system.
 The second function calls the <code>setname</code> function directly and is thus safe.

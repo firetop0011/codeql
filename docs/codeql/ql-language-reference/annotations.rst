@@ -46,7 +46,7 @@ Overview of annotations
 ***********************
 
 This section describes what the different annotations do, and when you can use them.
-You can also find a summary table in the Annotations section of the 
+You can also find a summary table in the Annotations section of the
 `QL language specification <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#annotations>`_.
 
 .. index:: abstract
@@ -61,7 +61,7 @@ The ``abstract`` annotation is used to define an abstract entity.
 
 For information about **abstract classes**, see ":ref:`Classes <abstract-classes>`."
 
-**Abstract predicates** are member predicates that have no body. They can be defined on any 
+**Abstract predicates** are member predicates that have no body. They can be defined on any
 class, and should be :ref:`overridden <overriding-member-predicates>` in non-abstract subtypes.
 
 Here is an example that uses abstract predicates. A common pattern when writing data flow
@@ -90,7 +90,7 @@ own body, or they must inherit from another class that overrides ``isSource``:
     class ConfigA extends Configuration {
       ...
       // provides a concrete definition of `isSource`
-      override predicate isSource(Node source) { ... } 
+      override predicate isSource(Node source) { ... }
     }
     class ConfigB extends ConfigA {
       ...
@@ -106,7 +106,7 @@ own body, or they must inherit from another class that overrides ``isSource``:
 **Available for**: |classes|, |algebraic datatypes|, |characteristic predicates|, |member predicates|, |non-member predicates|, |modules|
 
 The ``cached`` annotation indicates that an entity should be evaluated in its entirety and
-stored in the evaluation cache. All later references to this entity will use the 
+stored in the evaluation cache. All later references to this entity will use the
 already-computed data. This affects references from other queries, as well as from the current query.
 
 For example, it can be helpful to cache a predicate that takes a long time to evaluate, and is
@@ -142,7 +142,7 @@ For example, the name ``DataFlowNode`` is deprecated and has the following QLDoc
     /**
      * DEPRECATED: Use `DataFlow::Node` instead.
      *
-     * An expression or function/class declaration, 
+     * An expression or function/class declaration,
      * viewed as a node in a data flow graph.
      */
     deprecated class DataFlowNode extends @dataflownode {
@@ -170,7 +170,7 @@ predicate. This is similar to a :ref:`database predicate <database-predicates>`.
 **Available for**: |non-member predicates|
 
 The ``transient`` annotation is applied to non-member predicates that are also annotated with ``external``,
-to indicate that they should not be cached to disk during evaluation. Note, if you attempt to apply ``transient`` 
+to indicate that they should not be cached to disk during evaluation. Note, if you attempt to apply ``transient``
 without ``external``, the compiler will report an error.
 
 .. index:: final
@@ -187,7 +187,7 @@ and a final predicate or field can't be overridden in a subclass.
 
 This is useful if you don't want subclasses to change the meaning of a particular entity.
 
-For example, the predicate ``hasName(string name)`` holds if an element has the name ``name``. 
+For example, the predicate ``hasName(string name)`` holds if an element has the name ``name``.
 It uses the predicate ``getName()`` to check this, and it wouldn't make sense for a subclass to
 change this definition. In this case, ``hasName`` should be final:
 
@@ -240,7 +240,7 @@ warning.
 The ``private`` annotation is used to prevent names from being exported.
 
 If a name has the annotation ``private``, or if it is accessed through an import statement
-annotated with ``private``, then you can only refer to that name from within the current 
+annotated with ``private``, then you can only refer to that name from within the current
 module's :ref:`namespace <namespaces>`.
 
 .. _query:
@@ -270,13 +270,13 @@ Inlining
 --------
 
 For simple predicates, the QL optimizer sometimes replaces a :ref:`call <calls>` to a predicate
-with the predicate body itself. This is known as **inlining**. 
+with the predicate body itself. This is known as **inlining**.
 
 For example, suppose you have a definition ``predicate one(int i) { i = 1 }``
 and a call to that predicate ``... one(y) ...``. The QL optimizer may inline the predicate to
-``... y = 1 ...``. 
+``... y = 1 ...``.
 
-You can use the following compiler pragma annotations to control the way the QL optimizer inlines 
+You can use the following compiler pragma annotations to control the way the QL optimizer inlines
 predicates.
 
 ``pragma[inline]``
@@ -285,7 +285,7 @@ predicates.
 **Available for**: |characteristic predicates|, |member predicates|, |non-member predicates|
 
 The ``pragma[inline]`` annotation tells the QL optimizer to always inline the annotated predicate
-into the places where it is called. This can be useful when a predicate body is very expensive to 
+into the places where it is called. This can be useful when a predicate body is very expensive to
 compute entirely, as it ensures that the predicate is evaluated with the other contextual information
 at the places where it is called.
 
@@ -328,9 +328,9 @@ than ordering ``p(x)`` before ``q(x)``.
 **Available for**: |characteristic predicates|, |member predicates|, |non-member predicates|
 
 The ``pragma[noinline]`` annotation is used to prevent a predicate from being inlined into the
-place where it is called. In practice, this annotation is useful when you've already grouped 
-certain variables together in a "helper" predicate, to ensure that the relation is evaluated 
-in one piece. This can help to improve performance. The QL optimizer's inlining may undo the 
+place where it is called. In practice, this annotation is useful when you've already grouped
+certain variables together in a "helper" predicate, to ensure that the relation is evaluated
+in one piece. This can help to improve performance. The QL optimizer's inlining may undo the
 work of the helper predicate, so it's a good idea to annotate it with ``pragma[noinline]``.
 
 ``pragma[nomagic]``
@@ -339,9 +339,9 @@ work of the helper predicate, so it's a good idea to annotate it with ``pragma[n
 **Available for**: |characteristic predicates|, |member predicates|, |non-member predicates|
 
 The ``pragma[nomagic]`` annotation is used to prevent the QL optimizer from performing the "magic sets"
-optimization on a predicate. 
+optimization on a predicate.
 
-This kind of optimization involves taking information from the context of a predicate 
+This kind of optimization involves taking information from the context of a predicate
 :ref:`call <calls>` and pushing it into the body of a predicate. This is usually
 beneficial, so you shouldn't use the ``pragma[nomagic]`` annotation unless recommended to do so
 by GitHub.
@@ -362,9 +362,9 @@ recommended to do so by GitHub, for example, to help resolve performance issues.
 When you use this annotation, be aware of the following issues:
 
 #. The QL optimizer automatically orders the conjuncts of a :ref:`complex formula <logical-connectives>`
-   in an efficient way. In a ``noopt`` predicate, the conjuncts are evaluated in exactly the order 
+   in an efficient way. In a ``noopt`` predicate, the conjuncts are evaluated in exactly the order
    that you write them.
-#. The QL optimizer automatically creates intermediary conjuncts to "translate" certain formulas 
+#. The QL optimizer automatically creates intermediary conjuncts to "translate" certain formulas
    into a :ref:`conjunction <conjunction>` of simpler formulas. In a ``noopt`` predicate, you
    must write these conjunctions explicitly.
    In particular, you can't chain predicate :ref:`calls <calls>` or call predicates on a
@@ -378,15 +378,15 @@ When you use this annotation, be aware of the following issues:
          Small() { this in [1 .. 10] }
          Small getSucc() { result = this + 1}
        }
-       
+
        predicate p(int i) {
          i.(Small).getSucc() = 2
        }
-       
+
        predicate q(Small s) {
          s.getSucc().getSucc() = 3
        }
-   
+
    If you add ``noopt`` pragmas, you must rewrite the predicates. For example:
 
    .. code-block:: ql
@@ -395,7 +395,7 @@ When you use this annotation, be aware of the following issues:
        predicate p(int i) {
          exists(Small s | s = i and s.getSucc() = 2)
        }
-       
+
        pragma[noopt]
        predicate q(Small s) {
          exists(Small succ |
@@ -412,7 +412,7 @@ When you use this annotation, be aware of the following issues:
 The ``pragma[only_bind_out]`` annotation lets you specify the direction in which the QL compiler should bind expressions.
 This can be useful to improve performance in rare cases where the QL optimizer orders parts of the QL program in an inefficient way.
 
-For example, ``x = pragma[only_bind_out](y)`` is semantically equivalent to ``x = y``, but has different binding behavior. 
+For example, ``x = pragma[only_bind_out](y)`` is semantically equivalent to ``x = y``, but has different binding behavior.
 ``x = y`` binds ``x`` from ``y`` and vice versa, while ``x = pragma[only_bind_out](y)`` only binds ``x`` from ``y``.
 
 For more information, see ":ref:`Binding <binding>`."
@@ -425,7 +425,7 @@ For more information, see ":ref:`Binding <binding>`."
 The ``pragma[only_bind_into]`` annotation lets you specify the direction in which the QL compiler should bind expressions.
 This can be useful to improve performance in rare cases where the QL optimizer orders parts of the QL program in an inefficient way.
 
-For example, ``x = pragma[only_bind_into](y)`` is semantically equivalent to ``x = y``, but has different binding behavior. 
+For example, ``x = pragma[only_bind_into](y)`` is semantically equivalent to ``x = y``, but has different binding behavior.
 ``x = y`` binds ``x`` from ``y`` and vice versa, while ``x = pragma[only_bind_into](y)`` only binds ``y`` from ``x``.
 
 For more information, see ":ref:`Binding <binding>`."
@@ -466,15 +466,15 @@ Binding sets
 
 You can use this annotation to explicitly state the binding sets for a predicate or class. A binding set
 is a subset of a predicate's or class body's arguments such that, if those arguments are constrained to a
-finite set of values, then the predicate or class itself is finite (that is, it evaluates to a finite 
+finite set of values, then the predicate or class itself is finite (that is, it evaluates to a finite
 set of tuples).
 
 The ``bindingset`` annotation takes a comma-separated list of variables.
 
 - When you annotate a predicate, each variable must be an argument of the predicate, possibly including ``this``
-  (for characteristic predicates and member predicates) and ``result`` (for predicates that return a result). 
+  (for characteristic predicates and member predicates) and ``result`` (for predicates that return a result).
   For more information, see ":ref:`predicate-binding`."
-- When you annotate a class, each variable must be ``this`` or a field in the class. 
+- When you annotate a class, each variable must be ``this`` or a field in the class.
 
 .. Links to use in substitutions
 

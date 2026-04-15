@@ -24,4 +24,3 @@ def safe1():
 @app.route('/safe2')
 def safe2():
     return render_response_from_env(safe2_env)
-

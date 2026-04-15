@@ -13,7 +13,7 @@ The precise nature of the vulnerability depends on which files are listed and ac
 <recommendation>
 
 <p>
-If this configuration may be used in production, remove the <code>directoryBrowse</code> element from the 
+If this configuration may be used in production, remove the <code>directoryBrowse</code> element from the
 <code>Web.config</code> file or set the value to false.
 </p>
 

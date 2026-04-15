@@ -14,7 +14,7 @@ public void sendUserFile(Socket sock, String user) {
 
 public void sendUserFileFixed(Socket sock, String user) {
 	// ...
-	
+
 	// GOOD: remove all dots and directory delimiters from the filename before using
 	String filename = filenameReader.readLine().replaceAll("\\.", "").replaceAll("/", "");
 	BufferedReader fileReader = new BufferedReader(

@@ -18,7 +18,7 @@ of the operators.
 
 <p>
 The indicated operator either does not have its opposite defined, or both of the definitions are not in terms of the other.
-Not defining an operator in terms of its opposite is prone to mistakes, as it requires modification of both operators when 
+Not defining an operator in terms of its opposite is prone to mistakes, as it requires modification of both operators when
 the behavior of one changes. Deliberately defining opposite operators with behaviors that are not actual logical opposites
 (e.g. defining <code>x == y</code> if <code>x</code> and <code>y</code> are divisible by 2 and <code> x != y </code> if <code>x</code> and <code>y</code> are divisible by 3)
 violates the almost universal assumptions developers have on the relationship of <code>==</code> and <code>!=</code> and will

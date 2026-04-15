@@ -5,7 +5,7 @@
 <overview>
 <p>
 The function <code>next()</code> will raise a <code>StopIteration</code> exception
-if the underlying iterator is exhausted. 
+if the underlying iterator is exhausted.
 Normally this is fine, but in a generator may cause problems.
 Since the <code>StopIteration</code> is an exception it will be propagated out of the generator
 causing termination of the generator. This is unlikely to be the expected behavior and may mask
@@ -21,7 +21,7 @@ has been accepted to modify the handling of <code>StopIteration</code> in genera
 </overview>
 <recommendation>
 <p>
-Each call to <code>next()</code> should be wrapped in a <code>try-except</code> to explicitly 
+Each call to <code>next()</code> should be wrapped in a <code>try-except</code> to explicitly
 handle <code>StopIteration</code> exceptions.
 </p>
 

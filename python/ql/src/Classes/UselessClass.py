@@ -4,7 +4,7 @@ class GCDFinder(object):
         self.b = b
 
     def calculate(self):
-        a = self.a 
+        a = self.a
         b = self.b
         while a != 0 and b != 0:
             if a > b:

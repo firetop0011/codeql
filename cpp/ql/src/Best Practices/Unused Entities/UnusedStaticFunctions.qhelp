@@ -6,7 +6,7 @@
 
 <overview>
 <p>
-This rule finds static functions with definitions that are never called or accessed. These unused functions should be 
+This rule finds static functions with definitions that are never called or accessed. These unused functions should be
 removed to increase code readability, reduce object size and avoid misuse.
 </p>
 

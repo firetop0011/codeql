@@ -11,4 +11,3 @@ C# framework & library support
    System,"``System.*``, ``System``",25,12154,65,7
    Others,"``Dapper``, ``JsonToItemsTaskFactory``, ``Microsoft.ApplicationBlocks.Data``, ``Microsoft.CSharp``, ``Microsoft.EntityFrameworkCore``, ``Microsoft.Extensions.Caching.Distributed``, ``Microsoft.Extensions.Caching.Memory``, ``Microsoft.Extensions.Configuration``, ``Microsoft.Extensions.DependencyInjection``, ``Microsoft.Extensions.DependencyModel``, ``Microsoft.Extensions.FileProviders``, ``Microsoft.Extensions.FileSystemGlobbing``, ``Microsoft.Extensions.Hosting``, ``Microsoft.Extensions.Http``, ``Microsoft.Extensions.Logging``, ``Microsoft.Extensions.Options``, ``Microsoft.Extensions.Primitives``, ``Microsoft.Interop``, ``Microsoft.NET.Build.Tasks``, ``Microsoft.NETCore.Platforms.BuildTasks``, ``Microsoft.VisualBasic``, ``Microsoft.Win32``, ``MySql.Data.MySqlClient``, ``Newtonsoft.Json``, ``Windows.Security.Cryptography.Core``",,556,138,
    Totals,,25,12717,397,7
-

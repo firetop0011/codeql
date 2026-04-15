@@ -5,10 +5,10 @@
 
 
 <overview>
-<p>This rule finds code that converts the result of an integer multiplication to a larger type. 
+<p>This rule finds code that converts the result of an integer multiplication to a larger type.
 Since the conversion applies <i>after</i> the multiplication, arithmetic overflow may still occur.</p>
 
-<p>The rule flags every multiplication of two non-constant integer expressions that 
+<p>The rule flags every multiplication of two non-constant integer expressions that
 is (explicitly or implicitly) converted to a larger integer type. The conversion is an indication that
 the expression would produce a result that would be too large to fit in the smaller integer type.</p>
 

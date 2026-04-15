@@ -6,9 +6,9 @@
 
 <overview>
 <p>Avoid using <code>x % 2 == 1</code> or <code>x % 2 > 0</code>
-to check whether a number <code>x</code> is odd, or 
+to check whether a number <code>x</code> is odd, or
 <code>x % 2 != 1</code> to check whether it is even.
-Such code does not work for negative numbers. 
+Such code does not work for negative numbers.
 For example, <code>-5 % 2</code> equals <code>-1</code>, not <code>1</code>.
 </p>
 

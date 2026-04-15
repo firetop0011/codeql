@@ -2,9 +2,9 @@
 try {
   if (checkValue) throw exception();
   bufMyData =  new myData*[sizeInt];
-	 
-  } 
-  catch (...) 
+
+  }
+  catch (...)
   {
     for (size_t i = 0; i < sizeInt; i++)
     {
@@ -15,9 +15,9 @@ try {
 try {
   if (checkValue) throw exception();
   bufMyData =  new myData*[sizeInt];
-	 
-  } 
-  catch (...) 
+
+  }
+  catch (...)
   {
     for (size_t i = 0; i < sizeInt; i++)
     {
@@ -33,7 +33,7 @@ try {
 	  delete valData;
 	  throw;
   }
-  catch (...) 
+  catch (...)
   {
     delete valData; // BAD
 ...
@@ -42,7 +42,7 @@ try {
     valData = NULL;
 	  throw;
   }
-  catch (...) 
+  catch (...)
   {
-    delete valData; // GOOD  
+    delete valData; // GOOD
 ...

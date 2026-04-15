@@ -15,7 +15,7 @@
 <p>
     The <code>ssh</code> package provides the predefined callback <code>InsecureIgnoreHostKey</code> that can be used during development and testing.
     It accepts any provided host key.
-    This callback, or a semantically similar callback, should not be used in production code. 
+    This callback, or a semantically similar callback, should not be used in production code.
 </p>
 </overview>
 

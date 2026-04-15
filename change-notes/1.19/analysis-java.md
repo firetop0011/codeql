@@ -2,8 +2,8 @@
 
 ## General improvements
 
-Path explanations have been added to the relevant security queries. 
-Use [QL for Eclipse](https://help.semmle.com/ql-for-eclipse/Content/WebHelp/getting-started.html) 
+Path explanations have been added to the relevant security queries.
+Use [QL for Eclipse](https://help.semmle.com/ql-for-eclipse/Content/WebHelp/getting-started.html)
 to run queries and explore the data flow in results.
 
 ## New queries
@@ -36,4 +36,3 @@ to run queries and explore the data flow in results.
   remote user input from servlets. This affects all security queries, which
   will yield additional results on projects that use the Spring Web framework.
 * The `ParityAnalysis` library is replaced with the more general `ModulusAnalysis` library, which improves the range analysis.
-

@@ -399,4 +399,3 @@ case @type.kind of
 @containertype = @arraytype | @slicetype | @maptype | @chantype;
 
 @chantype = @sendchantype | @recvchantype | @sendrcvchantype;
-

@@ -46,7 +46,7 @@ jobs:
       - name: Cache compilation cache
         id: query-cache
         uses: ./.github/actions/cache-query-compilation
-        with: 
+        with:
           key: ql-for-ql-tests
       - name: Run QL tests
         run: |
@@ -54,7 +54,7 @@ jobs:
         env:
           CODEQL: ${{ steps.find-codeql.outputs.codeql-path }}
 
-  other-os: 
+  other-os:
     strategy:
       matrix:
         os: [macos-latest, windows-latest]
@@ -62,7 +62,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
-      - name: Install GNU tar 
+      - name: Install GNU tar
         if: runner.os == 'macOS'
         run: |
           brew install gnu-tar
@@ -106,4 +106,3 @@ jobs:
         run: |
           $Env:PATH += ";$(dirname ${{ steps.find-codeql.outputs.codeql-path }})"
           codeql test run --check-databases --search-path "${{ github.workspace }}/ql/extractor-pack" ql/ql/test/queries/style/DeadCode/DeadCode.qlref
-      

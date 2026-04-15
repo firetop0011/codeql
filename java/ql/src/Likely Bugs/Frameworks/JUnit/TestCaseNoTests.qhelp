@@ -23,13 +23,13 @@ public void testXXX() {
 }
 </pre>
 
-<p>Note that the method name must start with <code>test</code> and the method must not take any 
+<p>Note that the method name must start with <code>test</code> and the method must not take any
 parameters.</p>
 
 <p>If the test case class is intended strictly for subclassing by other test case classes, consider
 making it abstract to document this intention. It will then no longer be flagged by this query.</p>
 
-<p>This rule applies only to JUnit 3.8-style test case classes. In JUnit 4, it is no longer required 
+<p>This rule applies only to JUnit 3.8-style test case classes. In JUnit 4, it is no longer required
 to extend <code>junit.framework.TestCase</code> to mark test methods.</p>
 
 </recommendation>

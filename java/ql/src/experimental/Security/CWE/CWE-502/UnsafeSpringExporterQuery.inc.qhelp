@@ -14,8 +14,8 @@ it results in remote code execution in the worst case.
 </p>
 
 <p>
-Examples of unsafe exporters include: <code>HttpInvokerServiceExporter</code>, 
-<code>SimpleHttpInvokerServiceExporter</code>, <code>RmiServiceExporter</code>, 
+Examples of unsafe exporters include: <code>HttpInvokerServiceExporter</code>,
+<code>SimpleHttpInvokerServiceExporter</code>, <code>RmiServiceExporter</code>,
 <code>HessianServiceExporter</code>.
 </p>
 <p>

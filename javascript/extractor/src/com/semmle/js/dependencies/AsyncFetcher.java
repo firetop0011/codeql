@@ -90,7 +90,7 @@ public class AsyncFetcher {
      * Extracts the relevant contents of the given tarball URL in the given folder;
      * the returned future completes when done.
      *
-     * If the same tarball has already been extracted elsewhere, then symbolic links are added to `destDir` linking to the already extracted tarball. 
+     * If the same tarball has already been extracted elsewhere, then symbolic links are added to `destDir` linking to the already extracted tarball.
      */
     public CompletableFuture<Void> installFromTarballUrl(String tarballUrl, Path destDir) {
         return tarballExtractions.get(tarballUrl, () -> {

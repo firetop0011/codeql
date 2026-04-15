@@ -16,7 +16,7 @@ may be called in all of the following ways:</p>
 <li><code>sum(new int[] { 1, 2, 3 })</code></li>
 </ul>
 
-<p>When a method <code>foo(T...&nbsp;x)</code> is called with an argument that is neither 
+<p>When a method <code>foo(T...&nbsp;x)</code> is called with an argument that is neither
 <code>T</code> nor <code>T[]</code>, but the argument can be cast as either, the choice of which
 type the argument is cast as is compiler-dependent.</p>
 
@@ -30,8 +30,8 @@ either <code>T</code> or <code>T[]</code> (insert a cast if necessary).</p>
 </recommendation>
 <example>
 
-<p>In the following example, the calls to <code>length</code> do not pass an argument of the same 
-type as the parameter of <code>length</code>, which is <code>Object</code> or an array of 
+<p>In the following example, the calls to <code>length</code> do not pass an argument of the same
+type as the parameter of <code>length</code>, which is <code>Object</code> or an array of
 <code>Object</code>. Therefore, when the program is compiled with javac, the output is:</p>
 
 <sample language="java">

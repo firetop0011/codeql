@@ -22,4 +22,3 @@ extensions:
     data:
       - ["hudson.util", "QuotedStringTokenizer", True, "tokenize", "(String)", "", "Argument[0]", "ReturnValue", "taint", "ai-manual"]
       - ["hudson.util", "TextFile", True, "TextFile", "(File)", "", "Argument[0]", "Argument[this]", "taint", "ai-manual"]
-      

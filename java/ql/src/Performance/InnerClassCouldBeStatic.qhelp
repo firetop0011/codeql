@@ -5,14 +5,14 @@
 
 
 <overview>
-<p>Nested classes allow logical grouping of related concerns, increasing encapsulation and 
+<p>Nested classes allow logical grouping of related concerns, increasing encapsulation and
 readability. However, there is a potential disadvantage when using them that you should be aware of.</p>
 
 <p>Any non-static nested class implicitly
 holds onto its "enclosing instance". This means that:</p>
 
 <ul>
-<li>The nested class has an implicitly defined field. The field holds a reference to the instance of 
+<li>The nested class has an implicitly defined field. The field holds a reference to the instance of
 the enclosing class that constructed the nested class.</li>
 <li>The nested class's constructors have an implicit parameter. The parameter is used for passing in
 the instance of the enclosing class. A reference to the instance is then stored in the field
@@ -20,8 +20,8 @@ mentioned above.</li>
 </ul>
 
 <p>Often, this is useful and necessary, because non-static nested class instances have
-access to instance state on their enclosing classes. However, if this instance state is not needed 
-by the nested class, this makes nested class instances larger than necessary, and hidden references 
+access to instance state on their enclosing classes. However, if this instance state is not needed
+by the nested class, this makes nested class instances larger than necessary, and hidden references
 to the enclosing classes are often the source of subtle memory leaks.</p>
 
 </overview>
@@ -32,8 +32,8 @@ declare the nested class <code>static</code>, avoiding the implicit field. As a 
 instances of the nested class become smaller, and hidden references to the enclosing class are
 made explicit.</p>
 
-<p>If a reference to the enclosing class instance is required during construction of the nested class 
-instance (but not subsequently), the constructor of the nested class should be refactored so that 
+<p>If a reference to the enclosing class instance is required during construction of the nested class
+instance (but not subsequently), the constructor of the nested class should be refactored so that
 it is explicitly given a reference to the enclosing instance.
 </p>
 

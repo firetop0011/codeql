@@ -18,12 +18,12 @@ optimizing compiler.
 </overview>
 <recommendation>
 <p>
-To check whether an index <code>i</code> is less than the length of an array, 
-simply compare these two numbers as unsigned integers: <code>i &lt; ARRAY_LENGTH</code>. 
-If the length of the array is defined as the difference between two pointers 
+To check whether an index <code>i</code> is less than the length of an array,
+simply compare these two numbers as unsigned integers: <code>i &lt; ARRAY_LENGTH</code>.
+If the length of the array is defined as the difference between two pointers
 <code>ptr</code> and <code>p_end</code>, write <code>i &lt; p_end - ptr</code>.
 If <code>i</code> is signed, cast it to unsigned
-in order to guard against negative <code>i</code>. For example, write 
+in order to guard against negative <code>i</code>. For example, write
 <code>(size_t)i &lt; p_end - ptr</code>.
 </p>
 </recommendation>

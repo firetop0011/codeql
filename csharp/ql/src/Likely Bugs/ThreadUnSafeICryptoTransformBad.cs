@@ -29,7 +29,7 @@ class Program
         {
             // hash calculated on all threads should be the same:
             // ungWv48Bz+pBQUDeXa4iI7ADYaOWF3qctBD/YfIAFa0= (base64)
-            // 
+            //
             tasks[i] = Task.Factory.StartNew(action, "abc");
         }
 

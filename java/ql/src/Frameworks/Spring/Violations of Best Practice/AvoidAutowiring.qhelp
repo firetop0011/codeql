@@ -17,15 +17,15 @@ documentation cites the following disadvantages of autowiring:
     <code>Classes</code> (and arrays of such simple properties). This limitation is by design.
   </li>
   <li>
-    Autowiring is less exact than explicit wiring. Although ... Spring is careful to avoid guessing in case of ambiguity that 
+    Autowiring is less exact than explicit wiring. Although ... Spring is careful to avoid guessing in case of ambiguity that
     might have unexpected results, the relationships between your Spring-managed objects are no longer documented explicitly.
   </li>
   <li>
     Wiring information may not be available to tools that may generate documentation from a Spring container.
   </li>
   <li>
-    Multiple bean definitions within the container may match the type specified by the setter method or constructor 
-    argument to be autowired. For arrays, collections, or Maps, this is not necessarily a problem. However for 
+    Multiple bean definitions within the container may match the type specified by the setter method or constructor
+    argument to be autowired. For arrays, collections, or Maps, this is not necessarily a problem. However for
     dependencies that expect a single value, this ambiguity is not arbitrarily resolved. If no unique bean definition is available, an exception is thrown.
   </li>
 </ul>
@@ -54,7 +54,7 @@ The Spring Framework Reference documentation suggests the following ways to addr
 </recommendation>
 <example>
 
-<p>The following example shows a bean, <code>autoWiredOrderService</code>, that is defined using 
+<p>The following example shows a bean, <code>autoWiredOrderService</code>, that is defined using
 autowiring, and an improved version of the bean, <code>orderService</code>, that is defined using
 explicit wiring.</p>
 

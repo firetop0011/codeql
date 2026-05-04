@@ -8,12 +8,12 @@ import com.semmle.util.exception.CatastrophicError;
 
 /**
  * Encapsulate the creation of message digests from strings.
- * 
+ *
  * <p>
  * This class acts as a (partial) output stream, until the <code>getDigest()</code> method is
  * called. After this the class can no longer be used, except to repeatedly call
  * {@link #getDigest()}.
- * 
+ *
  * <p>
  * UTF-8 is used internally as the {@link Charset} for this class when converting Strings to bytes.
  */
@@ -68,7 +68,7 @@ public class StringDigestor {
 	}
 
 	/**
-	 * Write the given string without prefixing it by its length. 
+	 * Write the given string without prefixing it by its length.
 	 */
 	public StringDigestor writeNoLength(Object toAppend) {
 		String s = toAppend.toString();
@@ -132,7 +132,7 @@ public class StringDigestor {
 
 	/**
 	 * Return the hex-encoded digest as a {@link String}.
-	 * 
+	 *
 	 * Get the digest from the data previously appended using <code>write(Object)</code>.
 	 * After this is called, the instance's {@link #write(Object)} and {@link #writeBytes(byte[])}
 	 * methods may no longer be used.

@@ -6,7 +6,7 @@
 
 <overview>
 <p>This rule finds compile-time constants other than zero (and some common error markers, like
-<code>-1</code> and <code>0xdeadbeef</code>) which are (explicitly or implicitly) converted to a pointer type. 
+<code>-1</code> and <code>0xdeadbeef</code>) which are (explicitly or implicitly) converted to a pointer type.
 This is a dangerous practice, since the meaning of the numerical value of pointers is platform dependent.</p>
 
 </overview>

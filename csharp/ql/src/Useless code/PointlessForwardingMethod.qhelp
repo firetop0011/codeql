@@ -8,8 +8,8 @@
   <li>one of them is only ever called from the other</li>
   <li>and the calling method of the two only makes calls to the callee</li>
   <li>and the calling method makes no other calls</li>
-</ul>  
-<p>then the calling method is no more than a forwarding method for the callee. 
+</ul>
+<p>then the calling method is no more than a forwarding method for the callee.
 Forwarding methods are difficult to keep track of and can make public APIs more complicated.</p>
 
 </overview>
@@ -18,7 +18,7 @@ Forwarding methods are difficult to keep track of and can make public APIs more 
 
 </recommendation>
 <example>
-<p>In this example the <code>Print(string, string)</code> method is simply a forwarding method. 
+<p>In this example the <code>Print(string, string)</code> method is simply a forwarding method.
 Since <code>Print(string)</code> is not called anywhere else it serves no purpose.</p>
 <sample src="PointlessForwardingMethod.cs" />
 

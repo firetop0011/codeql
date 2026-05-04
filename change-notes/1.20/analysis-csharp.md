@@ -34,5 +34,4 @@
 * Support has been added for NHibernate-Core, including
   - Stored data flow sources
   - Sinks for SQL expressions
-  - Data flow through fields that are mapped to the database 
-
+  - Data flow through fields that are mapped to the database

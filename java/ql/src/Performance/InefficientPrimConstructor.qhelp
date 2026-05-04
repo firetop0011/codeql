@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>Primitive values (for example <code>int</code>, <code>float</code>, <code>boolean</code>) 
+<p>Primitive values (for example <code>int</code>, <code>float</code>, <code>boolean</code>)
 all have corresponding reference types known as <em>boxed types</em>
 (for example <code>Integer</code>, <code>Float</code>, <code>Boolean</code>). These boxed types
 can be used when an actual object is required. While they all provide
@@ -14,14 +14,14 @@ bad practice to call those constructors directly.</p>
 
 <p>Each boxed type provides a static <code>valueOf</code> method
 that takes an argument of the appropriate primitive type and returns an object representing
-it. The advantage of calling <code>valueOf</code> over calling a constructor is that it allows for 
-some caching of instances. By reusing these cached instances instead of 
+it. The advantage of calling <code>valueOf</code> over calling a constructor is that it allows for
+some caching of instances. By reusing these cached instances instead of
 constructing new heap objects all the time, a significant amount of garbage collector effort can be saved.</p>
 
 </overview>
 <recommendation>
 
-<p>In almost all circumstances, a call of, for example, <code>Integer.valueOf(42)</code> can be 
+<p>In almost all circumstances, a call of, for example, <code>Integer.valueOf(42)</code> can be
 used instead of <code>new Integer(42)</code>.</p>
 
 <p>Note that sometimes you can rely on Java's
@@ -47,7 +47,7 @@ an argument of this type.</p>
   Addison-Wesley, 2008.
 </li>
 <li>
-  Java API Specification:  
+  Java API Specification:
   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html#valueOf(boolean)">Boolean.valueOf()</a>,
   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Byte.html#valueOf(byte)">Byte.valueOf()</a>,
   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Short.html#valueOf(short)">Short.valueOf()</a>,

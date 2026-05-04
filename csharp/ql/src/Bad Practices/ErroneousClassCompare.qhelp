@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>Checking the type of an object on its type's name is not robust to future changes, and may allow 
+<p>Checking the type of an object on its type's name is not robust to future changes, and may allow
 an attacker to inject a malicious class.</p>
 
 </overview>
@@ -12,7 +12,7 @@ an attacker to inject a malicious class.</p>
 
 </recommendation>
 <example>
-<p>In this example the type of the account is checked purely based on class name and is not 
+<p>In this example the type of the account is checked purely based on class name and is not
 reliable.</p>
 
 <p>It would be more appropriate to check the type of <code>account</code> like so:</p>

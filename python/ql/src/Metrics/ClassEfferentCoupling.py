@@ -1,5 +1,5 @@
 class X:
-    
+
     def iUseY(y):
         y.doStuff()
 

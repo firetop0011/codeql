@@ -7,7 +7,7 @@
 <overview>
 <p>
 To name a Spring bean, it is best to use the <code>id</code> attribute instead of the <code>name</code> attribute. Using the
-<code>id</code> attribute enables the XML parser to perform additional checks (for example, checking if the <code>id</code> in a <code>ref</code> 
+<code>id</code> attribute enables the XML parser to perform additional checks (for example, checking if the <code>id</code> in a <code>ref</code>
 attribute is an actual <code>id</code> of an XML element).
 </p>
 

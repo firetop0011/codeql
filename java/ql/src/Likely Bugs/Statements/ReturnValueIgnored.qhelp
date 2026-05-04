@@ -5,18 +5,18 @@
 
 
 <overview>
-<p>If the result of a method call is used in most cases, 
+<p>If the result of a method call is used in most cases,
 any calls to that method where the result is ignored are
 inconsistent, and may be erroneous uses of the API.
-Often, the result is some kind of status indicator, and is therefore important to check. 
+Often, the result is some kind of status indicator, and is therefore important to check.
 </p>
 
 </overview>
 <recommendation>
 
 <p>
-Ensure that the results of <i>all</i> calls to a particular 
-method are used. The return value of a method that returns a status value should normally be checked 
+Ensure that the results of <i>all</i> calls to a particular
+method are used. The return value of a method that returns a status value should normally be checked
 before any modified data or allocated resource is used.
 </p>
 

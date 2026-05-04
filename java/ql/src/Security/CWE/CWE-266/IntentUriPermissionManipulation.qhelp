@@ -7,7 +7,7 @@
 The started Activity can then use <code>setResult</code> to return the appropriate data to the calling component.</p>
 <p>If an Activity obtains the incoming, user-provided Intent and directly returns it via <code>setResult</code>
 without any checks, the application may be unintentionally giving arbitrary access to its content providers, even
-if they are not exported, as long as they are configured with the attribute <code>android:grantUriPermissions="true"</code>. 
+if they are not exported, as long as they are configured with the attribute <code>android:grantUriPermissions="true"</code>.
 This happens because the attacker adds the appropriate URI permission flags to the provided Intent, which take effect
 once the Intent is reflected back.</p>
 </overview>
@@ -19,7 +19,7 @@ by checking them with <code>Intent.getFlags</code> or removing them with <code>I
 </recommendation>
 
 <example>
-<p>The following sample contains three examples. In the first example, a user-provided Intent is obtained and 
+<p>The following sample contains three examples. In the first example, a user-provided Intent is obtained and
   directly returned back with <code>setResult</code>, which is dangerous. In the second example, a new Intent
   is created to safely return the desired data. The third example shows how the obtained Intent can be sanitized
   by removing dangerous flags before using it to return data to the calling component.

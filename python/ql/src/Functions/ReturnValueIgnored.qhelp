@@ -18,7 +18,7 @@ A return value is also assumed to be trivial if it is ignored for more than 25% 
 <p>Act upon all non-trivial return values, either propagating each value or recording it.
 If a return value should be ignored, then ensure that it is ignored consistently.
 </p>
-    
+
 <p>
 If you have access to the source code of the called function, then consider modifying it so that it does not return pointless values.
 </p>

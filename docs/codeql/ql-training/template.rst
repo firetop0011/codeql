@@ -1,13 +1,13 @@
 .. Template for rst slide shows
 
 
-.. Key points: 
+.. Key points:
    - Each heading marks the start of a new slide
    - The default slide style is a plain white-ish background with minimal company branding
    - Different slide designs have been preconfigured. To choose a different layout
-     use the appropriate .. rst-class:: directive. For examples of the different designs, 
-     see the template below. This directive can also be used to create custom classes for individual 
-     images and slide backgrounds if necessary. Additional CSS styles may also be required when using custom 
+     use the appropriate .. rst-class:: directive. For examples of the different designs,
+     see the template below. This directive can also be used to create custom classes for individual
+     images and slide backgrounds if necessary. Additional CSS styles may also be required when using custom
      class directives. Search for 'deck-specific styles for individual images` in default.css for examples
      of how to implement custom class styles.
    - Additional notes can be added to a slide using a .. note:: directive
@@ -24,10 +24,10 @@ Template slide deck
 .. container:: subheading
 
    First subheading
-   
+
    Second subheading
 
-.. Set up slide. Include link to CodeQL databases required for examples 
+.. Set up slide. Include link to CodeQL databases required for examples
 
 .. rst-class:: setup
 
@@ -64,23 +64,23 @@ If you don't specify an rst-class, you default to the 'basic' slide design.
 
 You can fit about this much text on a slide:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
 sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Code sample
 ===========
 
-Use a ``.. code-block::`` directive to include a code snippet. 
+Use a ``.. code-block::`` directive to include a code snippet.
 Specify the language after the directive to add syntax highlighting.
 
 .. code-block:: ql
 
    import cpp
-   
+
    from AddExpr a, Variable v, RelationalOperation cmp
    where
      a.getAnOperand() = v.getAnAccess() and
@@ -101,8 +101,8 @@ Columns and graphs
 
    .. code-block:: ql
 
-      import cpp  
-   
+      import cpp
+
       from IfStmt ifstmt, Block block
       where
         block = ifstmt.getThen() and
@@ -113,19 +113,19 @@ Columns and graphs
 .. container:: column-right
 
    Graphs can be built from text using a ``.. graphviz directive``.
-   See the source file for details.   
+   See the source file for details.
 
    .. graphviz::
-       
+
       digraph {
       graph [ dpi = 1000 ]
       node [shape=polygon,sides=4,color=blue4,style="filled,rounded",   fontname=consolas,fontcolor=white]
       a [label=<tainted<BR /><FONT POINT-SIZE="10">ParameterNode</FONT>>]
       b [label=<tainted<BR /><FONT POINT-SIZE="10">ExprNode</FONT>>]
       c [label=<x<BR /><FONT POINT-SIZE="10">ExprNode</FONT>>]
-      d [label=<x<BR /><FONT POINT-SIZE="10">ExprNode</FONT>>]   
+      d [label=<x<BR /><FONT POINT-SIZE="10">ExprNode</FONT>>]
       a -> b
-      b -> {c, d}   
+      b -> {c, d}
       }
 
 .. You can indicate a new concept by using a purple slide background

@@ -30,7 +30,7 @@ variable used by function <code>get</code>.
 <p>
 It would be clearer to wrap the whole module into a closure like this (which also avoids exposing
 function <code>compute</code> to the outside world):
-</p> 
+</p>
 
 <sample src="examples/DeleteVarGood.js" />
 

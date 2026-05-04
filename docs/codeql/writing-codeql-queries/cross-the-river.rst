@@ -167,7 +167,7 @@ When finding the solution, you should be careful to avoid "infinite" paths. For 
 could ferry the goat back and forth any number of times without ever reaching an unsafe state.
 Such a path would have an infinite number of river crossings without ever solving the puzzle.
 
-One way to restrict our paths to a finite number of river crossings is to define a 
+One way to restrict our paths to a finite number of river crossings is to define a
 :ref:`member predicate <member-predicates>`
 ``State reachesVia(string path, int steps)``.
 The result of this predicate is any state that is reachable from the current state (``this``) via

@@ -142,7 +142,7 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Some classes/modules with upper-case acronyms in their name have been renamed to follow our style-guide. 
+* Some classes/modules with upper-case acronyms in their name have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### New Features
@@ -159,7 +159,7 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Many classes/predicates/modules with upper-case acronyms in their name have been renamed to follow our style-guide. 
+* Many classes/predicates/modules with upper-case acronyms in their name have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### New Features
@@ -258,7 +258,7 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide. 
+* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### New Features

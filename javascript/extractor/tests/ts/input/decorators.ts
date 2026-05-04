@@ -2,7 +2,7 @@
 class Class {
   @methodDecorator
   method(): number { return this.field }
-  
+
   @fieldDecorator
   field: number;
 }

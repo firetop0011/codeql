@@ -4,11 +4,11 @@ import java.util.List;
 
 public class A {
 	private List<Integer> l;
-	
+
 	public A(Integer... is) {
 		this.l = Arrays.asList(is);
 	}
-	
+
 	public List<Integer> getList() {
 		return l;
 	}

@@ -8,4 +8,3 @@ declare module "m1" {
     T4
   } from "m3"
 }
-  

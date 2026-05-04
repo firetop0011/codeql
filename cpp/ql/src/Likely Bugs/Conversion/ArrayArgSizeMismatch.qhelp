@@ -5,11 +5,11 @@
 
 
 <overview>
-<p>This rule looks for function calls where the size of the array being passed is smaller  
+<p>This rule looks for function calls where the size of the array being passed is smaller
 than the size of the declared array parameter for the function. This is most likely going to lead
 to memory accesses that are beyond the bounds of the passed array.</p>
 
-<p>The size of the array being passed is very likely wrong as it does not match that of the function's 
+<p>The size of the array being passed is very likely wrong as it does not match that of the function's
 parameter.</p>
 
 </overview>

@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>If a database query is built using string concatenation, and the
-components of the concatenation include user input, a user 
+components of the concatenation include user input, a user
 is likely to be able to run malicious database queries.
 This applies to various database query languages, including
 SQL and the Java Persistence Query Language.</p>

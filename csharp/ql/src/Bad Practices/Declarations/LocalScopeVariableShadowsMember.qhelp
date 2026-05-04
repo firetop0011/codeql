@@ -14,7 +14,7 @@ corresponding member.</p>
 </recommendation>
 <example>
 <p>In this example, the local variable <code>title</code> shadows the member field of the same name.
-This leads to a mistaken reference to <code>title</code> when assigning the <code>message</code> 
+This leads to a mistaken reference to <code>title</code> when assigning the <code>message</code>
 string. The reference should really have been to <code>this.title</code>.</p>
 <sample src="LocalScopeVariableShadowsMemberBad.cs" />
 </example>

@@ -22,7 +22,7 @@ cleartext.</p>
 <example>
 
 <p>The following example shows two ways of storing user credentials in a cookie. In the 'BAD' case,
-the credentials are simply stored in cleartext. In the 'GOOD' case, the credentials are protected before 
+the credentials are simply stored in cleartext. In the 'GOOD' case, the credentials are protected before
 storing them, using <code>MachineKey.Protect</code>, wrapped in a utility method.</p>
 
 <sample src="CleartextStorage.cs" />
@@ -30,7 +30,7 @@ storing them, using <code>MachineKey.Protect</code>, wrapped in a utility method
 </example>
 <references>
 
-<li>M. Dowd, J. McDonald and J. Schuhm, <i>The Art of Software Security Assessment</i>, 1st Edition, Chapter 2 - 'Common Vulnerabilities of Encryption', p. 43. Addison Wesley, 2006.</li> 
+<li>M. Dowd, J. McDonald and J. Schuhm, <i>The Art of Software Security Assessment</i>, 1st Edition, Chapter 2 - 'Common Vulnerabilities of Encryption', p. 43. Addison Wesley, 2006.</li>
 <li>M. Howard and D. LeBlanc, <i>Writing Secure Code</i>, 2nd Edition, Chapter 9 - 'Protecting Secret Data', p. 299. Microsoft, 2002.</li>
 
 </references>

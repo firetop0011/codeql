@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>Calling <code>x.Equals(y)</code> on incomparable types will almost always return false. If two classes do 
+<p>Calling <code>x.Equals(y)</code> on incomparable types will almost always return false. If two classes do
 not have a common parent class their instances are considered incomparable.</p>
 
 </overview>
@@ -12,7 +12,7 @@ not have a common parent class their instances are considered incomparable.</p>
 
 </recommendation>
 <example>
-<p>In this example both calls to the Equals method will always return false regardless of the contents of the <code>ArrayList</code> 
+<p>In this example both calls to the Equals method will always return false regardless of the contents of the <code>ArrayList</code>
 or <code>String</code> because <code>ArrayList</code>s and <code>String</code>s are incomparable.</p>
 <sample src="IncomparableEquals.cs" />
 

@@ -461,7 +461,7 @@ h1, h2, h3 {
 
 h1, h2 {
   font-size: 1.5em;
-  font-family: 'Work Sans', sans-serif; 
+  font-family: 'Work Sans', sans-serif;
 }
 /* line 280, ../scss/default.scss */
 /*h2 {
@@ -1001,7 +1001,7 @@ article.smaller q:before, article.smaller q:after {
   background-image: radial-gradient(50% 50%, #b1dfff 0%, #4387fd 600px);
 }
 
-/* the popup class is used to display the speaker notes when 'presenter' view 
+/* the popup class is used to display the speaker notes when 'presenter' view
    is enabled. This view is not currently optimal, so certain selectors have been commented-out,
    with a view to improving the styles at a later date */
 
@@ -1410,7 +1410,7 @@ slide {
   height: 100%;
   overflow: auto;
   transform: scale(1);
-}  
+}
 
 .highlight {
   width: auto;
@@ -1462,12 +1462,12 @@ hgroup .pre {
 
 /* purple background slides (new section)*/
 
-.background2 {  
+.background2 {
   background-image: url("../../alternative-slide.svg");
   background-size: cover;
 }
 
-.background2 h2 { 
+.background2 h2 {
   color: white;
 }
 
@@ -1520,7 +1520,7 @@ hgroup .pre {
   background-image: url("../../end-slide.svg");
   background-size: 100% 100%;
   background-color: #5c31ff;
-} 
+}
 
 /* styles for side by side columns */
 
@@ -1685,7 +1685,7 @@ li > ul > li {
   color: black !important;
  }
 
- .highlight { color: #333 !important} /* default */ 
+ .highlight { color: #333 !important} /* default */
  .highlight .s { color: #06994a !important} /* strings */
  .highlight .m { color: #333 } /* numbers (no special highlighting) */
  .highlight .c1 { color: #007020 !important; font-style: italic !important} /* one-line comments */
@@ -1781,7 +1781,7 @@ li > ul > li {
   .note {
     position: unset;
   }
-  
+
   /* don't display slide number */
   slides > slide:not(.nobackground):after {
     display: none;

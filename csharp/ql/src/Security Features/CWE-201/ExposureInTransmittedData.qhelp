@@ -5,7 +5,7 @@
 <overview>
 <p>
 Transmitting sensitive data to the user is a potential security risk. Always ensure that
-transmitted data is intended for the user. For example, passwords and the contents of 
+transmitted data is intended for the user. For example, passwords and the contents of
 database exceptions are generally not appropriate to send to the user, as they reveal
 information that could be abused or exploited.
 </p>

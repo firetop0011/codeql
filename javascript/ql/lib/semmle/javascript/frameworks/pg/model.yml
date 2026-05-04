@@ -1,5 +1,5 @@
 extensions:
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeModel
     data:
@@ -69,7 +69,7 @@ extensions:
       - [pg.PoolClient, pg.Pool, "Member[connect].WithArity[0].ReturnValue.Awaited"]
       - [pg.PoolStatic, pg, "Member[Pool]"]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: summaryModel
     data:
@@ -79,7 +79,7 @@ extensions:
       - [pg.Events, "", "", "Member[addListener,on,once,prependListener,prependOnceListener].ReturnValue", type]
       - [pg.Pool, "", "", "Member[addListener,on,once,prependListener,prependOnceListener].ReturnValue", type]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeVariableModel
     data:

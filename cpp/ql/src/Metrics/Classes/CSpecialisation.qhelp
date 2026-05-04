@@ -26,7 +26,7 @@ superclasses, rather than redefining the behavior that is already there.
 The main reason that classes have a high specialization index is that
 multiple subclasses specialize a common base class in exactly the same
 way. In this case, the relevant function(s) should be pulled up into the base
-class (see the 'Pull Up Method' refactoring in [Fowler]). 
+class (see the 'Pull Up Method' refactoring in [Fowler]).
 </p>
 
 </recommendation>

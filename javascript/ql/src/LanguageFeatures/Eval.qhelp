@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>
-The built-in <code>eval</code> function and the <code>Function</code> constructor allow executing 
+The built-in <code>eval</code> function and the <code>Function</code> constructor allow executing
 arbitrary strings as JavaScript code. This is a dangerous feature, since this code has the same access
 privileges as any other code, so great care has to be taken to ensure that malicious code is not
 accidentally executed this way. Using this feature also hampers static checking and program comprehension.

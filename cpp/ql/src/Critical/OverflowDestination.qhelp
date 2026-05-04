@@ -3,15 +3,15 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>The bounded copy functions <code>memcpy</code>, <code>memmove</code>, <code>strncpy</code>, <code>strncat</code> accept a size argument. 
-You should call these functions with a size argument that is derived from the size of the destination buffer. 
-Using a size argument that is derived from the source buffer may cause a buffer overflow. 
+<p>The bounded copy functions <code>memcpy</code>, <code>memmove</code>, <code>strncpy</code>, <code>strncat</code> accept a size argument.
+You should call these functions with a size argument that is derived from the size of the destination buffer.
+Using a size argument that is derived from the source buffer may cause a buffer overflow.
 Buffer overflows can lead to anything from a segmentation fault to a security vulnerability.</p>
 </overview>
 
 <recommendation>
-<p>Check the highlighted function calls carefully. 
-Ensure that the size parameter is derived from the size of the destination buffer, and 
+<p>Check the highlighted function calls carefully.
+Ensure that the size parameter is derived from the size of the destination buffer, and
 not the source buffer.</p>
 
 <include src="aliasAnalysisWarning.inc.qhelp" />

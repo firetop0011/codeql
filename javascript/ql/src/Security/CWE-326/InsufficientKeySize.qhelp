@@ -12,7 +12,7 @@ As computational power increases, the ability to break ciphers grows and keys ne
 
 <recommendation>
 <p>
-An encryption key should be at least 2048-bit long when using RSA encryption, and 128-bit long when using 
+An encryption key should be at least 2048-bit long when using RSA encryption, and 128-bit long when using
 symmetric encryption.
 </p>
 </recommendation>
@@ -27,7 +27,7 @@ Wikipedia:
 <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>.
 </li>
 <li>
-NodeJS: 
+NodeJS:
 <a href="https://nodejs.org/api/crypto.html">Crypto</a>.
 </li>
 <li>

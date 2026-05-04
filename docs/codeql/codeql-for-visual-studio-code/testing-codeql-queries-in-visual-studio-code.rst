@@ -37,7 +37,7 @@ Testing the results of your queries
 Monitoring the performance of your queries
 ------------------------------------------
 
-Query performance is important when you want to run a query on large databases, or as part of your continuous integration system. 
+Query performance is important when you want to run a query on large databases, or as part of your continuous integration system.
 
 .. include:: ../reusables/running-queries-debug.rst
 

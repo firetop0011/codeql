@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>Classes with a synchronized <code>writeObject</code> method 
+<p>Classes with a synchronized <code>writeObject</code> method
 but no other synchronized methods usually lack a sufficient level of synchronization.
 If any mutable state of this class can be modified without proper synchronization,
 the serialization using the <code>writeObject</code> method may result in an inconsistent state.
@@ -14,9 +14,9 @@ the serialization using the <code>writeObject</code> method may result in an inc
 </overview>
 <recommendation>
 
-<p>See if synchronization is necessary 
+<p>See if synchronization is necessary
 on methods other than <code>writeOject</code> to make the class thread-safe.
-Any methods that access or modify the state of an object of this class 
+Any methods that access or modify the state of an object of this class
 should usually be synchronized as well.
 </p>
 

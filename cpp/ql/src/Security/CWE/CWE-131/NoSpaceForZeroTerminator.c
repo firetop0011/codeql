@@ -8,4 +8,3 @@ void flawed_strdup(const char *input)
 	strcpy(copy, input);
 	return copy;
 }
-

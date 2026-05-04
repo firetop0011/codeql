@@ -5,7 +5,7 @@
 <overview>
 <p>Using broken or weak cryptographic algorithms can leave data vulnerable to being decrypted.</p>
 
-<p>Many cryptographic algorithms provided by cryptography libraries are known to be weak, or 
+<p>Many cryptographic algorithms provided by cryptography libraries are known to be weak, or
 flawed. Using such an algorithm means that an attacker may be able to easily decrypt the encrypted
 data.</p>
 

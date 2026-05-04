@@ -17,7 +17,7 @@ public class BufferedLineReader implements Closeable {
 	private final char[] buffer = new char[8192];
 	private  int nextChar = 0, nChars = 0;
 	private final Reader in;
-	
+
 	public BufferedLineReader(Reader in) {
 		this.in = in;
 	}
@@ -38,7 +38,7 @@ public class BufferedLineReader implements Closeable {
 		nextChar = terminator + 1;
 		return result;
 	}
-	
+
 	/**
 	 * Get the index of the last character that should be included in the next line.
 	 * Usually, this is the LF in a LF or CRLF line terminator, but it might be the
@@ -56,7 +56,7 @@ public class BufferedLineReader implements Closeable {
 				else if (buffer[i] == '\n')
 					return i; // LF
 			}
-			
+
 			// We didn't find a full newline in the existing buffer: Try to fill.
 			alreadyChecked = nChars - nextChar;
 			int newlyRead = fill();
@@ -64,7 +64,7 @@ public class BufferedLineReader implements Closeable {
 				return nChars - 1;
 		} while (true);
 	}
-	
+
 	/**
 	 * Block until at least one character from the underlying stream is read,
 	 * or EOF is reached.
@@ -80,16 +80,16 @@ public class BufferedLineReader implements Closeable {
 			nChars = nChars - nextChar;
 			nextChar = 0;
 		}
-		
+
 		// Is the buffer full?
 		if (nChars == buffer.length)
 			return 0;
-		
+
 		int read;
 		do {
 			read = in.read(buffer, nChars, buffer.length - nChars);
 		} while (read == 0);
-		
+
 		if (read > 0) {
 			nChars += read;
 		}

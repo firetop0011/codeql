@@ -1,5 +1,5 @@
 name: codeql/python-examples
-groups: 
+groups:
   - python
   - examples
 dependencies:

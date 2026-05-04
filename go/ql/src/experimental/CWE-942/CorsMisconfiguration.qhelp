@@ -15,13 +15,13 @@
 </p>
 <p>
 	This configuration can also allow the inclusion of cookies on the cross-origin request,
-	(i.e. when the <code>Access-Control-Allow-Credentials</code> header is set to true) 
+	(i.e. when the <code>Access-Control-Allow-Credentials</code> header is set to true)
 	meaning that Peer B can send a request to Peer A that will include the cookies as if the request was executed by the user.
 </p>
 <p>
-	That can have dangerous effects if Peer B origin is not restricted correctly. 
-	An example of a dangerous scenario is when <code>Access-Control-Allow-Origin</code> header is set to a value gotten from the Peer B's request 
-	(and not correctly validated), or is set to special values such as <code>*</code> or <code>null</code>. 
+	That can have dangerous effects if Peer B origin is not restricted correctly.
+	An example of a dangerous scenario is when <code>Access-Control-Allow-Origin</code> header is set to a value gotten from the Peer B's request
+	(and not correctly validated), or is set to special values such as <code>*</code> or <code>null</code>.
 	The above values can allow any Peer B to send requests to the misconfigured Peer A on behalf of the user.
 </p>
 <p>

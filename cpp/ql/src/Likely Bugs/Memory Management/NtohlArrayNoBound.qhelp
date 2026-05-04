@@ -41,12 +41,12 @@ before being used as an array index.</p>
 <li>
   <a href="https://docs.microsoft.com/en-us/windows/desktop/api/winsock/nf-winsock-ntohl">
     ntohl - winsock reference
-  </a> 
+  </a>
 </li>
 <li>
   <a href="https://linux.die.net/man/3/ntohl">
     ntohl - Linux man page
-  </a> 
+  </a>
 </li>
 
 </references>

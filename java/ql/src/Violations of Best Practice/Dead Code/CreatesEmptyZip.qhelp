@@ -8,7 +8,7 @@
 <p>The <code>ZipOutputStream</code> class is used to write ZIP files to a file
 or other stream. A ZIP file consists of a number of <i>entries</i>. Usually
 each entry corresponds to a file in the directory structure being zipped. There
-is a method on <code>ZipOutputStream</code> that is slightly confusingly named 
+is a method on <code>ZipOutputStream</code> that is slightly confusingly named
 <code>putNextEntry</code>. Despite its name, it does not write a whole entry.
 Instead, it writes the <em>metadata</em> for an entry. The content for that entry
 is then written using the <code>write</code> method. Finally the entry is

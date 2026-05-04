@@ -4,7 +4,7 @@ public static void main(String[] args) {
 			String protocol = "http://";
 			URL u = new URL(protocol + "www.secret.example.org/");
 			// BAD: This causes a 'ClassCastException' at runtime, because the
-			// HTTP URL cannot be used to make an 'HttpsURLConnection', 
+			// HTTP URL cannot be used to make an 'HttpsURLConnection',
 			// which enforces SSL.
 			HttpsURLConnection hu = (HttpsURLConnection) u.openConnection();
 			hu.setRequestMethod("PUT");
@@ -16,7 +16,7 @@ public static void main(String[] args) {
 			// fail
 		}
 	}
-	
+
 	{
 		try {
 			String protocol = "https://";

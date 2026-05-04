@@ -8,8 +8,8 @@
 <p>A type wildcard with an <code>extends</code> clause (for example
 <code>?&nbsp;extends&nbsp;String</code>) implicitly suggests that a type (in
 this case <code>String</code>) has subclasses. If the type in the <code>extends</code>
-clause is final, the code is confusing because a final class cannot have 
-any subclasses. The only type that satisfies <code>?&nbsp;extends&nbsp;String</code> is 
+clause is final, the code is confusing because a final class cannot have
+any subclasses. The only type that satisfies <code>?&nbsp;extends&nbsp;String</code> is
 <code>String</code>.</p>
 
 </overview>
@@ -26,7 +26,7 @@ any subclasses. The only type that satisfies <code>?&nbsp;extends&nbsp;String</c
 <sample src="TypeVarExtendsFinalType.java" />
 
 <p>However, because <code>String</code> is declared <code>final</code>, it does not have any
-subclasses. Therefore, it is clearer to replace <code>?&nbsp;extends&nbsp;String</code> with 
+subclasses. Therefore, it is clearer to replace <code>?&nbsp;extends&nbsp;String</code> with
 <code>String</code>.</p>
 
 </example>

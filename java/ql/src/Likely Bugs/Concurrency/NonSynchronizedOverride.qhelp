@@ -7,7 +7,7 @@
 <overview>
 <p>If a synchronized method is overridden in a subclass,
 the compiler does not require the overriding method to be
-synchronized. However, if the overriding method is not synchronized, the thread-safety of the 
+synchronized. However, if the overriding method is not synchronized, the thread-safety of the
 subclass may be broken.
 </p>
 

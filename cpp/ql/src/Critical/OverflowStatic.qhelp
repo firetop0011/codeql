@@ -3,8 +3,8 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>When you use static arrays you must ensure that you do not exceed the size of the array during 
-write and access operations. If an operation attempts to write to or access an element that is 
+<p>When you use static arrays you must ensure that you do not exceed the size of the array during
+write and access operations. If an operation attempts to write to or access an element that is
 outside the range of the array then this results in a buffer overflow. Buffer overflows can lead to anything from a segmentation fault to a security vulnerability.
 </p>
 

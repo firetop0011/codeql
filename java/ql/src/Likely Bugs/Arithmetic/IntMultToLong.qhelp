@@ -7,7 +7,7 @@
 <overview>
 <p>
 An integer multiplication that is assigned
-to a variable of type <code>long</code> or returned from a method with 
+to a variable of type <code>long</code> or returned from a method with
 return type <code>long</code> may cause unexpected arithmetic overflow.
 </p>
 
@@ -21,12 +21,12 @@ Casting to type <code>long</code> before multiplying reduces the risk of arithme
 </recommendation>
 <example>
 
-<p>In the following example, the multiplication expression assigned to <code>j</code> causes overflow and results 
+<p>In the following example, the multiplication expression assigned to <code>j</code> causes overflow and results
 in the value <code>-1651507200</code> instead of <code>4000000000000000000</code>.</p>
 
 <sample src="IntMultToLong.java" />
 
-<p>In the following example, the assignment to <code>k</code> correctly avoids overflow by casting 
+<p>In the following example, the assignment to <code>k</code> correctly avoids overflow by casting
 one of the operands to type <code>long</code>.
 </p>
 

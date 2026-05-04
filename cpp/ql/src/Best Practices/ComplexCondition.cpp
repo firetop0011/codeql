@@ -6,7 +6,7 @@ bool accept_message =
 
 //This condition is acceptable, as all the logical operators are of the same type (&&)
 bool valid_connect =
-	message_type == CONNECT && 
+	message_type == CONNECT &&
 	_state != CONNECTED &&
 	time_since_prev_connect > MAX_CONNECT_INTERVAL &&
 	message_length <= MAX_PACKET_SIZE &&

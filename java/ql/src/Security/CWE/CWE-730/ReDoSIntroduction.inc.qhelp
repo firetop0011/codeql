@@ -40,8 +40,8 @@
 		</p>
 
 		<p>
-			Note that Java versions 9 and above have some mitigations against ReDoS; however they aren't perfect 
-			and more complex regular expressions can still be affected by this problem. 
+			Note that Java versions 9 and above have some mitigations against ReDoS; however they aren't perfect
+			and more complex regular expressions can still be affected by this problem.
 		</p>
 	</overview>
 
@@ -53,7 +53,7 @@
 			ensure that the strings matched with the regular expression are short
 			enough that the time-complexity does not matter.
 
-			Alternatively, an alternate regex library that guarantees linear time execution, such as Google's RE2J, may be used. 
+			Alternatively, an alternate regex library that guarantees linear time execution, such as Google's RE2J, may be used.
 
 		</p>
 

@@ -14,7 +14,7 @@ removed to avoid misuse.
 
 <recommendation>
 <p>
-Examine the code to see if the variable is no longer needed. If it is unnecessary, remove the variable. 
+Examine the code to see if the variable is no longer needed. If it is unnecessary, remove the variable.
 Otherwise, update the relevant code to use the variable.
 </p>
 </recommendation>

@@ -7,7 +7,7 @@
 <overview>
 <p>
 This rule finds <code>switch</code> statements that use an integer instead of an enumeration.
-Enumerations are preferred when dealing with a limited number of choices as they makes it easier 
+Enumerations are preferred when dealing with a limited number of choices as they makes it easier
 to see if a case has been left out.
 </p>
 

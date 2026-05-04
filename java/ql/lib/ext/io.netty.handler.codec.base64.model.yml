@@ -5,4 +5,3 @@ extensions:
   data:
     - ["io.netty.handler.codec.base64", "Base64", True, "decode", "", "", "Argument[0]", "ReturnValue", "taint", "manual"]
     - ["io.netty.handler.codec.base64", "Base64", True, "encode", "", "", "Argument[0]", "ReturnValue", "taint", "manual"]
-      

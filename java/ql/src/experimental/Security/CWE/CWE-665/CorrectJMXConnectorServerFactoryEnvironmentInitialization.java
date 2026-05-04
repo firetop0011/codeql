@@ -19,12 +19,12 @@ public class CorrectJmxInitialisation {
         // For Java 10+
         String stringsOnlyFilter = "java.lang.String;!*"; // Deny everything but java.lang.String
         env.put(RMIConnectorServer.CREDENTIALS_FILTER_PATTERN, stringsOnlyFilter);
-                
+
         /* Java 9 or below:
         env.put("jmx.remote.rmi.server.credential.types",
                 new String[] { String[].class.getName(), String.class.getName() });
         */
-        
+
         MBeanServer beanServer = ManagementFactory.getPlatformMBeanServer();
 
         JMXServiceURL jmxUrl = new JMXServiceURL("service:jmx:rmi:///jndi/rmi://localhost:" + jmxPort + "/jmxrmi");

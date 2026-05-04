@@ -15,8 +15,8 @@ concurrency problems.
 <recommendation>
 
 <p>Check which code needs to be synchronized.
-Any code that requires synchronization on the given lock should be placed 
-within the synchronized block. 
+Any code that requires synchronization on the given lock should be placed
+within the synchronized block.
 </p>
 
 </recommendation>

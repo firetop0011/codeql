@@ -15,7 +15,7 @@ public class PackageJson {
 
     public static class Dist {
         private String tarball;
-    
+
         public String getTarball() {
             return tarball;
         }

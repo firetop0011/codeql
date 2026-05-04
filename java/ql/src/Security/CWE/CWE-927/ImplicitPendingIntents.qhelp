@@ -25,7 +25,7 @@
 </overview>
 
 <recommendation>
-<p>Avoid creating implicit <code>PendingIntent</code>s. This means that the underlying <code>Intent</code> should always have an 
+<p>Avoid creating implicit <code>PendingIntent</code>s. This means that the underlying <code>Intent</code> should always have an
   explicit destination component.</p>
 <p>When you add the <code>PendingIntent</code> as an extra of another <code>Intent</code>, make sure that this second <code>Intent</code> also has
 an explicit destination component, so that it is not delivered to untrusted applications.</p>
@@ -38,7 +38,7 @@ an explicit destination component, so that it is not delivered to untrusted appl
   </p>
   <p>In the first example, both the <code>PendingIntent</code> and the <code>Intent</code> it is wrapped in are implicit,
     making them vulnerable to attack.</p>
-  <p>In the second example, the issue is avoided by adding explicit destination components to the 
+  <p>In the second example, the issue is avoided by adding explicit destination components to the
     <code>PendingIntent</code> and the wrapping <code>Intent</code>.</p>
   <p>The third example uses the <code>FLAG_IMMUTABLE</code> flag to prevent the underlying <code>Intent</code> from being modified
     by the destination component.</p>

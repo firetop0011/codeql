@@ -4,10 +4,10 @@
 <qhelp>
 <overview>
 <p>When an ordering is introduced on instances of a class by making the class implement the <code>
-IComparable</code> interface, it is sensible to ensure that for all instances <code>c1</code> and 
-<code>c2</code>, <code>c1.CompareTo(c2) == 0</code> &hArr; <code>c1.Equals(c2)</code>. Classes that 
-implement <code>IComparable.CompareTo</code> but inherit <code>Equals</code>, rather than 
-overriding it to match the <code>CompareTo</code> implementation, generally violate this 
+IComparable</code> interface, it is sensible to ensure that for all instances <code>c1</code> and
+<code>c2</code>, <code>c1.CompareTo(c2) == 0</code> &hArr; <code>c1.Equals(c2)</code>. Classes that
+implement <code>IComparable.CompareTo</code> but inherit <code>Equals</code>, rather than
+overriding it to match the <code>CompareTo</code> implementation, generally violate this
 assumption, which can lead to confusion when the class is used.</p>
 
 <blockquote>

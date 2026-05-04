@@ -1,7 +1,7 @@
 STARTUPINFOW si;
 PROCESS_INFORMATION pi;
 
-// ... 
+// ...
 
 CreateProcessW(                           // BUG
     NULL,                                 // lpApplicationName

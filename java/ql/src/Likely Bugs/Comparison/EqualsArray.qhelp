@@ -12,13 +12,13 @@ array contents, which is unlikely to be what is intended.
 </overview>
 <recommendation>
 
-<p>To compare the lengths of the arrays and the corresponding pairs of elements in the arrays, use 
+<p>To compare the lengths of the arrays and the corresponding pairs of elements in the arrays, use
 one of the comparison methods from <code>java.util.Arrays</code>:</p>
 
 <ul>
-    <li>The method <code>Arrays.equals</code> performs a shallow comparison. That is, array elements 
+    <li>The method <code>Arrays.equals</code> performs a shallow comparison. That is, array elements
     are compared using <code>equals</code>.</li>
-    <li>The method <code>Arrays.deepEquals</code> performs a deep comparison, which is appropriate 
+    <li>The method <code>Arrays.deepEquals</code> performs a deep comparison, which is appropriate
     for comparisons of nested arrays.</li>
 </ul>
 
@@ -30,11 +30,11 @@ shallow and deep hash codes based on the hash codes of individual array elements
 </recommendation>
 <example>
 
-<p>In the following example, the two arrays are first compared using the <code>Object.equals</code> method. 
+<p>In the following example, the two arrays are first compared using the <code>Object.equals</code> method.
 Because this checks only reference equality and the two arrays are different objects, <code>Object.equals</code>
 returns <code>false</code>. The two arrays are then compared using the <code>Arrays.equals</code> method.
-Because this compares the length and contents of the arrays, <code>Arrays.equals</code> returns 
-<code>true</code>. 
+Because this compares the length and contents of the arrays, <code>Arrays.equals</code> returns
+<code>true</code>.
 </p>
 
 <sample src="EqualsArray.java" />

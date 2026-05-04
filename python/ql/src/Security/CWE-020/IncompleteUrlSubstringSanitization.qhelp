@@ -54,7 +54,7 @@
         <p>
 
             The first two examples show unsafe checks that are easily bypassed.
-            In <code>unsafe1</code> the attacker can simply add 
+            In <code>unsafe1</code> the attacker can simply add
             <code>example.com</code> anywhere in the url. For example,
             <code>http://evil-example.net/example.com</code>.
         </p>

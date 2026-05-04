@@ -12,7 +12,7 @@
 <p>
 This query finds unsigned values that are being negated. Behavior is undefined in such cases.
 Negating integer values produces the two's complement of that number, which cannot represent negative
-values of large unsigned values (values where the sign bit is used) and are most likely to be interpreted 
+values of large unsigned values (values where the sign bit is used) and are most likely to be interpreted
 as a smaller positive integer instead.
 </p>
 

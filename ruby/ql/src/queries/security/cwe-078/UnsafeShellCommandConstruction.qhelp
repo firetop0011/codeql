@@ -4,9 +4,9 @@
 <qhelp>
 <overview>
 	<p>
-		Dynamically constructing a shell command with inputs from exported 
+		Dynamically constructing a shell command with inputs from exported
 		functions may inadvertently change the meaning of the shell command.
-		
+
 		Clients using the exported function may use inputs containing
 		characters that the shell interprets in a special way, for instance
 		quotes and spaces.
@@ -20,13 +20,13 @@
 <recommendation>
 
 	<p>
-		If possible, provide the dynamic arguments to the shell as an array 
+		If possible, provide the dynamic arguments to the shell as an array
 		to APIs such as <code>system(..)</code> to avoid interpretation by the shell.
 	</p>
 
 	<p>
 		Alternatively, if the shell command must be constructed
-		dynamically, then add code to ensure that special characters 
+		dynamically, then add code to ensure that special characters
 		do not alter the shell command unexpectedly.
 	</p>
 
@@ -42,13 +42,13 @@
 
 	<p>
 		The shell command will, however, fail to work as intended if the
-		input contains spaces or other special characters interpreted in a 
-		special way by the shell. 
+		input contains spaces or other special characters interpreted in a
+		special way by the shell.
 	</p>
 
 	<p>
 		Even worse, a client might pass in user-controlled
-		data, not knowing that the input is interpreted as a shell command. 
+		data, not knowing that the input is interpreted as a shell command.
 		This could allow a malicious user to provide the input <code>http://example.org; cat /etc/passwd</code>
 		in order to execute the command <code>cat /etc/passwd</code>.
 	</p>

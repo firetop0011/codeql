@@ -3,33 +3,33 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>This metric measures the inheritance depth of reference types. Inheritance is a great way to 
-reduce code duplication but when a reference type is nested too deeply in an inheritance hierarchy 
-the code can become difficult to manage. Firstly the code is more difficult to understand because 
-the superclasses have to be understood first to fully understand the reference types at the bottom 
-of the hierarchy. Secondly the code becomes very difficult to update; making a change at the top of 
+<p>This metric measures the inheritance depth of reference types. Inheritance is a great way to
+reduce code duplication but when a reference type is nested too deeply in an inheritance hierarchy
+the code can become difficult to manage. Firstly the code is more difficult to understand because
+the superclasses have to be understood first to fully understand the reference types at the bottom
+of the hierarchy. Secondly the code becomes very difficult to update; making a change at the top of
 the hierarchy could break a lot of the types lower down.</p>
 
 </overview>
 <recommendation>
-<p>A high inheritance depth is an indicator that the inheritance hierarchy might be badly structured. Reviewing the 
+<p>A high inheritance depth is an indicator that the inheritance hierarchy might be badly structured. Reviewing the
 hierarchy might show a number of issues.</p>
 
-<p>One possible issue is that a class represents the same abstraction as its superclass. In this case the two classes 
+<p>One possible issue is that a class represents the same abstraction as its superclass. In this case the two classes
 should simply be merged into one.</p>
 
-<p>It is also possible that the class hierarchy is actually trying to represent multiple properties of the same object. 
+<p>It is also possible that the class hierarchy is actually trying to represent multiple properties of the same object.
 If this is the case then it may be preferable to use composition instead of inheritance.</p>
 
 </recommendation>
 <example>
-<p>In this example the inheritance hierarchy is being used to represent multiple properties of a <code>Book</code>. 
+<p>In this example the inheritance hierarchy is being used to represent multiple properties of a <code>Book</code>.
 Inheritance should not be used in this way.</p>
 <sample src="TInheritanceDepth.cs" />
 
 </example>
 <section title="Fixing by Using Composition">
-<p>This code is more appropriate because different properties of <code>Book</code>s are defined by fields rather than 
+<p>This code is more appropriate because different properties of <code>Book</code>s are defined by fields rather than
 the position in the inheritance hierarchy.</p>
 <sample src="TInheritanceDepthFix.cs" />
 

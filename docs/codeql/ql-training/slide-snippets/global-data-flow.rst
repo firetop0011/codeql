@@ -37,7 +37,7 @@ The ``semmle.code.<language>.dataflow.TaintTracking`` library provides a framewo
   #. Subclass ``TaintTracking::Configuration`` following this template:
 
      .. code-block:: ql
-    
+
        class Config extends TaintTracking::Configuration {
          Config() { this = "<some unique identifier>" }
          override predicate isSource(DataFlow::Node nd) { ... }

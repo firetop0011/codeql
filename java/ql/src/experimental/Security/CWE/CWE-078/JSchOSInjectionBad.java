@@ -10,8 +10,7 @@ public class JSchOSInjectionBad {
         Channel channel = session.openChannel("exec");
         // BAD - untrusted user data is used directly in a command
         ((ChannelExec) channel).setCommand("ping " + command);
-        
+
         channel.connect();
     }
 }
-

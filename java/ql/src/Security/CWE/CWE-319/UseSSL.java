@@ -13,7 +13,7 @@ public static void main(String[] args) {
 			// fail
 		}
 	}
-	
+
 	{
 		try {
 			URL u = new URL("https://www.secret.example.org/");

@@ -28,7 +28,7 @@ inheritance graph.
 <recommendation>
 <p>
 Do not call virtual functions from the constructor or destructor. Change the virtual function in the base into a non-virtual function and pass
-any required parameters from the derived classes, or simply perform initialization that requires a virtual function after construction/before destruction. 
+any required parameters from the derived classes, or simply perform initialization that requires a virtual function after construction/before destruction.
 </p>
 
 </recommendation>

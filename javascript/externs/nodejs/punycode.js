@@ -101,4 +101,3 @@ module.exports.toASCII = punycode.toASCII;
 module.exports.ucs2 = punycode.ucs2;
 
 module.exports.version = punycode.version;
-

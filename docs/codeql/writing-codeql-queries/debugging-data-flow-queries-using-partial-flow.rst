@@ -32,7 +32,7 @@ The same query can be slightly simplified by rewriting it without :ref:`path exp
     select sink, "Sink is reached from $@.", source.getNode(), "here"
 
 If a data-flow query that you have written doesn't produce the results you expect it to, there may be a problem with your query.
-You can try to debug the potential problem by following the steps described below. 
+You can try to debug the potential problem by following the steps described below.
 
 Checking sources and sinks
 --------------------------
@@ -80,7 +80,7 @@ To avoid these problems, a data-flow ``Configuration`` comes with a mechanism fo
 
 There is also a ``Configuration.hasPartialFlowRev`` for exploring flow backwards from a sink.
 
-As noted in the documentation for ``hasPartialFlow`` (for example, in the 
+As noted in the documentation for ``hasPartialFlow`` (for example, in the
 `CodeQL for Java documentation <https://codeql.github.com/codeql-standard-libraries/java/semmle/code/java/dataflow/internal/DataFlowImpl2.qll/predicate.DataFlowImpl2$Configuration$hasPartialFlow.3.html>`__) you must first enable this by adding an override of ``explorationLimit``. For example:
 
 .. code-block:: ql
@@ -108,9 +108,9 @@ To do quick evaluations of partial flow it is often easiest to add a predicate t
 If you are focusing on a single source then the ``src`` column is superfluous. You may of course also add other columns of interest based on ``n``, but including the enclosing callable and the distance to the source at the very least is generally recommended, as they can be useful columns to sort on to better inspect the results.
 
 
-If you see a large number of partial flow results, you can focus them in a couple of ways: 
+If you see a large number of partial flow results, you can focus them in a couple of ways:
 
-- If flow travels a long distance following an expected path, that can result in a lot of uninteresting flow being included in the exploration radius. To reduce the amount of uninteresting flow, you can replace the source definition with a suitable ``node`` that appears along the path and restart the partial flow exploration from that point. 
+- If flow travels a long distance following an expected path, that can result in a lot of uninteresting flow being included in the exploration radius. To reduce the amount of uninteresting flow, you can replace the source definition with a suitable ``node`` that appears along the path and restart the partial flow exploration from that point.
 - Creative use of barriers and sanitizers can be used to cut off flow paths that are uninteresting. This also reduces the number of partial flow results to explore while debugging.
 
 Further reading

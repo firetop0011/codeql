@@ -29,6 +29,6 @@ public void ldapQueryGood(HttpServletRequest request, DirContext ctx) throws Nam
   // GOOD: User input is encoded before being used in search filter
   String safeUsername = encoder.encodeForLDAP(username);
   String safeFilter = "username=" + safeUsername;
-  
+
   ctx.search(safeDn, safeFilter, new SearchControls());
 }

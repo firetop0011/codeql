@@ -19,7 +19,7 @@ The life-cycle of a Java object has 7 stages:
     <strong>Created</strong> : Memory is allocated for the object and the initializers and constructors have been run.
   </li>
   <li>
-    <strong>In use</strong> : The object is reachable through a chain of strong references from a garbage collection root. A garbage collection 
+    <strong>In use</strong> : The object is reachable through a chain of strong references from a garbage collection root. A garbage collection
                   root is a special class of variable (which includes variables on the stack of any thread, static variables of any class, and
                   references from Java Native Interface code).
   </li>
@@ -40,13 +40,13 @@ The life-cycle of a Java object has 7 stages:
                   and the object still remains unreachable.
   </li>
   <li>
-    <strong>Deallocated</strong> : The object is a candidate for deallocation. 
+    <strong>Deallocated</strong> : The object is a candidate for deallocation.
   </li>
 </ul>
 
 <p>
 The call to the <code>finalize</code> method occurs when the object is in the 'Collected' stage. At that point, it is already unreachable from the
-garbage collection roots so any of its references to other objects no longer contribute to their reference counts. 
+garbage collection roots so any of its references to other objects no longer contribute to their reference counts.
 </p>
 
 </overview>

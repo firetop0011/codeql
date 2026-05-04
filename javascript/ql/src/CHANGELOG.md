@@ -87,7 +87,7 @@ No user-facing changes.
 ### New Queries
 
 * Added a new query, `js/second-order-command-line-injection`, to detect shell
-  commands that may execute arbitrary code when the user has control over 
+  commands that may execute arbitrary code when the user has control over
   the arguments to a command-line program.
   This currently flags up unsafe invocations of git and hg.
 
@@ -127,7 +127,7 @@ No user-facing changes.
 
 ### New Queries
 
-* Added a new query, `py/suspicious-regexp-range`, to detect character ranges in regular expressions that seem to match 
+* Added a new query, `py/suspicious-regexp-range`, to detect character ranges in regular expressions that seem to match
   too many characters.
 
 ## 0.3.2
@@ -158,16 +158,16 @@ No user-facing changes.
 
 ### New Queries
 
-* The `js/actions/command-injection` query has been added. It highlights GitHub Actions workflows that may allow an 
+* The `js/actions/command-injection` query has been added. It highlights GitHub Actions workflows that may allow an
   attacker to execute arbitrary code in the workflow.
   The query previously existed an experimental query.
-* A new query `js/insecure-temporary-file` has been added. The query detects the creation of temporary files that may be accessible by others users. The query is not run by default. 
+* A new query `js/insecure-temporary-file` has been added. The query detects the creation of temporary files that may be accessible by others users. The query is not run by default.
 
 ## 0.1.2
 
 ### New Queries
 
-* The `js/missing-origin-check` query has been added. It highlights "message" event handlers that do not check the origin of the event.  
+* The `js/missing-origin-check` query has been added. It highlights "message" event handlers that do not check the origin of the event.
   The query previously existed as the experimental `js/missing-postmessageorigin-verification` query.
 
 ## 0.1.1
@@ -182,7 +182,7 @@ No user-facing changes.
 
 ### New Queries
 
-* The `js/resource-exhaustion` query has been added. It highlights locations where an attacker can cause a large amount of resources to be consumed. 
+* The `js/resource-exhaustion` query has been added. It highlights locations where an attacker can cause a large amount of resources to be consumed.
   The query previously existed as an experimental query.
 
 ### Minor Analysis Improvements

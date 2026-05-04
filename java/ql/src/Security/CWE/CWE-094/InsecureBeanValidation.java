@@ -34,7 +34,7 @@ public class TestValidator implements ConstraintValidator<Object, String> {
         // Bad: Bean properties (normally user-controlled) are passed directly to `buildConstraintViolationWithTemplate`
         constraintContext.buildConstraintViolationWithTemplate(value).addConstraintViolation().disableDefaultConstraintViolation();
 
-        // Good: Bean properties (normally user-controlled) are escaped 
+        // Good: Bean properties (normally user-controlled) are escaped
         String escaped = InterpolationHelper.escapeMessageParameter(value);
         constraintContext.buildConstraintViolationWithTemplate(escaped).addConstraintViolation().disableDefaultConstraintViolation();
 

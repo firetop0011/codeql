@@ -11,7 +11,7 @@ invariants.
 </p>
 
 <p>
-For example, the behavior of <code>Dictionary</code> when a write happens concurrently with another write or a read is 
+For example, the behavior of <code>Dictionary</code> when a write happens concurrently with another write or a read is
 undefined, and frequently leads to data corruption and can lead to ​ issues as serious as livelock.
 </p>
 

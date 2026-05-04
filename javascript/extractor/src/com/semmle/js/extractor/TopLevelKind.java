@@ -9,9 +9,9 @@ public enum TopLevelKind {
   EVENT_HANDLER(2),
   JAVASCRIPT_URL(3),
   ANGULAR_STYLE_TEMPLATE(4);
-  
+
   private int value;
-  
+
   private TopLevelKind(int value) {
     this.value = value;
   }

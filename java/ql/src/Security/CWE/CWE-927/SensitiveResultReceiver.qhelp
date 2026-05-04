@@ -2,12 +2,12 @@
 <qhelp>
 
   <overview>
-    <p>If a <code>ResultReceiver</code> is obtained from an untrusted source, such as an <code>Intent</code> received by an exported component, 
+    <p>If a <code>ResultReceiver</code> is obtained from an untrusted source, such as an <code>Intent</code> received by an exported component,
     do not send it sensitive data. Otherwise, the information may be leaked to a malicious application.</p>
   </overview>
 
   <recommendation>
-    <p> 
+    <p>
       Do not send sensitive data to an untrusted <code>ResultReceiver</code>.
     </p>
   </recommendation>

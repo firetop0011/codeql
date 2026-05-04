@@ -341,4 +341,3 @@ module.exports.LOADIPHLPAPI = dns.LOADIPHLPAPI;
 module.exports.ADDRGETNETWORKPARAMS = dns.ADDRGETNETWORKPARAMS;
 
 module.exports.CANCELLED = dns.CANCELLED;
-

@@ -5,8 +5,8 @@
 
 <overview>
 <p>
-Casting an expression to the type that it already has serves no purpose and clutters the code. It indicates confusion about the 
-type of the expression, or that the code has been partially refactored. 
+Casting an expression to the type that it already has serves no purpose and clutters the code. It indicates confusion about the
+type of the expression, or that the code has been partially refactored.
 </p>
 
 <p>

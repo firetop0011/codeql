@@ -113,4 +113,3 @@ module.exports.create = domain.create;
 domain.active;
 
 module.exports.active = domain.active;
-

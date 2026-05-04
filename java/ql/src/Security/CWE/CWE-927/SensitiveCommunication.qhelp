@@ -7,8 +7,8 @@
   </overview>
 
   <recommendation>
-    <p> 
-      For <code>sendBroadcast</code> methods, a receiver permission may be specified so that only applications with a certain permission may receive the Intent; 
+    <p>
+      For <code>sendBroadcast</code> methods, a receiver permission may be specified so that only applications with a certain permission may receive the Intent;
       or a <code>LocalBroadcastManager</code> may be used.
       Otherwise, ensure that Intents containing sensitive data have an explicit receiver class set.
     </p>
@@ -41,7 +41,7 @@
       <a href="https://developer.android.com/topic/libraries/architecture/livedata">Android LiveData Overview</a>
     </li>
     <li>
-      Oversecured: 
+      Oversecured:
       <a href="https://blog.oversecured.com/Interception-of-Android-implicit-intents/">Interception of Android implicit intents</a>
     </li>
   </references>

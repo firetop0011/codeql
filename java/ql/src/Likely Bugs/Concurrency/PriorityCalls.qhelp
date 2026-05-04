@@ -5,19 +5,19 @@
 
 
 <overview>
-<p>Specifying thread priorities using calls to <code>Thread.setPriority</code> 
-and <code>Thread.getPriority</code> is not portable 
+<p>Specifying thread priorities using calls to <code>Thread.setPriority</code>
+and <code>Thread.getPriority</code> is not portable
 and may have adverse consequences such as starvation.
 </p>
 
 </overview>
 <recommendation>
 
-<p>Avoid setting thread priorities to control interactions between threads. 
+<p>Avoid setting thread priorities to control interactions between threads.
 Using the default thread priority should be sufficient for most applications.
 </p>
 
-<p>However, if you need to enforce a specific synchronization order, use one of the following 
+<p>However, if you need to enforce a specific synchronization order, use one of the following
 alternatives:</p>
 
 <ul>
@@ -25,8 +25,8 @@ alternatives:</p>
     <li>Using the <code>java.util.concurrent</code> library</li>
 </ul>
 
-<p>In some cases, calls to <code>Thread.sleep</code> may be appropriate to temporarily stop 
-execution (provided that there is no possibility for race conditions), but this is not generally 
+<p>In some cases, calls to <code>Thread.sleep</code> may be appropriate to temporarily stop
+execution (provided that there is no possibility for race conditions), but this is not generally
 recommended.</p>
 
 </recommendation>

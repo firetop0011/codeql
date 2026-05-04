@@ -5,7 +5,7 @@ for (i = 0; i < NUM_RECORDS; i++) {
 	for (j = 0; j < NUM_FIELDS; j++) {
 		process(record[i]->field[j]);
 	}
-	
+
 	int field_idx = 0;
 	//Better: the inner loop has a descriptive name
 	for (field_idx = 0; field_idx < NUM_FIELDS; field_idx++) {

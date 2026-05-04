@@ -10,4 +10,3 @@ void advapi() {
   // GOOD: use AES
   CryptDeriveKey(hCryptProv, CALG_AES_256, hHash, 0, &hKey);
 }
-

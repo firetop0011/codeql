@@ -7,7 +7,7 @@
 <overview>
 <p>
 This rule finds boolean expressions that have more than 5 consecutive operators that are not of the same type (e.g. alternating <code>&amp;&amp;</code> and <code>||</code> operators).
-Long chains of operators of the same type are not flagged as violations of this rule. 
+Long chains of operators of the same type are not flagged as violations of this rule.
 </p>
 
 <p>

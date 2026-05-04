@@ -16,4 +16,3 @@ def process_request(request):
     hashed_input = binascii.hexlify(dk)
     if hashed_input == hashed_password:
         redirect("login")
-

@@ -5,16 +5,16 @@
 
 
 <overview>
-<p>Classes that implement <code>Comparable&lt;T&gt;</code> and define 
+<p>Classes that implement <code>Comparable&lt;T&gt;</code> and define
 a <code>compareTo</code> method whose parameter type is not <code>T</code>
-<i>overload</i> the <code>compareTo</code> method instead of <i>overriding</i> it. This may not be intended. 
+<i>overload</i> the <code>compareTo</code> method instead of <i>overriding</i> it. This may not be intended.
 </p>
 
 </overview>
 <example>
 
 <p>In the following example, the call to <code>compareTo</code> on line 17 calls the method
-defined in class <code>Super</code>, instead of the method defined in class <code>Sub</code>, because 
+defined in class <code>Super</code>, instead of the method defined in class <code>Sub</code>, because
 the type of <code>a</code> and <code>b</code> is <code>Super</code>. This may not be the method that
 the programmer intended.</p>
 
@@ -23,7 +23,7 @@ the programmer intended.</p>
 </example>
 <recommendation>
 
-<p>To <i>override</i> the <code>Comparable&lt;T&gt;.compareTo</code> method,   
+<p>To <i>override</i> the <code>Comparable&lt;T&gt;.compareTo</code> method,
 the parameter of <code>compareTo</code> must have type <code>T</code>.
 </p>
 

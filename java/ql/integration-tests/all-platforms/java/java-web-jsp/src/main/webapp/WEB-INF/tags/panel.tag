@@ -1,5 +1,5 @@
-<%-- 
-   - Copyright (c) 2002 The Apache Software Foundation.  All rights 
+<%--
+   - Copyright (c) 2002 The Apache Software Foundation.  All rights
    - reserved.
 --%>
 <%@ attribute name="color" %>

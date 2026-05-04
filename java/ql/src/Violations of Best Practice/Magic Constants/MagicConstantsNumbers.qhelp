@@ -12,7 +12,7 @@ explanation. It is considered bad practice to use magic numbers because:</p>
 <ul>
 <li>A number in isolation can be difficult for other programmers to understand.
 </li>
-<li>It can be difficult to update the code if the requirements change. For example, if the magic 
+<li>It can be difficult to update the code if the requirements change. For example, if the magic
 number represents the number of guests allowed, adding one more guest means that you must change
 every occurrence of the magic number.
 </li>

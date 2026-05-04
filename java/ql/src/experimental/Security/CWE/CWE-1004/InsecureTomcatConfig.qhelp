@@ -10,7 +10,7 @@ an attacker can use a cross-site scripting (XSS) attack to get another user's se
 
 <recommendation>
 <p>Tomcat version 7+ automatically sets an <code>HttpOnly</code> flag on all session cookies to
-prevent client side scripts from accessing the session ID. 
+prevent client side scripts from accessing the session ID.
 In most situations, you should not override this behavior.</p>
 </recommendation>
 

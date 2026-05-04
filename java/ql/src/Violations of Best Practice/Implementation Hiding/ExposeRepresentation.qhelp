@@ -16,17 +16,17 @@ a mutable argument to its field.</p>
 <p>There are three ways of addressing this problem:</p>
 
 <ul>
-<li><strong>Using immutable objects</strong> : The fields store objects that are <em>immutable</em>, 
+<li><strong>Using immutable objects</strong> : The fields store objects that are <em>immutable</em>,
 which means that once constructed their value can never be changed. Examples from the
 standard library are <code>String</code>, <code>Integer</code> or
-<code>Float</code>. Although such an object may be aliased, or shared between several contexts, 
+<code>Float</code>. Although such an object may be aliased, or shared between several contexts,
 there can be no unexpected changes to the internal state of the object because it cannot be modified.</li>
 
-<li><strong>Creating a read-only view</strong> : The <code>java.util.Collections.unmodifiable*</code> 
-methods can be used to create a read-only view of a collection without copying it. 
-This tends to give better performance than creating copies of objects. Note that this 
-technique is not suitable for every situation, because any changes to the underlying 
-collection will spread to affect the view. This can lead to unexpected 
+<li><strong>Creating a read-only view</strong> : The <code>java.util.Collections.unmodifiable*</code>
+methods can be used to create a read-only view of a collection without copying it.
+This tends to give better performance than creating copies of objects. Note that this
+technique is not suitable for every situation, because any changes to the underlying
+collection will spread to affect the view. This can lead to unexpected
 results, and is a particular danger when writing multi-threaded code.</li>
 
 <li><strong>Making defensive copies</strong> : Each setter (or constructor) makes a copy or clone of the

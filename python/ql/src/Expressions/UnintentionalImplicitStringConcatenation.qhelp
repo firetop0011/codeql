@@ -4,7 +4,7 @@
 <qhelp>
 
 <overview>
-<p>When two string literals abut each other the Python interpreter implicitly concatenates them into a 
+<p>When two string literals abut each other the Python interpreter implicitly concatenates them into a
 single string. On occasion this can be useful, but is more commonly misleading or incorrect.
 </p>
 

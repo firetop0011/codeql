@@ -25,7 +25,7 @@ We can start by looking at every private field in a class and checking that ever
    import cpp
 
    from Constructor c, Field f
-   where f.getDeclaringType() = c.getDeclaringType() and f.isPrivate() 
+   where f.getDeclaringType() = c.getDeclaringType() and f.isPrivate()
        and not exists(Assignment a | a = f.getAnAssignment() and a.getEnclosingFunction() = c)
    select c, "Constructor does not initialize fields $@.", f, f.getName()
 
@@ -57,7 +57,7 @@ These can be excluded by adding an extra condition to check for this special con
    import cpp
 
    from Constructor c, Field f
-   where f.getDeclaringType() = c.getDeclaringType() and f.isPrivate() 
+   where f.getDeclaringType() = c.getDeclaringType() and f.isPrivate()
        and not exists(Assignment a | a = f.getAnAssignment() and a.getEnclosingFunction() = c)
        // check for constructor initialization lists as well
        and not exists(ConstructorFieldInit i | i.getTarget() = f and i.getEnclosingFunction() = c)
@@ -73,7 +73,7 @@ When you test the revised query, you may discover that fields from classes in ex
    import cpp
 
    from Constructor c, Field f
-   where f.getDeclaringType() = c.getDeclaringType() and f.isPrivate() 
+   where f.getDeclaringType() = c.getDeclaringType() and f.isPrivate()
        and not exists(Assignment a | a = f.getAnAssignment() and a.getEnclosingFunction() = c)
        // check for constructor initialization lists as well
        and not exists(ConstructorFieldInit i | i.getTarget() = f and i.getEnclosingFunction() = c)
@@ -135,7 +135,7 @@ Finally we can simplify the query by using the transitive closure operator. In t
    import cpp
 
    from Constructor c, Field f
-   where f.getDeclaringType() = c.getDeclaringType() and f.isPrivate() 
+   where f.getDeclaringType() = c.getDeclaringType() and f.isPrivate()
        // check for constructor initialization lists as well
        and not exists(ConstructorFieldInit i | i.getTarget() = f and i.getEnclosingFunction() = c)
        // check for initializations performed indirectly by methods called

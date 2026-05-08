@@ -338,4 +338,3 @@ Exercise 2
    /* 10 */ t.getHeight() < avg(float i | exists(Person p | p.getHeight() = i) | i) and
    /* 11 */ t = max(Person p | p.getLocation() = "east" | p order by p.getAge())
    select "The thief is " + t + "!"
-   

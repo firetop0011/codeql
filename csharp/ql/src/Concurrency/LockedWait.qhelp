@@ -4,13 +4,13 @@
 <qhelp>
 <overview>
 <p>Holding a lock during a call to <code>System.Threading.Monitor.Wait()</code> can lead to
-performance problems or deadlock because the lock can prevent other threads from running. 
+performance problems or deadlock because the lock can prevent other threads from running.
 This can be caused by nesting the call to <code>System.Threading.Monitor.Wait()</code> in
 two <code>lock</code> statements, or by waiting on a different object to the one
 which is locked.</p>
 
 <p>Synchronized methods (with the attribute <code>[MethodImpl(MethodImplOptions.Synchronized)]</code>)
-can also cause problems, because they are equivalent to <code>lock(this)</code> or 
+can also cause problems, because they are equivalent to <code>lock(this)</code> or
 <code>lock(typeof(Class))</code>.</p>
 
 </overview>

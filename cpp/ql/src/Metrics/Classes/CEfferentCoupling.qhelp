@@ -4,7 +4,7 @@
 <qhelp>
 <overview>
 <p>
-This metric measures the number of outgoing dependencies for each class, 
+This metric measures the number of outgoing dependencies for each class,
 i.e. the number of other classes on which each class depends.
 </p>
 

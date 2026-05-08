@@ -60,7 +60,7 @@ public class ObjectUtil {
 	{
 		return value == null ? replacement : value;
 	}
-	
+
 	@SafeVarargs
 	public static <T> T nullCoalesce(T... values) {
 		for(T value : values) {

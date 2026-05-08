@@ -12,7 +12,7 @@ class DateFormattingThread implements Runnable {
 }
 
 public class DateFormatThreadUnsafe {
-    
+
     public static void main(String[] args) {
         for(int i=0; i<100; i++){
             new Thread(new DateFormattingThread()).start();

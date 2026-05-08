@@ -18,7 +18,7 @@ def expand_template_params(args, param_arg_map):
             result.append(param_arg_map[arg])
         else:
             result.append(arg)
-    
+
     return result
 
 def find_instantiation(module, args, templates):
@@ -59,14 +59,14 @@ def instantiate_template(template, instantiation, root, templates):
                 output.write(import_record["access"] + " ")
             imported_module = find_instantiation(import_record["module"],
                 expand_template_params(import_record["args"], param_arg_map), templates)
-            output.write("import %s  // %s<%s>\n" % 
+            output.write("import %s  // %s<%s>\n" %
                 (
                     imported_module,
                     import_record["module"],
                     ", ".join(import_record["args"])
                 )
             )
-            
+
         output.writelines(template_def["body_lines"])
 
 def generate_instantiations(template, root, templates):

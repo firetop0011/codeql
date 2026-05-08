@@ -6,8 +6,8 @@
 
 <overview>
 <p>
-This rule finds classes with virtual functions but no virtual destructor. Deleting a class without a virtual destructor will 
-only call the destructor of the type of the pointer being deleted. This can cause a defect if the pointer type is a base 
+This rule finds classes with virtual functions but no virtual destructor. Deleting a class without a virtual destructor will
+only call the destructor of the type of the pointer being deleted. This can cause a defect if the pointer type is a base
 type while the object instance is a derived type.
 </p>
 

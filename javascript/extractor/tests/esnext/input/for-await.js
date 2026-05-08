@@ -1,6 +1,6 @@
 async function foo() {
     for await (const call of calls) {
-        call();    
+        call();
     }
 }
 

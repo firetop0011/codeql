@@ -11,7 +11,7 @@ method.</p>
 </overview>
 <example>
 
-<p>The following example shows how the singleton design pattern is often misimplemented. The 
+<p>The following example shows how the singleton design pattern is often misimplemented. The
 programmer intends the constructor of <code>MasterSingleton</code> to
 be protected so that it cannot be instantiated (because the
 singleton instance should be retrieved using <code>getInstance</code>).

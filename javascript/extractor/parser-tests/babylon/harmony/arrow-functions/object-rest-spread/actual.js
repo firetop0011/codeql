@@ -1,3 +1,3 @@
 var foo = ( { title, ...other } ) => {
-  
+
 };

@@ -6,8 +6,8 @@ The QL libraries and queries in this version have been explicitly checked agains
 .. pull-quote::
 
     Tip
-    
-    If you're interested in other libraries or frameworks, you can extend the analysis to cover them. 
+
+    If you're interested in other libraries or frameworks, you can extend the analysis to cover them.
     For example, by extending the data flow libraries to include data sources and sinks for additional libraries or frameworks.
 
 .. There is currently no built-in support for libraries or frameworks for C/C++.
@@ -34,7 +34,7 @@ COBOL built-in support
 Java built-in support
 ==================================
 
-.. csv-table:: 
+.. csv-table::
      :file: java-frameworks.csv
      :header-rows: 1
      :class: fullWidthTable
@@ -44,7 +44,7 @@ Java built-in support
 JavaScript and TypeScript built-in support
 =======================================================
 
-.. csv-table:: 
+.. csv-table::
      :file: javascript-typescript-frameworks.csv
      :header-rows: 1
      :class: fullWidthTable
@@ -54,7 +54,7 @@ JavaScript and TypeScript built-in support
 Python built-in support
 ====================================
 
-.. csv-table:: 
+.. csv-table::
      :file: python-frameworks.csv
      :header-rows: 1
      :class: fullWidthTable

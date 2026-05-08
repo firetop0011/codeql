@@ -3,4 +3,4 @@ class UsersController < ActionController::Base
       filename = params[:filename]
       File.open(filename)
     end
-  end  
+  end

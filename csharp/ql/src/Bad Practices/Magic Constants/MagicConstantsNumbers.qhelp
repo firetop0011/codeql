@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>This rule finds numbers that are used multiple times that should possibly be constants instead. 
+<p>This rule finds numbers that are used multiple times that should possibly be constants instead.
 Named constants make it easier to determine the purpose of the number and make the number easy to change if it is used more than once.</p>
 
 </overview>

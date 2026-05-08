@@ -28,7 +28,7 @@ public class TrapDependencies extends TextFile
 
 	/**
 	 * Load a TRAP dependencies (.dep) file
-	 * 
+	 *
 	 * @param file the file to load
 	 */
 	public TrapDependencies(Path file) {
@@ -37,7 +37,7 @@ public class TrapDependencies extends TextFile
 		if(trap == null)
 			parseError(file);
 	}
-	
+
 	@Override
 	protected Set<String> getSet(final Path file, String label) {
 		if(label.equals(TRAP)) {
@@ -62,7 +62,7 @@ public class TrapDependencies extends TextFile
 		if(label.equals(TRAPS)) return traps;
 		return null;
 	}
-	
+
 	@Override
 	protected void parseError(Path file) {
 		throw new ResourceError("Corrupt TRAP dependencies: " + file);
@@ -79,7 +79,7 @@ public class TrapDependencies extends TextFile
 	/**
 	 * @return the paths of the TRAP file dependencies
 	 *         (relative to the trap directory)
-	 *         
+	 *
 	 */
 	public Set<String> dependencies() {
 		return Collections.unmodifiableSet(traps);
@@ -87,7 +87,7 @@ public class TrapDependencies extends TextFile
 
 	/**
 	 * Add a path to a TRAP file (relative to the trap directory).
-	 * 
+	 *
 	 * @param trap the path to the trap file to add
 	 */
 	public void addDependency(String trap) {

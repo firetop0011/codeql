@@ -1,6 +1,6 @@
 """
     Custom Pygments lexer for highlighting QL code.
-    
+
     Based on instructions from http://pygments.org/docs/lexerdevelopment/.
 """
 
@@ -35,15 +35,15 @@ class QLLexer(RegexLexer):
             # Keywords
             (r'\b(boolean|date|float|int|string)\b', Keyword.Type),
             (r'\b(abstract|cached|deprecated|external|final|library|override|private|query'
-             r'|(pragma|language|bindingset)\[\w*(,\s*\w*)*\])\s', 
+             r'|(pragma|language|bindingset)\[\w*(,\s*\w*)*\])\s',
              Keyword.Reserved),
             (words((
                 'and', 'any', 'as', 'asc', 'avg', 'by', 'class','concat', 'count',
-                'desc', 'else', 'exists', 'extends', 'false', 'forall', 
+                'desc', 'else', 'exists', 'extends', 'false', 'forall',
                 'forex', 'from', 'if', 'implies', 'import', 'in', 'instanceof',
-                'max', 'min', 'module', 'newtype', 'not', 'none', 'or', 'order', 
-                'predicate', 'rank', 'result', 'select', 'strictconcat', 
-                'strictcount', 'strictsum', 'sum', 'super', 'then', 'this', 
+                'max', 'min', 'module', 'newtype', 'not', 'none', 'or', 'order',
+                'predicate', 'rank', 'result', 'select', 'strictconcat',
+                'strictcount', 'strictsum', 'sum', 'super', 'then', 'this',
                 'true', 'unique', 'where'), prefix=r'\b', suffix=r'\b'),
              Keyword),
             # Identifiers

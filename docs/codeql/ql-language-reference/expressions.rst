@@ -7,7 +7,7 @@ Expressions
 
 An expression evaluates to a set of values and has a type.
 
-For example, the expression ``1 + 2`` 
+For example, the expression ``1 + 2``
 evaluates to the integer ``3`` and the expression ``"QL"`` evaluates to the string ``"QL"``. ``1 + 2`` has :ref:`type <types>` ``int`` and ``"QL"`` has type ``string``.
 
 The following sections describe the expressions that are available in QL.
@@ -15,10 +15,10 @@ The following sections describe the expressions that are available in QL.
 Variable references
 *******************
 
-A variable reference is the name of a declared :ref:`variable <variables>`. This kind of 
+A variable reference is the name of a declared :ref:`variable <variables>`. This kind of
 expression has the same type as the variable it refers to.
 
-For example, if you have :ref:`declared <variable-declarations>` the variables ``int i`` and ``LocalScopeVariable lsv``, then 
+For example, if you have :ref:`declared <variable-declarations>` the variables ``int i`` and ``LocalScopeVariable lsv``, then
 the expressions ``i`` and ``lsv`` have types ``int`` and ``LocalScopeVariable`` respectively.
 
 You can also refer to the variables ``this`` and ``result``. These are used in :ref:`predicate
@@ -41,20 +41,20 @@ You can express certain values directly in QL, such as numbers, booleans, and st
 
     0
     42
-    -2048 
+    -2048
 
-- :ref:`Float <float>` literals: These are sequences of decimal digits separated by a dot 
+- :ref:`Float <float>` literals: These are sequences of decimal digits separated by a dot
   (``.``), possibly starting with a minus sign (``-``).
   For example:
-  
+
   .. code-block:: ql
-      
+
     2.0
     123.456
     -100.5
 
-- :ref:`String <string>` literals: These are finite strings of 16-bit characters. You can 
-  define a string literal by enclosing characters in quotation marks (``"..."``). Most 
+- :ref:`String <string>` literals: These are finite strings of 16-bit characters. You can
+  define a string literal by enclosing characters in quotation marks (``"..."``). Most
   characters represent themselves, but there are a few characters that you need to "escape"
   with a backslash. The following are examples of string literals:
 
@@ -62,18 +62,18 @@ You can express certain values directly in QL, such as numbers, booleans, and st
 
     "hello"
     "They said, \"Please escape quotation marks!\""
-  
+
   See `String literals <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#string-literals-string>`__
-  in the QL language specification for more details. 
-    
+  in the QL language specification for more details.
+
   Note: there is no "date literal" in QL. Instead, to specify a :ref:`date <date>`, you should
   convert a string to the date that it represents using the ``toDate()`` predicate. For example,
   ``"2016-04-03".toDate()`` is the date April 3, 2016, and ``"2000-01-01 00:00:01".toDate()`` is the
   point in time one second after New Year 2000.
-  
+
   The following string formats are recognized as dates:
-   - **ISO dates**, such as ``"2016-04-03 17:00:24"``. The seconds part is optional (assumed 
-     to be ``"00"`` if it's missing), and the entire time part can also be missing (in which 
+   - **ISO dates**, such as ``"2016-04-03 17:00:24"``. The seconds part is optional (assumed
+     to be ``"00"`` if it's missing), and the entire time part can also be missing (in which
      case it's assumed to be ``"00:00:00"``).
    - **Short-hand ISO dates**, such as ``"20160403"``.
    - **UK-style dates**, such as ``"03/04/2016"``.
@@ -82,8 +82,8 @@ You can express certain values directly in QL, such as numbers, booleans, and st
 Parenthesized expressions
 *************************
 
-A parenthesized expression is an expression surrounded by parentheses, ``(`` and ``)``. This 
-expression has exactly the same type and values as the original expression. 
+A parenthesized expression is an expression surrounded by parentheses, ``(`` and ``)``. This
+expression has exactly the same type and values as the original expression.
 Parentheses are useful for grouping expressions together to remove ambiguity and improve
 readability.
 
@@ -93,12 +93,12 @@ readability.
 Ranges
 ******
 
-A range expression denotes a range of values ordered between two expressions. It consists of 
-two expressions separated by ``..`` and enclosed in brackets (``[`` and ``]``). 
-For example, ``[3 .. 7]`` is a valid range expression. Its values are any integers between 
+A range expression denotes a range of values ordered between two expressions. It consists of
+two expressions separated by ``..`` and enclosed in brackets (``[`` and ``]``).
+For example, ``[3 .. 7]`` is a valid range expression. Its values are any integers between
 ``3`` and ``7`` (including ``3`` and ``7`` themselves).
 
-In a valid range, the start and end expression are integers, floats, or dates. If one of them 
+In a valid range, the start and end expression are integers, floats, or dates. If one of them
 is a date, then both must be dates. If one of them is an integer and the other a float, then
 both are treated as floats.
 
@@ -124,36 +124,36 @@ Super expressions
 *****************
 
 Super expressions in QL are similar to super expressions in other programming languages, such
-as Java. You can use them in predicate calls, when you want to use the predicate definition 
-from a supertype. In practice, this is useful when a predicate inherits two definitions from 
+as Java. You can use them in predicate calls, when you want to use the predicate definition
+from a supertype. In practice, this is useful when a predicate inherits two definitions from
 its supertypes. In that case, the predicate must :ref:`override <overriding-member-predicates>`
 those definitions to avoid ambiguity.
-However, if you want to use the definition from a particular supertype instead of writing a 
+However, if you want to use the definition from a particular supertype instead of writing a
 new definition, you can use a super expression.
 
-In the following example, the class ``C`` inherits two definitions of the predicate 
-``getANumber()``—one from ``A`` and one from ``B``. 
+In the following example, the class ``C`` inherits two definitions of the predicate
+``getANumber()``—one from ``A`` and one from ``B``.
 Instead of overriding both definitions, it uses the definition from ``B``.
 
 .. code-block:: ql
-   
+
     class A extends int {
       A() { this = 1 }
       int getANumber() { result = 2 }
     }
-    
+
     class B extends int {
       B() { this = 1 }
       int getANumber() { result = 3 }
     }
-    
+
     class C extends A, B {
       // Need to define `int getANumber()`; otherwise it would be ambiguous
-      int getANumber() { 
+      int getANumber() {
         result = B.super.getANumber()
       }
     }
-    
+
     from C c
     select c, c.getANumber()
 
@@ -181,7 +181,7 @@ Aggregations
 ************
 
 An aggregation is a mapping that computes a result value from a set of input values that are
-specified by a formula. 
+specified by a formula.
 
 The general syntax is:
 
@@ -193,7 +193,7 @@ The variables :ref:`declared <variable-declarations>` in ``<variable declaration
 the **aggregation variables**.
 
 Ordered aggregates (namely ``min``, ``max``, ``rank``, ``concat``, and ``strictconcat``) are
-ordered by their ``<expression>`` values by default. The ordering is either numeric (for 
+ordered by their ``<expression>`` values by default. The ordering is either numeric (for
 integers and floating point numbers) or lexicographic (for strings). Lexicographic ordering is
 based on the `Unicode value <https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin>`_
 of each character.
@@ -210,25 +210,25 @@ The following aggregates are available in QL:
 
 - ``count``: This aggregate determines the number of distinct values of ``<expression>`` for
   each possible assignment of the aggregation variables.
-  
-  For example, the following aggregation returns the number of files that have more than 
+
+  For example, the following aggregation returns the number of files that have more than
   ``500`` lines:
 
   .. code-block:: ql
 
       count(File f | f.getTotalNumberOfLines() > 500 | f)
-  
-  If there are no possible assignments to the aggregation variables that satisfy the formula, as in 
+
+  If there are no possible assignments to the aggregation variables that satisfy the formula, as in
   ``count(int i | i = 1 and i = 2 | i)``, then ``count`` defaults to the value ``0``.
 
 .. index:: min, max, minimum, maximum
 
 - ``min`` and ``max``: These aggregates determine the smallest (``min``) or largest (``max``)
-  value of ``<expression>`` among the possible assignments to the aggregation variables. 
+  value of ``<expression>`` among the possible assignments to the aggregation variables.
   ``<expression>`` must be of numeric type or of type ``string``, or an explicit order must be defined with ``order by``.
   When using ``order by``, more than one result may exist in case of ties.
-  
-  For example, the following aggregation returns the name of the ``.js`` file (or files) with the 
+
+  For example, the following aggregation returns the name of the ``.js`` file (or files) with the
   largest number of lines, using the number of lines of code to break ties:
 
   .. code-block:: ql
@@ -238,7 +238,7 @@ The following aggregates are available in QL:
   The following aggregation returns the minimum string ``s`` out of the three strings mentioned
   below, that is, the string that comes first in the lexicographic ordering of all the possible
   values of ``s``. (In this case, it returns ``"De Morgan"``.)
-  
+
   .. code-block:: ql
 
       min(string s | s = "Tarski" or s = "Dedekind" or s = "De Morgan" | s)
@@ -249,7 +249,7 @@ The following aggregates are available in QL:
   assignments to the aggregation variables. The type of ``<expression>`` must be numeric.
   If there are no possible assignments to the aggregation variables that satisfy the formula, the aggregation fails and
   returns no values. In other words, it evaluates to the empty set.
-  
+
   For example, the following aggregation returns the average of the integers ``0``, ``1``,
   ``2``, and ``3``:
 
@@ -259,8 +259,8 @@ The following aggregates are available in QL:
 
 .. index:: sum
 
-- ``sum``: This aggregate determines the sum of the values of ``<expression>`` over all possible 
-  assignments to the aggregation variables. The type of ``<expression>`` must be numeric. 
+- ``sum``: This aggregate determines the sum of the values of ``<expression>`` over all possible
+  assignments to the aggregation variables. The type of ``<expression>`` must be numeric.
   If there are no possible assignments to the aggregation variables that satisfy the formula, then the sum is ``0``.
 
   For example, the following aggregation returns the sum of ``i * j`` for all possible values
@@ -272,8 +272,8 @@ The following aggregates are available in QL:
 
 .. index:: concat
 
-- ``concat``: This aggregate concatenates the values of ``<expression>`` over all possible 
-  assignments to the aggregation variables. Note that ``<expression>`` must be of type 
+- ``concat``: This aggregate concatenates the values of ``<expression>`` over all possible
+  assignments to the aggregation variables. Note that ``<expression>`` must be of type
   ``string``. If there are no possible assignments to the aggregation variables that satisfy
   the formula, then ``concat`` defaults to the empty string.
 
@@ -295,7 +295,7 @@ The following aggregates are available in QL:
 
 .. index:: rank
 
-- ``rank``: This aggregate takes the possible values of ``<expression>`` and ranks them. 
+- ``rank``: This aggregate takes the possible values of ``<expression>`` and ranks them.
   ``<expression>`` must be of numeric type or of type ``string``, or an explicit order must be defined with ``order by``.
   The aggregation returns the value that is ranked in the position specified by the **rank expression**.
   You must include this rank expression in brackets after the keyword ``rank``.
@@ -344,15 +344,15 @@ Evaluation of aggregates
 
 In general, aggregate evaluation involves the following steps:
 
-#. Determine the input variables: these are the aggregation variables declared in ``<variable declarations>`` and 
+#. Determine the input variables: these are the aggregation variables declared in ``<variable declarations>`` and
    also the variables declared outside of the aggregate that are used in some component of the aggregate.
 
 #. Generate all possible distinct tuples (combinations) of the values of input variables such that the
-   ``<formula>`` holds true. Note that the same value of an aggregate variable may appear in 
-   multiple distinct tuples. All such occurrences of the same value are treated as distinct occurrences 
+   ``<formula>`` holds true. Note that the same value of an aggregate variable may appear in
+   multiple distinct tuples. All such occurrences of the same value are treated as distinct occurrences
    when processing tuples.
 
-#. Apply ``<expression>`` on each tuple and collect the generated (distinct) values. The application 
+#. Apply ``<expression>`` on each tuple and collect the generated (distinct) values. The application
    of ``<expression>`` on a tuple may result in generating more than one value.
 
 #. Apply the aggregation function on the values generated in step 3 to compute the final result.
@@ -366,24 +366,24 @@ Let us apply these steps to the ``sum`` aggregate in the following query:
 
 #. Input variables: ``i``, ``j``.
 
-#. All possible tuples ``(<value of i>, <value of j>)`` satisfying the given condition: 
+#. All possible tuples ``(<value of i>, <value of j>)`` satisfying the given condition:
    ``(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 0), (1, 1), ..., (4, 5)``.
 
    30 tuples are generated in this step.
 
-#. Apply the ``<expression> i`` on all tuples. This means selecting all values of ``i`` from 
+#. Apply the ``<expression> i`` on all tuples. This means selecting all values of ``i`` from
    all tuples: ``0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4.``
 
 #. Apply the aggregation function ``sum`` on the above values to get the final result ``60``.
 
-If we change ``<expression>`` to ``i + j`` in the above query, the query result is ``135`` since 
+If we change ``<expression>`` to ``i + j`` in the above query, the query result is ``135`` since
 applying ``i + j`` on all tuples results in following values:
 \ ``0, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 7, 3, 4, 5, 6, 7, 8, 4, 5, 6, 7, 8, 9``.
 
 Next, consider the following query:
 
 .. code-block:: ql
- 
+
    select count(string s | s = "hello" | s.charAt(_))
 
 #. ``s`` is the input variable of the aggregate.
@@ -394,18 +394,18 @@ Next, consider the following query:
    is a :ref:`don't-care expression <don-t-care-expressions>`, which represents any value.
    ``s.charAt(_)`` generates four distinct values ``h, e, l, o``.
 
-#. Finally, ``count`` is applied on these values, and the query returns ``4``.  
+#. Finally, ``count`` is applied on these values, and the query returns ``4``.
 
 
 
 Omitting parts of an aggregation
 ================================
 
-The three parts of an aggregation are not always required, so you can often write the 
+The three parts of an aggregation are not always required, so you can often write the
 aggregation in a simpler form:
 
 #. If you want to write an aggregation of the form ``<aggregate>(<type> v | <expression> = v | v)``,
-   then you can omit the ``<variable declarations>`` and ``<formula>`` parts and write it 
+   then you can omit the ``<variable declarations>`` and ``<formula>`` parts and write it
    as follows:
 
    .. code-block:: ql
@@ -416,7 +416,7 @@ aggregation in a simpler form:
    string ``"hello"``. These forms are equivalent:
 
    .. code-block:: ql
-   
+
        count(int i | i = "hello".indexOf("l") | i)
        count("hello".indexOf("l"))
 
@@ -428,14 +428,14 @@ aggregation in a simpler form:
 
        avg(int i | i = [0 .. 3] | i)
        avg(int i | i = [0 .. 3])
-   
+
 #. As a special case, you can omit the ``<expression>`` part from ``count`` even if there is more
    than one aggregation variable. In such a case, it counts the number of distinct tuples of
    aggregation variables that satisfy the formula. In other words, the expression part is
    considered to be the constant ``1``. For example, the following aggregations are equivalent:
 
    .. code-block:: ql
-  
+
        count(int i, int j | i in [1 .. 3] and j in [1 .. 3] | 1)
        count(int i, int j | i in [1 .. 3] and j in [1 .. 3])
 
@@ -445,7 +445,7 @@ aggregation in a simpler form:
 
        <aggregate>(<variable declarations> | | <expression>)
 
-   This is useful if you don't want to restrict the aggregation variables any further. 
+   This is useful if you don't want to restrict the aggregation variables any further.
    For example, the following aggregation returns the maximum number of lines across all files:
 
    .. code-block:: ql
@@ -470,24 +470,24 @@ In addition to standard aggregates, QL also supports monotonic aggregates.
 Monotonic aggregates differ from standard aggregates in the way that they deal with the
 values generated by the ``<expression>`` part of the formula:
 
-- Standard aggregates take the ``<expression>`` values for each ``<formula>`` value and 
+- Standard aggregates take the ``<expression>`` values for each ``<formula>`` value and
   flatten them into a list. A single aggregation function is applied to all the values.
-- Monotonic aggregates take an ``<expression>`` for each value given by the ``<formula>``, 
-  and create combinations of all the possible values. The aggregation 
+- Monotonic aggregates take an ``<expression>`` for each value given by the ``<formula>``,
+  and create combinations of all the possible values. The aggregation
   function is applied to each of the resulting combinations.
 
-In general, if the ``<expression>`` is total and functional, then monotonic aggregates are 
-equivalent to standard aggregates. Results differ when there is not precisely one ``<expression>`` 
+In general, if the ``<expression>`` is total and functional, then monotonic aggregates are
+equivalent to standard aggregates. Results differ when there is not precisely one ``<expression>``
 value for each value generated by the ``<formula>``:
 
-- If there are missing ``<expression>`` values (that is, there is no 
-  ``<expression>`` value for a value generated by the ``<formula>``), monotonic aggregates 
-  won't compute a result, as you cannot create combinations of values  
+- If there are missing ``<expression>`` values (that is, there is no
+  ``<expression>`` value for a value generated by the ``<formula>``), monotonic aggregates
+  won't compute a result, as you cannot create combinations of values
   including exactly one ``<expression>`` value for each value generated by the ``<formula>``.
 
-- If there is more than one ``<expression>`` per ``<formula>`` result, you can create multiple 
-  combinations of values including exactly one ``<expression>`` value for each 
-  value generated by the ``<formula>``. Here, the aggregation function is applied to each of the 
+- If there is more than one ``<expression>`` per ``<formula>`` result, you can create multiple
+  combinations of values including exactly one ``<expression>`` value for each
+  value generated by the ``<formula>``. Here, the aggregation function is applied to each of the
   resulting combinations.
 
 Example of monotonic aggregates
@@ -595,9 +595,9 @@ requesting monotonic semantics of aggregates.
 Recursive monotonic aggregates
 ------------------------------
 
-Monotonic aggregates may be used :ref:`recursively <recursion>`, but the recursive call may only appear in the 
+Monotonic aggregates may be used :ref:`recursively <recursion>`, but the recursive call may only appear in the
 expression, and not in the range. The recursive semantics for aggregates are the same as the
-recursive semantics for the rest of QL. For example, we might define a predicate to calculate 
+recursive semantics for the rest of QL. For example, we might define a predicate to calculate
 the distance of a node in a graph from the leaves as follows:
 
 .. code-block:: ql
@@ -609,9 +609,9 @@ the distance of a node in a graph from the leaves as follows:
      else result = 1 + max(Node child | child = n.getAChild() | depth(child))
    }
 
-Here the recursive call is in the expression, which is legal. The recursive semantics for aggregates 
-are the same as the recursive semantics for the rest of QL. If you understand how aggregates work in 
-the non-recursive case then you should not find it difficult to use them recursively. However, it is 
+Here the recursive call is in the expression, which is legal. The recursive semantics for aggregates
+are the same as the recursive semantics for the rest of QL. If you understand how aggregates work in
+the non-recursive case then you should not find it difficult to use them recursively. However, it is
 worth seeing how the evaluation of a recursive aggregation proceeds.
 
 Consider the depth example we just saw with the following graph as input (arrows point from children to parents):
@@ -634,7 +634,7 @@ Then the evaluation of the ``depth`` predicate proceeds as follows:
 | 3         | ``(0, b), (0, d), (0, e), (1, c), (2, a)`` | The recursive step for **a** succeeds, since ``depth`` now has a value for all its children (**b** and **c**).                                                           |
 +-----------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Here, we can see that at the intermediate stages it is very important for the aggregate to 
+Here, we can see that at the intermediate stages it is very important for the aggregate to
 fail if some of the children lack a value - this prevents erroneous values being added.
 
 .. index:: any
@@ -701,7 +701,7 @@ arithmetic negations of the values.
 Binary operations
 *****************
 
-A binary operation consists of an expression, followed by a binary operator, followed by 
+A binary operation consists of an expression, followed by a binary operator, followed by
 another expression. For example:
 
 .. code-block:: ql
@@ -730,13 +730,13 @@ You can use the following binary operators in QL:
 | Modulo                 | ``%``  |
 +------------------------+--------+
 
-If both expressions are numbers, these operators act as standard arithmetic operators. For 
-example, ``10.6 - 3.2`` has value ``7.4``, ``123.456 * 0`` has value ``0``, and ``9 % 4`` has 
+If both expressions are numbers, these operators act as standard arithmetic operators. For
+example, ``10.6 - 3.2`` has value ``7.4``, ``123.456 * 0`` has value ``0``, and ``9 % 4`` has
 value ``1`` (the remainder after dividing ``9`` by ``4``).
-If both operands are integers, then the result is an integer. Otherwise the result is a 
+If both operands are integers, then the result is an integer. Otherwise the result is a
 floating-point number.
 
-You can also use ``+`` as a string concatenation operator. In this case, at least one of the 
+You can also use ``+`` as a string concatenation operator. In this case, at least one of the
 expressions must be a string—the other expression is implicitly converted to a string using the
 ``toString()`` predicate. The two expressions are concatenated, and the result is a string. For
 example, the expression ``221 + "B"`` has value ``"221B"``.
@@ -746,32 +746,32 @@ example, the expression ``221 + "B"`` has value ``"221B"``.
 Casts
 *****
 
-A cast allows you to constrain the :ref:`type <types>` of an expression. This is similar to casting in other 
-languages, for example in Java. 
+A cast allows you to constrain the :ref:`type <types>` of an expression. This is similar to casting in other
+languages, for example in Java.
 
-You can write a cast in two ways: 
-  - As a "postfix" cast: A dot followed by the name of a type in parentheses. 
+You can write a cast in two ways:
+  - As a "postfix" cast: A dot followed by the name of a type in parentheses.
     For example, ``x.(Foo)`` restricts the type of ``x`` to ``Foo``.
-  - As a "prefix" cast: A type in parentheses followed by another expression. 
+  - As a "prefix" cast: A type in parentheses followed by another expression.
     For example, ``(Foo)x`` also restricts the type of ``x`` to ``Foo``.
 
 Note that a postfix cast is equivalent to a prefix cast surrounded by parentheses—``x.(Foo)``
 is exactly equivalent to ``((Foo)x)``.
 
-Casts are useful if you want to call a :ref:`member predicate <member-predicates>` that is only defined for a more 
-specific type. For example, the following query selects Java 
+Casts are useful if you want to call a :ref:`member predicate <member-predicates>` that is only defined for a more
+specific type. For example, the following query selects Java
 `classes <https://codeql.github.com/codeql-standard-libraries/java/semmle/code/java/Type.qll/type.Type$Class.html>`_
 that have a direct supertype called "List":
 
 .. code-block:: ql
 
     import java
-    
+
     from Type t
-    where t.(Class).getASupertype().hasName("List")    
+    where t.(Class).getASupertype().hasName("List")
     select t
 
-Since the predicate ``getASupertype()`` is defined for ``Class``, but not for ``Type``, you 
+Since the predicate ``getASupertype()`` is defined for ``Class``, but not for ``Type``, you
 can't call ``t.getASupertype()`` directly. The cast ``t.(Class)`` ensures that ``t`` is
 of type ``Class``, so it has access to the desired predicate.
 
@@ -787,10 +787,10 @@ If you prefer to use a prefix cast, you can rewrite the ``where`` part as:
 Don't-care expressions
 **********************
 
-This is an expression written as a single underscore ``_``. It represents any value. (You 
-"don't care" what the value is.) 
+This is an expression written as a single underscore ``_``. It represents any value. (You
+"don't care" what the value is.)
 
-Unlike other expressions, a don't-care expression does not have a type. In practice, this 
+Unlike other expressions, a don't-care expression does not have a type. In practice, this
 means that ``_`` doesn't have any :ref:`member predicates <member-predicates>`, so you can't
 call ``_.somePredicate()``.
 

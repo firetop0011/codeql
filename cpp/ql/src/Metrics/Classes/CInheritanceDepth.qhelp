@@ -34,13 +34,13 @@ the cause of the problem. Here are two possibilities:
 <li>
 A class and its superclass represent fundamentally the same abstraction.
 In this case, they should generally be merged together (see the 'Collapse
-Hierarchy' refactoring on pp.279-80 of [Fowler]). 
+Hierarchy' refactoring on pp.279-80 of [Fowler]).
 </li>
 
 <li>
 The class hierarchy is trying to represent variation in more than one
 dimension using single inheritance. This can lead to an unnecessarily
-deep class hierarchy with lots of code duplication. 
+deep class hierarchy with lots of code duplication.
 </li></ul>
 
 <p>

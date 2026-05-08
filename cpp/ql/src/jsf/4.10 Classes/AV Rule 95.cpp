@@ -1,11 +1,11 @@
 enum Shape_color { red, green, blue };
-class Shape 
+class Shape
 {
   public:
     virtual void draw (Shape_color color = green) const;
     ...
 }
-class Circle : public Shape 
+class Circle : public Shape
 {
   public:
     virtual void draw (Shape_color  color = red) const;

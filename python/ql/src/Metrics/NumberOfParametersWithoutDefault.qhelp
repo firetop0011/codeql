@@ -31,32 +31,32 @@ Restrict the number of parameters for a function, according to the reason for th
 passed into the function separately. The parameters that are logically related should be grouped together
 (see the 'Introduce Parameter Object' refactoring on pp. 238-242 of [Fowler]).</li>
 
-<li>The function has too many responsibilities. It should be broken into multiple functions (see the 
+<li>The function has too many responsibilities. It should be broken into multiple functions (see the
 'Extract Method' refactoring on pp. 89-95 of [Fowler]), and each new function should be passed
 a subset of the original parameters.</li>
 
-<li>The function has redundant parameters that are not used. The two main reasons for this are: 
+<li>The function has redundant parameters that are not used. The two main reasons for this are:
 (1) parameters were added for future extensibility but are never used; (2) the body of the function was changed
 so that it no longer uses certain parameters, but the function signature was not
-correspondingly updated. In both cases, the theoretically correct solution is to delete the unused 
+correspondingly updated. In both cases, the theoretically correct solution is to delete the unused
 parameters (see the 'Remove Parameter' refactoring on pp. 223-225 of [Fowler]), although you must do
 this cautiously if the function is part of a published interface.</li>
 </ul>
 
-<p>When a function is part of a published interface, one possible solution is to add a new, wrapper 
-function to the interface that has a tidier signature. Alternatively, you can publish a new version of 
+<p>When a function is part of a published interface, one possible solution is to add a new, wrapper
+function to the interface that has a tidier signature. Alternatively, you can publish a new version of
 the interface that has a better design. Clearly, however, neither of these solutions is ideal,
 so you should take care to design interfaces the right way from the start.</p>
 
 <p>The practice of adding parameters for future extensibility is especially
 bad. It is confusing to other programmers, who are uncertain what values they should pass
-in for these unnecessary parameters, and it adds unused code that is potentially difficult to remove 
+in for these unnecessary parameters, and it adds unused code that is potentially difficult to remove
 later.</p>
 
 </recommendation>
 <section title="Examples">
 
-<p>In the following example, although the parameters are logically related, they are passed into the 
+<p>In the following example, although the parameters are logically related, they are passed into the
 <code>print_annotation</code> function separately.</p>
 
 <sample src="NumberOfParameters1.py" />
@@ -69,7 +69,7 @@ An instance of the class can then be passed into the function instead, as shown 
 <sample src="NumberOfParameters1Good.py" />
 
 <p>In the following example, the <code>print_membership</code> function has too many responsibilities,
-and so needs to be passed four arguments.</p> 
+and so needs to be passed four arguments.</p>
 
 <sample src="NumberOfParameters2.py" />
 

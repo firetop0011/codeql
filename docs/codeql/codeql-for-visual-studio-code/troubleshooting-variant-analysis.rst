@@ -27,4 +27,3 @@ If there are problems with the variant analysis run, you will see a warning bann
     :alt: Screenshot of the "Variant Analysis Results" view showing a warning banner with the text "warning: Problem with controller repository" and "Publicly visible controller repository can't be used to analyze private repositories. 1 private repository was not analyzed." The "View logs" button is highlighted with a dark orange outline.
 
 In this example, the user ran variant analysis on a custom list of two repositories. One of the repositories was a private repository and could not be analyzed because they had a public controller repository. Only the public repository was analyzed. To analyze both repositories, this user needs to edit their settings and update the controller repository to a private repository. For information on how to edit the controller repository, see ":ref:`Customizing settings <customizing-settings>`."
-

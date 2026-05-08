@@ -21,7 +21,7 @@
 * The recently introduced new data flow and taint tracking APIs have had a
   number of module and predicate renamings. The old APIs remain in place for
   now.
-* The `WebViewDubuggingQuery` library has been renamed to `WebViewDebuggingQuery` to fix the typo in the file name. `WebViewDubuggingQuery` is now deprecated. 
+* The `WebViewDubuggingQuery` library has been renamed to `WebViewDebuggingQuery` to fix the typo in the file name. `WebViewDubuggingQuery` is now deprecated.
 
 ### New Features
 
@@ -29,7 +29,7 @@
 
 ### Minor Analysis Improvements
 
-* Fixed a bug in the regular expression used to identify sensitive information in `SensitiveActions::getCommonSensitiveInfoRegex`. This may affect the results of the queries `java/android/sensitive-communication`, `java/android/sensitive-keyboard-cache`, and `java/sensitive-log`. 
+* Fixed a bug in the regular expression used to identify sensitive information in `SensitiveActions::getCommonSensitiveInfoRegex`. This may affect the results of the queries `java/android/sensitive-communication`, `java/android/sensitive-keyboard-cache`, and `java/sensitive-log`.
 * Added a summary model for the `java.lang.UnsupportedOperationException(String)` constructor.
 * The filenames embedded in `Compilation.toString()` now use `/` as the path separator on all platforms.
 * Added models for the following packages:
@@ -164,7 +164,7 @@ No user-facing changes.
 * Fixed a problem in the taint model for the method `java.nio.file.Paths.get`.
 * Deleted the deprecated `LocalClassDeclStmtNode` and `LocalClassDeclStmt` classes from `PrintAst.qll` and `Statement.qll` respectively.
 * Deleted the deprecated `getLocalClass` predicate from `LocalTypeDeclStmt`, and the deprecated `getLocalClassDeclStmt` predicate from `LocalClassOrInterface`.
-* Added support for Android Manifest `<activity-aliases>` elements in data flow sources. 
+* Added support for Android Manifest `<activity-aliases>` elements in data flow sources.
 
 ### Bug Fixes
 
@@ -270,9 +270,9 @@ No user-facing changes.
 
 ### Deprecated APIs
 
-* Many classes/predicates/modules with upper-case acronyms in their name have been renamed to follow our style-guide. 
+* Many classes/predicates/modules with upper-case acronyms in their name have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
-* The utility files previously in the `semmle.code.java.security.performance` package have been moved to the `semmle.code.java.security.regexp` package.  
+* The utility files previously in the `semmle.code.java.security.performance` package have been moved to the `semmle.code.java.security.regexp` package.
   The previous files still exist as deprecated aliases.
 
 ### New Features
@@ -291,7 +291,7 @@ No user-facing changes.
 * The class `AndroidFragment` now also models the Android Jetpack version of the `Fragment` class (`androidx.fragment.app.Fragment`).
 * Java 19 builds can now be extracted. There are no non-preview new language features in this release, so the only user-visible change is that the CodeQL extractor will now correctly trace compilations using the JDK 19 release of `javac`.
 * Classes and methods that are seen with several different paths during the extraction process (for example, packaged into different JAR files) now report an arbitrarily selected location via their `getLocation` and `hasLocationInfo` predicates, rather than reporting all of them. This may lead to reduced alert duplication.
-* The query `java/hardcoded-credential-api-call` now recognises methods that consume usernames, passwords and keys from the JSch, Ganymed, Apache SSHD, sshj, Trilead SSH-2, Apache FTPClient and MongoDB projects. 
+* The query `java/hardcoded-credential-api-call` now recognises methods that consume usernames, passwords and keys from the JSch, Ganymed, Apache SSHD, sshj, Trilead SSH-2, Apache FTPClient and MongoDB projects.
 
 ## 0.3.3
 
@@ -322,7 +322,7 @@ No user-facing changes.
 * Added data-flow models for `java.util.Properties`. Additional results may be found where relevant data is stored in and then retrieved from a `Properties` instance.
 * Added `Modifier.isInline()`.
 * Removed Kotlin-specific database and QL structures for loops and `break`/`continue` statements. The Kotlin extractor was changed to reuse the Java structures for these constructs.
-* Added additional flow sources for uses of external storage on Android. 
+* Added additional flow sources for uses of external storage on Android.
 
 ## 0.3.0
 
@@ -332,7 +332,7 @@ No user-facing changes.
 
 ### Minor Analysis Improvements
 
-Added a flow step for `String.valueOf` calls on tainted `android.text.Editable` objects. 
+Added a flow step for `String.valueOf` calls on tainted `android.text.Editable` objects.
 
 ## 0.2.3
 
@@ -425,7 +425,7 @@ Added a flow step for `String.valueOf` calls on tainted `android.text.Editable` 
    * `File::getCanonicalFile`
    * `File::getAbsolutePath`
    * `File::getCanonicalPath`
-* Added a flow step for `toString` calls on tainted `android.text.Editable` objects. 
+* Added a flow step for `toString` calls on tainted `android.text.Editable` objects.
 * Added a data flow step for tainted Android intents that are sent to other activities and accessed there via `getIntent()`.
 * Added modeling of MyBatis (`org.apache.ibatis`) Providers, resulting in additional sinks for the queries `java/ognl-injection`, `java/sql-injection`, `java/sql-injection-local` and `java/concatenated-sql-query`.
 
@@ -452,7 +452,7 @@ Added a flow step for `String.valueOf` calls on tainted `android.text.Editable` 
 ### Breaking Changes
 
 * The recently added flow-state versions of `isBarrierIn`, `isBarrierOut`, `isSanitizerIn`, and `isSanitizerOut` in the data flow and taint tracking libraries have been removed.
-* The `getUrl` predicate of `DeclaredRepository` in `MavenPom.qll` has been renamed to `getRepositoryUrl`. 
+* The `getUrl` predicate of `DeclaredRepository` in `MavenPom.qll` has been renamed to `getRepositoryUrl`.
 
 ### New Features
 
@@ -472,7 +472,7 @@ Added a flow step for `String.valueOf` calls on tainted `android.text.Editable` 
 
 ### Deprecated APIs
 
-* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide. 
+* Many classes/predicates/modules that had upper-case acronyms have been renamed to follow our style-guide.
   The old name still exists as a deprecated alias.
 
 ### New Features

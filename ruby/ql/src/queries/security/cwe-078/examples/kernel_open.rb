@@ -3,4 +3,4 @@ class UsersController < ActionController::Base
     filename = params[:filename]
     open(filename) # BAD
   end
-end  
+end

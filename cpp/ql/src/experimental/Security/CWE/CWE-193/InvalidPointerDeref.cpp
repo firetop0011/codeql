@@ -4,7 +4,7 @@ void write_data(const unsigned char*, const unsigned char*);
 
 int main(int argc, char* argv[]) {
   unsigned size = get_size();
-  
+
   {
     unsigned char *begin = (unsigned char*)malloc(size);
     if(!begin) return -1;

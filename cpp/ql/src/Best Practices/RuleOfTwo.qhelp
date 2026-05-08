@@ -8,7 +8,7 @@
 <p>This rule finds classes that define a copy constructor or a copy assignment operator, but not both of them. The compiler generates default implementations for these functions, and since they deal with similar concerns it is likely that if the default implementation of one of them is not satisfactory, then neither is that of the other.</p>
 
 <p>When a class defines a copy constructor or a copy assignment operator, but not both, this can cause
-unexpected behavior.  The object initialization (that is, <code>Class c1 = c2</code>) may behave differently 
+unexpected behavior.  The object initialization (that is, <code>Class c1 = c2</code>) may behave differently
 from object assignment (that is, <code>c1 = c2</code>).</p>
 </overview>
 

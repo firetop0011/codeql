@@ -2145,4 +2145,3 @@ module.exports.S_IROTH = constants.S_IROTH;
 module.exports.S_IWOTH = constants.S_IWOTH;
 
 module.exports.S_IXOTH = constants.S_IXOTH;
-

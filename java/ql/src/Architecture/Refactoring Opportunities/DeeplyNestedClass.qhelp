@@ -22,7 +22,7 @@ The solution is to move one or more of the nested classes into a higher scope, l
 <li>
 Ensure that the class can still access the required variables from its previously enclosing scopes.</li>
 <li>
-Consider the dependencies, particularly when you move a non-static nested class out of the 
+Consider the dependencies, particularly when you move a non-static nested class out of the
 containing class. Generally, a non-static class should be refactored to depend only on
 the contents of the classes that previously enclosed it. This avoids introducing a dependency cycle where the non-static class depends on the previously-enclosing classes themselves.
 </li></ul>

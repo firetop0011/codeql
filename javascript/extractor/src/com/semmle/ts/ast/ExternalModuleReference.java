@@ -21,7 +21,7 @@ public class ExternalModuleReference extends Expression implements INodeWithSymb
   public <C, R> R accept(Visitor<C, R> v, C c) {
     return v.visit(this, c);
   }
-  
+
   @Override
   public int getSymbol() {
     return this.symbol;

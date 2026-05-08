@@ -1,5 +1,5 @@
 extensions:
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeModel
     data:
@@ -178,7 +178,7 @@ extensions:
       - ["@google-cloud/spanner/transaction.Dml", "@google-cloud/spanner/transaction.DmlStatic", Instance]
       - ["@google-cloud/spanner/transaction.DmlStatic", "@google-cloud/spanner/transaction", "Member[Dml]"]
 
-  - addsTo: 
+  - addsTo:
       pack: codeql/javascript-all
       extensible: typeVariableModel
     data:

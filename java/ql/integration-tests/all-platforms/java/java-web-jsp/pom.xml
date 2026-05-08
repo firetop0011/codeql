@@ -5,13 +5,13 @@
     <artifactId>vulnerable-jsp-app</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    
+
     <name>Vulnerable JSP Application</name>
     <description>
     This is a demo application used to display the typical configuration required to precompiled JSP.
     This application also contains vulnerable samples. DO NOT used this project's code as example.
     </description>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jetty-version>9.3.3.v20150827</jetty-version>
@@ -275,11 +275,11 @@
                 </configuration>
             </plugin>
 
-            <plugin>                
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
-            </plugin>   
+            </plugin>
 
             <!-- SpotBugs Static Analysis -->
             <plugin>

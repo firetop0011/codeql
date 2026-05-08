@@ -1,4 +1,4 @@
-// GOOD: Certificate pinning implemented via okhttp3.CertificatePinner 
+// GOOD: Certificate pinning implemented via okhttp3.CertificatePinner
 CertificatePinner certificatePinner = new CertificatePinner.Builder()
     .add("example.com", "sha256/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=")
     .build();
@@ -21,6 +21,6 @@ SSLContext sslContext = SSLContext.getInstance("TLS");
 sslContext.init(null, tmf.getTrustManagers(), null);
 
 URL url = new URL("http://www.example.com/");
-HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection(); 
+HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
 
 urlConnection.setSSLSocketFactory(sslContext.getSocketFactory());

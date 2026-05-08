@@ -6,7 +6,7 @@ abstract class FrameworkTestCase extends TestCase {
 		super.setUp();
 		Framework.init();
 	}
-	
+
 	@Override
 	protected void tearDown() throws Exception {
 		super.tearDown();
@@ -22,15 +22,15 @@ public class TearDownNoSuper extends FrameworkTestCase {
 	protected void setUp() throws Exception {
 		super.setUp();
 	}
-	
+
 	public void testFramework() {
 		//...
 	}
-	
+
 	public void testFramework2() {
 		//...
 	}
-	
+
 	@Override
 	protected void tearDown() throws Exception {
 		// BAD: Does not call 'super.tearDown'. May cause later tests to fail
@@ -46,15 +46,15 @@ public class TearDownSuper extends FrameworkTestCase {
 	protected void setUp() throws Exception {
 		super.setUp();
 	}
-	
+
 	public void testFramework() {
 		//...
 	}
-	
+
 	public void testFramework2() {
 		//...
 	}
-	
+
 	@Override
 	protected void tearDown() throws Exception {
 		// GOOD: Correctly calls 'super.tearDown' to shut down the

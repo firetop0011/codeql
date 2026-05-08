@@ -9,7 +9,7 @@
       the <code>"application/vnd.android.package-archive"</code> MIME type. If
       the file used in the <code>Intent</code> is from a location that is not
       controlled by the application (for example, an SD card that is
-      universally writable), this can result in the unintended installation of untrusted applications.  
+      universally writable), this can result in the unintended installation of untrusted applications.
     </p>
   </overview>
 

@@ -80,7 +80,7 @@ with open(opcode_path, 'r', encoding='utf-8') as opcode:
                         # Indent by two additional spaces, since opcodes are declared in the
                         # `Opcode` module.
                         indent = '  '
-                
+
                 if name_without_suffix:
                     # Found an `Opcode` that matches a known `Instruction`. Replace the QLDoc with
                     # a copy of the one from the `Instruction`.

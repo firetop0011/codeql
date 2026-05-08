@@ -3,16 +3,16 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>It is generally very easy to make sure you are overriding the method you intend in C# - you use 
-the <code>override</code> keyword and the compiler will detect any errors you make. However, it is 
-still possible to add methods that appear to override something but do not override because they do 
-not use the <code>override</code> keyword or are misspelt. Methods of this type are confusing to 
+<p>It is generally very easy to make sure you are overriding the method you intend in C# - you use
+the <code>override</code> keyword and the compiler will detect any errors you make. However, it is
+still possible to add methods that appear to override something but do not override because they do
+not use the <code>override</code> keyword or are misspelt. Methods of this type are confusing to
 other programmers and may act unexpectedly.</p>
 
 </overview>
 <recommendation>
-<p>The appropriate solution involves carefully examining the method in question: if it should be 
-overriding another method, change it accordingly; if not, rename or remove it to avoid further 
+<p>The appropriate solution involves carefully examining the method in question: if it should be
+overriding another method, change it accordingly; if not, rename or remove it to avoid further
 confusion.</p>
 
 </recommendation>

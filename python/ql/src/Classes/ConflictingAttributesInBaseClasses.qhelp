@@ -6,14 +6,14 @@
 <overview>
 <p>
 When a class subclasses multiple base classes, attribute lookup is performed from left to right amongst the base classes.
-This form of attribute lookup is called "method resolution order" and is a solution to the 
+This form of attribute lookup is called "method resolution order" and is a solution to the
 <a href="http://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem">diamond inheritance problem</a> where several base classes
 override a method in a shared superclass.
 </p>
 <p>
 Unfortunately, this means that if more than one base class defines the same attribute, the leftmost base class will effectively override
 the attribute of the rightmost base class, even though the leftmost base class is not a subclass of the rightmost base class.
-Unless the methods in question are designed for inheritance, using <code>super</code>, then this implicit overriding may not be the desired behavior. 
+Unless the methods in question are designed for inheritance, using <code>super</code>, then this implicit overriding may not be the desired behavior.
 Even if it is the desired behavior it makes the code hard to understand and maintain.
 </p>
 

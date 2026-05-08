@@ -5,9 +5,9 @@
 
 
 <overview>
-<p>This rule finds code that uses 
+<p>This rule finds code that uses
 <code>x % 2 == 1</code>
-to check whether a number <tt>x</tt> is odd, which does not work for negative numbers. 
+to check whether a number <tt>x</tt> is odd, which does not work for negative numbers.
 Applying <code>%</code> to negative numbers produces negative results.
 For example, <code>(-5) % 2 </code> equals <code>-1</code>, not <code>1</code>.
 As a result, this check incorrectly considers all negative numbers as even.
@@ -15,7 +15,7 @@ As a result, this check incorrectly considers all negative numbers as even.
 
 </overview>
 <recommendation>
-<p>Consider using 
+<p>Consider using
 <code>x % 2 != 0</code> or <code>(x &amp; 1) == 1</code> instead.
 </p>
 

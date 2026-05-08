@@ -46,7 +46,7 @@ public class StreamUtil
 		}
 		return total;
 	}
-	
+
 	/**
 	 * Copy all chars that can be read from a {@link Reader}, into a {@link Writer}.
 	 *

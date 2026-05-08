@@ -2,4 +2,3 @@
 def raise_int():
     #Will raise a TypeError
     raise 4
-

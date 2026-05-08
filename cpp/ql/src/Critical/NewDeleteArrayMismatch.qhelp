@@ -14,7 +14,7 @@ be avoided.
 <p>
 The <code>new</code> operator allocates memory for just <em>one</em> object, then calls that object's constructor, and <code>delete</code>
 does the opposite. The array <code>delete[]</code> operator, however, expects the pointer to be pointing to the first element of
-an array (which could have header data specifying the length of the array) and would attempt to call the destructor on each 
+an array (which could have header data specifying the length of the array) and would attempt to call the destructor on each
 element of the 'array', which would likely lead to a segfault due to the invalid header data.
 </p>
 

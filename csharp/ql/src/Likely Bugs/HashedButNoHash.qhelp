@@ -3,7 +3,7 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>Classes that override <code>System.Object.Equals()</code> but not <code>System.Object.GetHashCode()</code> 
+<p>Classes that override <code>System.Object.Equals()</code> but not <code>System.Object.GetHashCode()</code>
 can yield unexpected results if instances of those classes are stored in a hashing data structure.</p>
 
 </overview>

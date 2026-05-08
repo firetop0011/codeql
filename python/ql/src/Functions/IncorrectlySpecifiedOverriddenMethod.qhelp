@@ -18,9 +18,9 @@ overriding method(s).</p>
 
 </recommendation>
 <example>
-<p>In this example there is a mismatch between the legal parameters for the base 
-class method <code>(self, source, filename)</code> and the extension method 
-<code>(self, source)</code>. Since there is a call that uses the signature of the extension method 
+<p>In this example there is a mismatch between the legal parameters for the base
+class method <code>(self, source, filename)</code> and the extension method
+<code>(self, source)</code>. Since there is a call that uses the signature of the extension method
 then it can be inferred that the base signature is erroneous and should be updated to
 match that of the extension method.
 </p>

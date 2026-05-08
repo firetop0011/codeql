@@ -17,7 +17,7 @@ same place, and exposes internals of the other class to the method.</p>
 its present location, or if you can move it to the class it is "envious" of.
 A common example is a method that calls a large number of getters on
 another class to perform a calculation that does not rely on
-anything from its own class. In such cases, you should move the method to the class containing the data. 
+anything from its own class. In such cases, you should move the method to the class containing the data.
 If the calculation depends on some values from the method's current class, they can either be passed as
 arguments or accessed using getters from the other class.</p>
 

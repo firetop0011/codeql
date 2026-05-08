@@ -34,7 +34,7 @@ extensions:
       - ["System.Security.Cryptography", "TripleDESCryptoServiceProvider", false, "CreateEncryptor", "(System.Byte[],System.Byte[])", "", "Argument[0]", "encryption-encryptor", "df-generated"]
       - ["System.Security.Cryptography", "TripleDESCryptoServiceProvider", false, "set_Key", "(System.Byte[])", "", "Argument[0]", "encryption-keyprop", "df-generated"]
 
-    
+
 
 
   - addsTo:
@@ -51946,6 +51946,3 @@ extensions:
       - ["System", "WeakReference<>", "TryGetTarget", "(T)", "summary", "df-generated"]
       - ["System", "WeakReference<>", "WeakReference", "(T)", "summary", "df-generated"]
       - ["System", "WeakReference<>", "WeakReference", "(T,System.Boolean)", "summary", "df-generated"]
-
-    
-        

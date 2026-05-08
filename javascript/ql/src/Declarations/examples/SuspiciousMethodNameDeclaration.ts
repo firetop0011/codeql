@@ -3,4 +3,3 @@ declare class Point {
    y: number;
    constructor(x : number, y: number);
 }
-

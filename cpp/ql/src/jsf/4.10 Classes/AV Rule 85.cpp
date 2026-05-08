@@ -15,7 +15,7 @@ class C {
 		return this->x % 3 == 0 && this->y % 4 == 0; //updated to include the new field
 	}
 	bool operator!=(const C& other) {
-		return !(*this == other); //Correct, no need to update this operator 
+		return !(*this == other); //Correct, no need to update this operator
 		                          //definition when adding the new field
 	}
 };

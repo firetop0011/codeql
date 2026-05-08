@@ -2,7 +2,7 @@ void f(char* s, float f) {
 	char buf[30];
 
 	//wrong: gets has no limit to the length of data it puts in the buffer
-	gets(buf); 
+	gets(buf);
 
 	//wrong: sprintf does not limit the length of the string put into buf
 	sprintf(buf, "This is a string: %s", s);

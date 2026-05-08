@@ -8,4 +8,3 @@ def redirect_to_file(function, args, kwargs, filename):
             function(*args, **kwargs)
         finally:
             sys.stdout = orig_stdout
-

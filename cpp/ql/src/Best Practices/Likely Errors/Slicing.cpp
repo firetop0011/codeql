@@ -31,13 +31,13 @@ int main(int argc, char* argv[]) {
 
     Connection curr_conn = conn;
     curr_conn.print_info();
-    curr_conn = m_conn; //Wrong: Derived MetricConnection assigned to Connection 
+    curr_conn = m_conn; //Wrong: Derived MetricConnection assigned to Connection
                         //variable, will slice off the counters and the overriding print_info
     curr_conn.print_info(); //Will not print the counters.
 
     Connection* curr_pconn = &conn;
     curr_pconn->print_info();
-    curr_pconn = &m_conn; //Correct: Pointer assigned to address of the MetricConnection. 
+    curr_pconn = &m_conn; //Correct: Pointer assigned to address of the MetricConnection.
                           //Counters and virtual functions remain intact.
     curr_pconn->print_info(); //Will call the correct method MeteredConnection::print_info
 }

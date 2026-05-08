@@ -16,13 +16,13 @@ QL, ``n = n + 1`` is an equality :ref:`formula <formulas>` that holds only
 if ``n`` is equal to ``n + 1`` (so in fact it does not hold for any numeric value).
 In Java, ``n = n + 1`` is not an equality, but an assignment that changes the value of ``n`` by
 adding ``1`` to the current value.
- 
+
 .. _variable-declarations:
 
 Declaring a variable
 ********************
 
-All variable declarations consist of a :ref:`type <types>` and a name for the variable. 
+All variable declarations consist of a :ref:`type <types>` and a name for the variable.
 The name can be any `identifier <https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#identifiers>`_
 that starts with a lowercase letter.
 
@@ -66,7 +66,7 @@ Free and bound variables
 ************************
 
 Variables can have different roles. Some variables are **free**, and their values directly
-affect the value of an :ref:`expression <expressions>` that uses them, or whether a 
+affect the value of an :ref:`expression <expressions>` that uses them, or whether a
 :ref:`formula <formulas>` that uses them holds or not.
 Other variables, called **bound** variables, are restricted to specific sets of values.
 
@@ -89,12 +89,12 @@ where ``"l"`` occurs in the string ``"hello"``, so it evaluates to ``2`` and ``3
 The second expression evaluates to ``-3``, the minimum value in the range ``[-3 .. 3]``.
 Although this expression uses a variable ``f``, it is just a placeholder or "dummy" variable,
 and you can't assign any values to it.
-You could replace ``f`` with a different variable without changing the meaning of the 
-expression. For example, ``min(float f | f in [-3 .. 3])`` is always equal to 
+You could replace ``f`` with a different variable without changing the meaning of the
+expression. For example, ``min(float f | f in [-3 .. 3])`` is always equal to
 ``min(float other | other in [-3 .. 3])``. This is an example of a **bound variable**.
 
-What about the expressions ``(i + 7) * 3`` and ``x.sqrt()``? 
-In these two cases, the values of the expressions depend on what values are assigned to the 
+What about the expressions ``(i + 7) * 3`` and ``x.sqrt()``?
+In these two cases, the values of the expressions depend on what values are assigned to the
 variables ``i`` and ``x`` respectively. In other words, the value of the variable has an impact
 on the value of the expression. These are examples of **free variables**.
 
@@ -123,7 +123,7 @@ For example, if ``i`` is assigned ``1`` or ``2`` (or any other ``int``) then the
 On the other hand, if ``i`` is assigned ``3.5``, then it doesn't hold.
 
 The last formula contains a free variable ``x`` and a bound variable ``y``. If ``x`` is assigned
-a non-negative number, then the final formula holds. On the other hand, if ``x`` is assigned 
+a non-negative number, then the final formula holds. On the other hand, if ``x`` is assigned
 ``-9`` for example, then the formula doesn't hold. The variable ``y`` doesn't affect whether
 the formula holds or not.
 
@@ -134,6 +134,6 @@ For more information about how assignments to free variables are computed, see "
 .. [#] This is a slight simplification. There are some formulas that are always true or always
        false, regardless of the assignments to their free variables. However, you won't usually
        use these when you're writing QL.
-       For example, and ``a = a`` is always true (known as a 
+       For example, and ``a = a`` is always true (known as a
        `tautology <https://en.wikipedia.org/wiki/Tautology_(logic)>`_), and ``x and not x`` is
        always false.

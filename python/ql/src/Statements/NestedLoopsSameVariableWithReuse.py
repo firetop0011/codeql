@@ -13,4 +13,3 @@ def largest_elements_correct(l):
         for y in x:
             maxnum = max(y, maxnum)
         print "The largest element in the list", x, "is", maxnum
-

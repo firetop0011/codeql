@@ -12,7 +12,7 @@ class Test {
 			int scaled2;
 			if (data < Integer.MAX_VALUE/10)
 				scaled2 = data * 10;
-			else 
+			else
 				scaled2 = Integer.MAX_VALUE;
 		}
 	}

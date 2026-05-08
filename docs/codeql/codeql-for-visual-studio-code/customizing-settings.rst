@@ -38,7 +38,7 @@ Changing the labels of query history items
 --------------------------------------------
 
 The query history **Format** setting controls how the extension lists queries in the query history. By default, each item has a label with the following format::
-    
+
     %q on %d - %s, %r result count [%t]
 
 - ``%q`` is the query name
@@ -60,7 +60,7 @@ By default, items in the query history view are retained for 30 days. You can se
 Configuring settings for running queries locally
 ------------------------------------------------
 
-There are a number of settings for **Running Queries**. If your queries run too slowly and time out frequently, you may want to increase the memory. 
+There are a number of settings for **Running Queries**. If your queries run too slowly and time out frequently, you may want to increase the memory.
 
 .. include:: ../reusables/running-queries-debug.rst
 
@@ -112,7 +112,7 @@ Configuring settings for testing queries locally
 
 To increase the number of threads used for testing queries, you can update the **Running Tests > Number Of Threads** setting.
 
-To pass additional arguments to the CodeQL CLI when running tests, you can update the **Running Tests > Additional Test Arguments** setting. For more information about the available arguments, see `test run <https://docs.github.com/en/code-security/codeql-cli/codeql-cli-manual/test-run/>`_ in the documentation for CodeQL CLI. 
+To pass additional arguments to the CodeQL CLI when running tests, you can update the **Running Tests > Additional Test Arguments** setting. For more information about the available arguments, see `test run <https://docs.github.com/en/code-security/codeql-cli/codeql-cli-manual/test-run/>`_ in the documentation for CodeQL CLI.
 
 Configuring settings for telemetry and data collection
 --------------------------------------------------------

@@ -649,4 +649,3 @@ module.exports.request = http.request;
 module.exports.get = http.get;
 
 module.exports.globalAgent = http.globalAgent;
-

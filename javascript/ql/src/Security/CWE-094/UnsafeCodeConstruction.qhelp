@@ -5,7 +5,7 @@
 
 <overview>
 <p>
-When a library function dynamically constructs code in a potentially unsafe way, then 
+When a library function dynamically constructs code in a potentially unsafe way, then
 it's important to document to clients of the library that the function should only be
 used with trusted inputs.
 
@@ -18,7 +18,7 @@ client vulnerable to code-injection attacks.
 
 <recommendation>
 <p>
-Properly document library functions that construct code from unsanitized 
+Properly document library functions that construct code from unsanitized
 inputs, or avoid constructing code in the first place.
 </p>
 </recommendation>
@@ -28,14 +28,14 @@ inputs, or avoid constructing code in the first place.
 The following example shows two methods implemented using `eval`: a simple
 deserialization routine and a getter method.
 If untrusted inputs are used with these methods,
-then an attacker might be able to execute arbitrary code on the system. 
+then an attacker might be able to execute arbitrary code on the system.
 </p>
 
 <sample src="examples/UnsafeCodeConstruction.js" />
 
 <p>
 To avoid this problem, either properly document that the function is potentially
-unsafe, or use an alternative solution such as `JSON.parse` or another library, like in the examples below, 
+unsafe, or use an alternative solution such as `JSON.parse` or another library, like in the examples below,
 that does not allow arbitrary code to be executed.
 </p>
 

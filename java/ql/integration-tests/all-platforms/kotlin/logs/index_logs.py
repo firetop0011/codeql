@@ -39,4 +39,3 @@ with open('logs.csv', 'w', newline='') as f_out:
                     write_line(j['origin'], j['kind'], msg)
 
 runSuccessfully(["codeql", "database", "index-files", "--language=csv", "--include=logs.csv", "test-db"])
-

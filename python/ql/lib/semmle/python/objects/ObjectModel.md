@@ -31,5 +31,3 @@ For example, behaviour of a (Python) class will determine the behaviour of insta
 
 The user-facing API, exposed through `Value` class, provides a higher level API designed for writing queries rather
 than implementing points-to. It provides easy access to objects by name and the ability to find calls to, attributes of, and references to objects.
-
-

@@ -6,7 +6,7 @@
 
 <overview>
 <p>A subclass of <code>Reader</code> or <code>InputStream</code> that is opened for reading
-but not closed may cause a resource leak. 
+but not closed may cause a resource leak.
 </p>
 
 </overview>
@@ -27,7 +27,7 @@ is to declare them within a <code>try-with-resources</code> statement, so that t
 
 <sample src="CloseReader.java" />
 
-<p>In the following example, the resource <code>br</code> is opened in a <code>try</code> block and 
+<p>In the following example, the resource <code>br</code> is opened in a <code>try</code> block and
 later closed in a <code>finally</code> block.</p>
 
 <sample src="CloseReaderGood.java" />

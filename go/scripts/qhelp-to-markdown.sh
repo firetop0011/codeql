@@ -7,7 +7,7 @@ if [ $# -ne 2 ]; then
   exit 1
 fi
 
-for qh in $(find $1 -name "*.qhelp"); do 
+for qh in $(find $1 -name "*.qhelp"); do
   mkdir -p $2/$(dirname $qh)
   codeql generate query-help --format=markdown $qh > $2/${qh/qhelp/md}
 done

@@ -8,8 +8,8 @@
 			code injection in contexts like <i>run:</i> or <i>script:</i>.
 		</p>
         <p>
-            Code injection in GitHub Actions may allow an attacker to 
-            exfiltrate the temporary GitHub repository authorization token. 
+            Code injection in GitHub Actions may allow an attacker to
+            exfiltrate the temporary GitHub repository authorization token.
             The token might have write access to the repository, allowing an attacker
              to use the token to make changes to the repository.
         </p>
@@ -22,8 +22,8 @@
 			to an intermediate environment variable.
 		</p>
         <p>
-            It is also recommended to limit the permissions of any tokens used 
-            by a workflow such as the GITHUB_TOKEN. 
+            It is also recommended to limit the permissions of any tokens used
+            by a workflow such as the GITHUB_TOKEN.
         </p>
 	</recommendation>
 

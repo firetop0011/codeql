@@ -1,5 +1,5 @@
 name: codeql/ruby-examples
-groups: 
+groups:
   - ruby
   - examples
 dependencies:

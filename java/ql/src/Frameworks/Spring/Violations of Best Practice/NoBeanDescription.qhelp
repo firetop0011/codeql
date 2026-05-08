@@ -20,7 +20,7 @@ Add a <code>&lt;description&gt;</code> element either in the <code>&lt;bean&gt;<
 </recommendation>
 <example>
 
-<p>The following example shows a Spring XML bean definition file that includes 
+<p>The following example shows a Spring XML bean definition file that includes
 <code>&lt;description&gt;</code> elements.</p>
 
 <sample src="NoBeanDescription.xml" />

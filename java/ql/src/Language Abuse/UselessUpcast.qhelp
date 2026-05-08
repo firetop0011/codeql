@@ -15,7 +15,7 @@ the redundant cast can simply be removed. However, an upcast is not redundant in
 </ul>
 
 <p>
-Both of these special cases are illustrated in the example below. This rule ignores these 
+Both of these special cases are illustrated in the example below. This rule ignores these
 special cases and highlights upcasts which appear to be redundant.
 </p>
 
@@ -28,8 +28,8 @@ Remove the unnecessary upcast to simplify the code.
 
 </recommendation>
 <example>
-<p>The following code includes an example of a redundant upcast that would be highlighted by this rule. 
-In addition, three examples of upcasts that are required and are ignored by this rule.</p>  
+<p>The following code includes an example of a redundant upcast that would be highlighted by this rule.
+In addition, three examples of upcasts that are required and are ignored by this rule.</p>
 
 <sample src="UselessUpcast.java" />
 </example>

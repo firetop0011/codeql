@@ -14,15 +14,15 @@ that cannot be thrown is misleading.
 <recommendation>
 
 <p>
-Ensure that you only include the <code>@throws</code> or <code>@exception</code> tags in Javadoc 
+Ensure that you only include the <code>@throws</code> or <code>@exception</code> tags in Javadoc
 when an exception can be thrown.
 </p>
 
 </recommendation>
 <example>
 
-<p>The following example shows a method with Javadoc that claims it can throw 
-<code>Exception</code>. Since <code>Exception</code> is a checked exception and the method 
+<p>The following example shows a method with Javadoc that claims it can throw
+<code>Exception</code>. Since <code>Exception</code> is a checked exception and the method
 does not declare that it may throw an exception, the Javadoc is wrong and should be updated.</p>
 
 <sample src="ImpossibleJavadocThrows.java" />
@@ -38,7 +38,7 @@ tag.</p>
 
 <li>
   Java SE Documentation:
-  <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html#throwstag">How to Write Doc Comments for the Javadoc Tool</a>, 
+  <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html#throwstag">How to Write Doc Comments for the Javadoc Tool</a>,
 </li>
 
 

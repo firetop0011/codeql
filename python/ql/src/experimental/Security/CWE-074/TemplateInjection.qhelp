@@ -3,7 +3,7 @@
     <overview>
         <p>
             Template Injection occurs when user input is embedded in a template in an unsafe manner.
-            When an attacker is able to use native template syntax to inject a malicious payload into a template, which is then executed server-side is results in Server Side Template Injection.         
+            When an attacker is able to use native template syntax to inject a malicious payload into a template, which is then executed server-side is results in Server Side Template Injection.
         </p>
     </overview>
     <recommendation>
@@ -14,7 +14,7 @@
     <example>
         <p>Consider the example given below, an untrusted HTTP parameter `template` is used to generate a Jinja2 template string. This can lead to remote code execution. </p>
         <sample src="JinjaBad.py" />
-        
+
         <p>Here we have fixed the problem by using the Jinja sandbox environment for evaluating untrusted code.</p>
         <sample src="JinjaGood.py" />
     </example>

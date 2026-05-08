@@ -15,7 +15,7 @@ void f() {
 		//...
 	}
 
-	//Correct: switch statement uses enum. It is easier to see if a case 
+	//Correct: switch statement uses enum. It is easier to see if a case
 	//has been left out, and that all cases are valid values
 	caseVals caseVal2;
 	switch (caseVal2) {

@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>This rule finds exceptions thrown in destructors. This is dangerous: If the destructor is called during stack unwinding as part of the 
+<p>This rule finds exceptions thrown in destructors. This is dangerous: If the destructor is called during stack unwinding as part of the
 handling of another exception, throwing an additional exception will immediately terminate the program as per the C++ specification.</p>
 
 </overview>

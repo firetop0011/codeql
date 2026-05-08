@@ -5,7 +5,7 @@
 
 
 <overview>
-<p>This rule finds empty blocks that occur as a branch of a conditional or as a loop body. 
+<p>This rule finds empty blocks that occur as a branch of a conditional or as a loop body.
 This may indicate badly maintained code or a defect due to an unhandled case. It is common to find commented-out code in the empty body. Commented-out code is discouraged and is a source of defects and maintainability issues.</p>
 
 </overview>

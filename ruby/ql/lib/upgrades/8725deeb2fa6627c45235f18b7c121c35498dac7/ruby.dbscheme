@@ -1264,4 +1264,3 @@ ast_node_parent(
   int parent: @ast_node_parent ref,
   int parent_index: int ref
 );
-

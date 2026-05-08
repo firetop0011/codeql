@@ -25,7 +25,7 @@ You can now suppress alerts using either single-line block comments (`/* ... */`
 | Information exposure through an exception (`cs/information-exposure-through-exception`) | More results | The query now recognizes writes to cookies, writes to ASP.NET (`Inner`)`Text` properties, and email contents as additional sinks. |
 | Information exposure through transmitted data (`cs/sensitive-data-transmission`) | More results | The query now recognizes writes to cookies and writes to ASP.NET (`Inner`)`Text` properties as additional sinks. |
 | Potentially dangerous use of non-short-circuit logic (`cs/non-short-circuit`) | Fewer false positive results | Results have been removed when the expression contains an `out` parameter. |
-| Useless assignment to local variable (`cs/useless-assignment-to-local`) | Fewer false positive results | Results have been removed when the value assigned is an (implicitly or explicitly) cast default-like value. For example, `var s = (string)null` and `string s = default`. Results have also been removed when the variable is named `_` in a `foreach` statement. | 
+| Useless assignment to local variable (`cs/useless-assignment-to-local`) | Fewer false positive results | Results have been removed when the value assigned is an (implicitly or explicitly) cast default-like value. For example, `var s = (string)null` and `string s = default`. Results have also been removed when the variable is named `_` in a `foreach` statement. |
 | XPath injection (`cs/xml/xpath-injection`) | More results | The query now recognizes calls to methods on `System.Xml.XPath.XPathNavigator` objects. |
 
 ## Changes to code extraction

@@ -3,13 +3,13 @@
   "qhelp.dtd">
 <qhelp>
 <overview>
-<p>This metric measures the maximum nesting depth of statements. When statements are nested too 
-deeply in the code they become difficult to understand. This is because understanding a line that 
+<p>This metric measures the maximum nesting depth of statements. When statements are nested too
+deeply in the code they become difficult to understand. This is because understanding a line that
 is deeply nested requires an understanding of the context of that line.</p>
 
 </overview>
 <recommendation>
-<p>The best way to address this problem is to extract more deeply nested parts of the code into their own logical 
+<p>The best way to address this problem is to extract more deeply nested parts of the code into their own logical
 methods.</p>
 
 </recommendation>
@@ -19,7 +19,7 @@ methods.</p>
 
 </example>
 <section title="Fixed by Extraction">
-<p>This code is easier to read because the part that prints every character in the string along 
+<p>This code is easier to read because the part that prints every character in the string along
 with its character code has been extracted to a separate method.</p>
 <sample src="StatementNestingDepthFix.cs" />
 

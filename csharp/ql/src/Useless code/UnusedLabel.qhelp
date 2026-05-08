@@ -10,7 +10,7 @@ indication that the code is incomplete, or that the code contains a bug where a
 
 </overview>
 <recommendation>
-<p>Ensure that all <code>goto</code> statements use the correct label, and remove the 
+<p>Ensure that all <code>goto</code> statements use the correct label, and remove the
 label if it is no longer needed.</p>
 
 <p>Another solution is to rewrite the code without <code>goto</code> statements, which can

@@ -16,4 +16,3 @@ def separate_headers(files):
 def process_files(files):
     for header, body in separate_headers(files):
         print(format_page(header, body))
-

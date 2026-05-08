@@ -211,4 +211,3 @@ module.exports.runInThisContext = vm.runInThisContext;
 vm.createScript = function(code, filename) {};
 
 module.exports.createScript = vm.createScript;
-

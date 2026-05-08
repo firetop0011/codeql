@@ -1,4 +1,4 @@
-// BAD - debugging is always enabled 
+// BAD - debugging is always enabled
 WebView.setWebContentsDebuggingEnabled(true);
 
 // GOOD - debugging is only enabled when this is a debug build, as indicated by the debuggable flag being set.
